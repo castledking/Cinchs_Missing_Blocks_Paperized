@@ -1,0 +1,39 @@
+name: CMB
+version: '${version}'
+main: net.cinchtail.cinchsmissingblocks.cmb.CmbPlugin
+api-version: '1.21'
+description: ${description}
+author: castledking
+
+# Ordering matters and is not incidental.
+#
+# CraftEngine registers its own block behaviour types in onLoad(), and parses block
+# configuration later, in the enable phase. Registering in this plugin's onLoad()
+# with load: BEFORE therefore puts cmb's types in the registry before CraftEngine
+# looks any of them up.
+#
+#   cmb.onLoad()                      register cmb:stairs, cmb:slab, ...
+#   CraftEngine.onLoad()              register its built-in types
+#   CraftEngine parses blocks         resolve cmb:* -> found
+#
+# join-classpath is what makes CraftEngine's classes visible here; without it the
+# registrations could not compile against BlockBehaviors at all.
+dependencies:
+  server:
+    CraftEngine:
+      load: BEFORE
+      required: true
+      join-classpath: true
+
+# Paper plugins register commands in code (CmbCommand, through the command lifecycle);
+# a `commands:` block here would be ignored.
+permissions:
+  cmb.admin:
+    description: /cmb reload all, /cmb setupmsg, and the setup message on first join
+    default: op
+  cmb.item:
+    description: /cmb item browser and /cmb item give (CraftEngine's, under CMB's name)
+    default: op
+  cmb.debug:
+    description: The debug commands, with -Dcmb.debug=true
+    default: op

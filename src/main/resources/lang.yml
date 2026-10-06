@@ -1,0 +1,38 @@
+# CMB messages. Colour codes use & (&6 gold, &e yellow, &7 grey, &f white, &c red,
+# &a green, &l bold). {prefix} is replaced by `prefix` below; other {placeholders} are
+# filled in by the plugin. Missing keys fall back to the defaults shipped in the jar.
+# Re-read by /cmb reload all.
+
+prefix: "&6[CMB] "
+
+reload-success: "{prefix}&eReloaded successfully. &7CraftEngine is rebuilding the pack."
+reload-failed: "{prefix}&cReload failed - see the console for why."
+
+# /cmb item is hidden from anyone without cmb.item, so a "you need permission"
+# message could never be shown and is deliberately absent.
+item-usage: "{prefix}&eUsage: &f/cmb item browser [player] &7or &f/cmb item give <player> <item> [amount] [--silent]"
+
+# The console startup banner: the art is in startups.txt, uncoloured, and everything
+# built around it is coloured here. {boot} is the boot time.
+startup:
+  tag-author: "&7by castledking"
+  tag-plugin: "&6Cinch's Missing Blocks \n&b- CraftEngine pack + companion plugin, vanilla clients"
+  details: "&fStartup details:"
+  boot-finished: "&7Boot finished in: &a{boot}"
+
+# Shown once to each player with cmb.admin, the first time they join with CMB
+# installed, and any time with /cmb setupmsg.
+setup-message:
+  - "&6&lCinch's Missing Blocks &7- setup"
+  - "&7 • &fCraftEngine {ce_version} &7found. CMB installs its pack into CraftEngine on every start and on &f/cmb reload all&7."
+  - "&7 • Resource pack: &f{delivery}&7. {delivery_note}"
+  - "&7 • Settings: &fplugins/CMB/config.yml &7- vertical slabs, horizontal stairs, furniture, warped nether wart. Apply with &f/cmb reload all&7."
+  - "&7 • Items: &f/cmb item browser &7or &f/cmb item give <player> <item>&7."
+  - "{warnings}"
+  - "&7 Show this again with &f/cmb setupmsg&7."
+
+setup-delivery-craftengine: "CraftEngine sends it to players on join."
+setup-delivery-rspm: "ResourcePackManager merges it into the server pack; CraftEngine's own sending is switched off."
+setup-hint-rspm-installed: "&e ! &7ResourcePackManager is installed: set &fresource-pack.delivery: rspm &7so the packs merge instead of competing."
+setup-hint-nexo-sounds: "&e ! &7Nexo mutes vanilla stone sounds (mechanics.yml: &ffurniture.custom_block_sounds: true&7 with custom_blocks sounds off). Stone blocks, CMB's included, go silent - set it to false."
+setup-hint-viabackwards: "&7 • ViaBackwards found: the concrete slabs and stairs vanilla 26.3 also has are kept for older clients."

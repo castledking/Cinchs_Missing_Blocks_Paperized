@@ -1,0 +1,153 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+# Cancel superseded runs on the same ref. A release branch gets several pushes while a
+# version is being finalised, and the older runs cost a full pack generation each.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Java 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: zulu
+          java-version: '25'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # yaml (every config the generator reads) and Pillow (the wart art and texture work).
+      # setup-python gives a bare interpreter, so without this the fixtures die on
+      # ModuleNotFoundError before running a single check.
+      - name: Install the generator's Python dependencies
+        run: python3 -m pip install --disable-pip-version-check pyyaml pillow
+
+      # The wrapper, not a system Gradle. This job is the check that the committed wrapper
+      # works, which is the reason for committing it.
+      #
+      # Paths here are root-relative for the published layout, where the contents of cmb/
+      # are the repository root: ./gradlew, tools/, build/libs/.
+      - name: Build
+        run: ./gradlew build --no-daemon
+
+      # After the build, not before: test_installer.py exercises the jar this step
+      # produces. Run first it found no jar and skipped -- a fixture silently opting out of
+      # the only coverage that does not need a server, which is exactly what this job is for.
+      #
+      # The fixture suites are plain scripts, not pytest -- pytest collects nothing from
+      # them, which is why they are invoked directly here.
+      #
+      # Most of them need a real CraftEngine install, which no CI runner has, so they skip.
+      # The skips are counted and printed rather than left implicit: a fixture that has
+      # quietly stopped testing anything must be visible in the log, not inferred from a
+      # green tick. The two that do run here -- deferred outputs and the installer -- cover
+      # the pack and the jar, which is what CI can actually check without a server.
+      - name: Generator fixtures
+        run: |
+          set -euo pipefail
+          skipped=0
+          ran=0
+          for t in tools/test_*.py; do
+            echo "::group::$t"
+            out=$(python3 "$t" 2>&1) || { echo "$out"; echo "::endgroup::"; exit 1; }
+            echo "$out"
+            if grep -q '^SKIP ' <<<"$out"; then
+              skipped=$((skipped + 1))
+              echo "::notice title=skipped::$t needs a CraftEngine install, skipped rather than failed"
+            else
+              ran=$((ran + 1))
+            fi
+            echo "::endgroup::"
+          done
+          echo "fixtures: $ran ran, $skipped skipped (need a CraftEngine install)"
+
+      - name: Upload the jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmb-${{ github.ref_name }}
+          # The glob alone would also match cmb-<version>-sources.jar, and a release
+          # artifact should be the plugin, not its sources.
+          path: |
+            build/libs/cmb-*.jar
+            !build/libs/*-sources.jar
+          if-no-files-found: error
+
+  # The pack is the product. Every generator assertion exists because one of these numbers
+  # was wrong at some point, so they are re-derived on every push rather than trusted from
+  # a checked-in file.
+  pack-invariants:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the generator's Python dependencies
+        run: python3 -m pip install --disable-pip-version-check pyyaml pillow
+
+      # --out is required; the pin lives in upstream/upstream.properties either way.
+      - name: Fetch the pinned upstream mod
+        run: python3 tools/upstream.py fetch --out upstream
+
+      # The generator reads tools/vanilla_templates, which is gitignored derived data.
+      # ./gradlew build fetches it through the fetchVanilla task; this job calls the
+      # generator directly, so it has to do that step itself or it dies on
+      # "missing wall template".
+      - name: Fetch the vanilla reference data
+        run: python3 tools/fetch_vanilla.py --version 26.3
+
+      - name: Generate the release pack
+        run: |
+          python3 tools/generate_pack.py \
+            --mod upstream \
+            --out build/pack \
+            --mc-version 26.3 \
+            --build-config tools/build-config.release.yml
+
+      - name: Check the manifest's own gates
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, sys
+
+          summary = json.loads(pathlib.Path("build/pack/manifest.json").read_text())["summary"]
+          gates = {
+              k: v for k, v in summary.items()
+              if isinstance(v, dict) and v.get("status") in ("PASS", "FAIL")
+          }
+          width = max(len(k) for k in gates)
+          for name, gate in sorted(gates.items()):
+              print(f"  {name.ljust(width)}  {gate['status']}")
+          failed = [k for k, v in gates.items() if v["status"] != "PASS"]
+          if failed:
+              sys.exit(f"failing gates: {', '.join(sorted(failed))}")
+          PY
+
+      - name: Report the counts
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          s = json.loads(pathlib.Path("build/pack/manifest.json").read_text())["summary"]
+          print(f"blocks enabled : {s['mod_blocks_enabled']}/{s['mod_blocks_total']}")
+          print(f"blocks w/ loot : {s['native_functionality']['blocks_with_loot']}")
+          print(f"items          : {s['items']}")
+          print(f"recipes        : {s['recipes']}")
+          print(f"ce states      : {s['ce_internal_states']}")
+          for name, n in sorted(s["families"].items()):
+              print(f"  {name:16} {n}")
+          PY

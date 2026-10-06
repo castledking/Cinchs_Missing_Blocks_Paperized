@@ -1,0 +1,150 @@
+# CMB configuration
+# Read from plugins/CMB/config.yml and re-read by /cmb reload all.
+#
+# Two kinds of setting live here, and the difference matters when something does not
+# work:
+#
+#   content / disabled-blocks
+#       What the pack contains. Changing one of these changes the allocation, so it
+#       can only be applied by regenerating the pack (tools/generate_pack.py). The
+#       plugin reads them to report what it expects, not to rewrite the pack.
+#
+#   features / resource-pack
+#       Runtime behaviour. Applied by /cmb reload all with no rebuild.
+
+craftengine:
+  # Ceiling on the CraftEngine internal states this pack may declare.
+  #
+  # Must be at or below `block.serverside-blocks` in CraftEngine's own config.yml.
+  # The generator prints used / configured / free so headroom stays visible.
+  max-internal-states: 5120
+  # States held back from the ceiling and never handed out. CraftEngine allocates
+  # states for its own blocks and other packs draw from the same pool, so the last
+  # few slots are left alone rather than spent.
+  reserved-states: 64
+
+compatibility:
+  # What to do when the running server cannot represent something the pack defines.
+  #
+  #   disable - skip it and report it (what a server owner wants)
+  #   fail    - refuse to reload and keep the previous pack
+  #
+  # Availability is decided against the live registry, not a hardcoded version list,
+  # so this only decides what happens to content the server turns out not to have.
+  unsupported-content: disable
+
+
+content:
+  # Warped nether wart: a crop this port adds, planted on soul sand like nether wart.
+  # Nine make a warped wart block. Three ways to find it, each switchable:
+  warped-nether-wart:
+    # In a newly generated nether fortress, each nether wart patch has this chance to
+    # come up warped instead.
+    fortress: true
+    fortress-chance: 0.25
+    # In newly generated terrain where a soul sand valley meets a crimson or warped
+    # forest, specks of soul sand with wart on top along the edge: warped beside warped
+    # forest, regular nether wart beside crimson.
+    biome-edges: true
+    biome-edge-chance: 0.35
+    # Regular nether wart planted on warped nylium grows as warped nether wart.
+    nylium-planting: true
+
+features:
+  # The terracotta and concrete stairs, slabs and walls (96 blocks). Withheld by
+  # default; with furniture-fallback on they are served as furniture. On 26.3, vanilla
+  # already has concrete slabs and stairs, so those are skipped unless ViaBackwards is
+  # installed; concrete walls are kept.
+  disable-terracotta: true
+  disable-concrete: true
+
+  # A furniture piece's cell is air to the server, so without this, blocks with no
+  # hitbox - buttons, rails, levers, string, pressure plates, torches - can be placed
+  # inside one. On, they can't, as they couldn't be placed inside a real block.
+  protect-furniture-cells: true
+
+  # Vertical slabs: a slab stood on edge. They are CraftEngine furniture rather than
+  # blocks, because nothing vanilla has a standing half-block collision (see
+  # DESIGN.md 6.1 - a bell is the only exact one, and it caps the family at four
+  # states that would have to be stolen from real bells). Being furniture, they cost
+  # no CraftEngine internal states at all.
+  #
+  # `cmb` builds one per CMB slab or stair material that is served. `vanilla` does
+  # the same for vanilla slabs, so
+  # `oak_slab` gets an oak vertical slab without any carrier being spent.
+  #
+  # `disabled` removes specific materials by their id suffix, and wins over both
+  # toggles. Listing a material that is not otherwise offered is reported rather
+  # than silently ignored, so a typo is visible.
+  vertical-slabs:
+    cmb: true
+    vanilla: true
+    # What two slabs in one cell become: block (a real block; Jade names its vanilla
+    # carrier) or furniture (Jade names it after the slab; breaks in one hit).
+    doubles: block
+    # Material names without the `_vertical` suffix, e.g. `oak`, `andesite_brick`.
+    disabled: []
+
+  # Horizontal stairs: a stair laid on its side (an L, three quarters of the cell,
+  # full height), the corner piece for vertical slab walls. Furniture as well, with
+  # the same `cmb`, `vanilla` and `disabled` meaning as vertical-slabs above.
+  horizontal-stairs:
+    cmb: true
+    vanilla: true
+    disabled: []
+
+  # Furniture fallback: every CMB stair, slab, wall, fence and pane is served as
+  # furniture - none of them can get a safe real-block carrier. Stairs keep
+  # vanilla's corner shapes against each other, slabs double into their full block.
+  # true, false, or a list of names to serve only those.
+  furniture-fallback: true
+
+resource-pack:
+  # Who sends the pack to players. Exactly one may; two at once means two competing
+  # `setResourcePack` calls and the client keeps the last, so one pack's models silently
+  # vanish. Pick the one that owns distribution on your server.
+  #
+  #   craftengine (default)
+  #       CraftEngine builds the pack and sends it itself. Nothing else to configure.
+  #
+  #   rspm
+  #       ResourcePackManager merges the pack into the server's combined pack, which is
+  #       what you want when something else (ItemsAdder, Nexo, another pack) is already
+  #       being merged - they combine instead of overwriting each other.
+  #
+  #       Choose this and CMB also flips CraftEngine out of the way, because leaving both
+  #       enabled is exactly the competing-pack case above:
+  #
+  #         plugins/CraftEngine/config.yml
+  #           resource-pack:
+  #             delivery:
+  #               send-on-join: false
+  #
+  #       CMB edits that line for you, on startup and on every `/cmb reload all`, and
+  #       only when this setting is `rspm`. It gates sending alone: the pack is still
+  #       built and written to `plugins/CraftEngine/generated/resource_pack.zip`, which
+  #       is then copied to `plugins/ResourcePackManager/mixer/cmb.zip` and followed by
+  #       `/rspm reload`. Blocks are unaffected either way - they are registered
+  #       server-side with server-side collision and loot, and the pack only decides how
+  #       they look.
+  #
+  #       Two things to know. CraftEngine reads `send-on-join` at *its* startup, so
+  #       CraftEngine needs a restart for the change to take effect. And if you ask for
+  #       `rspm` while ResourcePackManager is not installed, CMB falls back to
+  #       `craftengine` with a warning and leaves CraftEngine's sending alone - the
+  #       alternative is players receiving no pack at all, and every custom block
+  #       rendering as its carrier.
+  delivery: craftengine
+
+  # Install the pack bundled in this jar into plugins/CraftEngine/resources/
+  # cinchsmissingblocks/, on startup and on /cmb reload all, filtered by the settings
+  # in this file. Turn off only if you generate the pack yourself and copy it in.
+  install: true
+
+# Blocks the server should not serve, whatever else enables them.
+#
+# A CMB block id without its namespace, e.g. `calcite_brick_stairs`. Deferred blocks
+# and variants already off in the generator are not affected - this only removes
+# more. Blocks with no carrier are listed here have no effect, because they are not
+# served in the first place; the generator's capacity report is the place to see why.
+disabled-blocks: []
