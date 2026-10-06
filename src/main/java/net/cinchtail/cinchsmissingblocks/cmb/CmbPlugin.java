@@ -223,11 +223,14 @@ public final class CmbPlugin extends JavaPlugin {
         try {
             String banner = new StartupHeader(this).getRandomHeader();
             if (banner != null) {
-                for (String line : banner.split("\n", -1)) {
-                    if (!line.isBlank()) {
-                        getLogger().info(line);
-                    }
-                }
+                // One sendMessage with the whole banner, not one log call per line.
+                //
+                // A logger call carries the plugin's name on every line, so splitting gave
+                // twenty lines each prefixed [CMB]. Splitting also tore the lang values
+                // apart: tag-plugin is one value holding its own newline, and breaking the
+                // banner on "\n" turned it into two separate messages. Embedded newlines
+                // are the console's business, not ours.
+                org.bukkit.Bukkit.getConsoleSender().sendMessage(banner);
             }
         } catch (Throwable t) {
             getLogger().warning("Startup banner skipped: " + t);

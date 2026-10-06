@@ -117,7 +117,10 @@ public final class StartupHeader {
         sb.append(plugin.lang().raw("startup.details")).append("\n&r\n");
         sb.append(buildDetails()).append("\n&r\n");
         sb.append(plugin.lang().raw("startup.boot-finished", Map.of(
-                "boot", "&a" + (System.currentTimeMillis() - plugin.startupStartTime()) + "ms")));
+                // The colour belongs to the lang value, not the substitution. Placeholders
+                // are filled by plain string replacement, so an "&a" here came out as
+                // "&a&a4193ms" -- visible in the log as a doubled escape.
+                "boot", (System.currentTimeMillis() - plugin.startupStartTime()) + "ms")));
         return sb.toString();
     }
 
