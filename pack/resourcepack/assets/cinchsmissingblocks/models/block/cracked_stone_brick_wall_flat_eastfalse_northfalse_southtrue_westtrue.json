@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/cracked_stone_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/cracked_stone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/cracked_stone_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "south": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "west": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "east": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/cracked_stone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "south": {
+          "texture": "minecraft:block/cracked_stone_bricks",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "west": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/cracked_stone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "west": {
+          "texture": "minecraft:block/cracked_stone_bricks",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        },
+        "north": {
+          "texture": "minecraft:block/cracked_stone_bricks"
+        }
+      }
+    }
+  ]
+}

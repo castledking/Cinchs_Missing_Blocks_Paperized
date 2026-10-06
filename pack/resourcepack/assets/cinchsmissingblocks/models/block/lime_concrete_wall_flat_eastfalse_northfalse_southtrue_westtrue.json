@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/lime_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/lime_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/lime_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/lime_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/lime_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/lime_concrete",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/lime_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/lime_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/lime_concrete",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/lime_concrete"
+        },
+        "north": {
+          "texture": "minecraft:block/lime_concrete"
+        }
+      }
+    }
+  ]
+}

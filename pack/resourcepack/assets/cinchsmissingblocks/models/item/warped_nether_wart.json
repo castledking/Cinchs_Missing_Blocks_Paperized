@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cinchsmissingblocks:block/warped_nether_wart"
+  }
+}

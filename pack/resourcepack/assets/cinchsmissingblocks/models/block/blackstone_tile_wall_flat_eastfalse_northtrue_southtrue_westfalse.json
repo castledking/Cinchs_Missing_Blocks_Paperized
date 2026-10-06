@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/blackstone_tiles"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/blackstone_tiles"
+        }
+      }
+    }
+  ]
+}

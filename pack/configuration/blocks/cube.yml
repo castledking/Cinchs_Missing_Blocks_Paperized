@@ -1,0 +1,1289 @@
+blocks:
+  "cinchsmissingblocks:andesite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/andesite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:andesite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:blackstone_tiles":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blackstone_tiles"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:blackstone_tiles"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:blue_nether_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blue_nether_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:blue_nether_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:calcite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/calcite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:calcite_bricks"
+      hardness: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_andesite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_andesite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_andesite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_blue_nether_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_blue_nether_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_blue_nether_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_calcite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_calcite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_calcite_bricks"
+      hardness: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_diorite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_diorite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_diorite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_dripstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_dripstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_dripstone_bricks"
+      hardness: 1.5
+      resistance: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_end_stone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_end_stone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_end_stone_bricks"
+      hardness: 3.0
+      resistance: 9.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_granite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_granite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_granite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_mud_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_mud_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_mud_bricks"
+      hardness: 1.5
+      resistance: 3.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_prismarine_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_prismarine_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_prismarine_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_purpur":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_purpur"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_purpur"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_red_nether_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_red_nether_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_red_nether_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_andesite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_andesite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_andesite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_blackstone_tiles":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_blackstone_tiles"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_blackstone_tiles"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_blue_nether_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_blue_nether_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_blue_nether_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_calcite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_calcite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_calcite_bricks"
+      hardness: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_diorite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_diorite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_diorite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_dripstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_dripstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_dripstone_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_end_stone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_end_stone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_end_stone_bricks"
+      hardness: 3.0
+      resistance: 9.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_granite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_granite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_granite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_mud_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_mud_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_mud_bricks"
+      hardness: 1.5
+      resistance: 3.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_prismarine_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_prismarine_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_prismarine_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_quartz_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_quartz_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_quartz_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_red_nether_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_red_nether_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_red_nether_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_red_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_red_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_red_sandstone_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_sandstone_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_stone_tiles":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_stone_tiles"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_stone_tiles"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_tuff_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_tuff_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_tuff_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:diorite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/diorite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:diorite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:dripstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/dripstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:dripstone_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:granite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/granite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:granite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_andesite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_andesite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_andesite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_bricks"
+      hardness: 2.0
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_calcite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_calcite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_calcite_bricks"
+      hardness: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_cobbled_deepslate":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_cobbled_deepslate"
+      hardness: 3.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_deepslate_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_deepslate_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_deepslate_bricks"
+      hardness: 3.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_deepslate_tiles":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_deepslate_tiles"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_deepslate_tiles"
+      hardness: 3.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_diorite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_diorite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_diorite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_dripstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_dripstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_dripstone_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_end_stone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_end_stone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_end_stone_bricks"
+      hardness: 3.0
+      resistance: 9.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_granite_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_granite_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_granite_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_mud_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_mud_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_mud_bricks"
+      hardness: 1.5
+      resistance: 3.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_prismarine_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_prismarine_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_prismarine_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_quartz_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_quartz_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_quartz_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_red_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_red_sandstone_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_sandstone_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_stone_tiles":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_stone_tiles"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_stone_tiles"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_tuff_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_tuff_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_tuff_bricks"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:polished_calcite":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_calcite"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:polished_calcite"
+      hardness: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:polished_dripstone":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_dripstone"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:polished_dripstone"
+      hardness: 1.5
+      resistance: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:polished_end_stone":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_end_stone"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:polished_end_stone"
+      hardness: 3.0
+      resistance: 9.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:red_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:red_sandstone_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:sandstone_bricks"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:sculk_inlaid_deepslate":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            - path: "cinchsmissingblocks:block/sculk_inlaid_deepslate"
+            - path: "cinchsmissingblocks:block/sculk_inlaid_deepslate_mirrored"
+            - path: "cinchsmissingblocks:block/sculk_inlaid_deepslate"
+              y: 180
+            - path: "cinchsmissingblocks:block/sculk_inlaid_deepslate_mirrored"
+              y: 180
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:sculk_inlaid_deepslate"
+      hardness: 3.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/silk_touch"
+      arguments:
+        item: "cinchsmissingblocks:sculk_inlaid_deepslate"
+  "cinchsmissingblocks:snow_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/snow_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:snow_bricks"
+      hardness: 0.2
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/shovel"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: alternatives
+              children:
+                - type: item
+                  item: "cinchsmissingblocks:snow_bricks"
+                  conditions:
+                    - type: enchantment
+                      predicate: "minecraft:silk_touch>=1"
+                - type: item
+                  item: "minecraft:snowball"
+                  functions:
+                    - type: set_count
+                      add: false
+                      count: 4
+                    - type: explosion_decay
+  "cinchsmissingblocks:stone_tiles":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/stone_tiles"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:stone_tiles"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"

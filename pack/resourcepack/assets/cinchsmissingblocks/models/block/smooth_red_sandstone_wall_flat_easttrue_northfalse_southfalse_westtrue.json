@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/red_sandstone_top"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "south": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "west": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "east": {
+          "texture": "minecraft:block/red_sandstone_top"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "east": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "south": {
+          "texture": "minecraft:block/red_sandstone_top"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "west": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/red_sandstone_top"
+        },
+        "north": {
+          "texture": "minecraft:block/red_sandstone_top"
+        }
+      }
+    }
+  ]
+}

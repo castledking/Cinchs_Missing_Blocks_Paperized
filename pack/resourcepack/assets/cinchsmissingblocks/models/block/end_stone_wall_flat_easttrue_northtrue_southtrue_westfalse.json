@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "minecraft:block/end_stone"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "south": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "west": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "east": {
+          "texture": "minecraft:block/end_stone"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "north": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "east": {
+          "texture": "minecraft:block/end_stone"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "east": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "south": {
+          "texture": "minecraft:block/end_stone"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "south": {
+          "texture": "minecraft:block/end_stone",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/end_stone"
+        },
+        "west": {
+          "texture": "minecraft:block/end_stone"
+        }
+      }
+    }
+  ]
+}

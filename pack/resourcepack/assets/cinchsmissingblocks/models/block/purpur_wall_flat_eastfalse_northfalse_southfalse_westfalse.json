@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "minecraft:block/purpur_block"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "south": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "west": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "east": {
+          "texture": "minecraft:block/purpur_block"
+        }
+      }
+    }
+  ]
+}

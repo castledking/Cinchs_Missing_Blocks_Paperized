@@ -46,77 +46,58 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 // --- the bundled pack --------------------------------------------------------
-// The plugin installs a CraftEngine pack bundled in the jar (PackInstaller), so a
-// server only installs the jar. It is generated here, at build time, from the upstream
-// mod pinned in upstream/upstream.properties: fetched from GitHub, or from the
-// verified fallback copy in upstream/ when GitHub can't be reached
-// (-Pupstream.offline=true skips the attempt). Needs python3 with PyYAML and Pillow.
-// Where the generator lives: tools/ and warped_netherwart_art/.
+// The plugin installs the CraftEngine pack in pack/ (PackInstaller), so a server only
+// installs the jar. pack/ is committed: building the jar needs nothing but Java.
 //
-// Two layouts, both real. In the working repository this module sits beside them, so they
-// are one directory up. In the published repository the contents of this directory ARE the
-// root, and they sit right here. Detecting rather than assuming is what lets one copy of
-// this file build in both, instead of the two drifting apart.
-val repoRoot: File = sequenceOf(rootDir, rootDir.parentFile)
-    .firstOrNull { File(it, "tools").isDirectory }
-    ?: error("tools/ not found beside ${rootDir.name} or in it; the pack cannot be generated")
-val python: String = (findProperty("python") as String?) ?: "python3"
-val upstreamTree = layout.buildDirectory.dir("upstream")
-val bundledPack = layout.buildDirectory.dir("bundled-pack")
+// pack/ is generated output. On the development machine it is regenerated from the
+// pinned upstream mod with the Python generator kept beside this repository (../tools,
+// not part of it) - `./gradlew regeneratePack` - after the upstream pin moves or the
+// generator changes. Everywhere else that task is simply absent.
+val generator: File = rootDir.parentFile.resolve("tools/generate_pack.py")
 
-val fetchUpstream by tasks.registering(Exec::class) {
-    description = "Fetch the pinned upstream mod (GitHub, else the local fallback)"
-    inputs.dir(repoRoot.resolve("upstream"))
-    inputs.file(repoRoot.resolve("tools/upstream.py"))
-    outputs.dir(upstreamTree)
-    val offline = (findProperty("upstream.offline") as String?)?.toBoolean() ?: false
-    commandLine(listOf(python, repoRoot.resolve("tools/upstream.py").path, "fetch",
-                       "--out", upstreamTree.get().asFile.path) + if (offline) listOf("--offline") else listOf())
-}
+if (generator.isFile) {
+    val python: String = (findProperty("python") as String?) ?: "python3"
+    val workspace: File = rootDir.parentFile
+    val upstreamTree = layout.buildDirectory.dir("upstream")
+    val generated = layout.buildDirectory.dir("generated-pack")
 
-// The vanilla reference data the generator reads: every vanilla blockstate, and every
-// model those reference transitively.
-//
-// It is derived, it is about 5,000 files, and it is gitignored -- so a fresh clone has
-// none of it, and the generator fails with "missing wall template ...". That is the whole
-// reason this task exists: the build fetches what it needs rather than assuming someone
-// already ran the fetch by hand.
-val vanillaCache = repoRoot.resolve("tools/vanilla_templates")
+    val fetchUpstream by tasks.registering(Exec::class) {
+        description = "Fetch the pinned upstream mod (GitHub, else the local fallback)"
+        val offline = (findProperty("upstream.offline") as String?)?.toBoolean() ?: false
+        commandLine(listOf(python, workspace.resolve("tools/upstream.py").path, "fetch",
+                           "--out", upstreamTree.get().asFile.path) + if (offline) listOf("--offline") else listOf())
+    }
 
-val fetchVanilla by tasks.registering(Exec::class) {
-    description = "Fetch the vanilla blockstates and models the generator reads"
-    // Only when absent. Re-fetching 5,000 files on every build would make the build depend
-    // on the network for no reason, which is what -Pupstream.offline exists to avoid.
-    onlyIf { !vanillaCache.resolve("template_wall_post.json").isFile }
-    outputs.dir(vanillaCache)
-    commandLine(python, repoRoot.resolve("tools/fetch_vanilla.py").path, "--version", "26.3")
-}
-
-val generatePack by tasks.registering(Exec::class) {
-    description = "Generate the bundled pack: everything on (tools/build-config.release.yml)"
-    dependsOn(fetchUpstream, fetchVanilla)
-    inputs.files(fileTree(repoRoot.resolve("tools")) { exclude("**/__pycache__/**") })
-    inputs.dir(repoRoot.resolve("warped_netherwart_art"))
-    inputs.dir(upstreamTree)
-    outputs.dir(bundledPack)
-    // The generator's summary goes to a log rather than the Gradle console; a failed
-    // build still prints its reason (stderr) and fails the task.
-    val log = layout.buildDirectory.file("generate-pack.log")
-    doFirst { standardOutput = log.get().asFile.also { it.parentFile.mkdirs() }.outputStream() }
-    commandLine(python, repoRoot.resolve("tools/generate_pack.py").path,
-                "--mod", upstreamTree.get().asFile.path,
-                "--out", bundledPack.get().asFile.path,
-                "--mc-version", "26.3",
-                "--build-config", repoRoot.resolve("tools/build-config.release.yml").path)
-    // The installer can't list a jar directory, so the pack ships with its own index:
-    // every bundled file, relative to pack/.
-    doLast {
-        val root = bundledPack.get().asFile
-        val files = root.walkTopDown().filter { it.isFile }
-            .map { it.relativeTo(root).invariantSeparatorsPath }
-            .filter { bundled(it) }
-            .sorted().toList()
-        root.resolve("index.txt").writeText(files.joinToString("\n", postfix = "\n"))
+    tasks.register<Exec>("regeneratePack") {
+        group = "build"
+        description = "Regenerate pack/ from the pinned upstream (needs ../tools and python3)"
+        dependsOn(fetchUpstream)
+        val log = layout.buildDirectory.file("generate-pack.log")
+        doFirst { standardOutput = log.get().asFile.also { it.parentFile.mkdirs() }.outputStream() }
+        commandLine(python, generator.path,
+                    "--mod", upstreamTree.get().asFile.path,
+                    "--out", generated.get().asFile.path,
+                    "--mc-version", "26.3",
+                    "--build-config", workspace.resolve("tools/build-config.release.yml").path)
+        doLast {
+            val root = generated.get().asFile
+            val files = root.walkTopDown().filter { it.isFile }
+                .map { it.relativeTo(root).invariantSeparatorsPath }
+                .filter { bundled(it) }
+                .sorted().toList()
+            val pack = file("pack")
+            pack.deleteRecursively()
+            files.forEach { rel -> root.resolve(rel).copyTo(pack.resolve(rel), overwrite = true) }
+            // The installer can't list a jar directory, so the pack ships with an index.
+            pack.resolve("index.txt").writeText(files.joinToString("\n", postfix = "\n"))
+            // The pin it was built from, for the upstream-watch workflow.
+            val pin = workspace.resolve("upstream/upstream.properties").readLines()
+                .filter { it.isNotBlank() && !it.startsWith("#") }
+            pack.resolve("upstream.properties").writeText(
+                "# The upstream commit pack/ was generated from (`./gradlew regeneratePack`).\n" +
+                pin.joinToString("\n", postfix = "\n"))
+            logger.lifecycle("pack/: ${files.size} files regenerated")
+        }
     }
 }
 
@@ -132,11 +113,8 @@ tasks.processResources {
     filesMatching("paper-plugin.yml") {
         expand("version" to project.version, "description" to "Cinch's Missing Blocks companion behaviours")
     }
-    dependsOn(generatePack)
-    from(bundledPack) {
+    from("pack") {
         into("pack")
-        include("index.txt", "pack.yml", "configuration/**", "resourcepack/**",
-                "intermediate/mining.json", "intermediate/pieces.json")
-        exclude("configuration/config.yml")
+        exclude("upstream.properties")
     }
 }

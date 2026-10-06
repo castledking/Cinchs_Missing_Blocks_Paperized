@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "minecraft:block/dark_prismarine"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "south": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "west": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "east": {
+          "texture": "minecraft:block/dark_prismarine"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "north": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "east": {
+          "texture": "minecraft:block/dark_prismarine"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "east": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "south": {
+          "texture": "minecraft:block/dark_prismarine"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "south": {
+          "texture": "minecraft:block/dark_prismarine",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/dark_prismarine"
+        },
+        "west": {
+          "texture": "minecraft:block/dark_prismarine"
+        }
+      }
+    }
+  ]
+}

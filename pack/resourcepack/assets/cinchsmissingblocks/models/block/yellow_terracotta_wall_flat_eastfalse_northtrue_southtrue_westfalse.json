@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/yellow_terracotta"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/yellow_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/yellow_terracotta",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/yellow_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/yellow_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "north": {
+          "texture": "minecraft:block/yellow_terracotta",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/yellow_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/yellow_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/yellow_terracotta",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/yellow_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/yellow_terracotta"
+        }
+      }
+    }
+  ]
+}

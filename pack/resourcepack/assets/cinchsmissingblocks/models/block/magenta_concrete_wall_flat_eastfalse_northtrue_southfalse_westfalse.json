@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/magenta_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/magenta_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/magenta_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/magenta_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/magenta_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/magenta_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/magenta_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/magenta_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/magenta_concrete"
+        },
+        "north": {
+          "texture": "minecraft:block/magenta_concrete",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/magenta_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/magenta_concrete"
+        }
+      }
+    }
+  ]
+}

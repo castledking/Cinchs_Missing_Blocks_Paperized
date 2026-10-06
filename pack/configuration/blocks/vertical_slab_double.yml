@@ -1,0 +1,5831 @@
+blocks:
+  "cinchsmissingblocks:acacia_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/acacia_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:acacia_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:andesite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/andesite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:andesite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:andesite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/andesite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:andesite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:bamboo_mosaic_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/bamboo_mosaic"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.bamboo_wood.break"
+        fall: "minecraft:block.bamboo_wood.fall"
+        hit: "minecraft:block.bamboo_wood.hit"
+        place: "minecraft:block.bamboo_wood.place"
+        step: "minecraft:block.bamboo_wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:bamboo_mosaic_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:bamboo_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/bamboo_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.bamboo_wood.break"
+        fall: "minecraft:block.bamboo_wood.fall"
+        hit: "minecraft:block.bamboo_wood.hit"
+        place: "minecraft:block.bamboo_wood.place"
+        step: "minecraft:block.bamboo_wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:bamboo_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:birch_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/birch_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:birch_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:black_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/black_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:black_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:black_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/black_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:black_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:black_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/black_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:black_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blackstone_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blackstone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blackstone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blackstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/blackstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blackstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/blue_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_nether_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blue_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_nether_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/blue_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/blue_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:brown_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/brown_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:brown_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:brown_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/brown_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:brown_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:brown_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/brown_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:brown_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:calcite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/calcite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:calcite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:calcite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/calcite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.75
+      resistance: 0.75
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:calcite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cherry_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cherry_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.cherry_wood.break"
+        fall: "minecraft:block.cherry_wood.fall"
+        hit: "minecraft:block.cherry_wood.hit"
+        place: "minecraft:block.cherry_wood.place"
+        step: "minecraft:block.cherry_wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cherry_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cinnabar_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cinnabar_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.cinnabar.break"
+        fall: "minecraft:block.cinnabar.fall"
+        hit: "minecraft:block.cinnabar.hit"
+        place: "minecraft:block.cinnabar.place"
+        step: "minecraft:block.cinnabar.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cinnabar_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cinnabar_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cinnabar"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.cinnabar.break"
+        fall: "minecraft:block.cinnabar.fall"
+        hit: "minecraft:block.cinnabar.hit"
+        place: "minecraft:block.cinnabar.place"
+        step: "minecraft:block.cinnabar.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cinnabar_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cobbled_deepslate_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cobbled_deepslate"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.deepslate.break"
+        fall: "minecraft:block.deepslate.fall"
+        hit: "minecraft:block.deepslate.hit"
+        place: "minecraft:block.deepslate.place"
+        step: "minecraft:block.deepslate.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cobbled_deepslate_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cobblestone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cobblestone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cobblestone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_andesite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_andesite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_andesite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_blackstone_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_blackstone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_blackstone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_blue_nether_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_blue_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_blue_nether_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_calcite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_calcite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_calcite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_deepslate_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_deepslate_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_deepslate_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_deepslate_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_deepslate_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_deepslate_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_diorite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_diorite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_diorite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_dripstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_dripstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_dripstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_end_stone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_end_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_end_stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_granite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_granite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_granite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_mud_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_mud_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_mud_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_nether_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_nether_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_polished_blackstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_polished_blackstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_polished_blackstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_prismarine_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_prismarine_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_prismarine_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_quartz_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_quartz_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_quartz_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_red_nether_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_red_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_red_nether_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_red_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_red_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_red_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_stone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_stone_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_stone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_stone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_tuff_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_tuff_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_tuff_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:crimson_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/crimson_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.nether_wood.break"
+        fall: "minecraft:block.nether_wood.fall"
+        hit: "minecraft:block.nether_wood.hit"
+        place: "minecraft:block.nether_wood.place"
+        step: "minecraft:block.nether_wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:crimson_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cut_copper_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cut_copper"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.copper.break"
+        fall: "minecraft:block.copper.fall"
+        hit: "minecraft:block.copper.hit"
+        place: "minecraft:block.copper.place"
+        step: "minecraft:block.copper.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cut_copper_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cut_red_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cut_red_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cut_red_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cut_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cut_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cut_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cyan_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cyan_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cyan_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cyan_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cyan_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cyan_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cyan_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cyan_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cyan_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:dark_oak_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/dark_oak_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:dark_oak_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:dark_prismarine_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/dark_prismarine"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:dark_prismarine_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:deepslate_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/deepslate_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.deepslate_bricks.break"
+        fall: "minecraft:block.deepslate_bricks.fall"
+        hit: "minecraft:block.deepslate_bricks.hit"
+        place: "minecraft:block.deepslate_bricks.place"
+        step: "minecraft:block.deepslate_bricks.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:deepslate_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:deepslate_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/deepslate_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.deepslate_tiles.break"
+        fall: "minecraft:block.deepslate_tiles.fall"
+        hit: "minecraft:block.deepslate_tiles.hit"
+        place: "minecraft:block.deepslate_tiles.place"
+        step: "minecraft:block.deepslate_tiles.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:deepslate_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:deepslate_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/deepslate"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:deepslate_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:diorite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/diorite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:diorite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:diorite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/diorite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:diorite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:dripstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/dripstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:dripstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:dripstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/dripstone_block"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:dripstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:end_stone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/end_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:end_stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:end_stone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/end_stone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:end_stone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:exposed_cut_copper_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/exposed_cut_copper"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.copper.break"
+        fall: "minecraft:block.copper.fall"
+        hit: "minecraft:block.copper.hit"
+        place: "minecraft:block.copper.place"
+        step: "minecraft:block.copper.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:exposed_cut_copper_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:granite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/granite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:granite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:granite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/granite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:granite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:gray_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/gray_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:gray_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:gray_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/gray_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:gray_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:gray_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/gray_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:gray_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:green_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/green_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:green_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:green_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/green_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:green_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:green_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/green_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:green_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:jungle_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/jungle_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:jungle_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_blue_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_blue_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_blue_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_blue_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_blue_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_blue_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_blue_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_blue_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_blue_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_gray_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_gray_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_gray_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_gray_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_gray_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_gray_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_gray_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_gray_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_gray_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:lime_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/lime_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:lime_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:lime_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/lime_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:lime_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:lime_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/lime_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:lime_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:magenta_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/magenta_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:magenta_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:magenta_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/magenta_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:magenta_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:magenta_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/magenta_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:magenta_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mangrove_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/mangrove_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mangrove_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_andesite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_andesite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_andesite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_calcite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_calcite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_calcite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_cobbled_deepslate_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_cobbled_deepslate_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_cobblestone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/mossy_cobblestone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_cobblestone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_deepslate_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_deepslate_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_deepslate_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_deepslate_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_deepslate_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_deepslate_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_diorite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_diorite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_diorite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_dripstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_dripstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_dripstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_end_stone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_end_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_end_stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_granite_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_granite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_granite_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_mud_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_mud_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_mud_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_prismarine_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_prismarine_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_prismarine_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_quartz_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_quartz_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_quartz_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_red_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_red_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_stone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/mossy_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_stone_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_stone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_stone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_tuff_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_tuff_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_tuff_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mud_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/mud_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.mud_bricks.break"
+        fall: "minecraft:block.mud_bricks.fall"
+        hit: "minecraft:block.mud_bricks.hit"
+        place: "minecraft:block.mud_bricks.place"
+        step: "minecraft:block.mud_bricks.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mud_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:nether_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:nether_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:netherrack_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/netherrack"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.4
+      resistance: 0.4
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:netherrack_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:oak_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/oak_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:oak_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:orange_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/orange_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:orange_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:orange_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/orange_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:orange_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:orange_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/orange_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:orange_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:oxidized_cut_copper_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/oxidized_cut_copper"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.copper.break"
+        fall: "minecraft:block.copper.fall"
+        hit: "minecraft:block.copper.hit"
+        place: "minecraft:block.copper.place"
+        step: "minecraft:block.copper.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:oxidized_cut_copper_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:packed_mud_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/packed_mud"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:packed_mud_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:pale_oak_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/pale_oak_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:pale_oak_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:pink_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/pink_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:pink_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:pink_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/pink_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:pink_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:pink_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/pink_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:pink_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_andesite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_andesite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_andesite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_blackstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_blackstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_blackstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_blackstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_blackstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_blackstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_calcite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_calcite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_calcite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_cinnabar_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_cinnabar"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.cinnabar.break"
+        fall: "minecraft:block.cinnabar.fall"
+        hit: "minecraft:block.cinnabar.hit"
+        place: "minecraft:block.cinnabar.place"
+        step: "minecraft:block.cinnabar.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_cinnabar_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_deepslate_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_deepslate"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.polished_deepslate.break"
+        fall: "minecraft:block.polished_deepslate.fall"
+        hit: "minecraft:block.polished_deepslate.hit"
+        place: "minecraft:block.polished_deepslate.place"
+        step: "minecraft:block.polished_deepslate.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_deepslate_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_diorite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_diorite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_diorite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_dripstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_dripstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_dripstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_end_stone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_end_stone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_end_stone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_granite_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_granite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_granite_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_sulfur_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_sulfur"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        fall: "minecraft:block.sulfur.fall"
+        hit: "minecraft:block.sulfur.hit"
+        place: "minecraft:block.sulfur.place"
+        step: "minecraft:block.sulfur.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_sulfur_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_tuff_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/polished_tuff"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.polished_tuff.break"
+        fall: "minecraft:block.polished_tuff.fall"
+        hit: "minecraft:block.polished_tuff.hit"
+        place: "minecraft:block.polished_tuff.place"
+        step: "minecraft:block.polished_tuff.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_tuff_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:poplar_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/poplar_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:poplar_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:prismarine_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/prismarine_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:prismarine_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:prismarine_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/prismarine"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:prismarine_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:purple_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/purple_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:purple_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:purple_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/purple_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:purple_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:purple_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/purple_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:purple_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:purpur_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/purpur_block"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:purpur_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:quartz_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/quartz_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:quartz_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:quartz_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/quartz_block"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:quartz_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_nether_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_nether_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:resin_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/resin_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.resin_bricks.break"
+        fall: "minecraft:block.resin_bricks.fall"
+        hit: "minecraft:block.resin_bricks.hit"
+        place: "minecraft:block.resin_bricks.place"
+        step: "minecraft:block.resin_bricks.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:resin_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:smooth_basalt_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/smooth_basalt"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_basalt_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:smooth_quartz_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/smooth_quartz"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_quartz_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:smooth_red_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/smooth_red_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_red_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:smooth_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/smooth_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:smooth_stone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/smooth_stone_slab_double"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_stone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:snow_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/snow_block"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.2
+      resistance: 0.2
+      tags:
+        - "minecraft:mineable/shovel"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:snow_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:spruce_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/spruce_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.wood.break"
+        fall: "minecraft:block.wood.fall"
+        hit: "minecraft:block.wood.hit"
+        place: "minecraft:block.wood.place"
+        step: "minecraft:block.wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:spruce_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:stone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:stone_tile_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/stone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:stone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/stone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:sulfur_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/sulfur_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        fall: "minecraft:block.sulfur.fall"
+        hit: "minecraft:block.sulfur.hit"
+        place: "minecraft:block.sulfur.place"
+        step: "minecraft:block.sulfur.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sulfur_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:sulfur_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/sulfur"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        fall: "minecraft:block.sulfur.fall"
+        hit: "minecraft:block.sulfur.hit"
+        place: "minecraft:block.sulfur.place"
+        step: "minecraft:block.sulfur.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sulfur_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:tuff_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/tuff_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.tuff_bricks.break"
+        fall: "minecraft:block.tuff_bricks.fall"
+        hit: "minecraft:block.tuff_bricks.hit"
+        place: "minecraft:block.tuff_bricks.place"
+        step: "minecraft:block.tuff_bricks.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:tuff_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:tuff_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/tuff"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.tuff.break"
+        fall: "minecraft:block.tuff.fall"
+        hit: "minecraft:block.tuff.hit"
+        place: "minecraft:block.tuff.place"
+        step: "minecraft:block.tuff.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:tuff_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:warped_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/warped_planks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/axe"
+      sounds:
+        break: "minecraft:block.nether_wood.break"
+        fall: "minecraft:block.nether_wood.fall"
+        hit: "minecraft:block.nether_wood.hit"
+        place: "minecraft:block.nether_wood.place"
+        step: "minecraft:block.nether_wood.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:warped_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:weathered_cut_copper_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/weathered_cut_copper"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.copper.break"
+        fall: "minecraft:block.copper.fall"
+        hit: "minecraft:block.copper.hit"
+        place: "minecraft:block.copper.place"
+        step: "minecraft:block.copper.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:white_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/white_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:white_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/white_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:white_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/white_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:yellow_concrete_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/yellow_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      require_correct_tools: true
+      respect_tool_component: true
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:yellow_terracotta_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/yellow_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:yellow_wool_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/yellow_wool"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      sounds:
+        break: "minecraft:block.wool.break"
+        fall: "minecraft:block.wool.fall"
+        hit: "minecraft:block.wool.hit"
+        place: "minecraft:block.wool.place"
+        step: "minecraft:block.wool.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay

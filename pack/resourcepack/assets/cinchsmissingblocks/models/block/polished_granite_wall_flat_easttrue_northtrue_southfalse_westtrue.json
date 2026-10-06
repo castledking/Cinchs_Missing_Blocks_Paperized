@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "minecraft:block/polished_granite"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "south": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "west": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "east": {
+          "texture": "minecraft:block/polished_granite"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "north": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "east": {
+          "texture": "minecraft:block/polished_granite"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "east": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "south": {
+          "texture": "minecraft:block/polished_granite"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "west": {
+          "texture": "minecraft:block/polished_granite",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/polished_granite"
+        },
+        "north": {
+          "texture": "minecraft:block/polished_granite"
+        }
+      }
+    }
+  ]
+}

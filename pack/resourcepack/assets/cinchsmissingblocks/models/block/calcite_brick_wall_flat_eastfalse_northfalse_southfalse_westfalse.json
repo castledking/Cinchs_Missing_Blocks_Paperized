@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/calcite_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/calcite_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/calcite_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/calcite_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/calcite_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/calcite_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/calcite_bricks"
+        }
+      }
+    }
+  ]
+}

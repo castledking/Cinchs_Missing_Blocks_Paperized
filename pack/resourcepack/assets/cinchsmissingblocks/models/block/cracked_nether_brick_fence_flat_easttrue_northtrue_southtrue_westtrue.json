@@ -1,0 +1,557 @@
+{
+  "textures": {
+    "particle": "minecraft:block/cracked_nether_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        6,
+        0,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            6,
+            6,
+            10,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "uv": [
+            6,
+            6,
+            10,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "uv": [
+            6,
+            0,
+            10,
+            16
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "south": {
+          "uv": [
+            6,
+            0,
+            10,
+            16
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "west": {
+          "uv": [
+            6,
+            0,
+            10,
+            16
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "east": {
+          "uv": [
+            6,
+            0,
+            10,
+            16
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        12,
+        0
+      ],
+      "to": [
+        9,
+        15,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "north": {
+          "uv": [
+            7,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "east": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        6,
+        0
+      ],
+      "to": [
+        9,
+        9,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "north": {
+          "uv": [
+            7,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "west": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "east": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        12,
+        7
+      ],
+      "to": [
+        16,
+        15,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "east": {
+          "uv": [
+            7,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "north": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "south": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        6,
+        7
+      ],
+      "to": [
+        16,
+        9,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "east": {
+          "uv": [
+            7,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "north": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "south": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        12,
+        7
+      ],
+      "to": [
+        9,
+        15,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "south": {
+          "uv": [
+            7,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "east": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "west": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        6,
+        7
+      ],
+      "to": [
+        9,
+        9,
+        16
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "south": {
+          "uv": [
+            7,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "east": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "west": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        12,
+        7
+      ],
+      "to": [
+        9,
+        15,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "west": {
+          "uv": [
+            7,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "south": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "north": {
+          "uv": [
+            0,
+            1,
+            9,
+            4
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        6,
+        7
+      ],
+      "to": [
+        9,
+        9,
+        9
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            9
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "west": {
+          "uv": [
+            7,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks",
+          "cullface": "north"
+        },
+        "south": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        },
+        "north": {
+          "uv": [
+            0,
+            7,
+            9,
+            10
+          ],
+          "texture": "minecraft:block/cracked_nether_bricks"
+        }
+      }
+    }
+  ]
+}

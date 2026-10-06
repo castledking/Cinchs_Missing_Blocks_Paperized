@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "minecraft:block/cut_red_sandstone"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/red_sandstone_top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/cut_red_sandstone"
+        },
+        "south": {
+          "texture": "minecraft:block/cut_red_sandstone"
+        },
+        "west": {
+          "texture": "minecraft:block/cut_red_sandstone"
+        },
+        "east": {
+          "texture": "minecraft:block/cut_red_sandstone"
+        }
+      }
+    }
+  ]
+}

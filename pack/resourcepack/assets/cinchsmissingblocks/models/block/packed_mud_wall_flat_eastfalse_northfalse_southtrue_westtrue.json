@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/packed_mud"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/packed_mud",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/packed_mud",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "south": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "west": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "east": {
+          "texture": "minecraft:block/packed_mud"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/packed_mud",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "south": {
+          "texture": "minecraft:block/packed_mud",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "west": {
+          "texture": "minecraft:block/packed_mud"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/packed_mud",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "west": {
+          "texture": "minecraft:block/packed_mud",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/packed_mud"
+        },
+        "north": {
+          "texture": "minecraft:block/packed_mud"
+        }
+      }
+    }
+  ]
+}

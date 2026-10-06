@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "minecraft:block/deepslate"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/deepslate_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/deepslate_top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/deepslate"
+        },
+        "south": {
+          "texture": "minecraft:block/deepslate"
+        },
+        "west": {
+          "texture": "minecraft:block/deepslate"
+        },
+        "east": {
+          "texture": "minecraft:block/deepslate"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/deepslate_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/deepslate_top"
+        },
+        "east": {
+          "texture": "minecraft:block/deepslate",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/deepslate"
+        },
+        "south": {
+          "texture": "minecraft:block/deepslate"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/deepslate_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/deepslate_top"
+        },
+        "south": {
+          "texture": "minecraft:block/deepslate",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/deepslate"
+        },
+        "west": {
+          "texture": "minecraft:block/deepslate"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/deepslate_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/deepslate_top"
+        },
+        "west": {
+          "texture": "minecraft:block/deepslate",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/deepslate"
+        },
+        "north": {
+          "texture": "minecraft:block/deepslate"
+        }
+      }
+    }
+  ]
+}

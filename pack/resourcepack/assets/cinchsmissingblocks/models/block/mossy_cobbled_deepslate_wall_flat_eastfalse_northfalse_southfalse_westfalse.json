@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_cobbled_deepslate",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_cobbled_deepslate",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+        }
+      }
+    }
+  ]
+}

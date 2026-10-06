@@ -1,16 +1,9 @@
 # CMB configuration
 # Read from plugins/CMB/config.yml and re-read by /cmb reload all.
 #
-# Two kinds of setting live here, and the difference matters when something does not
-# work:
-#
-#   content / disabled-blocks
-#       What the pack contains. Changing one of these changes the allocation, so it
-#       can only be applied by regenerating the pack (tools/generate_pack.py). The
-#       plugin reads them to report what it expects, not to rewrite the pack.
-#
-#   features / resource-pack
-#       Runtime behaviour. Applied by /cmb reload all with no rebuild.
+# None of these needs a rebuild: the plugin installs its bundled CraftEngine pack
+# filtered by this file on startup and again on /cmb reload all, and the behaviour
+# settings are re-read at the same time.
 
 craftengine:
   # Ceiling on the CraftEngine internal states this pack may declare.

@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_tiles"
+        }
+      }
+    }
+  ]
+}

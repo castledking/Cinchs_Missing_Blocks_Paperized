@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/purpur_block"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "south": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "west": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "east": {
+          "texture": "minecraft:block/purpur_block"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "east": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "south": {
+          "texture": "minecraft:block/purpur_block"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "west": {
+          "texture": "minecraft:block/purpur_block",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/purpur_block"
+        },
+        "north": {
+          "texture": "minecraft:block/purpur_block"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_prismarine_bricks"
+        }
+      }
+    }
+  ]
+}

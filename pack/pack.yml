@@ -1,0 +1,5 @@
+author: Cinchtail
+version: 4.4.0
+description: "Cinch's Missing Blocks for Paper, via CraftEngine"
+namespace: cinchsmissingblocks
+enable: true

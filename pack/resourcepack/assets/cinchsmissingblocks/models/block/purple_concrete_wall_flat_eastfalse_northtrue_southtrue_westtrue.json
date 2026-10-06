@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "minecraft:block/purple_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/purple_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "north": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/purple_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/purple_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/purple_concrete",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/purple_concrete"
+        },
+        "north": {
+          "texture": "minecraft:block/purple_concrete"
+        }
+      }
+    }
+  ]
+}

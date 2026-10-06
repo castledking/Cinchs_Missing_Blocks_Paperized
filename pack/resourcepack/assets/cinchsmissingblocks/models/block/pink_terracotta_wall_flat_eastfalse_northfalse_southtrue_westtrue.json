@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/pink_terracotta"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/pink_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/pink_terracotta",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/pink_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/pink_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/pink_terracotta",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/pink_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/pink_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/pink_terracotta",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/pink_terracotta"
+        },
+        "north": {
+          "texture": "minecraft:block/pink_terracotta"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/gray_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/gray_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/gray_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/gray_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/gray_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/gray_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/gray_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/gray_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/gray_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/gray_concrete",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/gray_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/gray_concrete"
+        }
+      }
+    }
+  ]
+}

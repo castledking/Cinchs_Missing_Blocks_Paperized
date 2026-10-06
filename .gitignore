@@ -1,61 +1,13 @@
-# Build output. Everything here is reproducible from tools/, so it stays out of git.
+# Build output
 build/
-dist/
-out/
-
-# Generated intermediate artifacts. Reproducible byte-for-byte from the mod source;
-# regenerate with `python3 tools/generate_pack.py` and inspect them there. The
-# *schema* is tracked (see tools/intermediate.py), the instances are not.
-intermediate/content.json
-intermediate/carriers.json
-intermediate/allocation.json
-content.json
-carriers.json
-allocation.json
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
+.gradle/
 
 # Editors / IDE
+bin/
 .idea/
 *.iml
 .vscode/
 .settings/
 .classpath
 .project
-
-# Gradle / Java (companion plugin)
-.gradle/
-*.class
-
-# Logs and local scratch
-*.log
-logs/
-tmp/
-*.bak
 .DS_Store
-
-# Vanilla reference data is downloaded, not authored, and mechanically re-fetchable
-# with tools/fetch_vanilla.py. The fetcher is tracked; its cache is not.
-tools/vanilla_templates/
-
-# cmb (companion plugin)
-cmb/build/
-cmb/.gradle/
-
-# disposable integration server
-server/
-
-# Paperclip runtime dirs (generated on first boot)
-libraries/
-versions/
-
-# IDE build output (Eclipse / VS Code Java)
-cmb/bin/

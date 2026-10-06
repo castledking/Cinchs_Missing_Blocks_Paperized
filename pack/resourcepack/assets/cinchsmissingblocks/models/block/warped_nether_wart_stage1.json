@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "cinchsmissingblocks:block/warped_nether_wart_stage1"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/quartz_block_side"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/quartz_block_side",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/quartz_block_side",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/quartz_block_side"
+        },
+        "south": {
+          "texture": "minecraft:block/quartz_block_side"
+        },
+        "west": {
+          "texture": "minecraft:block/quartz_block_side"
+        },
+        "east": {
+          "texture": "minecraft:block/quartz_block_side"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/quartz_block_side",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/quartz_block_side"
+        },
+        "west": {
+          "texture": "minecraft:block/quartz_block_side",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/quartz_block_side"
+        },
+        "north": {
+          "texture": "minecraft:block/quartz_block_side"
+        }
+      }
+    }
+  ]
+}

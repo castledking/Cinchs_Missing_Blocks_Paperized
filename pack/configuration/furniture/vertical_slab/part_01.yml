@@ -1,0 +1,3943 @@
+furniture:
+  "cinchsmissingblocks:snow_brick_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Snow Brick Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/snow_brick_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:snow_brick_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:snow_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:snow_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:snow_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:snow_brick_horizontal_stairs"
+  "cinchsmissingblocks:snow_brick_vertical":
+    data:
+      item_name: "<!i><white>Snow Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/snow_brick_vertical"
+    settings:
+      item: "cinchsmissingblocks:snow_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:snow_brick_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:snow_brick_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:snow_brick_vertical"
+  "cinchsmissingblocks:snow_brick_vertical_double":
+    data:
+      item_name: "<!i><white>Snow Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/snow_brick_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:snow_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:snow_brick_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:snow_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:spruce_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Spruce Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/spruce_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:spruce_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wood.break"
+        place: "minecraft:block.wood.place"
+        hit: "minecraft:block.wood.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:spruce_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:spruce_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:spruce_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:spruce_horizontal_stairs"
+  "cinchsmissingblocks:spruce_vertical":
+    data:
+      item_name: "<!i><white>Spruce Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/spruce_vertical"
+    settings:
+      item: "cinchsmissingblocks:spruce_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wood.break"
+        place: "minecraft:block.wood.place"
+        hit: "minecraft:block.wood.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:spruce_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:spruce_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:spruce_vertical"
+  "cinchsmissingblocks:spruce_vertical_double":
+    data:
+      item_name: "<!i><white>Spruce Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/spruce_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:spruce_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wood.break"
+        place: "minecraft:block.wood.place"
+        hit: "minecraft:block.wood.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:spruce_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:spruce_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:stone_brick_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Stone Brick Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/stone_brick_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:stone_brick_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:stone_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:stone_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:stone_brick_horizontal_stairs"
+  "cinchsmissingblocks:stone_brick_vertical":
+    data:
+      item_name: "<!i><white>Stone Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/stone_brick_vertical"
+    settings:
+      item: "cinchsmissingblocks:stone_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_brick_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:stone_brick_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:stone_brick_vertical"
+  "cinchsmissingblocks:stone_brick_vertical_double":
+    data:
+      item_name: "<!i><white>Stone Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/stone_brick_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:stone_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_brick_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:stone_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Stone Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/stone_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:stone_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:stone_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:stone_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:stone_horizontal_stairs"
+  "cinchsmissingblocks:stone_tile_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Stone Tile Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/stone_tile_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:stone_tile_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_tile_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:stone_tile_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:stone_tile_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:stone_tile_horizontal_stairs"
+  "cinchsmissingblocks:stone_tile_vertical":
+    data:
+      item_name: "<!i><white>Stone Tile Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/stone_tile_vertical"
+    settings:
+      item: "cinchsmissingblocks:stone_tile_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_tile_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:stone_tile_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:stone_tile_vertical"
+  "cinchsmissingblocks:stone_tile_vertical_double":
+    data:
+      item_name: "<!i><white>Stone Tile Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/stone_tile_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:stone_tile_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_tile_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:stone_vertical":
+    data:
+      item_name: "<!i><white>Stone Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/stone_vertical"
+    settings:
+      item: "cinchsmissingblocks:stone_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:stone_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:stone_vertical"
+  "cinchsmissingblocks:stone_vertical_double":
+    data:
+      item_name: "<!i><white>Stone Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/stone_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:stone_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:stone_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:sulfur_brick_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Sulfur Brick Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/sulfur_brick_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:sulfur_brick_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        place: "minecraft:block.sulfur.place"
+        hit: "minecraft:block.sulfur.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:sulfur_brick_horizontal_stairs"
+  "cinchsmissingblocks:sulfur_brick_vertical":
+    data:
+      item_name: "<!i><white>Sulfur Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/sulfur_brick_vertical"
+    settings:
+      item: "cinchsmissingblocks:sulfur_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        place: "minecraft:block.sulfur.place"
+        hit: "minecraft:block.sulfur.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_brick_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_brick_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:sulfur_brick_vertical"
+  "cinchsmissingblocks:sulfur_brick_vertical_double":
+    data:
+      item_name: "<!i><white>Sulfur Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/sulfur_brick_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:sulfur_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        place: "minecraft:block.sulfur.place"
+        hit: "minecraft:block.sulfur.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_brick_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sulfur_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:sulfur_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Sulfur Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/sulfur_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:sulfur_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        place: "minecraft:block.sulfur.place"
+        hit: "minecraft:block.sulfur.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:sulfur_horizontal_stairs"
+  "cinchsmissingblocks:sulfur_vertical":
+    data:
+      item_name: "<!i><white>Sulfur Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/sulfur_vertical"
+    settings:
+      item: "cinchsmissingblocks:sulfur_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        place: "minecraft:block.sulfur.place"
+        hit: "minecraft:block.sulfur.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:sulfur_vertical"
+  "cinchsmissingblocks:sulfur_vertical_double":
+    data:
+      item_name: "<!i><white>Sulfur Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/sulfur_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:sulfur_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        place: "minecraft:block.sulfur.place"
+        hit: "minecraft:block.sulfur.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:sulfur_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sulfur_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:terracotta_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Terracotta Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/terracotta_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:terracotta_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:terracotta_horizontal_stairs"
+  "cinchsmissingblocks:terracotta_vertical":
+    data:
+      item_name: "<!i><white>Terracotta Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/terracotta_vertical"
+    settings:
+      item: "cinchsmissingblocks:terracotta_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:terracotta_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:terracotta_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:terracotta_vertical"
+  "cinchsmissingblocks:terracotta_vertical_double":
+    data:
+      item_name: "<!i><white>Terracotta Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/terracotta_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:terracotta_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:terracotta_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:tuff_brick_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Tuff Brick Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/tuff_brick_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:tuff_brick_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.tuff_bricks.break"
+        place: "minecraft:block.tuff_bricks.place"
+        hit: "minecraft:block.tuff_bricks.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:tuff_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:tuff_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:tuff_brick_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:tuff_brick_horizontal_stairs"
+  "cinchsmissingblocks:tuff_brick_vertical":
+    data:
+      item_name: "<!i><white>Tuff Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/tuff_brick_vertical"
+    settings:
+      item: "cinchsmissingblocks:tuff_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.tuff_bricks.break"
+        place: "minecraft:block.tuff_bricks.place"
+        hit: "minecraft:block.tuff_bricks.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:tuff_brick_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:tuff_brick_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:tuff_brick_vertical"
+  "cinchsmissingblocks:tuff_brick_vertical_double":
+    data:
+      item_name: "<!i><white>Tuff Brick Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/tuff_brick_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:tuff_brick_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.tuff_bricks.break"
+        place: "minecraft:block.tuff_bricks.place"
+        hit: "minecraft:block.tuff_bricks.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:tuff_brick_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:tuff_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:tuff_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Tuff Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/tuff_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:tuff_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.tuff.break"
+        place: "minecraft:block.tuff.place"
+        hit: "minecraft:block.tuff.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:tuff_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:tuff_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:tuff_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:tuff_horizontal_stairs"
+  "cinchsmissingblocks:tuff_vertical":
+    data:
+      item_name: "<!i><white>Tuff Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/tuff_vertical"
+    settings:
+      item: "cinchsmissingblocks:tuff_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.tuff.break"
+        place: "minecraft:block.tuff.place"
+        hit: "minecraft:block.tuff.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:tuff_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:tuff_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:tuff_vertical"
+  "cinchsmissingblocks:tuff_vertical_double":
+    data:
+      item_name: "<!i><white>Tuff Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/tuff_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:tuff_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.tuff.break"
+        place: "minecraft:block.tuff.place"
+        hit: "minecraft:block.tuff.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:tuff_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:tuff_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:warped_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Warped Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/warped_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:warped_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.nether_wood.break"
+        place: "minecraft:block.nether_wood.place"
+        hit: "minecraft:block.nether_wood.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:warped_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:warped_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:warped_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:warped_horizontal_stairs"
+  "cinchsmissingblocks:warped_vertical":
+    data:
+      item_name: "<!i><white>Warped Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/warped_vertical"
+    settings:
+      item: "cinchsmissingblocks:warped_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.nether_wood.break"
+        place: "minecraft:block.nether_wood.place"
+        hit: "minecraft:block.nether_wood.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:warped_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:warped_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:warped_vertical"
+  "cinchsmissingblocks:warped_vertical_double":
+    data:
+      item_name: "<!i><white>Warped Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/warped_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:warped_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.nether_wood.break"
+        place: "minecraft:block.nether_wood.place"
+        hit: "minecraft:block.nether_wood.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:warped_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:warped_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:weathered_cut_copper_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Weathered Cut Copper Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/weathered_cut_copper_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:weathered_cut_copper_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.copper.break"
+        place: "minecraft:block.copper.place"
+        hit: "minecraft:block.copper.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:weathered_cut_copper_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:weathered_cut_copper_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:weathered_cut_copper_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:weathered_cut_copper_horizontal_stairs"
+  "cinchsmissingblocks:weathered_cut_copper_vertical":
+    data:
+      item_name: "<!i><white>Weathered Cut Copper Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/weathered_cut_copper_vertical"
+    settings:
+      item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.copper.break"
+        place: "minecraft:block.copper.place"
+        hit: "minecraft:block.copper.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+  "cinchsmissingblocks:weathered_cut_copper_vertical_double":
+    data:
+      item_name: "<!i><white>Weathered Cut Copper Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/weathered_cut_copper_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.copper.break"
+        place: "minecraft:block.copper.place"
+        hit: "minecraft:block.copper.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:weathered_cut_copper_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:weathered_cut_copper_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:white_concrete_horizontal_stairs":
+    data:
+      item_name: "<!i><white>White Concrete Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/white_concrete_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:white_concrete_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_concrete_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:white_concrete_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:white_concrete_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:white_concrete_horizontal_stairs"
+  "cinchsmissingblocks:white_concrete_vertical":
+    data:
+      item_name: "<!i><white>White Concrete Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/white_concrete_vertical"
+    settings:
+      item: "cinchsmissingblocks:white_concrete_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_concrete_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:white_concrete_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:white_concrete_vertical"
+  "cinchsmissingblocks:white_concrete_vertical_double":
+    data:
+      item_name: "<!i><white>White Concrete Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/white_concrete_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:white_concrete_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_concrete_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:white_terracotta_horizontal_stairs":
+    data:
+      item_name: "<!i><white>White Terracotta Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/white_terracotta_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:white_terracotta_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:white_terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:white_terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:white_terracotta_horizontal_stairs"
+  "cinchsmissingblocks:white_terracotta_vertical":
+    data:
+      item_name: "<!i><white>White Terracotta Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/white_terracotta_vertical"
+    settings:
+      item: "cinchsmissingblocks:white_terracotta_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_terracotta_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:white_terracotta_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:white_terracotta_vertical"
+  "cinchsmissingblocks:white_terracotta_vertical_double":
+    data:
+      item_name: "<!i><white>White Terracotta Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/white_terracotta_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:white_terracotta_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_terracotta_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:white_wool_horizontal_stairs":
+    data:
+      item_name: "<!i><white>White Wool Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/white_wool_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:white_wool_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wool.break"
+        place: "minecraft:block.wool.place"
+        hit: "minecraft:block.wool.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_wool_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:white_wool_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:white_wool_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:white_wool_horizontal_stairs"
+  "cinchsmissingblocks:white_wool_vertical":
+    data:
+      item_name: "<!i><white>White Wool Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/white_wool_vertical"
+    settings:
+      item: "cinchsmissingblocks:white_wool_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wool.break"
+        place: "minecraft:block.wool.place"
+        hit: "minecraft:block.wool.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_wool_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:white_wool_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:white_wool_vertical"
+  "cinchsmissingblocks:white_wool_vertical_double":
+    data:
+      item_name: "<!i><white>White Wool Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/white_wool_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:white_wool_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wool.break"
+        place: "minecraft:block.wool.place"
+        hit: "minecraft:block.wool.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:white_wool_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:yellow_concrete_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Yellow Concrete Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/yellow_concrete_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:yellow_concrete_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_concrete_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:yellow_concrete_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:yellow_concrete_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:yellow_concrete_horizontal_stairs"
+  "cinchsmissingblocks:yellow_concrete_vertical":
+    data:
+      item_name: "<!i><white>Yellow Concrete Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/yellow_concrete_vertical"
+    settings:
+      item: "cinchsmissingblocks:yellow_concrete_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_concrete_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:yellow_concrete_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:yellow_concrete_vertical"
+  "cinchsmissingblocks:yellow_concrete_vertical_double":
+    data:
+      item_name: "<!i><white>Yellow Concrete Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/yellow_concrete_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:yellow_concrete_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_concrete_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_concrete_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:yellow_terracotta_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Yellow Terracotta Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/yellow_terracotta_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:yellow_terracotta_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:yellow_terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:yellow_terracotta_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:yellow_terracotta_horizontal_stairs"
+  "cinchsmissingblocks:yellow_terracotta_vertical":
+    data:
+      item_name: "<!i><white>Yellow Terracotta Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/yellow_terracotta_vertical"
+    settings:
+      item: "cinchsmissingblocks:yellow_terracotta_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_terracotta_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:yellow_terracotta_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:yellow_terracotta_vertical"
+  "cinchsmissingblocks:yellow_terracotta_vertical_double":
+    data:
+      item_name: "<!i><white>Yellow Terracotta Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/yellow_terracotta_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:yellow_terracotta_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_terracotta_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_terracotta_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:yellow_wool_horizontal_stairs":
+    data:
+      item_name: "<!i><white>Yellow Wool Horizontal Stairs"
+    model:
+      path: "cinchsmissingblocks:item/yellow_wool_horizontal_stairs"
+    settings:
+      item: "cinchsmissingblocks:yellow_wool_horizontal_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wool.break"
+        place: "minecraft:block.wool.place"
+        hit: "minecraft:block.wool.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_wool_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:yellow_wool_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+      ceiling:
+        elements:
+          - item: "cinchsmissingblocks:yellow_wool_horizontal_stairs"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+            blocks_building: false
+        loot_spawn_offset: "0,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:yellow_wool_horizontal_stairs"
+  "cinchsmissingblocks:yellow_wool_vertical":
+    data:
+      item_name: "<!i><white>Yellow Wool Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/yellow_wool_vertical"
+    settings:
+      item: "cinchsmissingblocks:yellow_wool_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wool.break"
+        place: "minecraft:block.wool.place"
+        hit: "minecraft:block.wool.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_wool_vertical"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0,0"
+      wall:
+        elements:
+          - item: "cinchsmissingblocks:yellow_wool_vertical"
+            position: "0,0,0.5"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,-0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0.5,0,0"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:yellow_wool_vertical"
+  "cinchsmissingblocks:yellow_wool_vertical_double":
+    data:
+      item_name: "<!i><white>Yellow Wool Vertical Slab"
+    model:
+      path: "cinchsmissingblocks:item/yellow_wool_vertical_double__full"
+    settings:
+      item: "cinchsmissingblocks:yellow_wool_vertical"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.wool.break"
+        place: "minecraft:block.wool.place"
+        hit: "minecraft:block.wool.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:yellow_wool_vertical_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_wool_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false

@@ -29,7 +29,7 @@ import org.yaml.snakeyaml.Yaml;
  * Installs the CraftEngine pack bundled in the jar, as this server's config.yml wants it.
  *
  * <p>The jar carries one pack, generated at build time from the pinned upstream mod
- * with everything on (tools/build-config.release.yml). {@code pack/intermediate/
+ * with everything on (the release build config). {@code pack/intermediate/
  * pieces.json} says, for every item, block and furniture id, which config switches it
  * depends on; this removes the ids whose switches are off, every recipe that names
  * one, and their category entries, and writes the result to

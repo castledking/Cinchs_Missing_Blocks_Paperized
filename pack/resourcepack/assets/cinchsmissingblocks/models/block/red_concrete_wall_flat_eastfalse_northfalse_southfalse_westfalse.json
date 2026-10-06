@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "minecraft:block/red_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/red_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/red_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/red_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/red_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/red_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/red_concrete"
+        }
+      }
+    }
+  ]
+}

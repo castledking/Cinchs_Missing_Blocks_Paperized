@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/netherrack"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/netherrack",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/netherrack",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "south": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "west": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "east": {
+          "texture": "minecraft:block/netherrack"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/netherrack",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "south": {
+          "texture": "minecraft:block/netherrack",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "west": {
+          "texture": "minecraft:block/netherrack"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/netherrack",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "west": {
+          "texture": "minecraft:block/netherrack",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/netherrack"
+        },
+        "north": {
+          "texture": "minecraft:block/netherrack"
+        }
+      }
+    }
+  ]
+}

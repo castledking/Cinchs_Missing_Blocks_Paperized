@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/smooth_stone"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/smooth_stone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/smooth_stone",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/smooth_stone"
+        },
+        "south": {
+          "texture": "minecraft:block/smooth_stone"
+        },
+        "west": {
+          "texture": "minecraft:block/smooth_stone"
+        },
+        "east": {
+          "texture": "minecraft:block/smooth_stone"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/smooth_stone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/smooth_stone"
+        },
+        "east": {
+          "texture": "minecraft:block/smooth_stone",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/smooth_stone"
+        },
+        "south": {
+          "texture": "minecraft:block/smooth_stone"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/light_blue_terracotta"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/light_blue_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/light_blue_terracotta",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/light_blue_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "north": {
+          "texture": "minecraft:block/light_blue_terracotta",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/light_blue_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/light_blue_terracotta",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/light_blue_terracotta"
+        }
+      }
+    }
+  ]
+}

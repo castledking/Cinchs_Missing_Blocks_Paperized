@@ -1,0 +1,3103 @@
+blocks:
+  "cinchsmissingblocks:andesite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/andesite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:andesite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:black_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/black_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:black_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:black_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/black_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:black_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blackstone_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blackstone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blackstone_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/blue_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_nether_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blue_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_nether_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:blue_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/blue_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:blue_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:brown_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/brown_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:brown_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:brown_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/brown_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:brown_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:calcite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/calcite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:calcite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:calcite_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/calcite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.75
+      resistance: 0.75
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:calcite_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_andesite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_andesite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_andesite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_blackstone_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_blackstone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_blackstone_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_blue_nether_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_blue_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_blue_nether_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_calcite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_calcite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_calcite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_deepslate_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_deepslate_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_deepslate_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_deepslate_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_deepslate_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_deepslate_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_diorite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_diorite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_diorite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_dripstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_dripstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_dripstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_end_stone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_end_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_end_stone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_granite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_granite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_granite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_mud_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_mud_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_mud_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_nether_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_nether_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_polished_blackstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_polished_blackstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_polished_blackstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_prismarine_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_prismarine_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_prismarine_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_quartz_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_quartz_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_quartz_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_red_nether_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_red_nether_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_red_nether_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_red_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_red_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_red_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_stone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cracked_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_stone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_stone_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_stone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_stone_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_tuff_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_tuff_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_tuff_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cyan_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cyan_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cyan_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cyan_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/cyan_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cyan_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:deepslate_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/deepslate"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:deepslate_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:diorite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/diorite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:diorite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:dripstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/dripstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:dripstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:dripstone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/dripstone_block"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:dripstone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:end_stone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/end_stone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:end_stone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:granite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/granite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:granite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:gray_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/gray_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:gray_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:gray_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/gray_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:gray_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:green_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/green_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:green_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:green_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/green_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:green_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_blue_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_blue_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_blue_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_blue_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_blue_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_blue_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_gray_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_gray_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_gray_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:light_gray_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/light_gray_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:light_gray_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:lime_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/lime_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:lime_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:lime_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/lime_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:lime_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:magenta_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/magenta_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:magenta_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:magenta_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/magenta_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:magenta_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_andesite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_andesite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_andesite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_calcite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_calcite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_calcite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_cobbled_deepslate_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_cobbled_deepslate"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_cobbled_deepslate_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_deepslate_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_deepslate_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_deepslate_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_deepslate_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_deepslate_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_deepslate_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_diorite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_diorite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_diorite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_dripstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_dripstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_dripstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_end_stone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_end_stone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_end_stone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_granite_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_granite_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_granite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_mud_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_mud_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_mud_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_prismarine_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_prismarine_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_prismarine_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_quartz_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_quartz_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_quartz_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_red_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_red_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_stone_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_stone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_stone_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_tuff_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_tuff_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_tuff_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:netherrack_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/netherrack"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.4
+      resistance: 0.4
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:netherrack_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:orange_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/orange_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:orange_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:orange_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/orange_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:orange_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:packed_mud_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/packed_mud"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      resistance: 3.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:packed_mud_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:pink_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/pink_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:pink_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:pink_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/pink_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:pink_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_calcite_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_calcite"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.0
+      resistance: 1.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_calcite_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_dripstone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_dripstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_dripstone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:polished_end_stone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/polished_end_stone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 3.0
+      resistance: 9.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:polished_end_stone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:purple_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/purple_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:purple_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:purple_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/purple_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:purple_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:quartz_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/quartz_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:quartz_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:red_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/red_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:red_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:smooth_basalt_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/smooth_basalt"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_basalt_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:snow_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/snow_block"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.2
+      resistance: 0.2
+      tags:
+        - "minecraft:mineable/shovel"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:snow_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:stone_tile_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/stone_tiles"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:stone_tile_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:white_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/white_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:white_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/white_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:white_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:yellow_concrete_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/yellow_concrete"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.8
+      resistance: 1.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_concrete_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:yellow_terracotta_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "minecraft:block/yellow_terracotta"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.25
+      resistance: 4.2
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:yellow_terracotta_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay

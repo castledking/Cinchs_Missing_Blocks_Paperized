@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/polished_dripstone"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/polished_dripstone"
+        }
+      }
+    }
+  ]
+}

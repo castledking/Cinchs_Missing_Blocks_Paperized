@@ -1,11 +1,10 @@
 # Watches the upstream mod (cinchtail/Cinchs_Missing_Blocks) for a new version and opens
-# a PR that moves the pin in upstream/upstream.properties and refreshes the local
-# fallback copy. Merging that PR is when the port adapts to upstream - nothing changes
-# until then, and builds keep using the pinned commit (from GitHub, or the fallback
-# when GitHub is down).
+# an issue when there is one. The bundled pack in pack/ is generated from one pinned
+# upstream commit (pack/upstream.properties); following a new upstream version means
+# regenerating it, which happens off GitHub, so this only raises the flag.
 #
 # Upstream doesn't tag releases; a release is a change of `version=` in its
-# gradle.properties (see tools/upstream.py).
+# gradle.properties on the default branch.
 name: upstream-watch
 
 on:
@@ -14,8 +13,8 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
+  issues: write
 
 jobs:
   watch:
@@ -23,53 +22,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-
-      - run: pip install pyyaml pillow
-
       - name: Compare the pin with upstream
-        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          set +e
-          out=$(python3 tools/upstream.py check)
-          code=$?
-          set -e
-          echo "$out"
-          if [ "$code" -eq 10 ]; then
-            echo "newer=true" >> "$GITHUB_OUTPUT"
-            echo "version=$(echo "$out" | python3 -c 'import json,sys;print(json.load(sys.stdin)["latest"]["version"])')" >> "$GITHUB_OUTPUT"
-          elif [ "$code" -ne 0 ]; then
-            exit "$code"
+          set -euo pipefail
+          prop() { grep -m1 "^$1=" pack/upstream.properties | cut -d= -f2-; }
+          repo=$(prop repo)
+          branch=$(prop branch)
+          pinned=$(prop version)
+          latest=$(curl -fsSL "https://raw.githubusercontent.com/$repo/$branch/gradle.properties" \
+                   | grep -m1 '^version=' | cut -d= -f2- | tr -d '[:space:]')
+          echo "pinned $pinned, upstream $latest"
+          if [ -z "$latest" ] || [ "$latest" = "$pinned" ]; then
+            exit 0
           fi
-
-      - name: Move the pin and refresh the fallback
-        if: steps.check.outputs.newer == 'true'
-        run: python3 tools/upstream.py bump
-
-      - name: Try a build from the new pin
-        if: steps.check.outputs.newer == 'true'
-        id: build
-        continue-on-error: true
-        run: |
-          python3 tools/upstream.py fetch --out build/upstream
-          python3 tools/generate_pack.py --mod build/upstream --out build/pack --mc-version 26.3 --check 2>&1 | tee build/generate.log
-          tail -n 60 build/generate.log > build/generate.tail
-
-      - name: Open the PR
-        if: steps.check.outputs.newer == 'true'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          branch: upstream/bump
-          title: "upstream: Cinch's Missing Blocks ${{ steps.check.outputs.version }}"
-          commit-message: "upstream: pin Cinch's Missing Blocks ${{ steps.check.outputs.version }}"
-          body: |
-            Upstream released **${{ steps.check.outputs.version }}**. This moves the pin
-            and refreshes the fallback copy in `upstream/`.
-
-            Generator build from the new pin: **${{ steps.build.outcome }}**. Before
-            merging, run the fixtures locally (`python3 tools/test_*.py`) and adapt the
-            generator to whatever upstream changed.
-          add-paths: |
-            upstream/
+          title="upstream: Cinch's Missing Blocks $latest"
+          if gh issue list --state all --search "\"$title\" in:title" --json number --jq '.[].number' | grep -q .; then
+            echo "already reported"
+            exit 0
+          fi
+          gh issue create --title "$title" --body "Upstream ($repo, branch \`$branch\`) is at **$latest**; the bundled pack is generated from **$pinned**. Regenerate pack/ from the new version and check what changed before releasing."

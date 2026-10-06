@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_deepslate_bricks"
+        }
+      }
+    }
+  ]
+}

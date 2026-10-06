@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/cracked_red_nether_bricks"
+        }
+      }
+    }
+  ]
+}

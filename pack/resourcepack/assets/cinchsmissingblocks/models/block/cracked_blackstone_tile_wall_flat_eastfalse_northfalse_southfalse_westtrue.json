@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/cracked_blackstone_tiles"
+        }
+      }
+    }
+  ]
+}

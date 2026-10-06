@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/prismarine_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/prismarine_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/prismarine_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/prismarine_bricks"
+        },
+        "south": {
+          "texture": "minecraft:block/prismarine_bricks"
+        },
+        "west": {
+          "texture": "minecraft:block/prismarine_bricks"
+        },
+        "east": {
+          "texture": "minecraft:block/prismarine_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/prismarine_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/prismarine_bricks"
+        },
+        "north": {
+          "texture": "minecraft:block/prismarine_bricks",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/prismarine_bricks"
+        },
+        "east": {
+          "texture": "minecraft:block/prismarine_bricks"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/cut_sandstone"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/sandstone_top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/cut_sandstone"
+        },
+        "south": {
+          "texture": "minecraft:block/cut_sandstone"
+        },
+        "west": {
+          "texture": "minecraft:block/cut_sandstone"
+        },
+        "east": {
+          "texture": "minecraft:block/cut_sandstone"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/sandstone_top"
+        },
+        "north": {
+          "texture": "minecraft:block/cut_sandstone",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/cut_sandstone"
+        },
+        "east": {
+          "texture": "minecraft:block/cut_sandstone"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/sandstone_top",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/sandstone_top"
+        },
+        "south": {
+          "texture": "minecraft:block/cut_sandstone",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/cut_sandstone"
+        },
+        "west": {
+          "texture": "minecraft:block/cut_sandstone"
+        }
+      }
+    }
+  ]
+}

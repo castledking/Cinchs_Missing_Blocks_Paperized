@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/brown_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/brown_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/brown_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/brown_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/brown_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "north": {
+          "texture": "minecraft:block/brown_concrete",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/brown_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/brown_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/brown_concrete",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/brown_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/brown_concrete"
+        }
+      }
+    }
+  ]
+}

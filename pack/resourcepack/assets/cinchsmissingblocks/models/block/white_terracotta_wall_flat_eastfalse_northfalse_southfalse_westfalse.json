@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "minecraft:block/white_terracotta"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/white_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/white_terracotta",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/white_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/white_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/white_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/white_terracotta"
+        }
+      }
+    }
+  ]
+}

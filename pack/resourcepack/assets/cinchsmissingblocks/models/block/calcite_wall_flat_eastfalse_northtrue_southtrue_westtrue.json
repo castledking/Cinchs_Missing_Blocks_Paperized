@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "minecraft:block/calcite"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/calcite"
+        },
+        "south": {
+          "texture": "minecraft:block/calcite"
+        },
+        "west": {
+          "texture": "minecraft:block/calcite"
+        },
+        "east": {
+          "texture": "minecraft:block/calcite"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/calcite"
+        },
+        "north": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/calcite"
+        },
+        "east": {
+          "texture": "minecraft:block/calcite"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/calcite"
+        },
+        "south": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/calcite"
+        },
+        "west": {
+          "texture": "minecraft:block/calcite"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/calcite"
+        },
+        "west": {
+          "texture": "minecraft:block/calcite",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/calcite"
+        },
+        "north": {
+          "texture": "minecraft:block/calcite"
+        }
+      }
+    }
+  ]
+}

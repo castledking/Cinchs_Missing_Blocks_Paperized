@@ -1,0 +1,517 @@
+blocks:
+  "cinchsmissingblocks:andesite_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/andesite_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/andesite_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/andesite_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:andesite_brick_pillar"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:blackstone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blackstone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blackstone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blackstone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:blackstone_brick_pillar"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:calcite_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/calcite_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/calcite_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/calcite_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:calcite_brick_pillar"
+      hardness: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:deepslate_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/deepslate_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/deepslate_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/deepslate_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:deepslate_brick_pillar"
+      hardness: 3.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:diorite_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/diorite_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/diorite_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/diorite_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:diorite_brick_pillar"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:dripstone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/dripstone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/dripstone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/dripstone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:dripstone_brick_pillar"
+      hardness: 1.5
+      resistance: 1.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:end_stone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/end_stone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/end_stone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/end_stone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:end_stone_brick_pillar"
+      hardness: 3.0
+      resistance: 9.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:granite_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/granite_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/granite_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/granite_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:granite_brick_pillar"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mud_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mud_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mud_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mud_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:mud_brick_pillar"
+      hardness: 1.5
+      resistance: 3.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:prismarine_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/prismarine_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/prismarine_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/prismarine_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:prismarine_brick_pillar"
+      hardness: 1.5
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:red_sandstone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_sandstone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_sandstone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_sandstone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:red_sandstone_brick_pillar"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:sandstone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sandstone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sandstone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sandstone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:sandstone_brick_pillar"
+      hardness: 0.8
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:stone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/stone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/stone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/stone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:stone_brick_pillar"
+      hardness: 2.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"

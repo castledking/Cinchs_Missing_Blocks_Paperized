@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/light_gray_concrete"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/light_gray_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/light_gray_concrete",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/light_gray_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/light_gray_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "east": {
+          "texture": "minecraft:block/light_gray_concrete",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "south": {
+          "texture": "minecraft:block/light_gray_concrete"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/light_gray_concrete",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "west": {
+          "texture": "minecraft:block/light_gray_concrete",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/light_gray_concrete"
+        },
+        "north": {
+          "texture": "minecraft:block/light_gray_concrete"
+        }
+      }
+    }
+  ]
+}

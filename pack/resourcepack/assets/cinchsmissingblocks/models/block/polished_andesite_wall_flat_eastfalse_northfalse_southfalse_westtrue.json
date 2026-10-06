@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/polished_andesite"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/polished_andesite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/polished_andesite",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/polished_andesite"
+        },
+        "south": {
+          "texture": "minecraft:block/polished_andesite"
+        },
+        "west": {
+          "texture": "minecraft:block/polished_andesite"
+        },
+        "east": {
+          "texture": "minecraft:block/polished_andesite"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/polished_andesite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/polished_andesite"
+        },
+        "west": {
+          "texture": "minecraft:block/polished_andesite",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/polished_andesite"
+        },
+        "north": {
+          "texture": "minecraft:block/polished_andesite"
+        }
+      }
+    }
+  ]
+}

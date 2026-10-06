@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/stone_tiles"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/stone_tiles",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/stone_tiles"
+        }
+      }
+    }
+  ]
+}

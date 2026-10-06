@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/snow_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/snow_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/snow_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/snow_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/snow_bricks",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/snow_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/snow_bricks",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/snow_bricks"
+        }
+      }
+    }
+  ]
+}

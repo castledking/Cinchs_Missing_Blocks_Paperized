@@ -16,7 +16,7 @@ import org.bukkit.plugin.Plugin;
  * was a fix that appeared to do nothing - the corrected file was written, then
  * overwritten with the old one from the jar.
  *
- * <p>So the deploy step stops here. The Python pipeline owns the pack's contents; the
+ * <p>So the deploy step stops here. The pack generator owns the pack's contents; the
  * plugin owns runtime allocation and the behaviours CraftEngine cannot supply. If the
  * two ever need to be unified, the writer has to render from the bundled
  * {@code content.json} rather than copy a snapshot, and that is a real piece of work

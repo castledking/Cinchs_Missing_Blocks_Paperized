@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/polished_calcite"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/polished_calcite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/polished_calcite",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/polished_calcite",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/polished_calcite",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/polished_calcite"
+        }
+      }
+    }
+  ]
+}

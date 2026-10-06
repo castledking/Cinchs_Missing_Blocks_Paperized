@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "minecraft:block/dripstone_block"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dripstone_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dripstone_block",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "south": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "west": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "east": {
+          "texture": "minecraft:block/dripstone_block"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dripstone_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "east": {
+          "texture": "minecraft:block/dripstone_block",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "south": {
+          "texture": "minecraft:block/dripstone_block"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        5
+      ],
+      "to": [
+        8,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/dripstone_block",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "west": {
+          "texture": "minecraft:block/dripstone_block",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "minecraft:block/dripstone_block"
+        },
+        "north": {
+          "texture": "minecraft:block/dripstone_block"
+        }
+      }
+    }
+  ]
+}

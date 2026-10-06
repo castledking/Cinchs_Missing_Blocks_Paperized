@@ -1,0 +1,75 @@
+furniture:
+  "cinchsmissingblocks:warped_nether_wart":
+    data:
+      item_name: "<!i><white>Warped Nether Wart"
+    model:
+      path: "cinchsmissingblocks:item/warped_nether_wart"
+    settings:
+      item: "cinchsmissingblocks:warped_nether_wart"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.nether_wart.break"
+        place: "minecraft:item.nether_wart.plant"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:warped_nether_wart__stage0"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0
+        hitboxes:
+          - type: interaction
+            position: "0,0,0"
+            width: 0.875
+            height: 0.25
+            blocks_building: false
+        loot_spawn_offset: "0,0.25,0"
+      age_0:
+        elements:
+          - item: "cinchsmissingblocks:warped_nether_wart__stage0"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0
+        hitboxes:
+          - type: interaction
+            position: "0,0,0"
+            width: 0.875
+            height: 0.25
+        loot_spawn_offset: "0,0.25,0"
+      age_1:
+        elements:
+          - item: "cinchsmissingblocks:warped_nether_wart__stage1"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0
+        hitboxes:
+          - type: interaction
+            position: "0,0,0"
+            width: 0.875
+            height: 0.5
+        loot_spawn_offset: "0,0.25,0"
+      age_2:
+        elements:
+          - item: "cinchsmissingblocks:warped_nether_wart__stage1"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0
+        hitboxes:
+          - type: interaction
+            position: "0,0,0"
+            width: 0.875
+            height: 0.75
+        loot_spawn_offset: "0,0.25,0"
+      age_3:
+        elements:
+          - item: "cinchsmissingblocks:warped_nether_wart__stage2"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0
+        hitboxes:
+          - type: interaction
+            position: "0,0,0"
+            width: 0.875
+            height: 0.875
+        loot_spawn_offset: "0,0.25,0"

@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/cyan_terracotta"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/cyan_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/cyan_terracotta",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/cyan_terracotta"
+        },
+        "south": {
+          "texture": "minecraft:block/cyan_terracotta"
+        },
+        "west": {
+          "texture": "minecraft:block/cyan_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/cyan_terracotta"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/cyan_terracotta",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/cyan_terracotta"
+        },
+        "north": {
+          "texture": "minecraft:block/cyan_terracotta",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "minecraft:block/cyan_terracotta"
+        },
+        "east": {
+          "texture": "minecraft:block/cyan_terracotta"
+        }
+      }
+    }
+  ]
+}

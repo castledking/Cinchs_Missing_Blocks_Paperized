@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_red_sandstone_bricks"
+        }
+      }
+    }
+  ]
+}

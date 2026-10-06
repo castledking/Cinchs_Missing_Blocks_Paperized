@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "minecraft:block/cracked_polished_blackstone_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/cracked_polished_blackstone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/cracked_polished_blackstone_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/cracked_polished_blackstone_bricks"
+        },
+        "south": {
+          "texture": "minecraft:block/cracked_polished_blackstone_bricks"
+        },
+        "west": {
+          "texture": "minecraft:block/cracked_polished_blackstone_bricks"
+        },
+        "east": {
+          "texture": "minecraft:block/cracked_polished_blackstone_bricks"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/mossy_end_stone_bricks"
+        }
+      }
+    }
+  ]
+}

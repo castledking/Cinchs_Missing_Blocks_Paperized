@@ -1,0 +1,72 @@
+{
+  "textures": {
+    "particle": "minecraft:block/smooth_basalt"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/smooth_basalt",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/smooth_basalt",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "minecraft:block/smooth_basalt"
+        },
+        "south": {
+          "texture": "minecraft:block/smooth_basalt"
+        },
+        "west": {
+          "texture": "minecraft:block/smooth_basalt"
+        },
+        "east": {
+          "texture": "minecraft:block/smooth_basalt"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "minecraft:block/smooth_basalt",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "minecraft:block/smooth_basalt"
+        },
+        "south": {
+          "texture": "minecraft:block/smooth_basalt",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "minecraft:block/smooth_basalt"
+        },
+        "west": {
+          "texture": "minecraft:block/smooth_basalt"
+        }
+      }
+    }
+  ]
+}
