@@ -124,6 +124,8 @@ public final class CmbPlugin extends JavaPlugin {
         // none: it only acts on cinchsmissingblocks:*_vertical furniture.
         // Which cells hold a piece: the fast "no" for the per-event checks below.
         getServer().getPluginManager().registerEvents(new PieceIndex(this), this);
+        // WorldGuard regions and GriefPrevention claims, for what CMB places and breaks.
+        getServer().getPluginManager().registerEvents(new Protection(this), this);
         getServer().getPluginManager().registerEvents(new VerticalSlabListener(this), this);
         // Several hits to break a furniture piece, by hardness and tool.
         getServer().getPluginManager().registerEvents(new FurnitureMining(this), this);

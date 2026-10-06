@@ -126,6 +126,9 @@ public final class NetherWartCrops implements Listener {
             return;
         }
         Player player = event.player();
+        if (!Protection.canBuild(player, cell, Material.NETHER_WART)) {
+            return;
+        }
         EquipmentSlot slot = event.hand() == InteractionHand.OFF_HAND
                 ? EquipmentSlot.OFF_HAND : EquipmentSlot.HAND;
         if (plant(cell, 0) && player.getGameMode() != GameMode.CREATIVE) {
@@ -153,6 +156,9 @@ public final class NetherWartCrops implements Listener {
         }
         event.setCancelled(true);
         Player player = event.getPlayer();
+        if (!Protection.canBuild(player, cell, Material.NETHER_WART)) {
+            return;
+        }
         if (plant(cell, 0) && player.getGameMode() != GameMode.CREATIVE) {
             event.getItem().setAmount(event.getItem().getAmount() - 1);
         }

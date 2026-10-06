@@ -463,6 +463,11 @@ public final class VerticalSlabListener implements Listener {
         };
         BlockFace wall = face == BlockFace.UP || face == BlockFace.DOWN ? null : face;
         Block cell = targetCell(event.clickedBlock(), face);
+        // A claim or region may not want it: CraftEngine's own check ran on its anchor,
+        // which is not always this cell, and this plugin places the piece itself.
+        if (!Protection.canBuild(player, cell, player.getInventory().getItem(slot).getType())) {
+            return;
+        }
         Vector look = player.getLocation().getDirection();
         // A slab or stair's half, as vanilla: the top of a block gives the bottom half,
         // the underside the top half, and a side whichever half was hit.
@@ -1151,6 +1156,9 @@ public final class VerticalSlabListener implements Listener {
                 || !cell.getType().isAir() || waterEvaporates(cell)) {
             return false;
         }
+        if (!Protection.canBuild(player, cell, held.getType())) {
+            return false;
+        }
         if (!allowed(new PlayerBucketEmptyEvent(player, cell, behind(plate), plate.back(),
                 Material.WATER_BUCKET, held, slot))) {
             return false;
@@ -1168,6 +1176,9 @@ public final class VerticalSlabListener implements Listener {
     private boolean drain(Player player, Plate plate, EquipmentSlot slot, ItemStack held) {
         Block cell = plate.cell();
         if (recentlyHandled(player) || !isWaterSource(cell)) {
+            return false;
+        }
+        if (!Protection.canBuild(player, cell, held.getType())) {
             return false;
         }
         if (!allowed(new PlayerBucketFillEvent(player, cell, behind(plate), plate.back(),
@@ -1210,6 +1221,9 @@ public final class VerticalSlabListener implements Listener {
         // full block, and never on top of a mob or player standing in its open half.
         if (!(cell.getType().isAir() || cell.getType() == Material.WATER)
                 || platesIn(cell).size() != 1 || occupied(cell)) {
+            return false;
+        }
+        if (!Protection.canBuild(player, cell, held.getType())) {
             return false;
         }
         if (!allowed(new BlockPlaceEvent(cell, cell.getState(), behind(plate), held,

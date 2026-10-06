@@ -6,6 +6,8 @@
 prefix: "&6[CMB] "
 
 reload-success: "{prefix}&eReloaded successfully. &7CraftEngine is rebuilding the pack."
+# Shown when WorldGuard refuses a placement or break (GriefPrevention shows its own).
+protected: "{prefix}&cYou can't do that here."
 reload-failed: "{prefix}&cReload failed - see the console for why."
 
 # /cmb item is hidden from anyone without cmb.item, so a "you need permission"

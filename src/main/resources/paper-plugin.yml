@@ -24,6 +24,17 @@ dependencies:
       load: BEFORE
       required: true
       join-classpath: true
+    # Optional: CMB asks them before placing or breaking a piece (Protection).
+    WorldGuard:
+      load: BEFORE
+      required: false
+      join-classpath: true
+    GriefPrevention:
+      load: BEFORE
+      required: false
+    GriefPrevention3D:
+      load: BEFORE
+      required: false
 
 # Paper plugins register commands in code (CmbCommand, through the command lifecycle);
 # a `commands:` block here would be ignored.

@@ -9,6 +9,7 @@ repositories {
     mavenCentral()
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.momirealms.net/releases/")
+    maven("https://maven.enginehub.org/repo/")
 }
 
 java {
@@ -32,6 +33,10 @@ dependencies {
     compileOnly("net.momirealms:craft-engine-core:${property("craftEngineVersion")}")
     compileOnly("net.momirealms:craft-engine-bukkit:${property("craftEngineVersion")}")
     compileOnly("net.momirealms:craft-engine-bukkit-proxy:${property("craftEngineVersion")}")
+
+    // Optional land protection (Protection): only touched when installed on the server.
+    // GriefPrevention, upstream and the 3D fork, is reached by reflection.
+    compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.19")
 }
 
 tasks.withType<JavaCompile>().configureEach {
