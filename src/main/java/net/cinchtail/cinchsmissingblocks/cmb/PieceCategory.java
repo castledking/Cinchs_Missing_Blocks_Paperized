@@ -9,7 +9,7 @@ import java.util.Locale;
  * kinds. A doubled slab is counted with its slab ({@code _slab_double} with the slabs,
  * {@code _vertical_double} with the vertical slabs) whether it was placed as a block or
  * as furniture, so {@code #slabs} finds every slab whichever form it took. The warped
- * nether wart crop is not a building piece and belongs to no category.
+ * nether wart crop is {@code #crops}.
  */
 public enum PieceCategory {
     BLOCKS(0x55FF55),
@@ -20,7 +20,8 @@ public enum PieceCategory {
     FENCES(0xAA0000),
     PANES(0xFF88CC),
     VERTICAL_SLABS(0x9933FF),
-    HORIZONTAL_STAIRS(0xFF00FF);
+    HORIZONTAL_STAIRS(0xFF00FF),
+    CROPS(0x55FFFF);
 
     /** The outline colour when config.yml doesn't set one. */
     public final int defaultColor;
@@ -37,7 +38,7 @@ public enum PieceCategory {
     /** The category of a CMB id's path (no namespace), or null if it has none. */
     public static PieceCategory of(String path, boolean block) {
         if (path.endsWith("_nether_wart")) {
-            return null;
+            return CROPS;
         }
         if (path.endsWith("_vertical_double") || path.endsWith("_vertical")) {
             return VERTICAL_SLABS;

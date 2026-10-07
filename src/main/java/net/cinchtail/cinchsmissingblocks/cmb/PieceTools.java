@@ -83,8 +83,18 @@ final class PieceTools implements Listener {
                 continue;
             }
             PieceCategory category = categoryOf(furniture.id(), false);
+            if (category == null || !categories.contains(category)) {
+                continue;
+            }
+            if (category == PieceCategory.CROPS) {
+                Block cell = furniture.location().getBlock();
+                if (distance2(cell, cx, cy, cz) <= r2) {
+                    found.add(new Found(category, furniture, null, cropBox(cell, furniture)));
+                }
+                continue;
+            }
             VerticalSlabListener.Plate plate = VerticalSlabListener.plate(furniture);
-            if (category == null || !categories.contains(category) || plate == null) {
+            if (plate == null) {
                 continue;
             }
             Block cell = plate.cell();
@@ -119,6 +129,15 @@ final class PieceTools implements Listener {
             }
         }
         return found;
+    }
+
+    /** A wart crop's height at each age: its hitbox's, 14 pixels wide. */
+    private static final double[] CROP_HEIGHT = {0.25, 0.5, 0.75, 0.875};
+
+    private static double[] cropBox(Block cell, BukkitFurniture crop) {
+        double height = CROP_HEIGHT[Math.min(Math.max(NetherWartCrops.ageOf(crop), 0), CROP_HEIGHT.length - 1)];
+        int x = cell.getX(), y = cell.getY(), z = cell.getZ();
+        return new double[] {x + 0.0625, y, z + 0.0625, x + 0.9375, y + height, z + 0.9375};
     }
 
     private static PieceCategory categoryOf(Key id, boolean block) {

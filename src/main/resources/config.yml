@@ -150,7 +150,8 @@ disabled-blocks: []
 #   /cmb glow [#category] [radius]   outline them, for you only, until /cmb glow again
 #
 # Categories: #blocks #pillars #stairs #slabs #walls #fences #panes #vertical_slabs
-# #horizontal_stairs, or #all. A doubled slab counts with its slab, block or furniture.
+# #horizontal_stairs #crops (warped nether wart), or #all. A doubled slab counts with its
+# slab, block or furniture.
 tools:
   # Blocks around you when a command gives no radius, and the most either accepts.
   default-radius: 8
@@ -166,6 +167,8 @@ tools:
     panes: "#FF88CC"
     vertical_slabs: "#9933FF"
     horizontal_stairs: "#FF00FF"
+    crops: "#55FFFF"
+  block-outline: WHITE_STAINED_GLASS_PANE # BARRIER for glow outline only
 
 # Ask Modrinth, on startup and every 12 hours, whether a newer CMB release exists for this
 # server's Minecraft version, and tell the console and players with cmb.admin when they

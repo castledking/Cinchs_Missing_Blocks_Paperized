@@ -30,8 +30,8 @@ class PieceCategoryTest {
     }
 
     @Test
-    void theCropIsNotABuildingPiece() {
-        assertNull(PieceCategory.of("warped_nether_wart", false));
+    void theWartCropIsACrop() {
+        assertEquals(PieceCategory.CROPS, PieceCategory.of("warped_nether_wart", false));
         assertNull(PieceCategory.of("something_else", false));
     }
 
