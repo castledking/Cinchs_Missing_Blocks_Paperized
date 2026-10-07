@@ -702,7 +702,13 @@ public final class VerticalSlabListener implements Listener {
         for (BlockFace face : HORIZONTAL) {
             applyVanillaJoins(cell.getRelative(face));
         }
-        applyVanillaJoins(cell.getRelative(BlockFace.DOWN));
+        Block below = cell.getRelative(BlockFace.DOWN);
+        if (Tag.WALLS.isTagged(below.getType())) {
+            // A piece above came or went: its tall sides and post follow.
+            applyWall(below, true);
+        } else {
+            applyVanillaJoins(below);
+        }
         // Below too: a wall's tall sides and post depend on what is above it.
         for (BlockFace face : new BlockFace[] {BlockFace.NORTH, BlockFace.SOUTH,
                 BlockFace.EAST, BlockFace.WEST, BlockFace.DOWN}) {
@@ -735,7 +741,7 @@ public final class VerticalSlabListener implements Listener {
             }
         }
         if (wallChanged) {
-            reshape(cell.getRelative(BlockFace.DOWN));
+            passDown(cell.getRelative(BlockFace.DOWN));
         }
     }
 
@@ -884,14 +890,25 @@ public final class VerticalSlabListener implements Listener {
         for (BlockFace side : HORIZONTAL) {
             beside |= PieceIndex.mayContain(block.getRelative(side));
         }
-        if (beside) {
-            Schedulers.atLocation(plugin, block.getLocation(), () -> applyVanillaJoins(block));
+        // Once per block per tick: a block gets a physics event from each neighbour that
+        // changes, and a task for each piled up.
+        if (beside && pendingJoins.add(block)) {
+            Schedulers.atLocation(plugin, block.getLocation(), () -> {
+                pendingJoins.remove(block);
+                applyVanillaJoins(block);
+            });
         }
         Block below = block.getRelative(BlockFace.DOWN);
-        if (wall && PieceIndex.mayContain(below)) {
-            Schedulers.atLocation(plugin, below.getLocation(), () -> reshape(below));
+        if (wall && PieceIndex.mayContain(below) && pendingReshapes.add(below)) {
+            Schedulers.atLocation(plugin, below.getLocation(), () -> {
+                pendingReshapes.remove(below);
+                reshape(below);
+            });
         }
     }
+
+    private static final Set<Block> pendingJoins = ConcurrentHashMap.newKeySet();
+    private static final Set<Block> pendingReshapes = ConcurrentHashMap.newKeySet();
 
     /** Joins a vanilla block to the pieces beside (and, for a wall, above) it. */
     static void applyVanillaJoins(Block block) {
@@ -913,11 +930,23 @@ public final class VerticalSlabListener implements Listener {
      * with pieces that don't join is cut.
      */
     static void applyWall(Block block) {
+        applyWall(block, false);
+    }
+
+    /**
+     * {@code aboveChanged}: what is above just changed - a piece above came or went, or a
+     * wall above was re-shaped - so its tall sides and post are worked out again here, as
+     * vanilla wasn't told. Only over air or a wall: under any other block vanilla's own
+     * answer, from its shape update, stands.
+     */
+    private static void applyWall(Block block, boolean aboveChanged) {
         if (!(block.getBlockData() instanceof org.bukkit.block.data.type.Wall data)) {
             return;
         }
         Block above = block.getRelative(BlockFace.UP);
         boolean pieceAbove = !platesIn(above).isEmpty();
+        boolean fromAbove = pieceAbove || aboveChanged && (above.getType().isAir()
+                || above.getBlockData() instanceof org.bukkit.block.data.type.Wall);
         BlockFace[] order = {BlockFace.NORTH, BlockFace.EAST, BlockFace.SOUTH, BlockFace.WEST};
         int[] height = new int[4];
         boolean changed = false;
@@ -937,7 +966,7 @@ public final class VerticalSlabListener implements Listener {
                     ? org.bukkit.block.data.type.Wall.Height.NONE
                     // Toward a piece, or under one, tall and low are this plugin's call;
                     // otherwise vanilla's own answer stands.
-                    : (!pieces.isEmpty() || pieceAbove)
+                    : (!pieces.isEmpty() || fromAbove)
                             ? (coversSide(above, side) ? org.bukkit.block.data.type.Wall.Height.TALL
                                                        : org.bukkit.block.data.type.Wall.Height.LOW)
                             : data.getHeight(side);
@@ -951,7 +980,7 @@ public final class VerticalSlabListener implements Listener {
                 changed = true;
             }
         }
-        if (changed || pieceAbove) {
+        if (changed || fromAbove) {
             boolean up = raisesPost(height, above);
             if (data.isUp() != up) {
                 data.setUp(up);
@@ -959,9 +988,22 @@ public final class VerticalSlabListener implements Listener {
             }
         }
         if (changed) {
-            // With physics, so a vanilla wall below takes the new shape, as vanilla's
-            // own walls pass a change down.
-            block.setBlockData(data, true);
+            // Without physics. With it, vanilla's shape update set the walls beside back to
+            // its own answer, they were set again, which set this one back - every tick,
+            // and multiplying, until the server stopped responding (walls in a row with
+            // pieces on top). Nothing beside a wall depends on its shape; only the wall
+            // below does, for its tall sides and post, so the change goes down by hand.
+            block.setBlockData(data, false);
+            passDown(block.getRelative(BlockFace.DOWN));
+        }
+    }
+
+    /** The wall below a wall that changed - vanilla or a piece - takes its new shape. */
+    private static void passDown(Block below) {
+        if (below.getBlockData() instanceof org.bukkit.block.data.type.Wall) {
+            applyWall(below, true);
+        } else if (PieceIndex.mayContain(below)) {
+            reshape(below);
         }
     }
 
