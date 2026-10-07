@@ -604,27 +604,6 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:blue_concrete_wall"
-  "cinchsmissingblocks:blue_nether_brick_fence":
-    data:
-      item_name: "<!i><white><lang:block.cinchsmissingblocks.blue_nether_brick_fence>"
-    model:
-      path: "cinchsmissingblocks:item/blue_nether_brick_fence"
-    settings:
-      item: "cinchsmissingblocks:blue_nether_brick_fence"
-      hit_times: 1
-      sounds:
-        break: "minecraft:block.stone.break"
-        place: "minecraft:block.stone.place"
-        hit: "minecraft:block.stone.hit"
-    variants:
-      template: "cinchsmissingblocks:fallback/fence"
-      arguments:
-        post: "cinchsmissingblocks:blue_nether_brick_fence__post"
-        side: "cinchsmissingblocks:blue_nether_brick_fence__side"
-    loot:
-      template: "default:loot_table/furniture"
-      arguments:
-        item: "cinchsmissingblocks:blue_nether_brick_fence"
   "cinchsmissingblocks:blue_nether_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.blue_nether_brick_slab>"
@@ -1593,27 +1572,6 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_blackstone_tile_wall"
-  "cinchsmissingblocks:cracked_blue_nether_brick_fence":
-    data:
-      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_blue_nether_brick_fence>"
-    model:
-      path: "cinchsmissingblocks:item/cracked_blue_nether_brick_fence"
-    settings:
-      item: "cinchsmissingblocks:cracked_blue_nether_brick_fence"
-      hit_times: 1
-      sounds:
-        break: "minecraft:block.stone.break"
-        place: "minecraft:block.stone.place"
-        hit: "minecraft:block.stone.hit"
-    variants:
-      template: "cinchsmissingblocks:fallback/fence"
-      arguments:
-        post: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
-        side: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
-    loot:
-      template: "default:loot_table/furniture"
-      arguments:
-        item: "cinchsmissingblocks:cracked_blue_nether_brick_fence"
   "cinchsmissingblocks:cracked_blue_nether_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_blue_nether_brick_slab>"
@@ -2824,27 +2782,6 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_mud_brick_wall"
-  "cinchsmissingblocks:cracked_nether_brick_fence":
-    data:
-      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_nether_brick_fence>"
-    model:
-      path: "cinchsmissingblocks:item/cracked_nether_brick_fence"
-    settings:
-      item: "cinchsmissingblocks:cracked_nether_brick_fence"
-      hit_times: 1
-      sounds:
-        break: "minecraft:block.stone.break"
-        place: "minecraft:block.stone.place"
-        hit: "minecraft:block.stone.hit"
-    variants:
-      template: "cinchsmissingblocks:fallback/fence"
-      arguments:
-        post: "cinchsmissingblocks:cracked_nether_brick_fence__post"
-        side: "cinchsmissingblocks:cracked_nether_brick_fence__side"
-    loot:
-      template: "default:loot_table/furniture"
-      arguments:
-        item: "cinchsmissingblocks:cracked_nether_brick_fence"
   "cinchsmissingblocks:cracked_nether_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_nether_brick_slab>"
@@ -3329,27 +3266,6 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_quartz_brick_wall"
-  "cinchsmissingblocks:cracked_red_nether_brick_fence":
-    data:
-      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_red_nether_brick_fence>"
-    model:
-      path: "cinchsmissingblocks:item/cracked_red_nether_brick_fence"
-    settings:
-      item: "cinchsmissingblocks:cracked_red_nether_brick_fence"
-      hit_times: 1
-      sounds:
-        break: "minecraft:block.stone.break"
-        place: "minecraft:block.stone.place"
-        hit: "minecraft:block.stone.hit"
-    variants:
-      template: "cinchsmissingblocks:fallback/fence"
-      arguments:
-        post: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
-        side: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
-    loot:
-      template: "default:loot_table/furniture"
-      arguments:
-        item: "cinchsmissingblocks:cracked_red_nether_brick_fence"
   "cinchsmissingblocks:cracked_red_nether_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_red_nether_brick_slab>"
@@ -10370,27 +10286,6 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:red_concrete_wall"
-  "cinchsmissingblocks:red_nether_brick_fence":
-    data:
-      item_name: "<!i><white><lang:block.cinchsmissingblocks.red_nether_brick_fence>"
-    model:
-      path: "cinchsmissingblocks:item/red_nether_brick_fence"
-    settings:
-      item: "cinchsmissingblocks:red_nether_brick_fence"
-      hit_times: 1
-      sounds:
-        break: "minecraft:block.stone.break"
-        place: "minecraft:block.stone.place"
-        hit: "minecraft:block.stone.hit"
-    variants:
-      template: "cinchsmissingblocks:fallback/fence"
-      arguments:
-        post: "cinchsmissingblocks:red_nether_brick_fence__post"
-        side: "cinchsmissingblocks:red_nether_brick_fence__side"
-    loot:
-      template: "default:loot_table/furniture"
-      arguments:
-        item: "cinchsmissingblocks:red_nether_brick_fence"
   "cinchsmissingblocks:red_sandstone_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.red_sandstone_brick_slab>"

@@ -8381,6 +8381,10 @@
       "vertical-slabs.material:blue_concrete",
       "doubles.block"
     ],
+    "cinchsmissingblocks:blue_nether_brick_fence": [
+      "block:blue_nether_brick_fence",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:blue_nether_brick_slab_double": [
       "block:blue_nether_brick_slab",
       "furniture-fallback",
@@ -8565,6 +8569,10 @@
     "cinchsmissingblocks:cracked_blackstone_tiles": [
       "block:cracked_blackstone_tiles"
     ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence": [
+      "block:cracked_blue_nether_brick_fence",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_blue_nether_brick_slab_double": [
       "block:cracked_blue_nether_brick_slab",
       "furniture-fallback",
@@ -8699,6 +8707,10 @@
     "cinchsmissingblocks:cracked_mud_bricks": [
       "block:cracked_mud_bricks"
     ],
+    "cinchsmissingblocks:cracked_nether_brick_fence": [
+      "block:cracked_nether_brick_fence",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_nether_brick_slab_double": [
       "block:cracked_nether_brick_slab",
       "furniture-fallback",
@@ -8748,6 +8760,10 @@
     ],
     "cinchsmissingblocks:cracked_quartz_bricks": [
       "block:cracked_quartz_bricks"
+    ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence": [
+      "block:cracked_red_nether_brick_fence",
+      "furniture-fallback"
     ],
     "cinchsmissingblocks:cracked_red_nether_brick_slab_double": [
       "block:cracked_red_nether_brick_slab",
@@ -9726,6 +9742,10 @@
       "vertical-slabs.material:red_concrete",
       "doubles.block"
     ],
+    "cinchsmissingblocks:red_nether_brick_fence": [
+      "block:red_nether_brick_fence",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:red_nether_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:red_nether_brick",
@@ -10254,10 +10274,6 @@
       "concrete",
       "furniture-fallback"
     ],
-    "cinchsmissingblocks:blue_nether_brick_fence": [
-      "block:blue_nether_brick_fence",
-      "furniture-fallback"
-    ],
     "cinchsmissingblocks:blue_nether_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:blue_nether_brick",
@@ -10644,10 +10660,6 @@
       "block:cracked_blackstone_tile_wall",
       "furniture-fallback"
     ],
-    "cinchsmissingblocks:cracked_blue_nether_brick_fence": [
-      "block:cracked_blue_nether_brick_fence",
-      "furniture-fallback"
-    ],
     "cinchsmissingblocks:cracked_blue_nether_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:cracked_blue_nether_brick",
@@ -10978,10 +10990,6 @@
       "block:cracked_mud_brick_wall",
       "furniture-fallback"
     ],
-    "cinchsmissingblocks:cracked_nether_brick_fence": [
-      "block:cracked_nether_brick_fence",
-      "furniture-fallback"
-    ],
     "cinchsmissingblocks:cracked_nether_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:cracked_nether_brick",
@@ -11112,10 +11120,6 @@
     ],
     "cinchsmissingblocks:cracked_quartz_brick_wall": [
       "block:cracked_quartz_brick_wall",
-      "furniture-fallback"
-    ],
-    "cinchsmissingblocks:cracked_red_nether_brick_fence": [
-      "block:cracked_red_nether_brick_fence",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cracked_red_nether_brick_horizontal_stairs": [
@@ -13707,10 +13711,6 @@
     "cinchsmissingblocks:red_concrete_wall": [
       "block:red_concrete_wall",
       "concrete",
-      "furniture-fallback"
-    ],
-    "cinchsmissingblocks:red_nether_brick_fence": [
-      "block:red_nether_brick_fence",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:red_nether_brick_horizontal_stairs": [

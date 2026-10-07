@@ -1156,18 +1156,8 @@ items:
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.blue_nether_brick_fence>"
     behavior:
-      type: furniture_item
-      furniture: "cinchsmissingblocks:blue_nether_brick_fence"
-      rules:
-        ground:
-          rotation: four
-          alignment: center
-        wall:
-          rotation: four
-          alignment: center
-        ceiling:
-          rotation: four
-          alignment: center
+      type: block_item
+      block: "cinchsmissingblocks:blue_nether_brick_fence"
   "cinchsmissingblocks:blue_nether_brick_fence__post":
     material: nether_brick
     model:
@@ -2960,18 +2950,8 @@ items:
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_blue_nether_brick_fence>"
     behavior:
-      type: furniture_item
-      furniture: "cinchsmissingblocks:cracked_blue_nether_brick_fence"
-      rules:
-        ground:
-          rotation: four
-          alignment: center
-        wall:
-          rotation: four
-          alignment: center
-        ceiling:
-          rotation: four
-          alignment: center
+      type: block_item
+      block: "cinchsmissingblocks:cracked_blue_nether_brick_fence"
   "cinchsmissingblocks:cracked_blue_nether_brick_fence__post":
     material: nether_brick
     model:
@@ -4673,18 +4653,8 @@ items:
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_nether_brick_fence>"
     behavior:
-      type: furniture_item
-      furniture: "cinchsmissingblocks:cracked_nether_brick_fence"
-      rules:
-        ground:
-          rotation: four
-          alignment: center
-        wall:
-          rotation: four
-          alignment: center
-        ceiling:
-          rotation: four
-          alignment: center
+      type: block_item
+      block: "cinchsmissingblocks:cracked_nether_brick_fence"
   "cinchsmissingblocks:cracked_nether_brick_fence__post":
     material: nether_brick
     model:
@@ -5366,18 +5336,8 @@ items:
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_red_nether_brick_fence>"
     behavior:
-      type: furniture_item
-      furniture: "cinchsmissingblocks:cracked_red_nether_brick_fence"
-      rules:
-        ground:
-          rotation: four
-          alignment: center
-        wall:
-          rotation: four
-          alignment: center
-        ceiling:
-          rotation: four
-          alignment: center
+      type: block_item
+      block: "cinchsmissingblocks:cracked_red_nether_brick_fence"
   "cinchsmissingblocks:cracked_red_nether_brick_fence__post":
     material: nether_brick
     model:
@@ -17055,18 +17015,8 @@ items:
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.red_nether_brick_fence>"
     behavior:
-      type: furniture_item
-      furniture: "cinchsmissingblocks:red_nether_brick_fence"
-      rules:
-        ground:
-          rotation: four
-          alignment: center
-        wall:
-          rotation: four
-          alignment: center
-        ceiling:
-          rotation: four
-          alignment: center
+      type: block_item
+      block: "cinchsmissingblocks:red_nether_brick_fence"
   "cinchsmissingblocks:red_nether_brick_fence__post":
     material: nether_brick
     model:

@@ -164,6 +164,562 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:blue_nether_brick_fence":
+    settings:
+      item: "cinchsmissingblocks:blue_nether_brick_fence"
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:fences"
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+      require_correct_tools: true
+      respect_tool_component: true
+    behavior:
+      type: fence_block
+      connectable_block_tag: "minecraft:wooden_fences"
+      can_leash: true
+    states:
+      properties:
+        north:
+          type: boolean
+          default: false
+        east:
+          type: boolean
+          default: false
+        south:
+          type: boolean
+          default: false
+        west:
+          type: boolean
+          default: false
+        waterlogged:
+          type: boolean
+          default: false
+      appearances:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+      variants:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=false"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=true"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=false"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=true"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=false"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=true"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=false"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=true"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=false"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=true"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=false"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=true"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=false"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=true"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=false"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=true"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:blue_nether_brick_slab_double":
     states:
       properties: {}
@@ -428,6 +984,562 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_blue_nether_brick_fence":
+    settings:
+      item: "cinchsmissingblocks:cracked_blue_nether_brick_fence"
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:fences"
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+      require_correct_tools: true
+      respect_tool_component: true
+    behavior:
+      type: fence_block
+      connectable_block_tag: "minecraft:wooden_fences"
+      can_leash: true
+    states:
+      properties:
+        north:
+          type: boolean
+          default: false
+        east:
+          type: boolean
+          default: false
+        south:
+          type: boolean
+          default: false
+        west:
+          type: boolean
+          default: false
+        waterlogged:
+          type: boolean
+          default: false
+      appearances:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+      variants:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=false"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=true"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=false"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=true"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=false"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=true"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=false"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=true"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=false"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=true"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=false"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=true"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=false"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=true"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=false"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=true"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_blue_nether_brick_slab_double":
     states:
       properties: {}
@@ -758,6 +1870,562 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_nether_brick_fence":
+    settings:
+      item: "cinchsmissingblocks:cracked_nether_brick_fence"
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:fences"
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+      require_correct_tools: true
+      respect_tool_component: true
+    behavior:
+      type: fence_block
+      connectable_block_tag: "minecraft:wooden_fences"
+      can_leash: true
+    states:
+      properties:
+        north:
+          type: boolean
+          default: false
+        east:
+          type: boolean
+          default: false
+        south:
+          type: boolean
+          default: false
+        west:
+          type: boolean
+          default: false
+        waterlogged:
+          type: boolean
+          default: false
+      appearances:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+      variants:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=false"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=true"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=false"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=true"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=false"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=true"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=false"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=true"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=false"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=true"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=false"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=true"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=false"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=true"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=false"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=true"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_nether_brick_slab_double":
     states:
       properties: {}
@@ -890,6 +2558,562 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_red_nether_brick_fence":
+    settings:
+      item: "cinchsmissingblocks:cracked_red_nether_brick_fence"
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:fences"
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+      require_correct_tools: true
+      respect_tool_component: true
+    behavior:
+      type: fence_block
+      connectable_block_tag: "minecraft:wooden_fences"
+      can_leash: true
+    states:
+      properties:
+        north:
+          type: boolean
+          default: false
+        east:
+          type: boolean
+          default: false
+        south:
+          type: boolean
+          default: false
+        west:
+          type: boolean
+          default: false
+        waterlogged:
+          type: boolean
+          default: false
+      appearances:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+      variants:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=false"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=true"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=false"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=true"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=false"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=true"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=false"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=true"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=false"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=true"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=false"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=true"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=false"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=true"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=false"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=true"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_red_nether_brick_slab_double":
     states:
       properties: {}
@@ -2738,6 +4962,562 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:red_nether_brick_fence":
+    settings:
+      item: "cinchsmissingblocks:red_nether_brick_fence"
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:fences"
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+      require_correct_tools: true
+      respect_tool_component: true
+    behavior:
+      type: fence_block
+      connectable_block_tag: "minecraft:wooden_fences"
+      can_leash: true
+    states:
+      properties:
+        north:
+          type: boolean
+          default: false
+        east:
+          type: boolean
+          default: false
+        south:
+          type: boolean
+          default: false
+        west:
+          type: boolean
+          default: false
+        waterlogged:
+          type: boolean
+          default: false
+      appearances:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=false,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=false,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=false,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=false,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          state: "minecraft:nether_brick_fence[east=true,north=true,south=true,waterlogged=true,west=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence__post"
+              rotation: 180
+              scale: "1.05,1.01,1.05"
+              translation: "0,0.0001,0"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 180
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 270
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 0
+              scale: "1.05,1.05,1"
+            - item: "cinchsmissingblocks:red_nether_brick_fence__side"
+              rotation: 90
+              scale: "1.05,1.05,1"
+      variants:
+        "east=false,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=false"
+        "east=false,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=false,west=true"
+        "east=false,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=false"
+        "east=false,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=false,west=true"
+        "east=false,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=false"
+        "east=true,north=false,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=false,west=true"
+        "east=true,north=false,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=false"
+        "east=true,north=false,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=false,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=false,west=true"
+        "east=true,north=false,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=false,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=false"
+        "east=false,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=false,west=true"
+        "east=false,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=false"
+        "east=false,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=false,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=false,west=true"
+        "east=false,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=false,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=false"
+        "east=true,north=true,south=false,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=false,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=false,west=true"
+        "east=true,north=true,south=false,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=false,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=false"
+        "east=true,north=true,south=true,waterlogged=true,west=false":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=false"
+          settings:
+            fluid_state: water
+        "east=true,north=true,south=true,waterlogged=false,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=false,west=true"
+        "east=true,north=true,south=true,waterlogged=true,west=true":
+          appearance: "east=true,north=true,south=true,waterlogged=true,west=true"
+          settings:
+            fluid_state: water
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:red_sandstone_brick_slab_double":
     states:
       properties: {}

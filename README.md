@@ -16,7 +16,7 @@
 
 ## What you get
 
-**996 pieces** across every family the mod has — **342 blocks** and **654 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
+**996 pieces** across every family the mod has — **347 blocks** and **649 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
 
 **Blocks** — real CraftEngine blocks on a borrowed vanilla state, with vanilla collision:
 
@@ -26,6 +26,7 @@
 | 94 | horizontal slab doubles |
 | 61 | full blocks: bricks, tiles, polished, cracked and mossy variants across andesite, calcite, deepslate, diorite, dripstone, end stone, granite, mud, prismarine, quartz, sandstone, stone, tuff and more |
 | 13 | pillars, rotating on all three axes |
+| 5 | fences — drawn over vanilla's nether brick fence, so they get its outline, its hold-to-break mining and its connections |
 
 **Furniture** — every material, spending no vanilla states:
 
@@ -36,7 +37,6 @@
 | 108 | walls, with proper posts and connection behaviour |
 | 97 | stairs |
 | 94 | horizontal slabs |
-| 5 | fences |
 | 1 | tinted glass pane |
 | 1 | warped nether wart crop, this port's own addition |
 
@@ -47,26 +47,26 @@ suits it — `features.vertical-slabs.doubles` chooses `block`, `furniture` or `
 `both` is the default here. That is two *representations* of one piece, which is why the
 counts above do not add it twice.
 
-All **381** of the mod's blocks are served — 342 as blocks, and walls, fences, panes, stairs
-and slabs as furniture, for the reason below. Alongside them come **1,822 items** and
-**1,127 recipes**, with drops, loot tables, mining tags and creative categories generated
+All **381** of the mod's blocks are served — 347 as blocks, fences among them, and walls,
+panes, stairs and slabs as furniture, for the reason below. Alongside them come **1,822 items**
+and **1,383 recipes**, with drops, loot tables, mining tags and creative categories generated
 from the mod's own data.
 
 ## Nothing vanilla changes
 
 Many CraftEngine packs borrow vanilla block states that real blocks also use, which is why a barrel or a crafter can suddenly look like something else. **This pack never does that.** Every state a block uses is one CraftEngine has already freed from vanilla — real blocks in that state are always drawn as an identical-looking twin, so no real block in your world ever changes appearance.
 
-Where a safe state doesn't exist, the pack doesn't borrow one. Walls and fences are the clearest example: every vanilla wall blockstate is *multipart*, and overwriting one strips the multipart rules, leaving thousands of real wall states with no model at all. So walls and fences aren't drawn on borrowed states — they're built as furniture instead. The build refuses anything it can't prove safe.
+Where a safe state doesn't exist, the pack doesn't borrow one. Walls are the clearest example: every vanilla wall blockstate is *multipart*, and overwriting one strips the multipart rules, leaving thousands of real wall states with no model at all. So walls aren't drawn on borrowed states — they're built as furniture instead. Fences take a third way, the one CraftEngine's own default fences use: each is a real block that *shares* the vanilla nether brick fence's states without changing its model, and the CMB fence is drawn over it by an entity renderer. A real nether brick fence still looks like itself. The build refuses anything it can't prove safe.
 
 ## Built on CraftEngine furniture and scaled shulker hitboxes
 
 Most of this pack is **not** a block drawn on a vanilla state. It's **CraftEngine furniture**: a display entity for the model, and CraftEngine's built-in **scaled shulker hitbox** for collision. That hitbox is what makes walls, fences, horizontal stairs and vertical slabs actually usable rather than merely visible:
 
 *   It's an **invisible, AI-less, client-side-only entity**. Players never see it or interact with it as an entity — it's pure client packets — while the collision is a real server-side box.
-*   It's **scaled**, so a hitbox can be shaped instead of being a fixed cube. Walls and fences tile several together, which is how a 2-block-tall wall gets the right collision on every face.
+*   It's **scaled**, so a hitbox can be shaped instead of being a fixed cube. Walls tile several together, which is how a 2-block-tall wall gets the right collision on every face.
 *   You can **walk into them, stand on them, build against them and break them** like any other block.
 
-Walls and fences use **connection-aware variants** — the shape changes based on which sides have neighbours, so posts appear at the ends and sides join in the middle exactly like vanilla.
+Walls use **connection-aware variants** — the shape changes based on which sides have neighbours, so posts appear at the ends and sides join in the middle exactly like vanilla.
 
 Vertical slabs are one per material, for CMB *and* vanilla (`oak_vertical`, `acacia_vertical`, and so on). Place them on the **ground** or against a **wall** — the collision matches the placement either way.
 
@@ -100,5 +100,5 @@ and CraftEngine's oldest supported version is 1.20.1 (its own dev servers start 
 that there is nothing for CMB to run on. Every CMB furniture piece also collides through a
 scaled shulker hitbox, and CraftEngine applies hitbox scale only from 1.20.5
 (`ShulkerFurnitureHitbox`, behind `VersionHelper.isOrAbove1_20_5`). Below 1.20.5, every wall,
-fence, stair and vertical slab would collide as a full block. CMB itself starts at 1.21.1, the
+stair and vertical slab would collide as a full block. CMB itself starts at 1.21.1, the
 version the mod it ports is written for, and the oldest Paper API its code is checked against.
