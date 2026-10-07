@@ -704,20 +704,36 @@ public final class VerticalSlabListener implements Listener {
         // Below too: a wall's tall sides and post depend on what is above it.
         for (BlockFace face : new BlockFace[] {BlockFace.NORTH, BlockFace.SOUTH,
                 BlockFace.EAST, BlockFace.WEST, BlockFace.DOWN}) {
-            Block side = cell.getRelative(face);
-            for (Plate plate : platesIn(side)) {
-                String variant = switch (plate.kind()) {
-                    case STAIRS -> {
-                        StairInfo info = stairAt(side);
-                        yield info.half() + "_" + stairShape(side, info.facing(), info.half());
-                    }
-                    case WALL, FENCE, PANE -> connections(side, plate.kind());
-                    default -> null;
-                };
-                if (variant != null && !variant.equals(plate.furniture().currentVariant().name())) {
-                    plate.furniture().setVariant(variant);
+            reshape(cell.getRelative(face));
+        }
+    }
+
+    /**
+     * Re-shapes the pieces in one cell. A wall whose shape changed re-shapes the wall
+     * below it, down the column until a shape stays the same: the wall below takes its
+     * tall sides and its post from this one, so without that, the result depended on the
+     * order the wall was built in. A neighbour gaining an arm left the wall under it
+     * with a low side (a 2-pixel hole), and a neighbour dropping its post left the wall
+     * under it with a stray one.
+     */
+    private static void reshape(Block cell) {
+        boolean wallChanged = false;
+        for (Plate plate : platesIn(cell)) {
+            String variant = switch (plate.kind()) {
+                case STAIRS -> {
+                    StairInfo info = stairAt(cell);
+                    yield info.half() + "_" + stairShape(cell, info.facing(), info.half());
                 }
+                case WALL, FENCE, PANE -> connections(cell, plate.kind());
+                default -> null;
+            };
+            if (variant != null && !variant.equals(plate.furniture().currentVariant().name())) {
+                plate.furniture().setVariant(variant);
+                wallChanged |= plate.kind() == Kind.WALL;
             }
+        }
+        if (wallChanged) {
+            reshape(cell.getRelative(BlockFace.DOWN));
         }
     }
 
