@@ -124,6 +124,7 @@ public final class PackInstaller {
                 new String(resource("intermediate/pieces.json"), StandardCharsets.UTF_8)).getAsJsonObject();
         Server server = new Server(Bukkit.getPluginManager().getPlugin("ViaBackwards") != null,
                 name -> Material.matchMaterial(name) != null);
+        Map<String, String> materialBlocks = materialBlocks(resource("configuration/recipes.yml"));
         Map<String, Set<String>> removed = new HashMap<>();
         for (String section : SECTIONS) {
             Set<String> ids = new HashSet<>();
@@ -134,6 +135,10 @@ public final class PackInstaller {
                     entry.getValue().getAsJsonArray().forEach(flag -> flags.add(flag.getAsString()));
                     String block = flags.stream().filter(f -> f.startsWith("block:"))
                             .map(f -> f.substring("block:".length())).findFirst().orElse(null);
+                    if (vanillaMaterialMissing(flags, materialBlocks, server)) {
+                        ids.add(entry.getKey());
+                        continue;
+                    }
                     for (String flag : flags) {
                         if (!on(flag, cfg, server, block)) {
                             ids.add(entry.getKey());
@@ -145,6 +150,68 @@ public final class PackInstaller {
             removed.put(section, ids);
         }
         return removed;
+    }
+
+    /**
+     * Whether an id is a vertical slab or horizontal stair made from a vanilla material
+     * this server's vanilla doesn't have: cinnabar, sulfur and poplar before 26.x, pale oak
+     * and resin bricks before 1.21.4. Such a piece would draw with the missing texture and
+     * its recipe wouldn't load, so it goes.
+     *
+     * <p>The material's block is read from the pack's own recipe for it (materialBlocks),
+     * not from a version table, so a new Minecraft version needs no change here. A
+     * material with no recipe to read, or a piece made from a CMB block, is kept.
+     */
+    static boolean vanillaMaterialMissing(List<String> flags, Map<String, String> materialBlocks, Server server) {
+        String material = null;
+        boolean vanilla = false;
+        for (String flag : flags) {
+            if (flag.equals("vertical-slabs.vanilla") || flag.equals("horizontal-stairs.vanilla")) {
+                vanilla = true;
+            } else if (flag.startsWith("vertical-slabs.material:") || flag.startsWith("horizontal-stairs.material:")) {
+                material = flag.substring(flag.indexOf(':') + 1);
+            }
+        }
+        if (!vanilla || material == null) {
+            return false;
+        }
+        String block = materialBlocks.get(material);
+        return block != null && !server.vanillaHas().test(block);
+    }
+
+    /**
+     * Material -> the vanilla block it is cut from (no namespace), read off the vertical
+     * slab and horizontal stair recipes: a vanilla material's pieces are crafted from its
+     * full block, the same block whose texture they draw.
+     */
+    @SuppressWarnings("unchecked")
+    static Map<String, String> materialBlocks(byte[] recipesYaml) {
+        Map<String, String> blocks = new HashMap<>();
+        LoaderOptions loader = new LoaderOptions();
+        loader.setCodePointLimit(Integer.MAX_VALUE);
+        Object loaded = new Yaml(loader).load(new String(recipesYaml, StandardCharsets.UTF_8));
+        if (!(loaded instanceof Map<?, ?> root) || !(root.get("recipes") instanceof Map<?, ?> recipes)) {
+            return blocks;
+        }
+        String prefix = "cinchsmissingblocks:";
+        for (Map.Entry<?, ?> entry : recipes.entrySet()) {
+            String key = String.valueOf(entry.getKey());
+            String material = key.endsWith("_vertical") ? key.substring(prefix.length(), key.length() - "_vertical".length())
+                    : key.endsWith("_horizontal_stairs")
+                            ? key.substring(prefix.length(), key.length() - "_horizontal_stairs".length())
+                            : null;
+            if (material == null || !key.startsWith(prefix)
+                    || !(entry.getValue() instanceof Map<?, ?> recipe)
+                    || !(recipe.get("ingredients") instanceof Map<?, ?> ingredients)) {
+                continue;
+            }
+            for (Object ingredient : ingredients.values()) {
+                if (ingredient instanceof String id && id.startsWith("minecraft:")) {
+                    blocks.putIfAbsent(material, id.substring("minecraft:".length()));
+                }
+            }
+        }
+        return blocks;
     }
 
     /**
