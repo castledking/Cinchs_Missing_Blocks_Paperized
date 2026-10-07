@@ -22,7 +22,16 @@ port=${PORT:-25565}
 ua="cmb-boot-test (github.com/castledking/Cinchs_Missing_Blocks_Paperized)"
 
 dir=$(mktemp -d)
-trap '[ -n "${KEEP:-}" ] && echo "kept $dir" || rm -rf "$dir"' EXIT
+server=
+# The verdict is the script's exit status, whatever cleanup does: stop the server and wait
+# for it, so nothing is still writing while the directory goes, and never fail on cleanup.
+cleanup() {
+    local status=$?
+    if [ -n "$server" ]; then kill "$server" 2>/dev/null || true; wait "$server" 2>/dev/null || true; fi
+    if [ -n "${KEEP:-}" ]; then echo "kept $dir"; else rm -rf "$dir" 2>/dev/null || true; fi
+    exit "$status"
+}
+trap cleanup EXIT
 cd "$dir"
 mkdir plugins
 
@@ -75,6 +84,8 @@ else
 fi
 for _ in $(seq 1 60); do kill -0 "$server" 2>/dev/null || break; sleep 1; done
 kill "$server" 2>/dev/null || true
+wait "$server" 2>/dev/null || true
+server=
 
 # Paper's plugin remapper reports it as "Unsupported class file major version"; the JVM
 # itself as UnsupportedClassVersionError.
