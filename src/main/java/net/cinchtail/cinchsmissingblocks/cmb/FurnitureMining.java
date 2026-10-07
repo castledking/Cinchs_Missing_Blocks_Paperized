@@ -11,9 +11,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
+import net.momirealms.craftengine.bukkit.api.CraftEngineFurniture;
 import net.momirealms.craftengine.bukkit.api.CraftEngineItems;
 import net.momirealms.craftengine.bukkit.api.event.FurnitureBreakEvent;
 import net.momirealms.craftengine.bukkit.api.event.FurnitureHitEvent;
+import net.momirealms.craftengine.bukkit.entity.furniture.BukkitFurniture;
 import net.momirealms.craftengine.bukkit.item.BukkitItemDefinition;
 import net.momirealms.craftengine.core.util.Key;
 import org.bukkit.Bukkit;
@@ -23,6 +25,7 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.SoundCategory;
 import org.bukkit.block.data.BlockData;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -75,6 +78,26 @@ public final class FurnitureMining implements Listener {
 
     public FurnitureMining(CmbPlugin plugin) {
         this.plugin = plugin;
+    }
+
+    /**
+     * A punch on a piece is a mining hit, not an attack. CraftEngine handles the hit at
+     * packet level, then passes the attack on to vanilla aimed at the piece's base display
+     * entity, and vanilla runs a full player attack on it: the swing's attack sound
+     * (entity.player.attack.knockback and kin) plays over the block's own hit sound. A
+     * block, which is what the piece stands in for, makes no such sound. The hit has
+     * already been counted by then, so the vanilla attack is only dropped.
+     */
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.LOWEST)
+    public void onAttack(io.papermc.paper.event.player.PrePlayerAttackEntityEvent event) {
+        Entity target = event.getAttacked();
+        if (!CraftEngineFurniture.isFurniture(target)) {
+            return;
+        }
+        BukkitFurniture furniture = CraftEngineFurniture.getLoadedFurnitureByMetaEntity(target);
+        if (furniture != null && VerticalSlabListener.plate(furniture) != null) {
+            event.setCancelled(true);
+        }
     }
 
     @EventHandler(ignoreCancelled = true)
