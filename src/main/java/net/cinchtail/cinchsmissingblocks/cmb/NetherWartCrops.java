@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
+import net.cinchtail.cinchsmissingblocks.cmb.compat.GameRuleCompat;
 import net.cinchtail.cinchsmissingblocks.cmb.config.CmbConfig;
 import net.cinchtail.cinchsmissingblocks.cmb.scheduler.Schedulers;
 import net.momirealms.craftengine.bukkit.api.CraftEngineFurniture;
@@ -19,7 +20,6 @@ import net.momirealms.craftengine.core.util.Key;
 import org.bukkit.Chunk;
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.GameMode;
-import org.bukkit.GameRules;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -196,7 +196,8 @@ public final class NetherWartCrops implements Listener {
      * Never, when randomTickSpeed is 0 - vanilla wart doesn't grow then either.
      */
     private static long growthDelay(World world) {
-        Integer speed = world.getGameRuleValue(GameRules.RANDOM_TICK_SPEED);
+        Integer speed = GameRuleCompat.RANDOM_TICK_SPEED == null ? null
+                : world.getGameRuleValue(GameRuleCompat.RANDOM_TICK_SPEED);
         if (speed == null || speed <= 0) {
             return -1;
         }

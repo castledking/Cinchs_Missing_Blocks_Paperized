@@ -13,8 +13,9 @@ repositories {
 }
 
 java {
-    // Paper 26.3 requires JVM 25+, so the toolchain follows the server rather than
-    // an older habit. 21 is still fine for the language level itself.
+    // The jar is Java 21 bytecode (options.release below), so it runs on Paper 1.21.x
+    // (Java 21) and 26.x (Java 25). The toolchain is 25 only because the newest-API
+    // verification compile reads paper-api 26.x, whose class files are Java 25.
     toolchain {
         languageVersion = JavaLanguageVersion.of(25)
     }
@@ -35,15 +36,52 @@ dependencies {
     compileOnly("net.momirealms:craft-engine-bukkit-proxy:${property("craftEngineVersion")}")
 
     // Optional land protection (Protection): only touched when installed on the server.
-    // GriefPrevention, upstream and the 3D fork, is reached by reflection.
-    compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.19")
+    // GriefPrevention, upstream and the 3D fork, is reached by reflection. 7.0.17 is the
+    // newest WorldGuard built for Java 21 (7.0.19 is Java 25); the query API Protection
+    // calls is the same in both.
+    compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.17")
 }
 
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
-    options.release = 25
+    options.release = 21
     options.compilerArgs.add("-Xlint:all,-serial,-processing")
 }
+
+// --- the supported range, checked at both ends -----------------------------------
+// main compiles against one Paper API; these compile the same sources against the two
+// ends of the supported range and fail `check` if either breaks. Each end gets the
+// WorldGuard that era's servers run: 7.0.17 pins Guava and Gson strictly below what
+// paper-api 26.3 needs, so the two do not resolve together, and 26.3 runs 7.0.19 anyway.
+fun verifyApi(name: String, paperApi: String, worldGuard: String, what: String) {
+    val classpath = configurations.create("${name}Classpath") {
+        isCanBeConsumed = false
+        isTransitive = true
+    }
+    dependencies {
+        add(classpath.name, "io.papermc.paper:paper-api:$paperApi")
+        add(classpath.name, "net.momirealms:craft-engine-core:${property("craftEngineVersion")}")
+        add(classpath.name, "net.momirealms:craft-engine-bukkit:${property("craftEngineVersion")}")
+        add(classpath.name, "net.momirealms:craft-engine-bukkit-proxy:${property("craftEngineVersion")}")
+        add(classpath.name, "com.sk89q.worldguard:worldguard-bukkit:$worldGuard")
+    }
+    val task = tasks.register<JavaCompile>(name) {
+        group = "verification"
+        description = "Compiles main against paper-api $paperApi: $what"
+        source = sourceSets.main.get().java
+        this.classpath = classpath
+        destinationDirectory = layout.buildDirectory.dir("verify/$name")
+        javaCompiler = javaToolchains.compilerFor { languageVersion = JavaLanguageVersion.of(25) }
+        // A check for errors, not a second warnings report: main's own compile lints.
+        options.compilerArgs = listOf("-Xlint:none", "-nowarn")
+    }
+    tasks.named("check") { dependsOn(task) }
+}
+
+verifyApi("verifyFloorApi", property("floorPaperApiVersion") as String, "7.0.17",
+          "fails on API newer than the oldest supported Paper")
+verifyApi("verifyNewestApi", property("newestPaperApiVersion") as String, "7.0.19",
+          "fails on API the newest supported Paper has removed")
 
 // --- the bundled pack --------------------------------------------------------
 // The plugin installs the CraftEngine pack in pack/ (PackInstaller), so a server only
