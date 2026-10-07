@@ -174,6 +174,11 @@ public final class CmbPlugin extends JavaPlugin {
                         io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
                         event -> event.registrar().register(craft.build()));
                 getLogger().info("Registered cmbcraft command");
+                StonecutterProbeCommand cut = new StonecutterProbeCommand(this);
+                getLifecycleManager().registerEventHandler(
+                        io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
+                        event -> event.registrar().register(cut.build()));
+                getLogger().info("Registered cmbcut command");
                 VerticalSlabProbe vslab = new VerticalSlabProbe();
                 getLifecycleManager().registerEventHandler(
                         io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
