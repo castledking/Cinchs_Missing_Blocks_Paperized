@@ -16,9 +16,9 @@
 
 ## What you get
 
-**1,264 pieces** across every family the mod has — **342 blocks** and **922 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
+**996 pieces** across every family the mod has — **342 blocks** and **654 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
 
-**Blocks** — real CraftEngine blocks, with vanilla collision:
+**Blocks** — real CraftEngine blocks on a borrowed vanilla state, with vanilla collision:
 
 | | |
 |---|---|
@@ -33,18 +33,19 @@
 |---|---|
 | 174 | horizontal stairs — a stair on its side, the corner piece for vertical slab walls |
 | 174 | vertical slabs — a slab stood on edge, for CMB **and** all vanilla materials |
-| 174 | vertical slab doubles, in furniture form |
 | 108 | walls, with proper posts and connection behaviour |
 | 97 | stairs |
 | 94 | horizontal slabs |
-| 94 | horizontal slab doubles, in furniture form |
 | 5 | fences |
 | 1 | tinted glass pane |
 | 1 | warped nether wart crop, this port's own addition |
 
-A doubled slab ships in **both** forms and the difference matters when you build: the block
-form mines like a block and takes pistons, the furniture form breaks in one hit like the slab
-it stands in for. `features.vertical-slabs.doubles` picks which a server offers.
+A doubled slab is **one piece, not two**, and it is a real block: placed in a cell it becomes a
+block on the `solid` pool with its own hardness, mining tags, sounds and loot. The pack also
+ships a furniture representation of the same doubled slab, so a server can pick the form that
+suits it — `features.vertical-slabs.doubles` chooses `block`, `furniture` or `both`, and
+`both` is the default here. That is two *representations* of one piece, which is why the
+counts above do not add it twice.
 
 All **381** of the mod's blocks are served — 342 as blocks, and walls, fences, panes, stairs
 and slabs as furniture, for the reason below. Alongside them come **1,822 items** and
