@@ -155,6 +155,11 @@ public final class CmbPlugin extends JavaPlugin {
                         io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
                         event -> event.registrar().register(shapes.build()));
                 getLogger().info("Registered cmbvshape command");
+                PieceDumpCommand pieces = new PieceDumpCommand(this);
+                getLifecycleManager().registerEventHandler(
+                        io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
+                        event -> event.registrar().register(pieces.build()));
+                getLogger().info("Registered cmbpieces command");
                 CraftProbeCommand craft = new CraftProbeCommand();
                 getLifecycleManager().registerEventHandler(
                         io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
