@@ -86,6 +86,19 @@ Furniture is not blocks. No redstone or neighbour updates, and each piece is an 
 
 ## Requirements
 
-*   Paper **1.20 - 26.3**
-*   **CraftEngine** 26.9.x
-*   Java 25
+*   Paper **1.21.1 – 26.3**
+*   Java **21** or newer (Paper 26.x itself needs Java 25)
+*   **CraftEngine** 26.9 or newer
+
+One jar covers the whole range, and CI boots it on 1.21.1, 1.21.11 and 26.3 on every push. On
+a server older than 26.x, the vertical slabs and horizontal stairs of vanilla materials it
+doesn't have (cinnabar, sulfur and poplar; before 1.21.4 also pale oak and resin bricks) are
+left out automatically, instead of showing with the missing texture.
+
+**1.20.x and older, 1.8 included, are not supported, and can't be.** CMB is a CraftEngine pack,
+and CraftEngine's oldest supported version is 1.20.1 (its own dev servers start there). Below
+that there is nothing for CMB to run on. Every CMB furniture piece also collides through a
+scaled shulker hitbox, and CraftEngine applies hitbox scale only from 1.20.5
+(`ShulkerFurnitureHitbox`, behind `VersionHelper.isOrAbove1_20_5`). Below 1.20.5, every wall,
+fence, stair and vertical slab would collide as a full block. CMB itself starts at 1.21.1, the
+version the mod it ports is written for, and the oldest Paper API its code is checked against.
