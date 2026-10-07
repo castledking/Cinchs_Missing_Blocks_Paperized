@@ -101,6 +101,10 @@ grep -qE 'at net\.cinchtail\.' server.log && problems+=("an exception passed thr
 grep -E '\[CMB\] (Enabling|Installed|Reloaded)' server.log | sed 's/^/  /' || true
 if (( ${#problems[@]} )); then
     printf 'FAIL: %s\n' "${problems[@]}"
+    if grep -q 'issue(s) in file' server.log; then
+        echo "---- CraftEngine's issues ----"
+        grep -A12 'issue(s) in file' server.log | head -60 || true
+    fi
     echo "---- log lines mentioning CMB or errors ----"
     grep -nE 'CMB|cinchtail|ERROR|Exception' server.log | head -80 || true
     echo "---- last 30 log lines ----"
