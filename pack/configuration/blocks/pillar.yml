@@ -32,6 +32,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:andesite_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -72,6 +78,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:blackstone_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -112,6 +124,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:calcite_brick_pillar"
       hardness: 1.0
+      sounds:
+        break: "minecraft:block.calcite.break"
+        fall: "minecraft:block.calcite.fall"
+        hit: "minecraft:block.calcite.hit"
+        place: "minecraft:block.calcite.place"
+        step: "minecraft:block.calcite.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -151,6 +169,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:deepslate_brick_pillar"
       hardness: 3.5
+      sounds:
+        break: "minecraft:block.deepslate_bricks.break"
+        fall: "minecraft:block.deepslate_bricks.fall"
+        hit: "minecraft:block.deepslate_bricks.hit"
+        place: "minecraft:block.deepslate_bricks.place"
+        step: "minecraft:block.deepslate_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -191,6 +215,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:diorite_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -231,6 +261,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:dripstone_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.dripstone_block.break"
+        fall: "minecraft:block.dripstone_block.fall"
+        hit: "minecraft:block.dripstone_block.hit"
+        place: "minecraft:block.dripstone_block.place"
+        step: "minecraft:block.dripstone_block.step"
       resistance: 1.0
       require_correct_tools: true
       respect_tool_component: true
@@ -271,6 +307,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:end_stone_brick_pillar"
       hardness: 3.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 9.0
       require_correct_tools: true
       respect_tool_component: true
@@ -311,6 +353,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:granite_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -351,6 +399,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mud_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.mud_bricks.break"
+        fall: "minecraft:block.mud_bricks.fall"
+        hit: "minecraft:block.mud_bricks.hit"
+        place: "minecraft:block.mud_bricks.place"
+        step: "minecraft:block.mud_bricks.step"
       resistance: 3.0
       require_correct_tools: true
       respect_tool_component: true
@@ -391,6 +445,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:prismarine_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -431,6 +491,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:red_sandstone_brick_pillar"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -470,6 +536,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:sandstone_brick_pillar"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -509,6 +581,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:stone_brick_pillar"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:

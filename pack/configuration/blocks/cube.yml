@@ -13,6 +13,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:andesite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -34,6 +40,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:blackstone_tiles"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -55,6 +67,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:blue_nether_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -76,6 +94,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:calcite_bricks"
       hardness: 1.0
+      sounds:
+        break: "minecraft:block.calcite.break"
+        fall: "minecraft:block.calcite.fall"
+        hit: "minecraft:block.calcite.hit"
+        place: "minecraft:block.calcite.place"
+        step: "minecraft:block.calcite.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -96,6 +120,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_andesite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -117,6 +147,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_blue_nether_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
       resistance: 6.0
       tags:
         - "minecraft:mineable/pickaxe"
@@ -136,6 +172,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -157,6 +199,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_calcite_bricks"
       hardness: 1.0
+      sounds:
+        break: "minecraft:block.calcite.break"
+        fall: "minecraft:block.calcite.fall"
+        hit: "minecraft:block.calcite.hit"
+        place: "minecraft:block.calcite.place"
+        step: "minecraft:block.calcite.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -177,6 +225,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_diorite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -198,6 +252,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_dripstone_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.dripstone_block.break"
+        fall: "minecraft:block.dripstone_block.fall"
+        hit: "minecraft:block.dripstone_block.hit"
+        place: "minecraft:block.dripstone_block.place"
+        step: "minecraft:block.dripstone_block.step"
       resistance: 1.0
       require_correct_tools: true
       respect_tool_component: true
@@ -219,6 +279,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_end_stone_bricks"
       hardness: 3.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 9.0
       require_correct_tools: true
       respect_tool_component: true
@@ -240,6 +306,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_granite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -261,6 +333,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_mud_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.mud_bricks.break"
+        fall: "minecraft:block.mud_bricks.fall"
+        hit: "minecraft:block.mud_bricks.hit"
+        place: "minecraft:block.mud_bricks.place"
+        step: "minecraft:block.mud_bricks.step"
       resistance: 3.0
       require_correct_tools: true
       respect_tool_component: true
@@ -282,6 +360,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_prismarine_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -303,6 +387,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_purpur"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -324,6 +414,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:chiseled_red_nether_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -345,6 +441,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_andesite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -366,6 +468,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_blackstone_tiles"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -387,6 +495,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_blue_nether_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -408,6 +522,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -429,6 +549,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_calcite_bricks"
       hardness: 1.0
+      sounds:
+        break: "minecraft:block.calcite.break"
+        fall: "minecraft:block.calcite.fall"
+        hit: "minecraft:block.calcite.hit"
+        place: "minecraft:block.calcite.place"
+        step: "minecraft:block.calcite.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -449,6 +575,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_diorite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -470,6 +602,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_dripstone_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.dripstone_block.break"
+        fall: "minecraft:block.dripstone_block.fall"
+        hit: "minecraft:block.dripstone_block.hit"
+        place: "minecraft:block.dripstone_block.place"
+        step: "minecraft:block.dripstone_block.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -491,6 +629,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_end_stone_bricks"
       hardness: 3.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 9.0
       require_correct_tools: true
       respect_tool_component: true
@@ -512,6 +656,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_granite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -533,6 +683,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_mud_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.mud_bricks.break"
+        fall: "minecraft:block.mud_bricks.fall"
+        hit: "minecraft:block.mud_bricks.hit"
+        place: "minecraft:block.mud_bricks.place"
+        step: "minecraft:block.mud_bricks.step"
       resistance: 3.0
       require_correct_tools: true
       respect_tool_component: true
@@ -554,6 +710,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_prismarine_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -575,6 +737,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_quartz_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -595,6 +763,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_red_nether_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -616,6 +790,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_red_sandstone_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -636,6 +816,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_sandstone_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -656,6 +842,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_stone_tiles"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -677,6 +869,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:cracked_tuff_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.tuff_bricks.break"
+        fall: "minecraft:block.tuff_bricks.fall"
+        hit: "minecraft:block.tuff_bricks.hit"
+        place: "minecraft:block.tuff_bricks.place"
+        step: "minecraft:block.tuff_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -698,6 +896,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:diorite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -719,6 +923,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:dripstone_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.dripstone_block.break"
+        fall: "minecraft:block.dripstone_block.fall"
+        hit: "minecraft:block.dripstone_block.hit"
+        place: "minecraft:block.dripstone_block.place"
+        step: "minecraft:block.dripstone_block.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -740,6 +950,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:granite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -761,6 +977,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_andesite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -782,6 +1004,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_bricks"
       hardness: 2.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -803,6 +1031,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_calcite_bricks"
       hardness: 1.0
+      sounds:
+        break: "minecraft:block.calcite.break"
+        fall: "minecraft:block.calcite.fall"
+        hit: "minecraft:block.calcite.hit"
+        place: "minecraft:block.calcite.place"
+        step: "minecraft:block.calcite.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -823,6 +1057,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_cobbled_deepslate"
       hardness: 3.5
+      sounds:
+        break: "minecraft:block.deepslate.break"
+        fall: "minecraft:block.deepslate.fall"
+        hit: "minecraft:block.deepslate.hit"
+        place: "minecraft:block.deepslate.place"
+        step: "minecraft:block.deepslate.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -844,6 +1084,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_deepslate_bricks"
       hardness: 3.5
+      sounds:
+        break: "minecraft:block.deepslate_bricks.break"
+        fall: "minecraft:block.deepslate_bricks.fall"
+        hit: "minecraft:block.deepslate_bricks.hit"
+        place: "minecraft:block.deepslate_bricks.place"
+        step: "minecraft:block.deepslate_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -865,6 +1111,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_deepslate_tiles"
       hardness: 3.5
+      sounds:
+        break: "minecraft:block.deepslate_tiles.break"
+        fall: "minecraft:block.deepslate_tiles.fall"
+        hit: "minecraft:block.deepslate_tiles.hit"
+        place: "minecraft:block.deepslate_tiles.place"
+        step: "minecraft:block.deepslate_tiles.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -886,6 +1138,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_diorite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -907,6 +1165,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_dripstone_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.dripstone_block.break"
+        fall: "minecraft:block.dripstone_block.fall"
+        hit: "minecraft:block.dripstone_block.hit"
+        place: "minecraft:block.dripstone_block.place"
+        step: "minecraft:block.dripstone_block.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -928,6 +1192,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_end_stone_bricks"
       hardness: 3.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 9.0
       require_correct_tools: true
       respect_tool_component: true
@@ -949,6 +1219,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_granite_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -970,6 +1246,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_mud_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.mud_bricks.break"
+        fall: "minecraft:block.mud_bricks.fall"
+        hit: "minecraft:block.mud_bricks.hit"
+        place: "minecraft:block.mud_bricks.place"
+        step: "minecraft:block.mud_bricks.step"
       resistance: 3.0
       require_correct_tools: true
       respect_tool_component: true
@@ -991,6 +1273,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_prismarine_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1012,6 +1300,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_quartz_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1032,6 +1326,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_red_sandstone_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1052,6 +1352,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_sandstone_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1072,6 +1378,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_stone_tiles"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1093,6 +1405,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:mossy_tuff_bricks"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.tuff_bricks.break"
+        fall: "minecraft:block.tuff_bricks.fall"
+        hit: "minecraft:block.tuff_bricks.hit"
+        place: "minecraft:block.tuff_bricks.place"
+        step: "minecraft:block.tuff_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1114,6 +1432,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:polished_calcite"
       hardness: 1.0
+      sounds:
+        break: "minecraft:block.calcite.break"
+        fall: "minecraft:block.calcite.fall"
+        hit: "minecraft:block.calcite.hit"
+        place: "minecraft:block.calcite.place"
+        step: "minecraft:block.calcite.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1134,6 +1458,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:polished_dripstone"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.dripstone_block.break"
+        fall: "minecraft:block.dripstone_block.fall"
+        hit: "minecraft:block.dripstone_block.hit"
+        place: "minecraft:block.dripstone_block.place"
+        step: "minecraft:block.dripstone_block.step"
       resistance: 1.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1155,6 +1485,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:polished_end_stone"
       hardness: 3.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 9.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1176,6 +1512,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:red_sandstone_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1196,6 +1538,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:sandstone_bricks"
       hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1221,6 +1569,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:sculk_inlaid_deepslate"
       hardness: 3.5
+      sounds:
+        break: "minecraft:block.deepslate_bricks.break"
+        fall: "minecraft:block.deepslate_bricks.fall"
+        hit: "minecraft:block.deepslate_bricks.hit"
+        place: "minecraft:block.deepslate_bricks.place"
+        step: "minecraft:block.deepslate_bricks.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1244,6 +1598,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:snow_bricks"
       hardness: 0.2
+      sounds:
+        break: "minecraft:block.snow.break"
+        fall: "minecraft:block.snow.fall"
+        hit: "minecraft:block.snow.hit"
+        place: "minecraft:block.snow.place"
+        step: "minecraft:block.snow.step"
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1280,6 +1640,12 @@ blocks:
     settings:
       item: "cinchsmissingblocks:stone_tiles"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
