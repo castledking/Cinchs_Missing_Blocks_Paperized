@@ -13,11 +13,12 @@ import net.momirealms.craftengine.bukkit.api.CraftEngineFurniture;
 import net.momirealms.craftengine.bukkit.entity.furniture.BukkitFurniture;
 import net.momirealms.craftengine.core.block.ImmutableBlockState;
 import net.momirealms.craftengine.core.util.Key;
+import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.BlockDisplay;
 import org.bukkit.entity.Display;
 import org.bukkit.entity.Entity;
@@ -40,8 +41,9 @@ import org.joml.Vector3f;
  * by tools.max-radius.
  *
  * <p>The outlines follow GriefPrevention3D's glowing visualization: a block display per
- * piece, glowing in its category's colour (any RGB, through the glow colour override),
- * seen only by the player who asked (hidden by default, shown to them). They are not
+ * piece, of the block tools.block-outline names, glowing in its category's colour (any
+ * RGB, through the glow colour override), seen only by the player who asked (hidden by
+ * default, shown to them). They are not
  * persistent, so a restart or an unloaded chunk can never leave one behind, and they go
  * when the player runs /cmb glow again, quits, or the plugin disables.
  */
@@ -198,6 +200,7 @@ final class PieceTools implements Listener {
         clearGlow(player);
         List<BlockDisplay> displays = new ArrayList<>();
         Map<String, Integer> colors = settings().colors();
+        BlockData outline = Bukkit.createBlockData(settings().outlineBlock());
         for (Found f : found) {
             double[] b = f.box();
             Location at = new Location(player.getWorld(), b[0] - PAD, b[1] - PAD, b[2] - PAD);
@@ -207,7 +210,7 @@ final class PieceTools implements Listener {
                 d.setVisibleByDefault(false);
                 d.setPersistent(false);
                 d.addScoreboardTag(GLOW_TAG);
-                d.setBlock(Material.WHITE_STAINED_GLASS.createBlockData());
+                d.setBlock(outline);
                 d.setGlowing(true);
                 d.setGlowColorOverride(color);
                 d.setBrightness(new Display.Brightness(15, 15));

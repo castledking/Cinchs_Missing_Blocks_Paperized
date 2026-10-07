@@ -139,7 +139,31 @@ public final class ConfigLoader {
             }
             colors.put(category.key(), rgb == null ? category.defaultColor : rgb);
         }
-        return new CmbConfig.Tools(defaultRadius, maxRadius, Map.copyOf(colors));
+        return new CmbConfig.Tools(defaultRadius, maxRadius, Map.copyOf(colors),
+                outlineBlock(c.getString("tools.block-outline")));
+    }
+
+    /**
+     * tools.block-outline as block data: a block (WHITE_STAINED_GLASS, barrier), or a block
+     * with states (white_stained_glass_pane[north=true,south=true]). Anything that isn't a
+     * block keeps the default, with a warning.
+     */
+    private String outlineBlock(String raw) {
+        if (raw == null || raw.isBlank()) {
+            return CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK;
+        }
+        String id = raw.trim().toLowerCase(java.util.Locale.ROOT);
+        try {
+            org.bukkit.block.data.BlockData data = org.bukkit.Bukkit.createBlockData(id);
+            if (data.getMaterial().isBlock() && !data.getMaterial().isAir()) {
+                return data.getAsString();
+            }
+        } catch (IllegalArgumentException e) {
+            // falls through to the warning
+        }
+        plugin.getLogger().warning("tools.block-outline: '" + raw + "' is not a block; using "
+                + CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK);
+        return CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK;
     }
 
     static Integer parseColor(String raw) {
@@ -156,7 +180,7 @@ public final class ConfigLoader {
                 : PieceCategory.values()) {
             colors.put(category.key(), category.defaultColor);
         }
-        return new CmbConfig.Tools(8, 32, Map.copyOf(colors));
+        return new CmbConfig.Tools(8, 32, Map.copyOf(colors), CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK);
     }
 
     /** Top-level sections this build understands. Anything else is a typo or a stale key. */

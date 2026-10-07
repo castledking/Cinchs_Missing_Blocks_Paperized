@@ -168,7 +168,10 @@ tools:
     vertical_slabs: "#9933FF"
     horizontal_stairs: "#FF00FF"
     crops: "#55FFFF"
-  block-outline: WHITE_STAINED_GLASS_PANE # BARRIER for glow outline only
+  # The block each outline is drawn with, faintly visible inside its glow: any block, or a
+  # block with states, e.g. "white_stained_glass_pane[north=true,south=true]". A pane on its
+  # own is a thin post.
+  block-outline: WHITE_STAINED_GLASS
 
 # Ask Modrinth, on startup and every 12 hours, whether a newer CMB release exists for this
 # server's Minecraft version, and tell the console and players with cmb.admin when they

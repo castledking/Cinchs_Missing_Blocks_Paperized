@@ -47,8 +47,14 @@ public record CmbConfig(
      * @param defaultRadius blocks around the player when a command gives no radius
      * @param maxRadius the largest radius either command accepts
      * @param colors outline colour per category, as 0xRRGGBB, keyed by {@code PieceCategory.key()}
+     * @param outlineBlock the block each outline is drawn with, as block data
+     *     ({@code minecraft:white_stained_glass}); checked when the config loads
      */
-    public record Tools(int defaultRadius, int maxRadius, java.util.Map<String, Integer> colors) {}
+    public record Tools(int defaultRadius, int maxRadius, java.util.Map<String, Integer> colors,
+                        String outlineBlock) {
+
+        public static final String DEFAULT_OUTLINE_BLOCK = "minecraft:white_stained_glass";
+    }
 
     /**
      * Vertical slabs: the enabled slab or stair stood on edge.
