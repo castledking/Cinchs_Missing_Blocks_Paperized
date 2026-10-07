@@ -100,12 +100,28 @@ public final class Protection implements Listener {
         }
     }
 
+    /** player -> {message, when}: the last denial sent, so one refusal reads once. */
+    private static final java.util.Map<java.util.UUID, Object[]> LAST_DENIAL = new java.util.concurrent.ConcurrentHashMap<>();
+    private static final long REPEAT_MS = 1000;
+
     private static void deny(Player player, String reason) {
-        if (reason == null || reason.isBlank()) {
+        String text = reason == null || reason.isBlank() ? null
+                // GriefPrevention returns its reason uncoloured and colours it when it sends
+                // it itself (TextMode.Err, red, in GriefPrevention and GriefPrevention3D).
+                // Relayed bare, it read white beside GriefPrevention's own red line.
+                : "\u00a7c" + reason;
+        String key = text == null ? "protected" : text;
+        long now = System.currentTimeMillis();
+        Object[] last = LAST_DENIAL.put(player.getUniqueId(), new Object[] {key, now});
+        // One action can ask more than once (a hit, then the break it leads to): say it once.
+        if (last != null && key.equals(last[0]) && now - (long) last[1] < REPEAT_MS) {
+            return;
+        }
+        if (text == null) {
             player.sendMessage(plugin.lang().get("protected"));
         } else {
             player.sendMessage(net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer
-                    .legacySection().deserialize(reason));
+                    .legacySection().deserialize(text));
         }
     }
 
