@@ -40,6 +40,17 @@ dependencies {
     // newest WorldGuard built for Java 21 (7.0.19 is Java 25); the query API Protection
     // calls is the same in both.
     compileOnly("com.sk89q.worldguard:worldguard-bukkit:7.0.17")
+
+    // Unit tests run without a server: paper-api supplies the Bukkit types the classes
+    // under test load, nothing more.
+    testImplementation("io.papermc.paper:paper-api:${property("paperApiVersion")}")
+    testImplementation(platform("org.junit:junit-bom:5.13.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.withType<JavaCompile>().configureEach {

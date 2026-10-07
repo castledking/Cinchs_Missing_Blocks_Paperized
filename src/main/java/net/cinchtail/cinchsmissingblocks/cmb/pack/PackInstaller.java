@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -17,9 +18,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 import net.cinchtail.cinchsmissingblocks.cmb.config.CmbConfig;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.LoaderOptions;
@@ -119,15 +122,20 @@ public final class PackInstaller {
     private Map<String, Set<String>> removedIds(CmbConfig cfg) throws IOException {
         JsonObject manifest = JsonParser.parseString(
                 new String(resource("intermediate/pieces.json"), StandardCharsets.UTF_8)).getAsJsonObject();
-        boolean viaBackwards = Bukkit.getPluginManager().getPlugin("ViaBackwards") != null;
+        Server server = new Server(Bukkit.getPluginManager().getPlugin("ViaBackwards") != null,
+                name -> Material.matchMaterial(name) != null);
         Map<String, Set<String>> removed = new HashMap<>();
         for (String section : SECTIONS) {
             Set<String> ids = new HashSet<>();
             JsonObject entries = manifest.getAsJsonObject(section);
             if (entries != null) {
                 for (Map.Entry<String, JsonElement> entry : entries.entrySet()) {
-                    for (JsonElement flag : entry.getValue().getAsJsonArray()) {
-                        if (!on(flag.getAsString(), cfg, viaBackwards)) {
+                    List<String> flags = new ArrayList<>();
+                    entry.getValue().getAsJsonArray().forEach(flag -> flags.add(flag.getAsString()));
+                    String block = flags.stream().filter(f -> f.startsWith("block:"))
+                            .map(f -> f.substring("block:".length())).findFirst().orElse(null);
+                    for (String flag : flags) {
+                        if (!on(flag, cfg, server, block)) {
                             ids.add(entry.getKey());
                             break;
                         }
@@ -139,14 +147,23 @@ public final class PackInstaller {
         return removed;
     }
 
-    /** One switch from pieces.json; "a|b" is on when either is. */
-    static boolean on(String flag, CmbConfig cfg, boolean viaBackwards) {
+    /**
+     * What the running server has, as far as the switches ask: ViaBackwards, and whether
+     * vanilla has a block or item by a given name (no namespace).
+     */
+    record Server(boolean viaBackwards, Predicate<String> vanillaHas) {}
+
+    /**
+     * One switch from pieces.json; "a|b" is on when either is. {@code block} is the CMB
+     * block the id belongs to (its {@code block:} switch), or null.
+     */
+    static boolean on(String flag, CmbConfig cfg, Server server, String block) {
         if (flag.isEmpty()) {
             return true;
         }
         if (flag.contains("|")) {
             for (String part : flag.split("\\|")) {
-                if (on(part, cfg, viaBackwards)) {
+                if (on(part, cfg, server, block)) {
                     return true;
                 }
             }
@@ -167,7 +184,14 @@ public final class PackInstaller {
             case "block" -> !cfg.disabledBlocks().blocks().contains(arg);
             case "terracotta" -> !features.disableTerracotta();
             case "concrete" -> !features.disableConcrete();
-            case "viabackwards" -> viaBackwards;
+            // A CMB block that vanilla later added under the same name (concrete slabs
+            // and stairs, in 26.x) is a duplicate on a server whose vanilla has it -
+            // unless ViaBackwards lets in older clients, which lack the vanilla one. The
+            // generator flags it from the newest vanilla it was built against; whether
+            // *this* server's vanilla has the block is only known here. On 1.21.x it never
+            // did, so the piece stays. No block to check: keep it rather than guess.
+            case "viabackwards" -> server.viaBackwards() || block == null
+                    || !server.vanillaHas().test(block);
             case "doubles.block" -> "block".equals(features.doubles());
             case "doubles.furniture" -> "furniture".equals(features.doubles());
             // A switch this build doesn't know: keep the id rather than guess.
