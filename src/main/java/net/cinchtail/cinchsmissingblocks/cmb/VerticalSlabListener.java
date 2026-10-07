@@ -1364,6 +1364,15 @@ public final class VerticalSlabListener implements Listener {
             return false;
         }
         Block cell = plate.cell();
+        // A wall or fence collides 1.5 high, as vanilla's does, so its top hitbox reaches
+        // half a block into the cell above, past the model. That part is what a player's
+        // crosshair meets when aiming at the top of the wall, and every face of it means
+        // "on top". Taken face by face, its sides placed a piece beside the wall below,
+        // or nothing when that cell was already the next wall along.
+        if ((plate.kind() == Kind.WALL || plate.kind() == Kind.FENCE)
+                && point.getY() >= cell.getY() + 1 - 1e-3) {
+            face = BlockFace.UP;
+        }
         Vec3d at = new Vec3d(point.getX(), point.getY(), point.getZ());
         Optional<ItemDefinition> definition = user.getItemInHand(hand).getDefinition();
         FurnitureItem furnitureItem = definition
