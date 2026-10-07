@@ -16,31 +16,40 @@
 
 ## What you get
 
-**799 pieces** across every family the mod has — **287 blocks** and **511 furniture** — all of them placeable.
+**1,264 pieces** across every family the mod has — **342 blocks** and **922 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
 
 **Blocks** — real CraftEngine blocks, with vanilla collision:
 
 | | |
 |---|---|
-| 157 | vertical slab doubles — two vertical slabs stacked make the full block |
+| 174 | vertical slab doubles — two vertical slabs stacked make the full block |
+| 94 | horizontal slab doubles |
 | 61 | full blocks: bricks, tiles, polished, cracked and mossy variants across andesite, calcite, deepslate, diorite, dripstone, end stone, granite, mud, prismarine, quartz, sandstone, stone, tuff and more |
-| 56 | horizontal slab doubles |
 | 13 | pillars, rotating on all three axes |
 
 **Furniture** — every material, spending no vanilla states:
 
 | | |
 |---|---|
-| 157 | horizontal stairs — a stair on its side, the corner piece for vertical slab walls |
-| 157 | vertical slabs — a slab stood on edge, for CMB **and** all vanilla materials |
-| 75 | walls, with proper posts and connection behaviour |
-| 60 | stairs |
-| 56 | horizontal slabs |
+| 174 | horizontal stairs — a stair on its side, the corner piece for vertical slab walls |
+| 174 | vertical slabs — a slab stood on edge, for CMB **and** all vanilla materials |
+| 174 | vertical slab doubles, in furniture form |
+| 108 | walls, with proper posts and connection behaviour |
+| 97 | stairs |
+| 94 | horizontal slabs |
+| 94 | horizontal slab doubles, in furniture form |
 | 5 | fences |
 | 1 | tinted glass pane |
-| 1 | warped nether wart crop, this port's own addition | 
+| 1 | warped nether wart crop, this port's own addition |
 
-Plus proper **drops, recipes, mining tags and creative categories**, generated from the mod's own data.
+A doubled slab ships in **both** forms and the difference matters when you build: the block
+form mines like a block and takes pistons, the furniture form breaks in one hit like the slab
+it stands in for. `features.vertical-slabs.doubles` picks which a server offers.
+
+All **381** of the mod's blocks are served — 342 as blocks, and walls, fences, panes, stairs
+and slabs as furniture, for the reason below. Alongside them come **1,822 items** and
+**1,127 recipes**, with drops, loot tables, mining tags and creative categories generated
+from the mod's own data.
 
 ## Nothing vanilla changes
 
