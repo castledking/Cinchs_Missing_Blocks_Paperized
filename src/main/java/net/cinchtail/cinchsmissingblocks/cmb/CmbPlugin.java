@@ -130,6 +130,7 @@ public final class CmbPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new VerticalSlabListener(this), this);
         // Several hits to break a furniture piece, by hardness and tool.
         getServer().getPluginManager().registerEvents(new FurnitureMining(this), this);
+        getServer().getPluginManager().registerEvents(new StonecutterGuard(this), this);
         // The warped nether wart crop, and finding it.
         getServer().getPluginManager().registerEvents(new NetherWartCrops(this), this);
         // The first-join setup message for admins (/cmb setupmsg shows it again).
