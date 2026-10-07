@@ -22,6 +22,9 @@ unknown-category: "{prefix}&cUnknown category &f{tag}&c. Use one of: &f{categori
 radius-out-of-range: "{prefix}&cThe radius must be between 1 and {max} (tools.max-radius in config.yml)."
 players-only: "{prefix}&cOnly a player can do that."
 
+# To players with cmb.admin on join, when Modrinth has a newer release for this server.
+update-available: "{prefix}&eCMB &f{latest} &eis available &7(this server runs {current})&e: &f{url}"
+
 item-usage: "{prefix}&eUsage: &f/cmb item browser [player] &7or &f/cmb item give <player> <item> [amount] [--silent]"
 
 # The console startup banner: the art is in startups.txt, uncoloured, and everything

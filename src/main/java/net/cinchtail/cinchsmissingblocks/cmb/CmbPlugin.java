@@ -134,6 +134,11 @@ public final class CmbPlugin extends JavaPlugin {
         // The warped nether wart crop, and finding it.
         getServer().getPluginManager().registerEvents(new NetherWartCrops(this), this);
         // The first-join setup message for admins (/cmb setupmsg shows it again).
+        if (cmbConfig().updateChecker()) {
+            UpdateChecker updates = new UpdateChecker(this);
+            getServer().getPluginManager().registerEvents(updates, this);
+            updates.start();
+        }
         this.pieceTools = new PieceTools(this);
         getServer().getPluginManager().registerEvents(pieceTools, this);
         this.setupNotice = new SetupNotice(this);

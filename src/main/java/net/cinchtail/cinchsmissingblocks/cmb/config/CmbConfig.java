@@ -28,6 +28,7 @@ import java.util.Set;
  * @param craftEngine state budget, mirrored from the generator so the two can be compared
  * @param disabledBlocks blocks the server refuses to serve regardless of anything else
  * @param tools /cmb kill and /cmb glow
+ * @param updateChecker ask Modrinth for a newer release and tell admins
  */
 public record CmbConfig(
         Features features,
@@ -36,7 +37,8 @@ public record CmbConfig(
         Compatibility compatibility,
         CraftEngineSettings craftEngine,
         DisabledBlocks disabledBlocks,
-        Tools tools
+        Tools tools,
+        boolean updateChecker
 ) {
 
     /**

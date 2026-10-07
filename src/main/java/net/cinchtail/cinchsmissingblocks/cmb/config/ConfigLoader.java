@@ -120,7 +120,8 @@ public final class ConfigLoader {
                         c.getInt("craftengine.max-internal-states", 5120),
                         c.getInt("craftengine.reserved-states", 64)),
                 new CmbConfig.DisabledBlocks(lower(c.getStringList("disabled-blocks"))),
-                tools(c));
+                tools(c),
+                c.getBoolean("update-checker", true));
     }
 
     /** The tools section; a colour that doesn't parse keeps its default, with a warning. */
@@ -161,7 +162,7 @@ public final class ConfigLoader {
     /** Top-level sections this build understands. Anything else is a typo or a stale key. */
     private static final Set<String> KNOWN_SECTIONS =
             Set.of("craftengine", "compatibility", "content", "features",
-                   "resource-pack", "disabled-blocks", "tools");
+                   "resource-pack", "disabled-blocks", "tools", "update-checker");
 
     private void reportUnknownKeys(Set<String> seenKeys) {
         List<String> unknown = seenKeys.stream().filter(k -> !KNOWN_SECTIONS.contains(k)).toList();
@@ -201,7 +202,8 @@ public final class ConfigLoader {
                 new CmbConfig.Compatibility(CmbConfig.Compatibility.Policy.DISABLE),
                 new CmbConfig.CraftEngineSettings(5120, 64),
                 new CmbConfig.DisabledBlocks(Set.of()),
-                defaultTools());
+                defaultTools(),
+                true);
     }
 
     /** Logs the settings that change behaviour, so a reload states what it picked up. */

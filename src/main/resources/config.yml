@@ -57,10 +57,12 @@ features:
   protect-furniture-cells: true
 
   # Vertical slabs: a slab stood on edge. They are CraftEngine furniture rather than
-  # blocks, because nothing vanilla has a standing half-block collision (see
-  # DESIGN.md 6.1 - a bell is the only exact one, and it caps the family at four
-  # states that would have to be stolen from real bells). Being furniture, they cost
-  # no CraftEngine internal states at all.
+  # blocks, because nothing vanilla collides like a standing half-block - a bell is the
+  # only exact match, and it covers four states that would have to be taken from real
+  # bells. Being furniture, they cost no CraftEngine internal states at all, and they
+  # still collide properly: CraftEngine gives each one invisible, no-AI shulkers,
+  # scaled to the piece, as a hitbox so vertical slabs don't let you move through them.
+  #
   #
   # `cmb` builds one per CMB slab or stair material that is served. `vanilla` does
   # the same for vanilla slabs, so
@@ -73,8 +75,8 @@ features:
     cmb: true
     vanilla: true
     # What two slabs in one cell become: block (a real block; Jade names its vanilla
-    # carrier) or furniture (Jade names it after the slab; breaks in one hit).
-    doubles: block
+    # carrier) or furniture (Jade names it after the slab).
+    doubles: furniture
     # Material names without the `_vertical` suffix, e.g. `oak`, `andesite_brick`.
     disabled: []
 
@@ -164,3 +166,8 @@ tools:
     panes: "#FF88CC"
     vertical_slabs: "#9933FF"
     horizontal_stairs: "#FF00FF"
+
+# Ask Modrinth, on startup and every 12 hours, whether a newer CMB release exists for this
+# server's Minecraft version, and tell the console and players with cmb.admin when they
+# join. Nothing is downloaded.
+update-checker: true
