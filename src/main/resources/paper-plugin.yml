@@ -45,6 +45,12 @@ permissions:
   cmb.item:
     description: /cmb item browser and /cmb item give (CraftEngine's, under CMB's name)
     default: op
+  cmb.kill:
+    description: /cmb kill - remove CMB pieces around you by category
+    default: op
+  cmb.glow:
+    description: /cmb glow - outline CMB pieces around you by category, for you only
+    default: op
   cmb.debug:
     description: The debug commands, with -Dcmb.debug=true
     default: op

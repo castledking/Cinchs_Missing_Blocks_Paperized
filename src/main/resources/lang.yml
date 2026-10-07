@@ -12,6 +12,16 @@ reload-failed: "{prefix}&cReload failed - see the console for why."
 
 # /cmb item is hidden from anyone without cmb.item, so a "you need permission"
 # message could never be shown and is deliberately absent.
+# /cmb kill and /cmb glow. {breakdown} is "5 walls, 3 stairs"; {categories} the list.
+kill-usage: "{prefix}&eUsage: &f/cmb kill <#category|#all> [radius] &7- removes CMB pieces around you, without drops"
+glow-usage: "{prefix}&eUsage: &f/cmb glow [#category|#all] [radius] &7- outlines CMB pieces for you; &f/cmb glow &7again clears"
+kill-done: "{prefix}&eRemoved &f{count} &epieces within &f{radius} &eblocks: &7{breakdown}"
+glow-done: "{prefix}&eOutlining &f{count} &epieces within &f{radius} &eblocks: &7{breakdown}&e. &f/cmb glow &7to clear."
+glow-off: "{prefix}&eOutlines cleared."
+unknown-category: "{prefix}&cUnknown category &f{tag}&c. Use one of: &f{categories}"
+radius-out-of-range: "{prefix}&cThe radius must be between 1 and {max} (tools.max-radius in config.yml)."
+players-only: "{prefix}&cOnly a player can do that."
+
 item-usage: "{prefix}&eUsage: &f/cmb item browser [player] &7or &f/cmb item give <player> <item> [amount] [--silent]"
 
 # The console startup banner: the art is in startups.txt, uncoloured, and everything

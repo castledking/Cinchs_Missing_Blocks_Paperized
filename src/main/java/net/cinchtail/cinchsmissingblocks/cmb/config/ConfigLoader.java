@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.stream.Collectors;
+import net.cinchtail.cinchsmissingblocks.cmb.PieceCategory;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -116,13 +119,49 @@ public final class ConfigLoader {
                 new CmbConfig.CraftEngineSettings(
                         c.getInt("craftengine.max-internal-states", 5120),
                         c.getInt("craftengine.reserved-states", 64)),
-                new CmbConfig.DisabledBlocks(lower(c.getStringList("disabled-blocks"))));
+                new CmbConfig.DisabledBlocks(lower(c.getStringList("disabled-blocks"))),
+                tools(c));
+    }
+
+    /** The tools section; a colour that doesn't parse keeps its default, with a warning. */
+    private CmbConfig.Tools tools(FileConfiguration c) {
+        int defaultRadius = Math.max(1, c.getInt("tools.default-radius", 8));
+        int maxRadius = Math.max(defaultRadius, c.getInt("tools.max-radius", 32));
+        Map<String, Integer> colors = new LinkedHashMap<>();
+        for (PieceCategory category
+                : PieceCategory.values()) {
+            String raw = c.getString("tools.glow-colors." + category.key());
+            Integer rgb = raw == null ? null : parseColor(raw);
+            if (raw != null && rgb == null) {
+                plugin.getLogger().warning("tools.glow-colors." + category.key() + ": '" + raw
+                        + "' is not a #RRGGBB colour; using the default");
+            }
+            colors.put(category.key(), rgb == null ? category.defaultColor : rgb);
+        }
+        return new CmbConfig.Tools(defaultRadius, maxRadius, Map.copyOf(colors));
+    }
+
+    static Integer parseColor(String raw) {
+        String hex = raw.trim().replaceFirst("^#", "");
+        if (!hex.matches("[0-9a-fA-F]{6}")) {
+            return null;
+        }
+        return Integer.parseInt(hex, 16);
+    }
+
+    private static CmbConfig.Tools defaultTools() {
+        Map<String, Integer> colors = new LinkedHashMap<>();
+        for (PieceCategory category
+                : PieceCategory.values()) {
+            colors.put(category.key(), category.defaultColor);
+        }
+        return new CmbConfig.Tools(8, 32, Map.copyOf(colors));
     }
 
     /** Top-level sections this build understands. Anything else is a typo or a stale key. */
     private static final Set<String> KNOWN_SECTIONS =
             Set.of("craftengine", "compatibility", "content", "features",
-                   "resource-pack", "disabled-blocks");
+                   "resource-pack", "disabled-blocks", "tools");
 
     private void reportUnknownKeys(Set<String> seenKeys) {
         List<String> unknown = seenKeys.stream().filter(k -> !KNOWN_SECTIONS.contains(k)).toList();
@@ -161,7 +200,8 @@ public final class ConfigLoader {
                 new CmbConfig.Content(new CmbConfig.Wart(true, 0.25, true, 0.35, true)),
                 new CmbConfig.Compatibility(CmbConfig.Compatibility.Policy.DISABLE),
                 new CmbConfig.CraftEngineSettings(5120, 64),
-                new CmbConfig.DisabledBlocks(Set.of()));
+                new CmbConfig.DisabledBlocks(Set.of()),
+                defaultTools());
     }
 
     /** Logs the settings that change behaviour, so a reload states what it picked up. */

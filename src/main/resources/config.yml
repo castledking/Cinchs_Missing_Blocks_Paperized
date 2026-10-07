@@ -141,3 +141,26 @@ resource-pack:
 # more. Blocks with no carrier are listed here have no effect, because they are not
 # served in the first place; the generator's capacity report is the place to see why.
 disabled-blocks: []
+
+# /cmb kill and /cmb glow: find CMB pieces around you by category.
+#
+#   /cmb kill <#category> [radius]   remove them (no drops)
+#   /cmb glow [#category] [radius]   outline them, for you only, until /cmb glow again
+#
+# Categories: #blocks #pillars #stairs #slabs #walls #fences #panes #vertical_slabs
+# #horizontal_stairs, or #all. A doubled slab counts with its slab, block or furniture.
+tools:
+  # Blocks around you when a command gives no radius, and the most either accepts.
+  default-radius: 8
+  max-radius: 32
+  # Outline colour per category, #RRGGBB.
+  glow-colors:
+    blocks: "#55FF55"
+    pillars: "#5555FF"
+    stairs: "#FFFF55"
+    slabs: "#FFAA00"
+    walls: "#FF5555"
+    fences: "#AA0000"
+    panes: "#FF88CC"
+    vertical_slabs: "#9933FF"
+    horizontal_stairs: "#FF00FF"

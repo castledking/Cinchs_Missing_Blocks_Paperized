@@ -27,6 +27,7 @@ import java.util.Set;
  * @param compatibility what to do with content the server cannot represent
  * @param craftEngine state budget, mirrored from the generator so the two can be compared
  * @param disabledBlocks blocks the server refuses to serve regardless of anything else
+ * @param tools /cmb kill and /cmb glow
  */
 public record CmbConfig(
         Features features,
@@ -34,8 +35,18 @@ public record CmbConfig(
         Content content,
         Compatibility compatibility,
         CraftEngineSettings craftEngine,
-        DisabledBlocks disabledBlocks
+        DisabledBlocks disabledBlocks,
+        Tools tools
 ) {
+
+    /**
+     * /cmb kill and /cmb glow.
+     *
+     * @param defaultRadius blocks around the player when a command gives no radius
+     * @param maxRadius the largest radius either command accepts
+     * @param colors outline colour per category, as 0xRRGGBB, keyed by {@code PieceCategory.key()}
+     */
+    public record Tools(int defaultRadius, int maxRadius, java.util.Map<String, Integer> colors) {}
 
     /**
      * Vertical slabs: the enabled slab or stair stood on edge.

@@ -694,7 +694,7 @@ public final class VerticalSlabListener implements Listener {
     }
 
     /** Re-shapes the furniture stairs beside a cell, after one there came or went. */
-    private static void reshapeAround(Block cell) {
+    static void reshapeAround(Block cell) {
         // The cell itself, if it is bars, a wall or a fence that just went in; those
         // beside the cell join or let go of a piece that came or went, and a vanilla
         // wall below takes its tall sides and post from a piece wall above it.

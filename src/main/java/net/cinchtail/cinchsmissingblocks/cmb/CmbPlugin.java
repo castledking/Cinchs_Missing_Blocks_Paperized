@@ -30,6 +30,7 @@ public final class CmbPlugin extends JavaPlugin {
     private PackWriter packWriter;
     private final Lang lang = new Lang(this);
     private SetupNotice setupNotice;
+    private PieceTools pieceTools;
     /** When this plugin started loading, so the banner can say how long the boot took. */
     private final long startupStartTime = System.currentTimeMillis();
     /** Resolved once on enable: the mode actually in force, after install checks. */
@@ -132,6 +133,8 @@ public final class CmbPlugin extends JavaPlugin {
         // The warped nether wart crop, and finding it.
         getServer().getPluginManager().registerEvents(new NetherWartCrops(this), this);
         // The first-join setup message for admins (/cmb setupmsg shows it again).
+        this.pieceTools = new PieceTools(this);
+        getServer().getPluginManager().registerEvents(pieceTools, this);
         this.setupNotice = new SetupNotice(this);
         getServer().getPluginManager().registerEvents(setupNotice, this);
         if (debug()) {
@@ -252,6 +255,18 @@ public final class CmbPlugin extends JavaPlugin {
     }
 
     /** The loaded config.yml. */
+    @Override
+    public void onDisable() {
+        // Outlines are not persistent, but a /reload keeps the world: take them down.
+        if (pieceTools != null) {
+            pieceTools.clearAll();
+        }
+    }
+
+    PieceTools pieceTools() {
+        return pieceTools;
+    }
+
     public CmbConfig cmbConfig() {
         return configLoader.config();
     }
