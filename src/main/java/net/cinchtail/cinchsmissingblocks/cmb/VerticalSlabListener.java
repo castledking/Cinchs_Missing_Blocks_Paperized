@@ -695,12 +695,14 @@ public final class VerticalSlabListener implements Listener {
 
     /** Re-shapes the furniture stairs beside a cell, after one there came or went. */
     private static void reshapeAround(Block cell) {
-        // The cell itself, if it is bars that just went in; bars beside the cell join
-        // or let go of a piece that came or went.
-        applyBars(cell);
+        // The cell itself, if it is bars, a wall or a fence that just went in; those
+        // beside the cell join or let go of a piece that came or went, and a vanilla
+        // wall below takes its tall sides and post from a piece wall above it.
+        applyVanillaJoins(cell);
         for (BlockFace face : HORIZONTAL) {
-            applyBars(cell.getRelative(face));
+            applyVanillaJoins(cell.getRelative(face));
         }
+        applyVanillaJoins(cell.getRelative(BlockFace.DOWN));
         // Below too: a wall's tall sides and post depend on what is above it.
         for (BlockFace face : new BlockFace[] {BlockFace.NORTH, BlockFace.SOUTH,
                 BlockFace.EAST, BlockFace.WEST, BlockFace.DOWN}) {
@@ -864,17 +866,140 @@ public final class VerticalSlabListener implements Listener {
         }
     }
 
+    /**
+     * A vanilla block that joins pieces, as its own shape update just reset it: bars,
+     * panes, walls and nether brick fences beside a piece, and a wall under a piece.
+     * Re-applied on the next tick; a piece wall under a vanilla wall that changed is
+     * re-shaped too, since it takes its tall sides and post from it.
+     */
     @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
-    public void onBarPhysics(org.bukkit.event.block.BlockPhysicsEvent event) {
+    public void onVanillaJoinPhysics(org.bukkit.event.block.BlockPhysicsEvent event) {
         Block block = event.getBlock();
-        if (!BARS.contains(block.getType())) {
+        Material type = block.getType();
+        boolean wall = Tag.WALLS.isTagged(type);
+        if (!BARS.contains(type) && !wall && type != Material.NETHER_BRICK_FENCE) {
             return;
         }
+        boolean beside = wall && PieceIndex.mayContain(block.getRelative(BlockFace.UP));
         for (BlockFace side : HORIZONTAL) {
-            if (PieceIndex.mayContain(block.getRelative(side))) {
-                Schedulers.atLocation(plugin, block.getLocation(), () -> applyBars(block));
-                return;
+            beside |= PieceIndex.mayContain(block.getRelative(side));
+        }
+        if (beside) {
+            Schedulers.atLocation(plugin, block.getLocation(), () -> applyVanillaJoins(block));
+        }
+        Block below = block.getRelative(BlockFace.DOWN);
+        if (wall && PieceIndex.mayContain(below)) {
+            Schedulers.atLocation(plugin, below.getLocation(), () -> reshape(below));
+        }
+    }
+
+    /** Joins a vanilla block to the pieces beside (and, for a wall, above) it. */
+    static void applyVanillaJoins(Block block) {
+        Material type = block.getType();
+        if (BARS.contains(type)) {
+            applyBars(block);
+        } else if (Tag.WALLS.isTagged(type)) {
+            applyWall(block);
+        } else if (type == Material.NETHER_BRICK_FENCE) {
+            applyFence(block);
+        }
+    }
+
+    /**
+     * Sets a vanilla wall's sides toward pieces, and its tall sides and post from a piece
+     * above, by the same rules the piece walls follow (connections). Vanilla can't see
+     * furniture, so on its own it never joins a piece wall, and it took a piece wall above
+     * it for nothing. Sides toward real blocks keep vanilla's answer; a side toward a cell
+     * with pieces that don't join is cut.
+     */
+    static void applyWall(Block block) {
+        if (!(block.getBlockData() instanceof org.bukkit.block.data.type.Wall data)) {
+            return;
+        }
+        Block above = block.getRelative(BlockFace.UP);
+        boolean pieceAbove = !platesIn(above).isEmpty();
+        BlockFace[] order = {BlockFace.NORTH, BlockFace.EAST, BlockFace.SOUTH, BlockFace.WEST};
+        int[] height = new int[4];
+        boolean changed = false;
+        for (int i = 0; i < 4; i++) {
+            BlockFace side = order[i];
+            List<Plate> pieces = platesIn(block.getRelative(side));
+            boolean joined;
+            if (!pieces.isEmpty()) {
+                joined = false;
+                for (Plate plate : pieces) {
+                    joined |= wallJoins(plate, side.getOppositeFace());
+                }
+            } else {
+                joined = data.getHeight(side) != org.bukkit.block.data.type.Wall.Height.NONE;
             }
+            org.bukkit.block.data.type.Wall.Height h = !joined
+                    ? org.bukkit.block.data.type.Wall.Height.NONE
+                    // Toward a piece, or under one, tall and low are this plugin's call;
+                    // otherwise vanilla's own answer stands.
+                    : (!pieces.isEmpty() || pieceAbove)
+                            ? (coversSide(above, side) ? org.bukkit.block.data.type.Wall.Height.TALL
+                                                       : org.bukkit.block.data.type.Wall.Height.LOW)
+                            : data.getHeight(side);
+            height[i] = switch (h) {
+                case NONE -> 0;
+                case LOW -> 1;
+                case TALL -> 2;
+            };
+            if (data.getHeight(side) != h) {
+                data.setHeight(side, h);
+                changed = true;
+            }
+        }
+        if (changed || pieceAbove) {
+            boolean up = raisesPost(height, above);
+            if (data.isUp() != up) {
+                data.setUp(up);
+                changed = true;
+            }
+        }
+        if (changed) {
+            // With physics, so a vanilla wall below takes the new shape, as vanilla's
+            // own walls pass a change down.
+            block.setBlockData(data, true);
+        }
+    }
+
+    private static boolean wallJoins(Plate plate, BlockFace face) {
+        return switch (plate.kind()) {
+            // Vanilla walls join walls and bars (panes) - and so the piece ones.
+            case WALL, PANE, DOUBLE -> true;
+            default -> plate.solid().contains(face);
+        };
+    }
+
+    /**
+     * Sets a vanilla nether brick fence's sides toward pieces: the piece fences are all
+     * nether brick, which joins only nether brick, and any full face. As for bars, a side
+     * toward real blocks is left to vanilla.
+     */
+    static void applyFence(Block block) {
+        if (!(block.getBlockData() instanceof org.bukkit.block.data.MultipleFacing data)) {
+            return;
+        }
+        boolean changed = false;
+        for (BlockFace side : HORIZONTAL) {
+            List<Plate> pieces = platesIn(block.getRelative(side));
+            if (pieces.isEmpty()) {
+                continue;
+            }
+            boolean join = false;
+            for (Plate plate : pieces) {
+                join |= plate.kind() == Kind.FENCE || plate.kind() == Kind.DOUBLE
+                        || plate.solid().contains(side.getOppositeFace());
+            }
+            if (data.hasFace(side) != join) {
+                data.setFace(side, join);
+                changed = true;
+            }
+        }
+        if (changed) {
+            block.setBlockData(data, false);
         }
     }
 
