@@ -54,7 +54,18 @@ public final class Lang {
 
     /** One message. */
     public Component get(String key, Map<String, String> placeholders) {
-        return LEGACY.deserialize(fill(messages.getString(key, key), placeholders));
+        return LEGACY.deserialize(fill(text(key, key), placeholders));
+    }
+
+    /**
+     * A key's text: the server's lang.yml, else the jar's default, else {@code missing}.
+     * Not getString(key, missing): an explicit default makes Bukkit skip the defaults set
+     * from the jar, so a lang.yml written by an older version showed new messages as
+     * their bare keys.
+     */
+    private String text(String key, String missing) {
+        String value = messages.getString(key);
+        return value != null ? value : missing;
     }
 
     public Component get(String key) {
@@ -76,7 +87,7 @@ public final class Lang {
 
     /** The raw text of a message, for building others from it. */
     public String raw(String key) {
-        return messages.getString(key, "");
+        return text(key, "");
     }
 
     /**
@@ -87,11 +98,11 @@ public final class Lang {
      * art above it has to stay intact.
      */
     public String raw(String key, Map<String, String> placeholders) {
-        return fill(messages.getString(key, key), placeholders);
+        return fill(text(key, key), placeholders);
     }
 
     private String fill(String text, Map<String, String> placeholders) {
-        String out = text.replace("{prefix}", messages.getString("prefix", ""));
+        String out = text.replace("{prefix}", text("prefix", ""));
         for (Map.Entry<String, String> entry : placeholders.entrySet()) {
             out = out.replace("{" + entry.getKey() + "}", entry.getValue());
         }
