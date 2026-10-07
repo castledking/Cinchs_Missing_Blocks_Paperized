@@ -167,3 +167,50 @@ tasks.processResources {
         exclude("upstream.properties")
     }
 }
+
+// --- the README's counts, derived from the pack -----------------------------------
+// The README states how many pieces the pack holds. Those numbers were hand-corrected
+// twice and were still wrong, so they are now re-derived from pack/intermediate/pieces.json
+// on every `check`, and the build fails if the README disagrees.
+//
+//   blocks     - ids in the block tree
+//   furniture  - ids only in the furniture tree: a doubled slab ships as both a block and
+//                furniture, and is one piece, counted as a block
+//   pieces     - blocks + furniture
+//   items      - ids in the item tree
+//
+// Recipes are left out: their count moves with every recipe feature the generator gains,
+// which is a change to the pack, not drift in the README.
+val verifyPackCounts by tasks.registering {
+    group = "verification"
+    description = "Fails if README.md's piece counts differ from the committed pack's"
+    val manifest = file("pack/intermediate/pieces.json")
+    val readme = file("README.md")
+    inputs.files(manifest, readme)
+    doLast {
+        @Suppress("UNCHECKED_CAST")
+        val tree = groovy.json.JsonSlurper().parse(manifest) as Map<String, Map<String, Any>>
+        val blocks = tree.getValue("blocks").keys
+        val furniture = tree.getValue("furniture").keys - blocks
+        val expected = linkedMapOf(
+            "pieces" to blocks.size + furniture.size,
+            "blocks" to blocks.size,
+            "furniture" to furniture.size,
+            "items" to tree.getValue("items").size,
+        )
+        val text = readme.readText()
+        val wrong = expected.mapNotNull { (what, n) ->
+            val claimed = Regex("""\*\*([\d,]+)\s+$what\*\*""").findAll(text).map { it.groupValues[1].replace(",", "").toInt() }.toList()
+            when {
+                claimed.isEmpty() -> "README.md never states the number of $what (the pack has $n)"
+                claimed.any { it != n } -> "README.md says ${claimed.joinToString()} $what; the pack has $n"
+                else -> null
+            }
+        }
+        if (wrong.isNotEmpty()) {
+            throw GradleException(wrong.joinToString("\n"))
+        }
+        logger.lifecycle("README counts match the pack: " + expected.entries.joinToString { "${it.value} ${it.key}" })
+    }
+}
+tasks.named("check") { dependsOn(verifyPackCounts) }
