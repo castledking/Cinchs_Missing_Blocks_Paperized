@@ -168,7 +168,7 @@ public class CmbCommand {
                     "radius", Integer.toString(radius),
                     "breakdown", breakdown(PieceTools.counts(found)));
             if (kill) {
-                PieceTools.kill(found);
+                plugin.pieceTools().kill(found);
                 player.sendMessage(plugin.lang().get("kill-done", placeholders));
             } else {
                 plugin.pieceTools().glow(player, found);

@@ -27,7 +27,11 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.ItemDisplay;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockExplodeEvent;
+import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.inventory.ItemStack;
@@ -62,7 +66,23 @@ final class PieceTools implements Listener {
     private static final double PAD = 0.01;
 
     private final CmbPlugin plugin;
-    private final Map<UUID, List<Display>> glowing = new ConcurrentHashMap<>();
+    private final Map<UUID, Set<Display>> glowing = new ConcurrentHashMap<>();
+    /**
+     * Each outline by what it outlines - a furniture's entity, or a block's cell - so it
+     * goes when that piece does, not only when the player clears them all.
+     */
+    private final Map<Object, Set<Display>> byPiece = new ConcurrentHashMap<>();
+
+    /** A block's place, as a key that outlives the Block. */
+    private record Cell(UUID world, int x, int y, int z) {
+        static Cell of(Block block) {
+            return new Cell(block.getWorld().getUID(), block.getX(), block.getY(), block.getZ());
+        }
+    }
+
+    private static Object keyOf(Found f) {
+        return f.furniture() != null ? f.furniture().bukkitEntity().getUniqueId() : Cell.of(f.block());
+    }
     private static final String OUTLINE_ITEM = VerticalSlabListener.NAMESPACE + ":glow_outline";
     private static final String FALLBACK_BLOCK = "minecraft:white_stained_glass";
     private volatile boolean warnedNoOutlineItem;
@@ -175,7 +195,7 @@ final class PieceTools implements Listener {
     // --- kill ----------------------------------------------------------------------
 
     /** Removes what {@link #find} found, without drops, and re-shapes what joined it. */
-    static void kill(List<Found> found) {
+    void kill(List<Found> found) {
         List<Block> cells = new ArrayList<>();
         for (Found f : found) {
             if (f.furniture() != null) {
@@ -188,6 +208,9 @@ final class PieceTools implements Listener {
                 }
             } else if (CraftEngineBlocks.remove(f.block())) {
                 cells.add(f.block());
+                // No break event either: its outline goes here (a furniture's goes with
+                // its entity, onEntityGone).
+                forget(Cell.of(f.block()));
             }
         }
         // Removing through the API fires no break event, so the walls, fences, panes and
@@ -206,7 +229,7 @@ final class PieceTools implements Listener {
     /** Outlines the pieces for this player only, replacing any outlines they had. */
     int glow(Player player, List<Found> found) {
         clearGlow(player);
-        List<Display> displays = new ArrayList<>();
+        Set<Display> displays = ConcurrentHashMap.newKeySet();
         Map<String, Integer> colors = settings().colors();
         ItemStack bare = CmbConfig.Tools.OUTLINE_ONLY.equals(settings().outlineBlock()) ? outlineItem() : null;
         BlockData block = bare != null ? null : Bukkit.createBlockData(
@@ -237,6 +260,7 @@ final class PieceTools implements Listener {
             }
             player.showEntity(plugin, display);
             displays.add(display);
+            byPiece.computeIfAbsent(keyOf(f), key -> ConcurrentHashMap.newKeySet()).add(display);
         }
         glowing.put(player.getUniqueId(), displays);
         return displays.size();
@@ -273,16 +297,20 @@ final class PieceTools implements Listener {
     }
 
     void clearGlow(Player player) {
-        List<Display> displays = glowing.remove(player.getUniqueId());
+        Set<Display> displays = glowing.remove(player.getUniqueId());
         if (displays != null) {
             for (Display display : displays) {
                 display.getScheduler().run(plugin, task -> display.remove(), null);
             }
+            byPiece.values().removeIf(outlines -> {
+                outlines.removeAll(displays);
+                return outlines.isEmpty();
+            });
         }
     }
 
     void clearAll() {
-        for (List<Display> displays : glowing.values()) {
+        for (Set<Display> displays : glowing.values()) {
             for (Display display : displays) {
                 if (display.isValid()) {
                     display.remove();
@@ -290,6 +318,53 @@ final class PieceTools implements Listener {
             }
         }
         glowing.clear();
+        byPiece.clear();
+    }
+
+    /** Takes away the outlines of a piece that is gone, for everyone who had them. */
+    private void forget(Object piece) {
+        Set<Display> outlines = byPiece.remove(piece);
+        if (outlines == null) {
+            return;
+        }
+        for (Display display : outlines) {
+            display.getScheduler().run(plugin, task -> display.remove(), null);
+            for (Set<Display> mine : glowing.values()) {
+                mine.remove(display);
+            }
+        }
+    }
+
+    /**
+     * A furniture piece is gone - broken, killed, washed away, turned into a double: its
+     * entity leaves the world whichever way it went.
+     */
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onEntityGone(com.destroystokyo.paper.event.entity.EntityRemoveFromWorldEvent event) {
+        if (!byPiece.isEmpty()) {
+            forget(event.getEntity().getUniqueId());
+        }
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    public void onBlockGone(BlockBreakEvent event) {
+        if (!byPiece.isEmpty()) {
+            forget(Cell.of(event.getBlock()));
+        }
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    public void onBlocksBlownUp(BlockExplodeEvent event) {
+        if (!byPiece.isEmpty()) {
+            event.blockList().forEach(block -> forget(Cell.of(block)));
+        }
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.MONITOR)
+    public void onBlocksBlownUp(EntityExplodeEvent event) {
+        if (!byPiece.isEmpty()) {
+            event.blockList().forEach(block -> forget(Cell.of(block)));
+        }
     }
 
     @EventHandler
