@@ -1197,8 +1197,20 @@ public final class VerticalSlabListener implements Listener {
         return switch (plate.kind()) {
             // Vanilla walls join walls and bars (panes) - and so the piece ones.
             case WALL, PANE, DOUBLE -> true;
-            default -> plate.solid().contains(face);
+            default -> plate.solid().contains(face) || slabEdge(plate, face);
         };
+    }
+
+    /**
+     * Whether {@code face} is one of a vertical slab's two edges - the half-depth sides
+     * either side of its full face. Vanilla would leave a gap there, as it does against a
+     * stair's or a slab's side; walls and panes join it, as vanilla bars already do here
+     * (barJoins), so a wall can close off a run of vertical slabs.
+     */
+    private static boolean slabEdge(Plate plate, BlockFace face) {
+        return plate.kind() == Kind.VERTICAL_SLAB && plate.back() != null
+                && face != plate.back() && face != plate.back().getOppositeFace()
+                && face != BlockFace.UP && face != BlockFace.DOWN;
     }
 
     /**
@@ -1394,7 +1406,8 @@ public final class VerticalSlabListener implements Listener {
         for (Plate plate : platesIn(next)) {
             if (plate.kind() == kind || plate.solid().contains(side.getOppositeFace())
                     // Walls and panes join each other, as vanilla's do.
-                    || (wallOrPane && (plate.kind() == Kind.WALL || plate.kind() == Kind.PANE))) {
+                    || (wallOrPane && (plate.kind() == Kind.WALL || plate.kind() == Kind.PANE))
+                    || (wallOrPane && slabEdge(plate, side.getOppositeFace()))) {
                 return true;
             }
         }
