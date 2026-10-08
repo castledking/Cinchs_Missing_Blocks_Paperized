@@ -577,6 +577,9 @@ public final class VerticalSlabListener implements Listener {
         // than CraftEngine's anchor and anchor yaw.
         event.setCancelled(true);
         Player player = event.player();
+        if (placedJustNow(player)) {
+            return;
+        }
         Location at = event.location();
         EquipmentSlot slot = event.hand() == InteractionHand.OFF_HAND
                 ? EquipmentSlot.OFF_HAND : EquipmentSlot.HAND;
@@ -663,6 +666,7 @@ public final class VerticalSlabListener implements Listener {
         if (spawn(place, id, variant, true) == null) {
             return;
         }
+        markPlaced(player);
         // Only now discard what the piece replaces. Clearing first meant a failed spawn --
         // CraftEngine unloaded, the id disabled by config, the pack mid-reload -- destroyed
         // the player's grass and put nothing in its place, with nothing said.
@@ -773,6 +777,7 @@ public final class VerticalSlabListener implements Listener {
         if (spawn(anchor, id, variant, true) == null) {
             return;
         }
+        markPlaced(player);
         clearForPlacement(cell);
         if (player.getGameMode() != GameMode.CREATIVE) {
             ItemStack held = player.getInventory().getItem(slot);
@@ -917,7 +922,8 @@ public final class VerticalSlabListener implements Listener {
                 // wall or fence below reaches half a block up into this cell, so a pane or
                 // wall standing on one never took a new connection.
                 plate.furniture().setVariant(variant, true);
-                wallChanged |= plate.kind() == Kind.WALL;
+                // The wall below takes its tall sides and post from a wall or pane above.
+                wallChanged |= plate.kind() == Kind.WALL || plate.kind() == Kind.PANE;
             }
         }
         if (wallChanged) {
@@ -1079,7 +1085,7 @@ public final class VerticalSlabListener implements Listener {
             });
         }
         Block below = block.getRelative(BlockFace.DOWN);
-        if (wall && PieceIndex.mayContain(below) && pendingReshapes.add(below)) {
+        if ((wall || BARS.contains(type)) && PieceIndex.mayContain(below) && pendingReshapes.add(below)) {
             Schedulers.atLocation(plugin, below.getLocation(), () -> {
                 pendingReshapes.remove(below);
                 reshape(below);
@@ -1333,8 +1339,9 @@ public final class VerticalSlabListener implements Listener {
     /** Whether the block above covers a wall side's top (vanilla's side test shape). */
     private static boolean coversSide(Block above, BlockFace side) {
         for (Plate plate : platesIn(above)) {
-            if (plate.kind() == Kind.WALL) {
-                // Its own arm on that side sits right on top of this one.
+            if (plate.kind() == Kind.WALL || plate.kind() == Kind.PANE) {
+                // Its own arm on that side sits right on top of this one (a pane's arm
+                // covers vanilla's side test shape exactly).
                 String variant = plate.furniture().currentVariant().name();
                 int at = variant.indexOf("nesw".charAt(sideIndex(side)));
                 return at >= 0 && variant.charAt(at + 1) != '0';
@@ -1346,18 +1353,23 @@ public final class VerticalSlabListener implements Listener {
         if (above.getBlockData() instanceof org.bukkit.block.data.type.Wall wall) {
             return wall.getHeight(side) != org.bukkit.block.data.type.Wall.Height.NONE;
         }
+        if (BARS.contains(above.getType()) && above.getBlockData() instanceof org.bukkit.block.data.MultipleFacing bars) {
+            return bars.hasFace(side);
+        }
         return above.getBlockData().isFaceSturdy(BlockFace.DOWN, BlockSupport.FULL);
     }
 
     /** Whether the block above covers a wall's post (vanilla's post test shape). */
     private static boolean coversPost(Block above) {
         for (Plate plate : platesIn(above)) {
-            // A wall above always has its post or two arms through the centre.
-            if (plate.kind() == Kind.WALL || plate.solid().contains(BlockFace.DOWN)) {
+            // A wall above always has its post or two arms through the centre; a pane, its post.
+            if (plate.kind() == Kind.WALL || plate.kind() == Kind.PANE
+                    || plate.solid().contains(BlockFace.DOWN)) {
                 return true;
             }
         }
         return above.getBlockData() instanceof org.bukkit.block.data.type.Wall
+                || BARS.contains(above.getType())
                 || above.getBlockData().isFaceSturdy(BlockFace.DOWN, BlockSupport.FULL);
     }
 
@@ -1874,6 +1886,25 @@ public final class VerticalSlabListener implements Listener {
     }
 
     // --- the guard against a second, vanilla bucket use ---------------------
+
+    /**
+     * One placement per click. One right-click can reach CraftEngine twice - the hitbox
+     * it hit, then the item used in the air, which the client sends when it thinks the
+     * first did nothing - and each placed a piece: one tap put two panes on a wall.
+     * A player can't place faster than every 4 ticks (200 ms), so 100 ms takes only
+     * the echo. Time rather than ticks: Folia has no single tick count.
+     */
+    private static final long PLACE_GUARD_NANOS = 100_000_000L;
+    private final Map<UUID, Long> placedAt = new ConcurrentHashMap<>();
+
+    private void markPlaced(Player player) {
+        placedAt.put(player.getUniqueId(), System.nanoTime());
+    }
+
+    private boolean placedJustNow(Player player) {
+        Long at = placedAt.get(player.getUniqueId());
+        return at != null && System.nanoTime() - at < PLACE_GUARD_NANOS;
+    }
 
     private void markHandled(Player player) {
         bucketHandledAt.put(player.getUniqueId(), Bukkit.getCurrentTick());
