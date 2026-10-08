@@ -783,7 +783,11 @@ public final class VerticalSlabListener implements Listener {
                 default -> null;
             };
             if (variant != null && !variant.equals(plate.furniture().currentVariant().name())) {
-                plate.furniture().setVariant(variant);
+                // Forced: unforced, CraftEngine first tests the new variant's hitboxes
+                // against the world and keeps the old one if they meet anything - and a
+                // wall or fence below reaches half a block up into this cell, so a pane or
+                // wall standing on one never took a new connection.
+                plate.furniture().setVariant(variant, true);
                 wallChanged |= plate.kind() == Kind.WALL;
             }
         }
@@ -1090,6 +1094,44 @@ public final class VerticalSlabListener implements Listener {
         if (changed) {
             block.setBlockData(data, false);
         }
+    }
+
+    /**
+     * A wall, fence or fence gate may go under a piece. Their collision is 1.5 blocks tall,
+     * and vanilla refuses a block whose collision meets an entity that blocks building -
+     * which a piece's lowest collider, at the floor of its cell, is. A block above never
+     * stops one of these, so only that overlap is let through: anything that blocks
+     * building in the cell itself (a player, a mob, a piece) still does.
+     */
+    @EventHandler(priority = EventPriority.HIGH)
+    public void onCanBuildUnderPiece(org.bukkit.event.block.BlockCanBuildEvent event) {
+        if (event.isBuildable()) {
+            return;
+        }
+        Material type = event.getBlockData().getMaterial();
+        if (!Tag.WALLS.isTagged(type) && !Tag.FENCES.isTagged(type) && !Tag.FENCE_GATES.isTagged(type)) {
+            return;
+        }
+        Block cell = event.getBlock();
+        if (platesIn(cell.getRelative(BlockFace.UP)).isEmpty() || !placeableInto(cell)) {
+            return;
+        }
+        org.bukkit.util.BoundingBox inside = org.bukkit.util.BoundingBox.of(cell).expand(-0.001);
+        if (cell.getWorld().getNearbyEntities(inside, VerticalSlabListener::blocksBuilding).isEmpty()) {
+            event.setBuildable(true);
+        }
+    }
+
+    /** Vanilla's Entity.blocksBuilding, as far as the API shows it. */
+    private static boolean blocksBuilding(Entity entity) {
+        if (entity instanceof Player player) {
+            return player.getGameMode() != org.bukkit.GameMode.SPECTATOR;
+        }
+        return (entity instanceof LivingEntity living && !living.isDead())
+                || entity instanceof org.bukkit.entity.Vehicle
+                || entity instanceof org.bukkit.entity.TNTPrimed
+                || entity instanceof org.bukkit.entity.EnderCrystal
+                || entity instanceof org.bukkit.entity.Hanging;
     }
 
     /** A real block placed or broken beside a furniture wall or fence changes what it joins. */
