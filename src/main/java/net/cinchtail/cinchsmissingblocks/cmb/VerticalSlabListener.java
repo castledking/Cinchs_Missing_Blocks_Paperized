@@ -339,7 +339,10 @@ public final class VerticalSlabListener implements Listener {
     public void onFlow(BlockFromToEvent event) {
         Block from = event.getBlock();
         Material fluid = from.getType();
-        if (fluid != Material.WATER && fluid != Material.LAVA) {
+        // Water also spreads from a bubble column and from anything holding water - a
+        // waterlogged block, seagrass, kelp - and those were let through every piece.
+        if (fluid != Material.WATER && fluid != Material.LAVA && fluid != Material.BUBBLE_COLUMN
+                && !wet(from)) {
             return;
         }
         BlockFace face = event.getFace();
@@ -568,17 +571,30 @@ public final class VerticalSlabListener implements Listener {
 
     /**
      * Removes what a placement replaces, as vanilla does - no drops - leaving water
-     * where the replaced block was underwater (seagrass, a waterlogged plant).
+     * where the replaced block was underwater (seagrass, a waterlogged plant). A two-tall
+     * plant (tall grass, large fern, tall seagrass) goes whole, whichever half was
+     * clicked: without physics its other half was left standing on its own.
      */
     static void clearForPlacement(Block cell) {
         Material type = cell.getType();
         if (type.isAir() || type == Material.WATER) {
             return;
         }
+        Block other = null;
+        if (cell.getBlockData() instanceof org.bukkit.block.data.Bisected half) {
+            other = cell.getRelative(half.getHalf() == org.bukkit.block.data.Bisected.Half.TOP
+                    ? BlockFace.DOWN : BlockFace.UP);
+            if (other.getType() != type) {
+                other = null;
+            }
+        }
         // No physics: vanilla removes the plant as part of placing, not as a change that
         // notifies neighbours, and letting it do would let a grass placement tick whatever
         // happened to be beside it.
         cell.setType(wet(cell) ? Material.WATER : Material.AIR, false);
+        if (other != null) {
+            other.setType(wet(other) ? Material.WATER : Material.AIR, false);
+        }
     }
 
     private static boolean wet(Block cell) {
@@ -695,6 +711,7 @@ public final class VerticalSlabListener implements Listener {
 
     /** Re-shapes the furniture stairs beside a cell, after one there came or went. */
     static void reshapeAround(Block cell) {
+        wakeWater(cell);
         // The cell itself, if it is bars, a wall or a fence that just went in; those
         // beside the cell join or let go of a piece that came or went, and a vanilla
         // wall below takes its tall sides and post from a piece wall above it.
@@ -715,6 +732,36 @@ public final class VerticalSlabListener implements Listener {
             reshape(cell.getRelative(face));
         }
     }
+
+    /**
+     * Water in and around a cell where a piece came or went flows by the new shape. The
+     * blocks themselves don't change - a piece's cell holds the same air or water either
+     * way - so vanilla schedules no fluid update: water beside a broken piece stayed put,
+     * and water cut off by a new one kept flowing. A fluid tick now, for the cell and its
+     * neighbours, and onFlow's rules decide where it goes.
+     */
+    private static void wakeWater(Block cell) {
+        if (!cell.isLiquid() && !wet(cell)) {
+            boolean any = false;
+            for (BlockFace face : AROUND) {
+                Block next = cell.getRelative(face);
+                any |= next.isLiquid() || wet(next);
+            }
+            if (!any) {
+                return;
+            }
+        }
+        cell.fluidTick();
+        for (BlockFace face : AROUND) {
+            Block next = cell.getRelative(face);
+            if (next.isLiquid() || wet(next)) {
+                next.fluidTick();
+            }
+        }
+    }
+
+    private static final BlockFace[] AROUND = {BlockFace.NORTH, BlockFace.EAST, BlockFace.SOUTH,
+            BlockFace.WEST, BlockFace.UP, BlockFace.DOWN};
 
     /**
      * Re-shapes the pieces in one cell. A wall whose shape changed re-shapes the wall
