@@ -10,7 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import net.cinchtail.cinchsmissingblocks.cmb.config.CmbConfig;
 import net.momirealms.craftengine.bukkit.api.CraftEngineBlocks;
 import net.momirealms.craftengine.bukkit.api.CraftEngineFurniture;
+import net.momirealms.craftengine.bukkit.api.CraftEngineItems;
 import net.momirealms.craftengine.bukkit.entity.furniture.BukkitFurniture;
+import net.momirealms.craftengine.bukkit.item.BukkitItemDefinition;
 import net.momirealms.craftengine.core.block.ImmutableBlockState;
 import net.momirealms.craftengine.core.util.Key;
 import org.bukkit.Bukkit;
@@ -22,11 +24,13 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.entity.BlockDisplay;
 import org.bukkit.entity.Display;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.ItemDisplay;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Transformation;
 import org.joml.AxisAngle4f;
 import org.joml.Vector3f;
@@ -41,7 +45,8 @@ import org.joml.Vector3f;
  * by tools.max-radius.
  *
  * <p>The outlines follow GriefPrevention3D's glowing visualization: a block display per
- * piece, of the block tools.block-outline names, glowing in its category's colour (any
+ * piece, of the block tools.block-outline names - or of CMB's invisible cube, for the glow
+ * alone - glowing in its category's colour (any
  * RGB, through the glow colour override), seen only by the player who asked (hidden by
  * default, shown to them). They are not
  * persistent, so a restart or an unloaded chunk can never leave one behind, and they go
@@ -57,7 +62,10 @@ final class PieceTools implements Listener {
     private static final double PAD = 0.01;
 
     private final CmbPlugin plugin;
-    private final Map<UUID, List<BlockDisplay>> glowing = new ConcurrentHashMap<>();
+    private final Map<UUID, List<Display>> glowing = new ConcurrentHashMap<>();
+    private static final String OUTLINE_ITEM = VerticalSlabListener.NAMESPACE + ":glow_outline";
+    private static final String FALLBACK_BLOCK = "minecraft:white_stained_glass";
+    private volatile boolean warnedNoOutlineItem;
 
     PieceTools(CmbPlugin plugin) {
         this.plugin = plugin;
@@ -198,31 +206,35 @@ final class PieceTools implements Listener {
     /** Outlines the pieces for this player only, replacing any outlines they had. */
     int glow(Player player, List<Found> found) {
         clearGlow(player);
-        List<BlockDisplay> displays = new ArrayList<>();
+        List<Display> displays = new ArrayList<>();
         Map<String, Integer> colors = settings().colors();
-        BlockData outline = Bukkit.createBlockData(settings().outlineBlock());
+        ItemStack bare = CmbConfig.Tools.OUTLINE_ONLY.equals(settings().outlineBlock()) ? outlineItem() : null;
+        BlockData block = bare != null ? null : Bukkit.createBlockData(
+                CmbConfig.Tools.OUTLINE_ONLY.equals(settings().outlineBlock())
+                        ? FALLBACK_BLOCK : settings().outlineBlock());
         for (Found f : found) {
             double[] b = f.box();
-            Location at = new Location(player.getWorld(), b[0] - PAD, b[1] - PAD, b[2] - PAD);
             Color color = Color.fromRGB(colors.getOrDefault(f.category().key(), f.category().defaultColor));
-            BlockDisplay display = player.getWorld().spawn(at, BlockDisplay.class, d -> {
-                // Before it is sent to anyone: hidden by default, never saved.
-                d.setVisibleByDefault(false);
-                d.setPersistent(false);
-                d.addScoreboardTag(GLOW_TAG);
-                d.setBlock(outline);
-                d.setGlowing(true);
-                d.setGlowColorOverride(color);
-                d.setBrightness(new Display.Brightness(15, 15));
-                d.setShadowRadius(0f);
-                d.setShadowStrength(0f);
-                d.setTransformation(new Transformation(
-                        new Vector3f(),
-                        new AxisAngle4f(),
-                        new Vector3f((float) (b[3] - b[0] + 2 * PAD), (float) (b[4] - b[1] + 2 * PAD),
-                                (float) (b[5] - b[2] + 2 * PAD)),
-                        new AxisAngle4f()));
-            });
+            Vector3f size = new Vector3f((float) (b[3] - b[0] + 2 * PAD), (float) (b[4] - b[1] + 2 * PAD),
+                    (float) (b[5] - b[2] + 2 * PAD));
+            Display display;
+            if (bare != null) {
+                // An item model is drawn about the entity: stand it at the box's centre.
+                Location at = new Location(player.getWorld(),
+                        (b[0] + b[3]) / 2, (b[1] + b[4]) / 2, (b[2] + b[5]) / 2);
+                display = player.getWorld().spawn(at, ItemDisplay.class, d -> {
+                    d.setItemStack(bare);
+                    d.setItemDisplayTransform(ItemDisplay.ItemDisplayTransform.NONE);
+                    style(d, color, size);
+                });
+            } else {
+                // A block is drawn from the entity's corner.
+                Location at = new Location(player.getWorld(), b[0] - PAD, b[1] - PAD, b[2] - PAD);
+                display = player.getWorld().spawn(at, BlockDisplay.class, d -> {
+                    d.setBlock(block);
+                    style(d, color, size);
+                });
+            }
             player.showEntity(plugin, display);
             displays.add(display);
         }
@@ -230,18 +242,48 @@ final class PieceTools implements Listener {
         return displays.size();
     }
 
+    /** Before it is sent to anyone: hidden by default, never saved, glowing, at its size. */
+    private static void style(Display d, Color color, Vector3f size) {
+        d.setVisibleByDefault(false);
+        d.setPersistent(false);
+        d.addScoreboardTag(GLOW_TAG);
+        d.setGlowing(true);
+        d.setGlowColorOverride(color);
+        d.setBrightness(new Display.Brightness(15, 15));
+        d.setShadowRadius(0f);
+        d.setShadowStrength(0f);
+        d.setTransformation(new Transformation(new Vector3f(), new AxisAngle4f(), size, new AxisAngle4f()));
+    }
+
+    /**
+     * CMB's invisible cube (the pack's glow_outline item), or null - with a warning, once -
+     * if CraftEngine doesn't have it, and the outlines fall back to a block.
+     */
+    private ItemStack outlineItem() {
+        BukkitItemDefinition item = CraftEngineItems.byId(OUTLINE_ITEM);
+        if (item != null) {
+            return item.buildBukkitItem();
+        }
+        if (!warnedNoOutlineItem) {
+            warnedNoOutlineItem = true;
+            plugin.getLogger().warning("tools.block-outline: NONE needs " + OUTLINE_ITEM
+                    + ", which CraftEngine doesn't have; outlining with " + FALLBACK_BLOCK);
+        }
+        return null;
+    }
+
     void clearGlow(Player player) {
-        List<BlockDisplay> displays = glowing.remove(player.getUniqueId());
+        List<Display> displays = glowing.remove(player.getUniqueId());
         if (displays != null) {
-            for (BlockDisplay display : displays) {
+            for (Display display : displays) {
                 display.getScheduler().run(plugin, task -> display.remove(), null);
             }
         }
     }
 
     void clearAll() {
-        for (List<BlockDisplay> displays : glowing.values()) {
-            for (BlockDisplay display : displays) {
+        for (List<Display> displays : glowing.values()) {
+            for (Display display : displays) {
                 if (display.isValid()) {
                     display.remove();
                 }

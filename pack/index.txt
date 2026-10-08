@@ -4732,6 +4732,7 @@ resourcepack/assets/cinchsmissingblocks/models/item/end_stone_wall__side_tall.js
 resourcepack/assets/cinchsmissingblocks/models/item/exposed_cut_copper_horizontal_stairs.json
 resourcepack/assets/cinchsmissingblocks/models/item/exposed_cut_copper_vertical.json
 resourcepack/assets/cinchsmissingblocks/models/item/exposed_cut_copper_vertical_double__full.json
+resourcepack/assets/cinchsmissingblocks/models/item/glow_outline.json
 resourcepack/assets/cinchsmissingblocks/models/item/granite_brick_horizontal_stairs.json
 resourcepack/assets/cinchsmissingblocks/models/item/granite_brick_pillar.json
 resourcepack/assets/cinchsmissingblocks/models/item/granite_brick_slab.json
@@ -5894,6 +5895,7 @@ resourcepack/assets/cinchsmissingblocks/textures/block/warped_nether_wart_stage0
 resourcepack/assets/cinchsmissingblocks/textures/block/warped_nether_wart_stage1.png
 resourcepack/assets/cinchsmissingblocks/textures/block/warped_nether_wart_stage2.png
 resourcepack/assets/cinchsmissingblocks/textures/item/blue_nether_brick.png
+resourcepack/assets/cinchsmissingblocks/textures/item/glow_outline.png
 resourcepack/assets/cinchsmissingblocks/textures/item/red_nether_brick.png
 resourcepack/assets/minecraft/models/block/red_sandstone_wall_inventory.json
 resourcepack/assets/minecraft/models/block/red_sandstone_wall_post.json

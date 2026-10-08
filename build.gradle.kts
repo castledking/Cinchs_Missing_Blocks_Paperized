@@ -196,7 +196,8 @@ val verifyPackCounts by tasks.registering {
             "pieces" to blocks.size + furniture.size,
             "blocks" to blocks.size,
             "furniture" to furniture.size,
-            "items" to tree.getValue("items").size,
+            // Not the glow outline's invisible cube: a tool of /cmb glow, not content.
+            "items" to (tree.getValue("items").keys - "cinchsmissingblocks:glow_outline").size,
         )
         val text = readme.readText()
         val wrong = expected.mapNotNull { (what, n) ->

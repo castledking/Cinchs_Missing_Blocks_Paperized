@@ -144,15 +144,19 @@ public final class ConfigLoader {
     }
 
     /**
-     * tools.block-outline as block data: a block (WHITE_STAINED_GLASS, barrier), or a block
-     * with states (white_stained_glass_pane[north=true,south=true]). Anything that isn't a
-     * block keeps the default, with a warning.
+     * tools.block-outline: NONE for the glow alone, or block data - a block
+     * (WHITE_STAINED_GLASS), or a block with states
+     * (white_stained_glass_pane[north=true,south=true]). Anything else keeps the default,
+     * with a warning.
      */
     private String outlineBlock(String raw) {
         if (raw == null || raw.isBlank()) {
             return CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK;
         }
         String id = raw.trim().toLowerCase(java.util.Locale.ROOT);
+        if (id.equals(CmbConfig.Tools.OUTLINE_ONLY)) {
+            return CmbConfig.Tools.OUTLINE_ONLY;
+        }
         try {
             org.bukkit.block.data.BlockData data = org.bukkit.Bukkit.createBlockData(id);
             if (data.getMaterial().isBlock() && !data.getMaterial().isAir()) {
@@ -161,7 +165,7 @@ public final class ConfigLoader {
         } catch (IllegalArgumentException e) {
             // falls through to the warning
         }
-        plugin.getLogger().warning("tools.block-outline: '" + raw + "' is not a block; using "
+        plugin.getLogger().warning("tools.block-outline: '" + raw + "' is neither NONE nor a block; using "
                 + CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK);
         return CmbConfig.Tools.DEFAULT_OUTLINE_BLOCK;
     }

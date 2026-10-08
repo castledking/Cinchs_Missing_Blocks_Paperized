@@ -48,12 +48,15 @@ public record CmbConfig(
      * @param maxRadius the largest radius either command accepts
      * @param colors outline colour per category, as 0xRRGGBB, keyed by {@code PieceCategory.key()}
      * @param outlineBlock the block each outline is drawn with, as block data
-     *     ({@code minecraft:white_stained_glass}); checked when the config loads
+     *     ({@code minecraft:white_stained_glass}), or {@link #OUTLINE_ONLY} for the glow
+     *     alone; checked when the config loads
      */
     public record Tools(int defaultRadius, int maxRadius, java.util.Map<String, Integer> colors,
                         String outlineBlock) {
 
-        public static final String DEFAULT_OUTLINE_BLOCK = "minecraft:white_stained_glass";
+        /** No block: the outline is drawn with CMB's invisible cube, so only its glow shows. */
+        public static final String OUTLINE_ONLY = "none";
+        public static final String DEFAULT_OUTLINE_BLOCK = OUTLINE_ONLY;
     }
 
     /**

@@ -8250,6 +8250,12 @@ items:
       path: "cinchsmissingblocks:item/exposed_cut_copper_vertical_double__full"
     data:
       item_name: "<!i><white>Exposed Cut Copper Vertical Slab"
+  "cinchsmissingblocks:glow_outline":
+    material: nether_brick
+    model:
+      path: "cinchsmissingblocks:item/glow_outline"
+    data:
+      item_name: "<!i><white>Glow Outline"
   "cinchsmissingblocks:granite_brick_horizontal_stairs":
     material: nether_brick
     model:

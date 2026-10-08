@@ -3342,6 +3342,7 @@
       "vertical-slabs.material:exposed_cut_copper",
       "doubles.furniture"
     ],
+    "cinchsmissingblocks:glow_outline": [],
     "cinchsmissingblocks:granite_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:granite_brick",
