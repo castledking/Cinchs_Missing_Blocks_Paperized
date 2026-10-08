@@ -290,6 +290,38 @@ public final class CmbPlugin extends JavaPlugin {
     }
 
     /**
+     * /cmb reload tools: re-read only the {@code tools} section.
+     *
+     * <p>Glow colours and the outline block are read fresh on every call to
+     * {@code PieceTools.settings()}, so re-reading the file is the whole job - there is
+     * nothing cached to rebuild. Deliberately skips {@link #installPack()} and the
+     * {@code ce reload all} that {@link #reload()} dispatches: neither touches the pack,
+     * and doing them anyway would put every player through a resource pack rebuild to
+     * change a glow colour.
+     *
+     * <p>Outlines already placed keep the colours they were drawn with, because a glow
+     * is a display entity and its colour is baked in when it is created. They come down
+     * first so the next {@code /cmb glow} uses the new ones.
+     *
+     * @return whether the reload succeeded
+     */
+    public boolean reloadTools() {
+        try {
+            configLoader.load();
+            if (pieceTools != null) {
+                pieceTools.clearAll();
+            }
+            getLogger().info("Reloaded CMB tools settings: "
+                    + configLoader.config().tools().colors().size() + " glow categories, "
+                    + "outline block " + configLoader.config().tools().outlineBlock());
+            return true;
+        } catch (Throwable t) {
+            getLogger().log(Level.SEVERE, "Failed to reload CMB tools settings", t);
+            return false;
+        }
+    }
+
+    /**
      * /cmb reload all: re-read the config, install the pack, then have CraftEngine
      * reload and rebuild.
      *

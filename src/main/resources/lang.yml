@@ -10,6 +10,12 @@ reload-success: "{prefix}&eReloaded successfully. &7CraftEngine is rebuilding th
 protected: "{prefix}&cYou can't do that here."
 reload-failed: "{prefix}&cReload failed - see the console for why."
 
+# /cmb reload tools only re-reads the tools section, so the pack is untouched and no
+# player is made to re-download it. Says so, or an admin cannot tell this apart from
+# reload all.
+reload-tools-success: "{prefix}&eReloaded the tools settings. &7Glow colours and the block outline. The pack is untouched."
+reload-tools-failed: "{prefix}&cReloading the tools settings failed - see the console for why."
+
 # /cmb item is hidden from anyone without cmb.item, so a "you need permission"
 # message could never be shown and is deliberately absent.
 # /cmb kill and /cmb glow. {breakdown} is "5 walls, 3 stairs"; {categories} the list.
@@ -42,7 +48,7 @@ setup-message:
   - "&7 • &fCraftEngine {ce_version} &7found. CMB installs its pack into CraftEngine on every start and on &f/cmb reload all&7."
   - "&7 • Resource pack: &f{delivery}&7. {delivery_note}"
   - "&7 • Settings: &fplugins/CMB/config.yml &7- vertical slabs, horizontal stairs, furniture, warped nether wart. Apply with &f/cmb reload all&7."
-  - "&7 • Items: &f/cmb item browser &7or &f/cmb item give <player> <item>&7."
+  - "&7 • Items: &f/cmb &7opens the browser, or &f/cmb item browser &7/ &f/cmb item give <player> <item>&7."
   - "{warnings}"
   - "&7 Show this again with &f/cmb setupmsg&7."
 

@@ -19,6 +19,9 @@ import java.util.Set;
  *   <dt>runtime</dt>
  *   <dd>{@link Features}, {@link ResourcePack}. Applied by {@code /cmb reload all} with
  *       no rebuild.
+ *   <dt>tools</dt>
+ *   <dd>{@link Tools}, read fresh on every use. {@code /cmb reload tools} re-reads these
+ *       alone, so a glow colour can be changed without a pack rebuild.
  * </dl>
  *
  * @param features runtime feature toggles

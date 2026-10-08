@@ -74,6 +74,7 @@ features:
   vertical-slabs:
     cmb: true
     vanilla: true
+    stonecutting: true
     # What two slabs in one cell become: block (a real block; Jade names its vanilla
     # carrier) or furniture (Jade names it after the slab).
     doubles: furniture
@@ -86,6 +87,7 @@ features:
   horizontal-stairs:
     cmb: true
     vanilla: true
+    stonecutting: true
     disabled: []
 
   # Furniture fallback: every CMB stair, slab, wall, fence and pane is served as

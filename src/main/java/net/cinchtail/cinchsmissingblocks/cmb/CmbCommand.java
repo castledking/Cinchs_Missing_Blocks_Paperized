@@ -54,11 +54,24 @@ public class CmbCommand {
 
     public LiteralCommandNode<CommandSourceStack> build() {
         return Commands.literal("cmb")
+                // A bare `/cmb` is the thing a server owner most wants after setup: open
+                // the browser and see what is there. Routed through item() so it inherits
+                // the permission handling and the console fallback that `cmb item browser`
+                // already has, rather than reimplementing either.
+                .executes(ctx -> item(ctx.getSource().getSender(), "browser"))
                 .then(Commands.literal("reload")
                         .requires(s -> s.getSender().hasPermission("cmb.admin"))
                         .then(Commands.literal("all")
                                 .executes(ctx -> {
                                     plugin.reload(ctx.getSource().getSender());
+                                    return Command.SINGLE_SUCCESS;
+                                }))
+                        .then(Commands.literal("tools")
+                                .executes(ctx -> {
+                                    CommandSender sender = ctx.getSource().getSender();
+                                    sender.sendMessage(plugin.lang().get(
+                                            plugin.reloadTools() ? "reload-tools-success"
+                                                                 : "reload-tools-failed"));
                                     return Command.SINGLE_SUCCESS;
                                 })))
                 .then(Commands.literal("setupmsg")
