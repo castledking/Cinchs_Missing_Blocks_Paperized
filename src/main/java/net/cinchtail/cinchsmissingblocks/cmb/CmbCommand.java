@@ -22,9 +22,14 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
- * /cmb reload all, /cmb setupmsg, /cmb item - CraftEngine's item browser and give, under
- * CMB's name - and /cmb kill and /cmb glow, which find CMB pieces around the player by
- * category (PieceTools).
+ * /cmb, which opens the item browser, /cmb reload all, /cmb reload tools, /cmb setupmsg,
+ * /cmb item - CraftEngine's item browser and give, under CMB's name - and /cmb kill and
+ * /cmb glow, which find CMB pieces around the player by category (PieceTools).
+ *
+ * <p>A bare {@code /cmb} is what an admin reaches for after {@code /cmb setupmsg}: setup
+ * says what is installed, the browser shows them. It goes through {@link #item} rather
+ * than dispatching to CraftEngine itself, so it shares that command's permission
+ * handling and console fallback instead of reimplementing either.
  *
  * <p>/cmb item is a pass-through to {@code /ce item browser|give}: the arguments and
  * their meaning are CraftEngine's, and so are the tab completions, asked of the
@@ -53,9 +58,7 @@ public class CmbCommand {
                         .requires(s -> s.getSender().hasPermission("cmb.admin"))
                         .then(Commands.literal("all")
                                 .executes(ctx -> {
-                                    CommandSender sender = ctx.getSource().getSender();
-                                    sender.sendMessage(plugin.lang().get(
-                                            plugin.reload() ? "reload-success" : "reload-failed"));
+                                    plugin.reload(ctx.getSource().getSender());
                                     return Command.SINGLE_SUCCESS;
                                 })))
                 .then(Commands.literal("setupmsg")
@@ -205,7 +208,7 @@ public class CmbCommand {
                 ? "ce.command.admin.give_item"
                 : words.length > 1 ? "ce.command.admin.item_browser" : "ce.command.player.item_browser";
         if (sender.hasPermission(cePermission)) {
-            Bukkit.dispatchCommand(sender, line);
+            dispatch(sender, line);
             return Command.SINGLE_SUCCESS;
         }
         // On the sender's behalf: the console has CraftEngine's permissions, but a
@@ -217,8 +220,20 @@ public class CmbCommand {
             }
             line += " " + player.getName();
         }
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), line);
+        dispatch(Bukkit.getConsoleSender(), line);
         return Command.SINGLE_SUCCESS;
+    }
+
+    /**
+     * Runs a {@code ce ...} command from the global region thread.
+     *
+     * <p>A player reaches {@code /cmb item} from a region thread, and
+     * {@code Bukkit.dispatchCommand} is global-tick-thread only: on Folia it throws
+     * {@code Dispatching command async} rather than quietly doing nothing. On Paper the
+     * global region scheduler is the main thread, so this is inline as before.
+     */
+    private void dispatch(CommandSender sender, String line) {
+        Schedulers.global(plugin, () -> Bukkit.dispatchCommand(sender, line));
     }
 
     /** CraftEngine's completions for the same `ce item ...` line, trimmed to CMB. */

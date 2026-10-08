@@ -4,6 +4,8 @@ main: net.cinchtail.cinchsmissingblocks.cmb.CmbPlugin
 api-version: '1.21'
 description: ${description}
 author: castledking
+website: https://castled.codes
+folia-supported: true
 
 # Ordering matters and is not incidental.
 #

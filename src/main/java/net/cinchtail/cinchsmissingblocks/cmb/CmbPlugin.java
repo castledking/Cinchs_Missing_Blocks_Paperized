@@ -5,6 +5,8 @@ import net.cinchtail.cinchsmissingblocks.cmb.config.ConfigLoader;
 import net.cinchtail.cinchsmissingblocks.cmb.pack.PackDeliveryService;
 import net.cinchtail.cinchsmissingblocks.cmb.pack.PackInstaller;
 import net.cinchtail.cinchsmissingblocks.cmb.writer.PackWriter;
+import net.cinchtail.cinchsmissingblocks.cmb.scheduler.Schedulers;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
@@ -287,21 +289,39 @@ public final class CmbPlugin extends JavaPlugin {
         return delivery;
     }
 
-    /** /cmb reload all: re-read the config, then have CraftEngine reload and rebuild. */
-    public boolean reload() {
-        lang.load();
-        if (!applyConfig()) {
-            return false;
-        }
-        installPack();
-        try {
-            org.bukkit.Bukkit.dispatchCommand(org.bukkit.Bukkit.getConsoleSender(), "ce reload all");
-            getLogger().info("Triggered ce reload all");
-            return true;
-        } catch (Throwable t) {
-            getLogger().warning("Failed to trigger ce reload all: " + t.getMessage());
-            return false;
-        }
+    /**
+     * /cmb reload all: re-read the config, install the pack, then have CraftEngine
+     * reload and rebuild.
+     *
+     * <p>Hops to the global region first, and replies from there. A player types this
+     * from a region thread, and {@code Bukkit.dispatchCommand} may only be called from
+     * the global tick thread: on Folia it throws {@code Dispatching command async}, which
+     * is a logged Throwable, not a silent no-op, so the pack never got rebuilt and the
+     * command reported success anyway. {@link Schedulers#global} is the documented owner
+     * of console commands for this reason. On Paper the global region scheduler is the
+     * main thread, so this runs inline as before.
+     *
+     * <p>Returns as soon as the reload is scheduled; {@code reply} gets the outcome
+     * once it has actually run, because a boolean cannot cross the scheduler hop.
+     */
+    public void reload(CommandSender reply) {
+        Schedulers.global(this, () -> {
+            lang.load();
+            if (!applyConfig()) {
+                reply.sendMessage(lang.get("reload-failed"));
+                return;
+            }
+            installPack();
+            try {
+                org.bukkit.Bukkit.dispatchCommand(
+                        org.bukkit.Bukkit.getConsoleSender(), "ce reload all");
+                getLogger().info("Triggered ce reload all");
+                reply.sendMessage(lang.get("reload-success"));
+            } catch (Throwable t) {
+                getLogger().log(Level.WARNING, "Failed to trigger ce reload all", t);
+                reply.sendMessage(lang.get("reload-failed"));
+            }
+        });
     }
 
     /**
