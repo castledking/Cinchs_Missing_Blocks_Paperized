@@ -122,7 +122,8 @@ public final class NetherWartCrops implements Listener {
             return;
         }
         Block cell = event.location().getBlock();
-        if (!VerticalSlabListener.placeableIntoDry(cell) || !soil(cell.getRelative(BlockFace.DOWN))) {
+        if (!VerticalSlabListener.placeableIntoDry(cell) || !soil(cell.getRelative(BlockFace.DOWN))
+                || occupied(cell)) {
             return;
         }
         Player player = event.player();
@@ -155,6 +156,9 @@ public final class NetherWartCrops implements Listener {
             return;
         }
         event.setCancelled(true);
+        if (occupied(cell)) {
+            return;
+        }
         Player player = event.getPlayer();
         if (!Protection.canBuild(player, cell, Material.NETHER_WART)) {
             return;
@@ -166,6 +170,43 @@ public final class NetherWartCrops implements Listener {
     }
 
     /** Places a warped wart of an age in a cell and starts it growing. */
+    /**
+     * Whether a crop or a piece already stands in a cell. The cell is air to the server
+     * either way, so placeableIntoDry passes it, and a second crop went in on top of the
+     * first: the soul sand's edge, outside the crop's hitbox, could still be clicked.
+     */
+    static boolean occupied(Block cell) {
+        return !VerticalSlabListener.platesIn(cell).isEmpty() || hasCrop(cell);
+    }
+
+    /** Whether a warped wart crop grows in a cell. */
+    static boolean hasCrop(Block cell) {
+        // The crop's entity stands on the cell's floor: search past it, then keep the cell's.
+        Location centre = cell.getLocation().add(0.5, 0.5, 0.5);
+        for (ItemDisplay display : cell.getWorld().getNearbyEntitiesByType(
+                ItemDisplay.class, centre, 0.5, 1.0, 0.5)) {
+            if (CraftEngineFurniture.isFurniture(display)) {
+                BukkitFurniture crop = CraftEngineFurniture.getLoadedFurnitureByMetaEntity(display);
+                if (isWart(crop) && crop.location().getBlock().equals(cell)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Nothing goes into a crop's cell, as with vanilla's crops - a vanilla nether wart on
+     * the same soul sand, say. Whatever features.protect-furniture-cells says: that is for
+     * building pieces; a block in a crop would be a second crop in one cell.
+     */
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.LOW)
+    public void onPlaceIntoCrop(org.bukkit.event.block.BlockPlaceEvent event) {
+        if (hasCrop(event.getBlockPlaced())) {
+            event.setCancelled(true);
+        }
+    }
+
     boolean plant(Block cell, int age) {
         BukkitFurniture furniture = VerticalSlabListener.spawn(
                 cell.getLocation().add(0.5, 0, 0.5), WART, "age_" + age, true);
