@@ -371,6 +371,7 @@ public final class VerticalSlabListener implements Listener {
         // at all, as vanilla stairs and slabs are.
         if (backCovers(from, face)) {
             event.setCancelled(true);
+            respread(from);
             return;
         }
         // Water flowing into a crop washes it away, as it does vanilla nether wart.
@@ -382,6 +383,7 @@ public final class VerticalSlabListener implements Listener {
         }
         if (entryBlocked(target, face)) {
             event.setCancelled(true);
+            respread(from);
         }
     }
 
@@ -432,6 +434,127 @@ public final class VerticalSlabListener implements Listener {
                 side.setBlockData(water);
             }
         });
+    }
+
+    /**
+     * Vanilla's sideways spread, with pieces as walls.
+     *
+     * <p>Water spreads only toward the nearest drop within four blocks (FlowingFluid's
+     * getSpread), and vanilla, which can't see pieces, finds that way straight through
+     * them. When the way it picked runs through a piece, onFlow refuses it, and the water
+     * spread nowhere - it sat still beside an open side. This works the choice out again
+     * with the pieces in the way, and spreads where that leads and vanilla's own choice
+     * didn't (where both lead, vanilla is spreading already). Water only, as spreadOnTop.
+     */
+    private void respread(Block from) {
+        if (from.getType() != Material.WATER || !pendingRespread.add(from)) {
+            return;
+        }
+        Schedulers.atLocation(plugin, from.getLocation(), () -> {
+            pendingRespread.remove(from);
+            if (from.getType() != Material.WATER || !(from.getBlockData() instanceof Levelled level)) {
+                return;
+            }
+            int next = level.getLevel() == 0 || level.getLevel() >= 8 ? 1 : level.getLevel() + 1;
+            if (next > 7) {
+                return;
+            }
+            Set<BlockFace> vanilla = spreadFaces(from, false);
+            for (BlockFace face : spreadFaces(from, true)) {
+                if (vanilla.contains(face)) {
+                    continue;
+                }
+                Block side = from.getRelative(face);
+                boolean weaker = side.getType() == Material.WATER && side.getBlockData() instanceof Levelled l
+                        && l.getLevel() > next && l.getLevel() < 8;
+                if (!side.getType().isAir() && !weaker) {
+                    continue;
+                }
+                Levelled water = (Levelled) Material.WATER.createBlockData();
+                water.setLevel(next);
+                side.setBlockData(water);
+            }
+        });
+    }
+
+    private static final Set<Block> pendingRespread = ConcurrentHashMap.newKeySet();
+    /** Water's slope find distance, and "no drop in reach". */
+    private static final int SLOPE_DISTANCE = 4;
+    private static final int NO_DROP = 1000;
+
+    /** getSpread: the sides at the least distance from a drop - with pieces as walls, or not. */
+    private static Set<BlockFace> spreadFaces(Block from, boolean pieces) {
+        Set<BlockFace> best = EnumSet.noneOf(BlockFace.class);
+        int least = NO_DROP;
+        for (BlockFace face : HORIZONTAL) {
+            Block side = from.getRelative(face);
+            if (!flowsInto(from, face, side, pieces)) {
+                continue;
+            }
+            int distance = drop(side, pieces) ? 0 : slope(side, 1, face.getOppositeFace(), pieces);
+            if (distance < least) {
+                best.clear();
+                least = distance;
+            }
+            if (distance <= least) {
+                best.add(face);
+            }
+        }
+        return best;
+    }
+
+    /** getSlopeDistance: how far from {@code at} the nearest drop is, not going back. */
+    private static int slope(Block at, int depth, BlockFace back, boolean pieces) {
+        int best = NO_DROP;
+        for (BlockFace face : HORIZONTAL) {
+            if (face == back) {
+                continue;
+            }
+            Block next = at.getRelative(face);
+            if (!flowsInto(at, face, next, pieces)) {
+                continue;
+            }
+            if (drop(next, pieces)) {
+                return depth;
+            }
+            if (depth < SLOPE_DISTANCE) {
+                best = Math.min(best, slope(next, depth + 1, face.getOppositeFace(), pieces));
+            }
+        }
+        return best;
+    }
+
+    /** Whether water could flow from {@code from} into {@code to}, the next cell {@code face}-wards. */
+    private static boolean flowsInto(Block from, BlockFace face, Block to, boolean pieces) {
+        if (!holdsWater(to) || isWaterSource(to)) {
+            return false;
+        }
+        return !pieces || (!backCovers(from, face) && !entryBlocked(platesIn(to), face));
+    }
+
+    /** isWaterHole: water in {@code cell} could fall into the cell below. */
+    private static boolean drop(Block cell, boolean pieces) {
+        Block below = cell.getRelative(BlockFace.DOWN);
+        if (below.getType() != Material.WATER && !holdsWater(below)) {
+            return false;
+        }
+        // Water falling onto a piece lands on it (onFlow): no drop.
+        return !pieces || (!backCovers(cell, BlockFace.DOWN) && platesIn(below).isEmpty());
+    }
+
+    /** canHoldFluid, near enough: what flowing water replaces or flows through. */
+    private static boolean holdsWater(Block cell) {
+        Material type = cell.getType();
+        if (type.isAir() || type == Material.WATER) {
+            return true;
+        }
+        if (cell.isLiquid() || wet(cell) || !cell.isPassable() || Tag.ALL_SIGNS.isTagged(type)) {
+            return false;
+        }
+        return switch (type) {
+            case SUGAR_CANE, BUBBLE_COLUMN, NETHER_PORTAL, END_PORTAL, END_GATEWAY, STRUCTURE_VOID -> false;
+            default -> true;
+        };
     }
 
     // --- horizontal stairs: placement -----------------------------------------
@@ -544,6 +667,12 @@ public final class VerticalSlabListener implements Listener {
         // CraftEngine unloaded, the id disabled by config, the pack mid-reload -- destroyed
         // the player's grass and put nothing in its place, with nothing said.
         clearForPlacement(cell);
+        // Flowing water gives way to the piece, as to a vanilla stair or wall: only a
+        // source waterlogs it. (A vertical slab, placed above, keeps it: its open half
+        // takes water in by flow.)
+        if (cell.getType() == Material.WATER && !isWaterSource(cell)) {
+            cell.setType(Material.AIR, false);
+        }
         if (player.getGameMode() != GameMode.CREATIVE) {
             ItemStack held = player.getInventory().getItem(slot);
             held.setAmount(held.getAmount() - 1);
