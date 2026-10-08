@@ -169,7 +169,6 @@ public final class NetherWartCrops implements Listener {
         player.swingHand(event.getHand() == null ? EquipmentSlot.HAND : event.getHand());
     }
 
-    /** Places a warped wart of an age in a cell and starts it growing. */
     /**
      * Whether a crop or a piece already stands in a cell. The cell is air to the server
      * either way, so placeableIntoDry passes it, and a second crop went in on top of the
@@ -207,6 +206,7 @@ public final class NetherWartCrops implements Listener {
         }
     }
 
+    /** Places a warped wart of an age in a cell and starts it growing. */
     boolean plant(Block cell, int age) {
         BukkitFurniture furniture = VerticalSlabListener.spawn(
                 cell.getLocation().add(0.5, 0, 0.5), WART, "age_" + age, true);
