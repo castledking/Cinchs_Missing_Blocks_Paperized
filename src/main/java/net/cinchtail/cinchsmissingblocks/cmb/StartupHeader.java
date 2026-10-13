@@ -145,8 +145,10 @@ public final class StartupHeader {
         String deliveryText = delivery == null ? "&7n/a" : "&a" + delivery.name().toLowerCase(Locale.ROOT);
         boolean rspmInstalled = plugin.getServer().getPluginManager().getPlugin("ResourcePackManager") != null;
 
-        String budget = "&a" + cfg.craftEngine().usable() + "&7/&a"
-                + cfg.craftEngine().maxInternalStates();
+        // CraftEngine's own limit; what the packs take is only known once it has loaded
+        // them, after this header (StateUsage logs it then).
+        StateUsage usage = StateUsage.now();
+        String budget = (usage.cmb() > 0 ? "&a" + usage.cmb() : "&7after load") + "&7/&a" + usage.limit();
 
         CmbConfig.VerticalSlabs vs = cfg.features().verticalSlabs();
         // Both feature switches are the same record; there is no HorizontalStairs type.
