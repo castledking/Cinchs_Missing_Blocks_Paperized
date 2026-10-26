@@ -43,16 +43,35 @@
 A doubled slab is **one piece, not two**, and it is a real block: placed in a cell it becomes a
 block on the `solid` pool with its own hardness, mining tags, sounds and loot. The pack also
 ships a furniture representation of the same doubled slab, so a server can pick the form that
-suits it — `features.vertical-slabs.doubles` chooses `block`, `furniture` or `both`, and
-`both` is the default here. That is two *representations* of one piece, which is why the
+suits it — `features.vertical-slabs.doubles` chooses `block` or `furniture`.
+The release bundle contains both and the plugin defaults to `furniture`. That is two
+*representations* of one piece, which is why the
 counts above do not add it twice.
 
-All **381** of the mod's blocks are served — 347 as blocks, fences among them, and walls,
-panes, stairs and slabs as furniture, for the reason below. Alongside them come **1,822 items**
-and **1,383 recipes**, with drops, loot tables, mining tags and creative categories generated
+Of the mod's **381 registered types**, **379 are served**. The polished deepslate button
+and pressure plate remain unavailable. Alongside the building pieces come **1,822 items**
+and **1,535 recipes**, with drops, loot tables, mining tags and creative categories generated
 from the mod's own data.
 
-## Nothing vanilla changes
+The bundle includes optional pieces. Fresh configs enable the mod's terracotta and
+concrete variants and leave the port's separate vertical slab items, horizontal stairs,
+and warped nether wart crop off. Existing server configs are preserved when upgrading.
+
+Recipes are translated from the upstream mod, including its six base vanilla recipe
+overrides and the built-in terracotta, concrete and reworked deepslate recipe packs.
+Nether wart and nether bricks make four red nether brick **items**; four of those
+items make the vanilla red nether brick block. `cheaper-nether-brick-recipe: false`
+changes both red and blue brick item recipes to yield two instead of four. Moss-carpet variants keep their source
+patterns and yields.
+
+Hidden recipe advancements retain the mod's criteria, requirements and native recipe
+rewards. Obtaining the prerequisite item unlocks its recipes during normal play;
+`/advancement grant <player> everything` and `/recipe give <player> *` work too. These
+advancements have no visible achievement tab. Inventory changes and recipe discovery
+award their source criteria through Paper events. They are registered in memory after
+CraftEngine loads the recipes, without installing a persistent data pack.
+
+## Vanilla blocks keep their appearance
 
 Many CraftEngine packs borrow vanilla block states that real blocks also use, which is why a barrel or a crafter can suddenly look like something else. **This pack never does that.** Every state a block uses is one CraftEngine has already freed from vanilla — real blocks in that state are always drawn as an identical-looking twin, so no real block in your world ever changes appearance.
 
@@ -82,7 +101,10 @@ Stacking two matching slabs merges them into a full block, and breaking that blo
 
 ## Trade-offs worth knowing
 
-Furniture is not blocks. No redstone or neighbour updates, and each piece is an entity. For building blocks that's exactly what you want, but it's why the furniture families are **opt-in** — flip `features.vertical-slabs`, `features.horizontal-stairs` and `features.furniture-fallback` in the plugin config. The plain blocks, stairs and slabs are always on.
+Furniture is not blocks. No redstone or neighbour updates, and each piece is an entity.
+`features.furniture-fallback` stays enabled to supply the mod's stairs, slabs, walls and
+panes. The port's separate vertical slab items and horizontal stairs are opt-in through
+`features.vertical-slabs` and `features.horizontal-stairs`.
 
 ## Requirements
 

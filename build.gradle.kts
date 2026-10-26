@@ -153,7 +153,8 @@ if (generator.isFile) {
 /** What the jar carries: the pack itself and the two files the plugin reads. */
 fun bundled(path: String): Boolean =
     (path == "pack.yml" || path.startsWith("configuration/") || path.startsWith("resourcepack/")
-        || path == "intermediate/mining.json" || path == "intermediate/pieces.json")
+        || path == "intermediate/mining.json" || path == "intermediate/pieces.json"
+        || path == "intermediate/recipe-advancements.json")
         // The generator's notes on its build settings; plugins/CMB/config.yml is the
         // config now, and these would describe the release build, not this server.
         && path != "configuration/config.yml"

@@ -134,6 +134,11 @@ public final class CmbPlugin extends JavaPlugin {
         // Several hits to break a furniture piece, by hardness and tool.
         getServer().getPluginManager().registerEvents(new FurnitureMining(this), this);
         getServer().getPluginManager().registerEvents(new StonecutterGuard(this), this);
+        try {
+            getServer().getPluginManager().registerEvents(new RecipeAdvancements(this), this);
+        } catch (java.io.IOException ex) {
+            throw new IllegalStateException("Could not read the mod's recipe advancements", ex);
+        }
         // The warped nether wart crop, and finding it.
         getServer().getPluginManager().registerEvents(new NetherWartCrops(this), this);
         // The first-join setup message for admins (/cmb setupmsg shows it again).

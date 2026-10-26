@@ -7898,10 +7898,18 @@
       "horizontal-stairs.vanilla",
       "horizontal-stairs.material:warped"
     ],
-    "cinchsmissingblocks:warped_nether_wart": [],
-    "cinchsmissingblocks:warped_nether_wart__stage0": [],
-    "cinchsmissingblocks:warped_nether_wart__stage1": [],
-    "cinchsmissingblocks:warped_nether_wart__stage2": [],
+    "cinchsmissingblocks:warped_nether_wart": [
+      "block:warped_nether_wart"
+    ],
+    "cinchsmissingblocks:warped_nether_wart__stage0": [
+      "block:warped_nether_wart"
+    ],
+    "cinchsmissingblocks:warped_nether_wart__stage1": [
+      "block:warped_nether_wart"
+    ],
+    "cinchsmissingblocks:warped_nether_wart__stage2": [
+      "block:warped_nether_wart"
+    ],
     "cinchsmissingblocks:warped_vertical": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:warped"
@@ -14199,7 +14207,9 @@
       "horizontal-stairs.vanilla",
       "horizontal-stairs.material:warped"
     ],
-    "cinchsmissingblocks:warped_nether_wart": [],
+    "cinchsmissingblocks:warped_nether_wart": [
+      "block:warped_nether_wart"
+    ],
     "cinchsmissingblocks:warped_vertical": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:warped"

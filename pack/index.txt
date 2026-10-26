@@ -13,6 +13,7 @@ configuration/templates/fallback_variants.yml
 configuration/translations.yml
 intermediate/mining.json
 intermediate/pieces.json
+intermediate/recipe-advancements.json
 pack.yml
 resourcepack/assets/cinchsmissingblocks/blockstates/andesite_brick_pillar.json
 resourcepack/assets/cinchsmissingblocks/blockstates/andesite_brick_slab.json

@@ -15,6 +15,33 @@ import org.junit.jupiter.api.Test;
 /** The installer's switches, evaluated against a stand-in for the running server. */
 class PackInstallerSwitchTest {
 
+    @Test
+    void cheaperNetherBricksChangesOnlyTheTwoItemYields() {
+        byte[] input = """
+                recipes:
+                  cinchsmissingblocks:red_nether_brick:
+                    type: shaped
+                    result: {id: 'cinchsmissingblocks:red_nether_brick', count: 4}
+                  cinchsmissingblocks:blue_nether_brick:
+                    type: shaped
+                    result: {id: 'cinchsmissingblocks:blue_nether_brick', count: 4}
+                  minecraft:red_nether_bricks:
+                    type: shaped
+                    result: {id: 'minecraft:red_nether_bricks', count: 1}
+                """.getBytes(StandardCharsets.UTF_8);
+        assertEquals(new String(input, StandardCharsets.UTF_8),
+                new String(PackInstaller.netherBrickYield(input, true), StandardCharsets.UTF_8));
+        Map<?, ?> root = new org.yaml.snakeyaml.Yaml().load(new String(
+                PackInstaller.netherBrickYield(input, false), StandardCharsets.UTF_8));
+        Map<?, ?> recipes = (Map<?, ?>) root.get("recipes");
+        for (String id : List.of("red_nether_brick", "blue_nether_brick")) {
+            Map<?, ?> recipe = (Map<?, ?>) recipes.get("cinchsmissingblocks:" + id);
+            assertEquals(2, ((Map<?, ?>) recipe.get("result")).get("count"));
+        }
+        Map<?, ?> vanilla = (Map<?, ?>) recipes.get("minecraft:red_nether_bricks");
+        assertEquals(1, ((Map<?, ?>) vanilla.get("result")).get("count"));
+    }
+
     private static final CmbConfig DEFAULTS = ConfigLoader.defaults();
 
     /** A 26.x server: vanilla has concrete slabs. */

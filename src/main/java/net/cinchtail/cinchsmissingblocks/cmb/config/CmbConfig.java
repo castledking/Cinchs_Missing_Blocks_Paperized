@@ -32,6 +32,7 @@ import java.util.Set;
  * @param disabledBlocks blocks the server refuses to serve regardless of anything else
  * @param tools /cmb kill and /cmb glow
  * @param updateChecker ask Modrinth for a newer release and tell admins
+ * @param cheaperNetherBrickRecipe four coloured nether brick items per craft, or two when false
  */
 public record CmbConfig(
         Features features,
@@ -41,7 +42,8 @@ public record CmbConfig(
         CraftEngineSettings craftEngine,
         DisabledBlocks disabledBlocks,
         Tools tools,
-        boolean updateChecker
+        boolean updateChecker,
+        boolean cheaperNetherBrickRecipe
 ) {
 
     /**

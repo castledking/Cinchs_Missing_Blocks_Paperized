@@ -2629,7 +2629,7 @@ furniture:
                   add: false
   "cinchsmissingblocks:blue_nether_brick_horizontal_stairs":
     data:
-      item_name: "<!i><white>Warped Nether Brick Horizontal Stairs"
+      item_name: "<!i><white>Blue Nether Brick Horizontal Stairs"
     model:
       path: "cinchsmissingblocks:item/blue_nether_brick_horizontal_stairs"
     settings:
@@ -2736,7 +2736,7 @@ furniture:
         item: "cinchsmissingblocks:blue_nether_brick_horizontal_stairs"
   "cinchsmissingblocks:blue_nether_brick_vertical":
     data:
-      item_name: "<!i><white>Warped Nether Brick Vertical Slab"
+      item_name: "<!i><white>Blue Nether Brick Vertical Slab"
     model:
       path: "cinchsmissingblocks:item/blue_nether_brick_vertical"
     settings:
@@ -2793,7 +2793,7 @@ furniture:
         item: "cinchsmissingblocks:blue_nether_brick_vertical"
   "cinchsmissingblocks:blue_nether_brick_vertical_double":
     data:
-      item_name: "<!i><white>Warped Nether Brick Vertical Slab"
+      item_name: "<!i><white>Blue Nether Brick Vertical Slab"
     model:
       path: "cinchsmissingblocks:item/blue_nether_brick_vertical_double__full"
     settings:
@@ -6133,7 +6133,7 @@ furniture:
                   add: false
   "cinchsmissingblocks:cracked_blue_nether_brick_horizontal_stairs":
     data:
-      item_name: "<!i><white>Cracked Warped Nether Brick Horizontal Stairs"
+      item_name: "<!i><white>Cracked Blue Nether Brick Horizontal Stairs"
     model:
       path: "cinchsmissingblocks:item/cracked_blue_nether_brick_horizontal_stairs"
     settings:
@@ -6240,7 +6240,7 @@ furniture:
         item: "cinchsmissingblocks:cracked_blue_nether_brick_horizontal_stairs"
   "cinchsmissingblocks:cracked_blue_nether_brick_vertical":
     data:
-      item_name: "<!i><white>Cracked Warped Nether Brick Vertical Slab"
+      item_name: "<!i><white>Cracked Blue Nether Brick Vertical Slab"
     model:
       path: "cinchsmissingblocks:item/cracked_blue_nether_brick_vertical"
     settings:
@@ -6297,7 +6297,7 @@ furniture:
         item: "cinchsmissingblocks:cracked_blue_nether_brick_vertical"
   "cinchsmissingblocks:cracked_blue_nether_brick_vertical_double":
     data:
-      item_name: "<!i><white>Cracked Warped Nether Brick Vertical Slab"
+      item_name: "<!i><white>Cracked Blue Nether Brick Vertical Slab"
     model:
       path: "cinchsmissingblocks:item/cracked_blue_nether_brick_vertical_double__full"
     settings:

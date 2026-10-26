@@ -79,6 +79,9 @@ public final class PackInstaller {
             if (rel.startsWith("configuration/") && rel.endsWith(".yml")) {
                 data = filter(data, removed, removedAll);
             }
+            if (rel.equals("configuration/recipes.yml")) {
+                data = netherBrickYield(data, cfg.cheaperNetherBrickRecipe());
+            }
             Path file = target.resolve(rel);
             wanted.add(file);
             if (Files.isRegularFile(file) && Arrays.equals(Files.readAllBytes(file), data)) {
@@ -267,6 +270,22 @@ public final class PackInstaller {
     }
 
     // --- filtering a configuration file -------------------------------------------
+
+    @SuppressWarnings("unchecked")
+    static byte[] netherBrickYield(byte[] data, boolean cheaper) {
+        if (cheaper) return data; // The bundled source recipes yield four.
+        Yaml yaml = new Yaml();
+        Map<String, Object> root = yaml.load(new String(data, StandardCharsets.UTF_8));
+        if (root.get("recipes") instanceof Map<?, ?> recipes) {
+            for (String id : List.of("cinchsmissingblocks:red_nether_brick", "cinchsmissingblocks:blue_nether_brick")) {
+                if (recipes.get(id) instanceof Map<?, ?> recipe
+                        && recipe.get("result") instanceof Map<?, ?> result) {
+                    ((Map<String, Object>) result).put("count", 2);
+                }
+            }
+        }
+        return yaml.dump(root).getBytes(StandardCharsets.UTF_8);
+    }
 
     /** The file without the removed ids, or the very same bytes when nothing went. */
     @SuppressWarnings("unchecked")

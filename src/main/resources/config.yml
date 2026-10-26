@@ -33,23 +33,27 @@ content:
   warped-nether-wart:
     # In a newly generated nether fortress, each nether wart patch has this chance to
     # come up warped instead.
-    fortress: true
+    fortress: false
     fortress-chance: 0.25
     # In newly generated terrain where a soul sand valley meets a crimson or warped
     # forest, specks of soul sand with wart on top along the edge: warped beside warped
     # forest, regular nether wart beside crimson.
-    biome-edges: true
+    biome-edges: false
     biome-edge-chance: 0.35
     # Regular nether wart planted on warped nylium grows as warped nether wart.
-    nylium-planting: true
+    nylium-planting: false
+
+# Two nether brick items plus the matching plants yield four coloured nether brick
+# items when true, two when false. Applies to both red and blue nether bricks.
+cheaper-nether-brick-recipe: true
 
 features:
-  # The terracotta and concrete stairs, slabs and walls (96 blocks). Withheld by
-  # default; with furniture-fallback on they are served as furniture. On 26.3, vanilla
+  # The terracotta and concrete stairs, slabs and walls. Enabled by default, as in
+  # the mod; furniture-fallback supplies their shapes. On 26.3, vanilla
   # already has concrete slabs and stairs, so those are skipped unless ViaBackwards is
   # installed; concrete walls are kept.
-  disable-terracotta: true
-  disable-concrete: true
+  disable-terracotta: false
+  disable-concrete: false
 
   # A furniture piece's cell is air to the server, so without this, blocks with no
   # hitbox - buttons, rails, levers, string, pressure plates, torches - can be placed
@@ -72,8 +76,10 @@ features:
   # toggles. Listing a material that is not otherwise offered is reported rather
   # than silently ignored, so a typo is visible.
   vertical-slabs:
-    cmb: true
-    vanilla: true
+    # These separate vertical-piece items and recipes are a Paperized extension.
+    # Enable both sources to offer them alongside the mod's normal blocks.
+    cmb: false
+    vanilla: false
     stonecutting: true
     # What two slabs in one cell become: block (a real block; Jade names its vanilla
     # carrier) or furniture (Jade names it after the slab).
@@ -85,8 +91,8 @@ features:
   # full height), the corner piece for vertical slab walls. Furniture as well, with
   # the same `cmb`, `vanilla` and `disabled` meaning as vertical-slabs above.
   horizontal-stairs:
-    cmb: true
-    vanilla: true
+    cmb: false
+    vanilla: false
     stonecutting: true
     disabled: []
 
@@ -144,7 +150,9 @@ resource-pack:
 # and variants already off in the generator are not affected - this only removes
 # more. Blocks with no carrier are listed here have no effect, because they are not
 # served in the first place; the generator's capacity report is the place to see why.
-disabled-blocks: []
+# The port's extra crop is opt-in. To enable it, remove this entry and enable the
+# desired content.warped-nether-wart discovery options above.
+disabled-blocks: [warped_nether_wart]
 
 # /cmb kill and /cmb glow: find CMB pieces around you by category.
 #

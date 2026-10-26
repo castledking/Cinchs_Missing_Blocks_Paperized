@@ -90,38 +90,40 @@ public final class ConfigLoader {
         return new CmbConfig(
                 new CmbConfig.Features(
                         new CmbConfig.VerticalSlabs(
-                                c.getBoolean("features.vertical-slabs.cmb", true),
-                                c.getBoolean("features.vertical-slabs.vanilla", true),
+                                c.getBoolean("features.vertical-slabs.cmb", false),
+                                c.getBoolean("features.vertical-slabs.vanilla", false),
                                 lower(c.getStringList("features.vertical-slabs.disabled"))),
                         new CmbConfig.VerticalSlabs(
-                                c.getBoolean("features.horizontal-stairs.cmb", true),
-                                c.getBoolean("features.horizontal-stairs.vanilla", true),
+                                c.getBoolean("features.horizontal-stairs.cmb", false),
+                                c.getBoolean("features.horizontal-stairs.vanilla", false),
                                 lower(c.getStringList("features.horizontal-stairs.disabled"))),
-                        "furniture".equalsIgnoreCase(c.getString("features.vertical-slabs.doubles", "block"))
+                        "furniture".equalsIgnoreCase(c.getString("features.vertical-slabs.doubles", "furniture"))
                                 ? "furniture" : "block",
                         c.getBoolean("features.furniture-fallback", true),
-                        c.getBoolean("features.disable-terracotta", true),
-                        c.getBoolean("features.disable-concrete", true),
+                        c.getBoolean("features.disable-terracotta", false),
+                        c.getBoolean("features.disable-concrete", false),
                         c.getBoolean("features.protect-furniture-cells", true)),
                 new CmbConfig.ResourcePack(
                         CmbConfig.ResourcePack.Delivery.parse(
                                 c.getString("resource-pack.delivery", "craftengine")),
                         c.getBoolean("resource-pack.install", true)),
                 new CmbConfig.Content(new CmbConfig.Wart(
-                        c.getBoolean("content.warped-nether-wart.fortress", true),
+                        c.getBoolean("content.warped-nether-wart.fortress", false),
                         c.getDouble("content.warped-nether-wart.fortress-chance", 0.25),
-                        c.getBoolean("content.warped-nether-wart.biome-edges", true),
+                        c.getBoolean("content.warped-nether-wart.biome-edges", false),
                         c.getDouble("content.warped-nether-wart.biome-edge-chance", 0.35),
-                        c.getBoolean("content.warped-nether-wart.nylium-planting", true))),
+                        c.getBoolean("content.warped-nether-wart.nylium-planting", false))),
                 new CmbConfig.Compatibility(
                         CmbConfig.Compatibility.Policy.parse(
                                 c.getString("compatibility.unsupported-content", "disable"))),
                 new CmbConfig.CraftEngineSettings(
                         c.getInt("craftengine.max-internal-states", 5120),
                         c.getInt("craftengine.reserved-states", 64)),
-                new CmbConfig.DisabledBlocks(lower(c.getStringList("disabled-blocks"))),
+                new CmbConfig.DisabledBlocks(c.contains("disabled-blocks")
+                        ? lower(c.getStringList("disabled-blocks")) : Set.of("warped_nether_wart")),
                 tools(c),
-                c.getBoolean("update-checker", true));
+                c.getBoolean("update-checker", true),
+                c.getBoolean("cheaper-nether-brick-recipe", true));
     }
 
     /** The tools section; a colour that doesn't parse keeps its default, with a warning. */
@@ -190,7 +192,7 @@ public final class ConfigLoader {
     /** Top-level sections this build understands. Anything else is a typo or a stale key. */
     private static final Set<String> KNOWN_SECTIONS =
             Set.of("craftengine", "compatibility", "content", "features",
-                   "resource-pack", "disabled-blocks", "tools", "update-checker");
+                   "resource-pack", "disabled-blocks", "tools", "update-checker", "cheaper-nether-brick-recipe");
 
     private void reportUnknownKeys(Set<String> seenKeys) {
         List<String> unknown = seenKeys.stream().filter(k -> !KNOWN_SECTIONS.contains(k)).toList();
@@ -223,15 +225,15 @@ public final class ConfigLoader {
     /** The shipped defaults, used when the file cannot be parsed. */
     public static CmbConfig defaults() {
         return new CmbConfig(
-                new CmbConfig.Features(new CmbConfig.VerticalSlabs(true, true, Set.of()),
-                        new CmbConfig.VerticalSlabs(true, true, Set.of()), "block", true, true, true, true),
+                new CmbConfig.Features(new CmbConfig.VerticalSlabs(false, false, Set.of()),
+                        new CmbConfig.VerticalSlabs(false, false, Set.of()), "furniture", true, false, false, true),
                 new CmbConfig.ResourcePack(CmbConfig.ResourcePack.Delivery.CRAFTENGINE, true),
-                new CmbConfig.Content(new CmbConfig.Wart(true, 0.25, true, 0.35, true)),
+                new CmbConfig.Content(new CmbConfig.Wart(false, 0.25, false, 0.35, false)),
                 new CmbConfig.Compatibility(CmbConfig.Compatibility.Policy.DISABLE),
                 new CmbConfig.CraftEngineSettings(5120, 64),
-                new CmbConfig.DisabledBlocks(Set.of()),
+                new CmbConfig.DisabledBlocks(Set.of("warped_nether_wart")),
                 defaultTools(),
-                true);
+                true, true);
     }
 
     /** Logs the settings that change behaviour, so a reload states what it picked up. */

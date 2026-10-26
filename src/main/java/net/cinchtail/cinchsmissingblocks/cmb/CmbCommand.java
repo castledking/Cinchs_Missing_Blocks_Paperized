@@ -217,22 +217,24 @@ public class CmbCommand {
             return 0;
         }
         String line = "ce item " + args.trim();
-        String cePermission = sub.equals("give")
-                ? "ce.command.admin.give_item"
-                : words.length > 1 ? "ce.command.admin.item_browser" : "ce.command.player.item_browser";
-        if (sender.hasPermission(cePermission)) {
-            dispatch(sender, line);
-            return Command.SINGLE_SUCCESS;
-        }
-        // On the sender's behalf: the console has CraftEngine's permissions, but a
-        // browser has to open for someone, so a bare `browser` names the sender.
+        // CraftEngine's `ce item browser` won't parse without a player, even typed by
+        // one, so a bare `browser` always opens for the sender, through the console.
         if (sub.equals("browser") && words.length == 1) {
             if (!(sender instanceof Player player)) {
                 sender.sendMessage(plugin.lang().get("item-usage"));
                 return 0;
             }
-            line += " " + player.getName();
+            dispatch(Bukkit.getConsoleSender(), line + " " + player.getName());
+            return Command.SINGLE_SUCCESS;
         }
+        String cePermission = sub.equals("give")
+                ? "ce.command.admin.give_item"
+                : "ce.command.admin.item_browser";
+        if (sender.hasPermission(cePermission)) {
+            dispatch(sender, line);
+            return Command.SINGLE_SUCCESS;
+        }
+        // On the sender's behalf: the console has CraftEngine's permissions.
         dispatch(Bukkit.getConsoleSender(), line);
         return Command.SINGLE_SUCCESS;
     }
