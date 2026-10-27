@@ -127,6 +127,7 @@ if (generator.isFile) {
                     "--mod", upstreamTree.get().asFile.path,
                     "--out", generated.get().asFile.path,
                     "--mc-version", "26.3",
+                    "--texture-overrides", file("texture-overrides").path,
                     "--build-config", workspace.resolve("tools/build-config.release.yml").path)
         doLast {
             val root = generated.get().asFile

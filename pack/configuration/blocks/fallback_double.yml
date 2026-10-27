@@ -720,6 +720,310 @@ blocks:
             fluid_state: water
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:blue_nether_brick_fence_gate":
+    settings:
+      item: "cinchsmissingblocks:blue_nether_brick_fence_gate"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:fence_gates"
+        - "minecraft:mineable/pickaxe"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+    behavior:
+      type: fence_gate_block
+      can_open_with_hand: true
+      can_open_by_wind_charge: true
+      sounds:
+        open: "minecraft:block.nether_wood_fence_gate.open"
+        close: "minecraft:block.nether_wood_fence_gate.close"
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+        open:
+          name: open
+          type: boolean
+          default: "false"
+        powered:
+          name: powered
+          type: boolean
+          default: "false"
+        in_wall:
+          name: in_wall
+          type: boolean
+          default: "false"
+      appearances:
+        "facing=north,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+      variants:
+        "facing=north,in_wall=true,open=true,powered=true":
+          appearance: "facing=north,in_wall=true,open=true,powered=true"
+        "facing=north,in_wall=false,open=true,powered=true":
+          appearance: "facing=north,in_wall=false,open=true,powered=true"
+        "facing=north,in_wall=true,open=true,powered=false":
+          appearance: "facing=north,in_wall=true,open=true,powered=false"
+        "facing=north,in_wall=false,open=true,powered=false":
+          appearance: "facing=north,in_wall=false,open=true,powered=false"
+        "facing=north,in_wall=true,open=false,powered=true":
+          appearance: "facing=north,in_wall=true,open=false,powered=true"
+        "facing=north,in_wall=false,open=false,powered=true":
+          appearance: "facing=north,in_wall=false,open=false,powered=true"
+        "facing=north,in_wall=true,open=false,powered=false":
+          appearance: "facing=north,in_wall=true,open=false,powered=false"
+        "facing=north,in_wall=false,open=false,powered=false":
+          appearance: "facing=north,in_wall=false,open=false,powered=false"
+        "facing=east,in_wall=true,open=true,powered=true":
+          appearance: "facing=east,in_wall=true,open=true,powered=true"
+        "facing=east,in_wall=false,open=true,powered=true":
+          appearance: "facing=east,in_wall=false,open=true,powered=true"
+        "facing=east,in_wall=true,open=true,powered=false":
+          appearance: "facing=east,in_wall=true,open=true,powered=false"
+        "facing=east,in_wall=false,open=true,powered=false":
+          appearance: "facing=east,in_wall=false,open=true,powered=false"
+        "facing=east,in_wall=true,open=false,powered=true":
+          appearance: "facing=east,in_wall=true,open=false,powered=true"
+        "facing=east,in_wall=false,open=false,powered=true":
+          appearance: "facing=east,in_wall=false,open=false,powered=true"
+        "facing=east,in_wall=true,open=false,powered=false":
+          appearance: "facing=east,in_wall=true,open=false,powered=false"
+        "facing=east,in_wall=false,open=false,powered=false":
+          appearance: "facing=east,in_wall=false,open=false,powered=false"
+        "facing=south,in_wall=true,open=true,powered=true":
+          appearance: "facing=south,in_wall=true,open=true,powered=true"
+        "facing=south,in_wall=false,open=true,powered=true":
+          appearance: "facing=south,in_wall=false,open=true,powered=true"
+        "facing=south,in_wall=true,open=true,powered=false":
+          appearance: "facing=south,in_wall=true,open=true,powered=false"
+        "facing=south,in_wall=false,open=true,powered=false":
+          appearance: "facing=south,in_wall=false,open=true,powered=false"
+        "facing=south,in_wall=true,open=false,powered=true":
+          appearance: "facing=south,in_wall=true,open=false,powered=true"
+        "facing=south,in_wall=false,open=false,powered=true":
+          appearance: "facing=south,in_wall=false,open=false,powered=true"
+        "facing=south,in_wall=true,open=false,powered=false":
+          appearance: "facing=south,in_wall=true,open=false,powered=false"
+        "facing=south,in_wall=false,open=false,powered=false":
+          appearance: "facing=south,in_wall=false,open=false,powered=false"
+        "facing=west,in_wall=true,open=true,powered=true":
+          appearance: "facing=west,in_wall=true,open=true,powered=true"
+        "facing=west,in_wall=false,open=true,powered=true":
+          appearance: "facing=west,in_wall=false,open=true,powered=true"
+        "facing=west,in_wall=true,open=true,powered=false":
+          appearance: "facing=west,in_wall=true,open=true,powered=false"
+        "facing=west,in_wall=false,open=true,powered=false":
+          appearance: "facing=west,in_wall=false,open=true,powered=false"
+        "facing=west,in_wall=true,open=false,powered=true":
+          appearance: "facing=west,in_wall=true,open=false,powered=true"
+        "facing=west,in_wall=false,open=false,powered=true":
+          appearance: "facing=west,in_wall=false,open=false,powered=true"
+        "facing=west,in_wall=true,open=false,powered=false":
+          appearance: "facing=west,in_wall=true,open=false,powered=false"
+        "facing=west,in_wall=false,open=false,powered=false":
+          appearance: "facing=west,in_wall=false,open=false,powered=false"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:blue_nether_brick_slab_double":
     states:
       properties: {}
@@ -1540,6 +1844,310 @@ blocks:
             fluid_state: water
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate":
+    settings:
+      item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:fence_gates"
+        - "minecraft:mineable/pickaxe"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+    behavior:
+      type: fence_gate_block
+      can_open_with_hand: true
+      can_open_by_wind_charge: true
+      sounds:
+        open: "minecraft:block.nether_wood_fence_gate.open"
+        close: "minecraft:block.nether_wood_fence_gate.close"
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+        open:
+          name: open
+          type: boolean
+          default: "false"
+        powered:
+          name: powered
+          type: boolean
+          default: "false"
+        in_wall:
+          name: in_wall
+          type: boolean
+          default: "false"
+      appearances:
+        "facing=north,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+      variants:
+        "facing=north,in_wall=true,open=true,powered=true":
+          appearance: "facing=north,in_wall=true,open=true,powered=true"
+        "facing=north,in_wall=false,open=true,powered=true":
+          appearance: "facing=north,in_wall=false,open=true,powered=true"
+        "facing=north,in_wall=true,open=true,powered=false":
+          appearance: "facing=north,in_wall=true,open=true,powered=false"
+        "facing=north,in_wall=false,open=true,powered=false":
+          appearance: "facing=north,in_wall=false,open=true,powered=false"
+        "facing=north,in_wall=true,open=false,powered=true":
+          appearance: "facing=north,in_wall=true,open=false,powered=true"
+        "facing=north,in_wall=false,open=false,powered=true":
+          appearance: "facing=north,in_wall=false,open=false,powered=true"
+        "facing=north,in_wall=true,open=false,powered=false":
+          appearance: "facing=north,in_wall=true,open=false,powered=false"
+        "facing=north,in_wall=false,open=false,powered=false":
+          appearance: "facing=north,in_wall=false,open=false,powered=false"
+        "facing=east,in_wall=true,open=true,powered=true":
+          appearance: "facing=east,in_wall=true,open=true,powered=true"
+        "facing=east,in_wall=false,open=true,powered=true":
+          appearance: "facing=east,in_wall=false,open=true,powered=true"
+        "facing=east,in_wall=true,open=true,powered=false":
+          appearance: "facing=east,in_wall=true,open=true,powered=false"
+        "facing=east,in_wall=false,open=true,powered=false":
+          appearance: "facing=east,in_wall=false,open=true,powered=false"
+        "facing=east,in_wall=true,open=false,powered=true":
+          appearance: "facing=east,in_wall=true,open=false,powered=true"
+        "facing=east,in_wall=false,open=false,powered=true":
+          appearance: "facing=east,in_wall=false,open=false,powered=true"
+        "facing=east,in_wall=true,open=false,powered=false":
+          appearance: "facing=east,in_wall=true,open=false,powered=false"
+        "facing=east,in_wall=false,open=false,powered=false":
+          appearance: "facing=east,in_wall=false,open=false,powered=false"
+        "facing=south,in_wall=true,open=true,powered=true":
+          appearance: "facing=south,in_wall=true,open=true,powered=true"
+        "facing=south,in_wall=false,open=true,powered=true":
+          appearance: "facing=south,in_wall=false,open=true,powered=true"
+        "facing=south,in_wall=true,open=true,powered=false":
+          appearance: "facing=south,in_wall=true,open=true,powered=false"
+        "facing=south,in_wall=false,open=true,powered=false":
+          appearance: "facing=south,in_wall=false,open=true,powered=false"
+        "facing=south,in_wall=true,open=false,powered=true":
+          appearance: "facing=south,in_wall=true,open=false,powered=true"
+        "facing=south,in_wall=false,open=false,powered=true":
+          appearance: "facing=south,in_wall=false,open=false,powered=true"
+        "facing=south,in_wall=true,open=false,powered=false":
+          appearance: "facing=south,in_wall=true,open=false,powered=false"
+        "facing=south,in_wall=false,open=false,powered=false":
+          appearance: "facing=south,in_wall=false,open=false,powered=false"
+        "facing=west,in_wall=true,open=true,powered=true":
+          appearance: "facing=west,in_wall=true,open=true,powered=true"
+        "facing=west,in_wall=false,open=true,powered=true":
+          appearance: "facing=west,in_wall=false,open=true,powered=true"
+        "facing=west,in_wall=true,open=true,powered=false":
+          appearance: "facing=west,in_wall=true,open=true,powered=false"
+        "facing=west,in_wall=false,open=true,powered=false":
+          appearance: "facing=west,in_wall=false,open=true,powered=false"
+        "facing=west,in_wall=true,open=false,powered=true":
+          appearance: "facing=west,in_wall=true,open=false,powered=true"
+        "facing=west,in_wall=false,open=false,powered=true":
+          appearance: "facing=west,in_wall=false,open=false,powered=true"
+        "facing=west,in_wall=true,open=false,powered=false":
+          appearance: "facing=west,in_wall=true,open=false,powered=false"
+        "facing=west,in_wall=false,open=false,powered=false":
+          appearance: "facing=west,in_wall=false,open=false,powered=false"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_blue_nether_brick_slab_double":
     states:
       properties: {}
@@ -1634,6 +2242,39 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:cracked_calcite_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_cinnabar_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
               functions:
                 - type: set_count
                   count: 2
@@ -2426,6 +3067,310 @@ blocks:
             fluid_state: water
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_nether_brick_fence_gate":
+    settings:
+      item: "cinchsmissingblocks:cracked_nether_brick_fence_gate"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:fence_gates"
+        - "minecraft:mineable/pickaxe"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+    behavior:
+      type: fence_gate_block
+      can_open_with_hand: true
+      can_open_by_wind_charge: true
+      sounds:
+        open: "minecraft:block.nether_wood_fence_gate.open"
+        close: "minecraft:block.nether_wood_fence_gate.close"
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+        open:
+          name: open
+          type: boolean
+          default: "false"
+        powered:
+          name: powered
+          type: boolean
+          default: "false"
+        in_wall:
+          name: in_wall
+          type: boolean
+          default: "false"
+      appearances:
+        "facing=north,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+      variants:
+        "facing=north,in_wall=true,open=true,powered=true":
+          appearance: "facing=north,in_wall=true,open=true,powered=true"
+        "facing=north,in_wall=false,open=true,powered=true":
+          appearance: "facing=north,in_wall=false,open=true,powered=true"
+        "facing=north,in_wall=true,open=true,powered=false":
+          appearance: "facing=north,in_wall=true,open=true,powered=false"
+        "facing=north,in_wall=false,open=true,powered=false":
+          appearance: "facing=north,in_wall=false,open=true,powered=false"
+        "facing=north,in_wall=true,open=false,powered=true":
+          appearance: "facing=north,in_wall=true,open=false,powered=true"
+        "facing=north,in_wall=false,open=false,powered=true":
+          appearance: "facing=north,in_wall=false,open=false,powered=true"
+        "facing=north,in_wall=true,open=false,powered=false":
+          appearance: "facing=north,in_wall=true,open=false,powered=false"
+        "facing=north,in_wall=false,open=false,powered=false":
+          appearance: "facing=north,in_wall=false,open=false,powered=false"
+        "facing=east,in_wall=true,open=true,powered=true":
+          appearance: "facing=east,in_wall=true,open=true,powered=true"
+        "facing=east,in_wall=false,open=true,powered=true":
+          appearance: "facing=east,in_wall=false,open=true,powered=true"
+        "facing=east,in_wall=true,open=true,powered=false":
+          appearance: "facing=east,in_wall=true,open=true,powered=false"
+        "facing=east,in_wall=false,open=true,powered=false":
+          appearance: "facing=east,in_wall=false,open=true,powered=false"
+        "facing=east,in_wall=true,open=false,powered=true":
+          appearance: "facing=east,in_wall=true,open=false,powered=true"
+        "facing=east,in_wall=false,open=false,powered=true":
+          appearance: "facing=east,in_wall=false,open=false,powered=true"
+        "facing=east,in_wall=true,open=false,powered=false":
+          appearance: "facing=east,in_wall=true,open=false,powered=false"
+        "facing=east,in_wall=false,open=false,powered=false":
+          appearance: "facing=east,in_wall=false,open=false,powered=false"
+        "facing=south,in_wall=true,open=true,powered=true":
+          appearance: "facing=south,in_wall=true,open=true,powered=true"
+        "facing=south,in_wall=false,open=true,powered=true":
+          appearance: "facing=south,in_wall=false,open=true,powered=true"
+        "facing=south,in_wall=true,open=true,powered=false":
+          appearance: "facing=south,in_wall=true,open=true,powered=false"
+        "facing=south,in_wall=false,open=true,powered=false":
+          appearance: "facing=south,in_wall=false,open=true,powered=false"
+        "facing=south,in_wall=true,open=false,powered=true":
+          appearance: "facing=south,in_wall=true,open=false,powered=true"
+        "facing=south,in_wall=false,open=false,powered=true":
+          appearance: "facing=south,in_wall=false,open=false,powered=true"
+        "facing=south,in_wall=true,open=false,powered=false":
+          appearance: "facing=south,in_wall=true,open=false,powered=false"
+        "facing=south,in_wall=false,open=false,powered=false":
+          appearance: "facing=south,in_wall=false,open=false,powered=false"
+        "facing=west,in_wall=true,open=true,powered=true":
+          appearance: "facing=west,in_wall=true,open=true,powered=true"
+        "facing=west,in_wall=false,open=true,powered=true":
+          appearance: "facing=west,in_wall=false,open=true,powered=true"
+        "facing=west,in_wall=true,open=true,powered=false":
+          appearance: "facing=west,in_wall=true,open=true,powered=false"
+        "facing=west,in_wall=false,open=true,powered=false":
+          appearance: "facing=west,in_wall=false,open=true,powered=false"
+        "facing=west,in_wall=true,open=false,powered=true":
+          appearance: "facing=west,in_wall=true,open=false,powered=true"
+        "facing=west,in_wall=false,open=false,powered=true":
+          appearance: "facing=west,in_wall=false,open=false,powered=true"
+        "facing=west,in_wall=true,open=false,powered=false":
+          appearance: "facing=west,in_wall=true,open=false,powered=false"
+        "facing=west,in_wall=false,open=false,powered=false":
+          appearance: "facing=west,in_wall=false,open=false,powered=false"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_nether_brick_slab_double":
     states:
       properties: {}
@@ -3114,6 +4059,310 @@ blocks:
             fluid_state: water
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_red_nether_brick_fence_gate":
+    settings:
+      item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:fence_gates"
+        - "minecraft:mineable/pickaxe"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+    behavior:
+      type: fence_gate_block
+      can_open_with_hand: true
+      can_open_by_wind_charge: true
+      sounds:
+        open: "minecraft:block.nether_wood_fence_gate.open"
+        close: "minecraft:block.nether_wood_fence_gate.close"
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+        open:
+          name: open
+          type: boolean
+          default: "false"
+        powered:
+          name: powered
+          type: boolean
+          default: "false"
+        in_wall:
+          name: in_wall
+          type: boolean
+          default: "false"
+      appearances:
+        "facing=north,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+      variants:
+        "facing=north,in_wall=true,open=true,powered=true":
+          appearance: "facing=north,in_wall=true,open=true,powered=true"
+        "facing=north,in_wall=false,open=true,powered=true":
+          appearance: "facing=north,in_wall=false,open=true,powered=true"
+        "facing=north,in_wall=true,open=true,powered=false":
+          appearance: "facing=north,in_wall=true,open=true,powered=false"
+        "facing=north,in_wall=false,open=true,powered=false":
+          appearance: "facing=north,in_wall=false,open=true,powered=false"
+        "facing=north,in_wall=true,open=false,powered=true":
+          appearance: "facing=north,in_wall=true,open=false,powered=true"
+        "facing=north,in_wall=false,open=false,powered=true":
+          appearance: "facing=north,in_wall=false,open=false,powered=true"
+        "facing=north,in_wall=true,open=false,powered=false":
+          appearance: "facing=north,in_wall=true,open=false,powered=false"
+        "facing=north,in_wall=false,open=false,powered=false":
+          appearance: "facing=north,in_wall=false,open=false,powered=false"
+        "facing=east,in_wall=true,open=true,powered=true":
+          appearance: "facing=east,in_wall=true,open=true,powered=true"
+        "facing=east,in_wall=false,open=true,powered=true":
+          appearance: "facing=east,in_wall=false,open=true,powered=true"
+        "facing=east,in_wall=true,open=true,powered=false":
+          appearance: "facing=east,in_wall=true,open=true,powered=false"
+        "facing=east,in_wall=false,open=true,powered=false":
+          appearance: "facing=east,in_wall=false,open=true,powered=false"
+        "facing=east,in_wall=true,open=false,powered=true":
+          appearance: "facing=east,in_wall=true,open=false,powered=true"
+        "facing=east,in_wall=false,open=false,powered=true":
+          appearance: "facing=east,in_wall=false,open=false,powered=true"
+        "facing=east,in_wall=true,open=false,powered=false":
+          appearance: "facing=east,in_wall=true,open=false,powered=false"
+        "facing=east,in_wall=false,open=false,powered=false":
+          appearance: "facing=east,in_wall=false,open=false,powered=false"
+        "facing=south,in_wall=true,open=true,powered=true":
+          appearance: "facing=south,in_wall=true,open=true,powered=true"
+        "facing=south,in_wall=false,open=true,powered=true":
+          appearance: "facing=south,in_wall=false,open=true,powered=true"
+        "facing=south,in_wall=true,open=true,powered=false":
+          appearance: "facing=south,in_wall=true,open=true,powered=false"
+        "facing=south,in_wall=false,open=true,powered=false":
+          appearance: "facing=south,in_wall=false,open=true,powered=false"
+        "facing=south,in_wall=true,open=false,powered=true":
+          appearance: "facing=south,in_wall=true,open=false,powered=true"
+        "facing=south,in_wall=false,open=false,powered=true":
+          appearance: "facing=south,in_wall=false,open=false,powered=true"
+        "facing=south,in_wall=true,open=false,powered=false":
+          appearance: "facing=south,in_wall=true,open=false,powered=false"
+        "facing=south,in_wall=false,open=false,powered=false":
+          appearance: "facing=south,in_wall=false,open=false,powered=false"
+        "facing=west,in_wall=true,open=true,powered=true":
+          appearance: "facing=west,in_wall=true,open=true,powered=true"
+        "facing=west,in_wall=false,open=true,powered=true":
+          appearance: "facing=west,in_wall=false,open=true,powered=true"
+        "facing=west,in_wall=true,open=true,powered=false":
+          appearance: "facing=west,in_wall=true,open=true,powered=false"
+        "facing=west,in_wall=false,open=true,powered=false":
+          appearance: "facing=west,in_wall=false,open=true,powered=false"
+        "facing=west,in_wall=true,open=false,powered=true":
+          appearance: "facing=west,in_wall=true,open=false,powered=true"
+        "facing=west,in_wall=false,open=false,powered=true":
+          appearance: "facing=west,in_wall=false,open=false,powered=true"
+        "facing=west,in_wall=true,open=false,powered=false":
+          appearance: "facing=west,in_wall=true,open=false,powered=false"
+        "facing=west,in_wall=false,open=false,powered=false":
+          appearance: "facing=west,in_wall=false,open=false,powered=false"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_red_nether_brick_slab_double":
     states:
       properties: {}
@@ -3180,6 +4429,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_resin_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_resin_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_resin_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:cracked_sandstone_brick_slab_double":
     states:
       properties: {}
@@ -3208,6 +4490,39 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:cracked_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_soul_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
               functions:
                 - type: set_count
                   count: 2
@@ -3279,6 +4594,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_sulfur_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_sulfur_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:cracked_tuff_brick_slab_double":
     states:
       properties: {}
@@ -3307,6 +4655,39 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:cracked_tuff_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cut_soul_sandstone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cut_soul_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cut_soul_sandstone_slab"
               functions:
                 - type: set_count
                   count: 2
@@ -4071,6 +5452,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_cinnabar_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:mossy_cobbled_deepslate_slab_double":
     states:
       properties: {}
@@ -4434,6 +5848,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:mossy_resin_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_resin_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_resin_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:mossy_sandstone_brick_slab_double":
     states:
       properties: {}
@@ -4500,6 +5947,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:mossy_sulfur_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_sulfur_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:mossy_tuff_brick_slab_double":
     states:
       properties: {}
@@ -4533,6 +6013,310 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:nether_brick_fence_gate":
+    settings:
+      item: "cinchsmissingblocks:nether_brick_fence_gate"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:fence_gates"
+        - "minecraft:mineable/pickaxe"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+    behavior:
+      type: fence_gate_block
+      can_open_with_hand: true
+      can_open_by_wind_charge: true
+      sounds:
+        open: "minecraft:block.nether_wood_fence_gate.open"
+        close: "minecraft:block.nether_wood_fence_gate.close"
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+        open:
+          name: open
+          type: boolean
+          default: "false"
+        powered:
+          name: powered
+          type: boolean
+          default: "false"
+        in_wall:
+          name: in_wall
+          type: boolean
+          default: "false"
+      appearances:
+        "facing=north,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+      variants:
+        "facing=north,in_wall=true,open=true,powered=true":
+          appearance: "facing=north,in_wall=true,open=true,powered=true"
+        "facing=north,in_wall=false,open=true,powered=true":
+          appearance: "facing=north,in_wall=false,open=true,powered=true"
+        "facing=north,in_wall=true,open=true,powered=false":
+          appearance: "facing=north,in_wall=true,open=true,powered=false"
+        "facing=north,in_wall=false,open=true,powered=false":
+          appearance: "facing=north,in_wall=false,open=true,powered=false"
+        "facing=north,in_wall=true,open=false,powered=true":
+          appearance: "facing=north,in_wall=true,open=false,powered=true"
+        "facing=north,in_wall=false,open=false,powered=true":
+          appearance: "facing=north,in_wall=false,open=false,powered=true"
+        "facing=north,in_wall=true,open=false,powered=false":
+          appearance: "facing=north,in_wall=true,open=false,powered=false"
+        "facing=north,in_wall=false,open=false,powered=false":
+          appearance: "facing=north,in_wall=false,open=false,powered=false"
+        "facing=east,in_wall=true,open=true,powered=true":
+          appearance: "facing=east,in_wall=true,open=true,powered=true"
+        "facing=east,in_wall=false,open=true,powered=true":
+          appearance: "facing=east,in_wall=false,open=true,powered=true"
+        "facing=east,in_wall=true,open=true,powered=false":
+          appearance: "facing=east,in_wall=true,open=true,powered=false"
+        "facing=east,in_wall=false,open=true,powered=false":
+          appearance: "facing=east,in_wall=false,open=true,powered=false"
+        "facing=east,in_wall=true,open=false,powered=true":
+          appearance: "facing=east,in_wall=true,open=false,powered=true"
+        "facing=east,in_wall=false,open=false,powered=true":
+          appearance: "facing=east,in_wall=false,open=false,powered=true"
+        "facing=east,in_wall=true,open=false,powered=false":
+          appearance: "facing=east,in_wall=true,open=false,powered=false"
+        "facing=east,in_wall=false,open=false,powered=false":
+          appearance: "facing=east,in_wall=false,open=false,powered=false"
+        "facing=south,in_wall=true,open=true,powered=true":
+          appearance: "facing=south,in_wall=true,open=true,powered=true"
+        "facing=south,in_wall=false,open=true,powered=true":
+          appearance: "facing=south,in_wall=false,open=true,powered=true"
+        "facing=south,in_wall=true,open=true,powered=false":
+          appearance: "facing=south,in_wall=true,open=true,powered=false"
+        "facing=south,in_wall=false,open=true,powered=false":
+          appearance: "facing=south,in_wall=false,open=true,powered=false"
+        "facing=south,in_wall=true,open=false,powered=true":
+          appearance: "facing=south,in_wall=true,open=false,powered=true"
+        "facing=south,in_wall=false,open=false,powered=true":
+          appearance: "facing=south,in_wall=false,open=false,powered=true"
+        "facing=south,in_wall=true,open=false,powered=false":
+          appearance: "facing=south,in_wall=true,open=false,powered=false"
+        "facing=south,in_wall=false,open=false,powered=false":
+          appearance: "facing=south,in_wall=false,open=false,powered=false"
+        "facing=west,in_wall=true,open=true,powered=true":
+          appearance: "facing=west,in_wall=true,open=true,powered=true"
+        "facing=west,in_wall=false,open=true,powered=true":
+          appearance: "facing=west,in_wall=false,open=true,powered=true"
+        "facing=west,in_wall=true,open=true,powered=false":
+          appearance: "facing=west,in_wall=true,open=true,powered=false"
+        "facing=west,in_wall=false,open=true,powered=false":
+          appearance: "facing=west,in_wall=false,open=true,powered=false"
+        "facing=west,in_wall=true,open=false,powered=true":
+          appearance: "facing=west,in_wall=true,open=false,powered=true"
+        "facing=west,in_wall=false,open=false,powered=true":
+          appearance: "facing=west,in_wall=false,open=false,powered=true"
+        "facing=west,in_wall=true,open=false,powered=false":
+          appearance: "facing=west,in_wall=true,open=false,powered=false"
+        "facing=west,in_wall=false,open=false,powered=false":
+          appearance: "facing=west,in_wall=false,open=false,powered=false"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:netherrack_slab_double":
     states:
       properties: {}
@@ -5518,6 +7302,310 @@ blocks:
             fluid_state: water
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:red_nether_brick_fence_gate":
+    settings:
+      item: "cinchsmissingblocks:red_nether_brick_fence_gate"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:fence_gates"
+        - "minecraft:mineable/pickaxe"
+      use_shape_for_light_occlusion: true
+      is_suffocating: false
+      is_redstone_conductor: false
+    behavior:
+      type: fence_gate_block
+      can_open_with_hand: true
+      can_open_by_wind_charge: true
+      sounds:
+        open: "minecraft:block.nether_wood_fence_gate.open"
+        close: "minecraft:block.nether_wood_fence_gate.close"
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+        open:
+          name: open
+          type: boolean
+          default: "false"
+        powered:
+          name: powered
+          type: boolean
+          default: "false"
+        in_wall:
+          name: in_wall
+          type: boolean
+          default: "false"
+      appearances:
+        "facing=north,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=north,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=north,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 0
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=east,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=east,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 90
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=south,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=south,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 180
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=true,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=true,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=true":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=true]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=true,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=true,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2"
+              rotation: 270
+              scale: "1,1,1"
+        "facing=west,in_wall=false,open=false,powered=false":
+          state: "minecraft:warped_fence_gate[facing=west,in_wall=false,open=false,powered=false]"
+          entity_renderer:
+            - item: "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3"
+              rotation: 270
+              scale: "1,1,1"
+      variants:
+        "facing=north,in_wall=true,open=true,powered=true":
+          appearance: "facing=north,in_wall=true,open=true,powered=true"
+        "facing=north,in_wall=false,open=true,powered=true":
+          appearance: "facing=north,in_wall=false,open=true,powered=true"
+        "facing=north,in_wall=true,open=true,powered=false":
+          appearance: "facing=north,in_wall=true,open=true,powered=false"
+        "facing=north,in_wall=false,open=true,powered=false":
+          appearance: "facing=north,in_wall=false,open=true,powered=false"
+        "facing=north,in_wall=true,open=false,powered=true":
+          appearance: "facing=north,in_wall=true,open=false,powered=true"
+        "facing=north,in_wall=false,open=false,powered=true":
+          appearance: "facing=north,in_wall=false,open=false,powered=true"
+        "facing=north,in_wall=true,open=false,powered=false":
+          appearance: "facing=north,in_wall=true,open=false,powered=false"
+        "facing=north,in_wall=false,open=false,powered=false":
+          appearance: "facing=north,in_wall=false,open=false,powered=false"
+        "facing=east,in_wall=true,open=true,powered=true":
+          appearance: "facing=east,in_wall=true,open=true,powered=true"
+        "facing=east,in_wall=false,open=true,powered=true":
+          appearance: "facing=east,in_wall=false,open=true,powered=true"
+        "facing=east,in_wall=true,open=true,powered=false":
+          appearance: "facing=east,in_wall=true,open=true,powered=false"
+        "facing=east,in_wall=false,open=true,powered=false":
+          appearance: "facing=east,in_wall=false,open=true,powered=false"
+        "facing=east,in_wall=true,open=false,powered=true":
+          appearance: "facing=east,in_wall=true,open=false,powered=true"
+        "facing=east,in_wall=false,open=false,powered=true":
+          appearance: "facing=east,in_wall=false,open=false,powered=true"
+        "facing=east,in_wall=true,open=false,powered=false":
+          appearance: "facing=east,in_wall=true,open=false,powered=false"
+        "facing=east,in_wall=false,open=false,powered=false":
+          appearance: "facing=east,in_wall=false,open=false,powered=false"
+        "facing=south,in_wall=true,open=true,powered=true":
+          appearance: "facing=south,in_wall=true,open=true,powered=true"
+        "facing=south,in_wall=false,open=true,powered=true":
+          appearance: "facing=south,in_wall=false,open=true,powered=true"
+        "facing=south,in_wall=true,open=true,powered=false":
+          appearance: "facing=south,in_wall=true,open=true,powered=false"
+        "facing=south,in_wall=false,open=true,powered=false":
+          appearance: "facing=south,in_wall=false,open=true,powered=false"
+        "facing=south,in_wall=true,open=false,powered=true":
+          appearance: "facing=south,in_wall=true,open=false,powered=true"
+        "facing=south,in_wall=false,open=false,powered=true":
+          appearance: "facing=south,in_wall=false,open=false,powered=true"
+        "facing=south,in_wall=true,open=false,powered=false":
+          appearance: "facing=south,in_wall=true,open=false,powered=false"
+        "facing=south,in_wall=false,open=false,powered=false":
+          appearance: "facing=south,in_wall=false,open=false,powered=false"
+        "facing=west,in_wall=true,open=true,powered=true":
+          appearance: "facing=west,in_wall=true,open=true,powered=true"
+        "facing=west,in_wall=false,open=true,powered=true":
+          appearance: "facing=west,in_wall=false,open=true,powered=true"
+        "facing=west,in_wall=true,open=true,powered=false":
+          appearance: "facing=west,in_wall=true,open=true,powered=false"
+        "facing=west,in_wall=false,open=true,powered=false":
+          appearance: "facing=west,in_wall=false,open=true,powered=false"
+        "facing=west,in_wall=true,open=false,powered=true":
+          appearance: "facing=west,in_wall=true,open=false,powered=true"
+        "facing=west,in_wall=false,open=false,powered=true":
+          appearance: "facing=west,in_wall=false,open=false,powered=true"
+        "facing=west,in_wall=true,open=false,powered=false":
+          appearance: "facing=west,in_wall=true,open=false,powered=false"
+        "facing=west,in_wall=false,open=false,powered=false":
+          appearance: "facing=west,in_wall=false,open=false,powered=false"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:red_sandstone_brick_slab_double":
     states:
       properties: {}
@@ -5650,6 +7738,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:smooth_soul_sandstone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/smooth_soul_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:snow_brick_slab_double":
     states:
       properties: {}
@@ -5678,6 +7799,72 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:snow_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:soul_sandstone_brick_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:soul_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:soul_sandstone_slab_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      resistance: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:soul_sandstone_slab"
               functions:
                 - type: set_count
                   count: 2

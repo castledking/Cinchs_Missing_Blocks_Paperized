@@ -490,10 +490,33 @@
       "block:blue_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:blue_nether_brick_fence_gate": [
+      "block:blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_0": [
+      "block:blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_1": [
+      "block:blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_2": [
+      "block:blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:blue_nether_brick_fence_gate__gate_3": [
+      "block:blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:blue_nether_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:blue_nether_brick",
       "furniture-fallback"
+    ],
+    "cinchsmissingblocks:blue_nether_brick_pillar": [
+      "block:blue_nether_brick_pillar"
     ],
     "cinchsmissingblocks:blue_nether_brick_slab": [
       "block:blue_nether_brick_slab",
@@ -1024,30 +1047,43 @@
     "cinchsmissingblocks:chiseled_red_nether_bricks": [
       "block:chiseled_red_nether_bricks"
     ],
+    "cinchsmissingblocks:chiseled_soul_sandstone": [
+      "block:chiseled_soul_sandstone"
+    ],
     "cinchsmissingblocks:cinnabar_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:cinnabar_brick"
+      "horizontal-stairs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks"
+    ],
+    "cinchsmissingblocks:cinnabar_brick_pillar": [
+      "block:cinnabar_brick_pillar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_brick_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:cinnabar_brick"
+      "vertical-slabs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_brick_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:cinnabar_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:cinnabar"
+      "horizontal-stairs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:cinnabar"
+      "vertical-slabs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:cobbled_deepslate_horizontal_stairs": [
@@ -1222,6 +1258,26 @@
     ],
     "cinchsmissingblocks:cracked_blue_nether_brick_fence__side": [
       "block:cracked_blue_nether_brick_fence",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate": [
+      "block:cracked_blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_0": [
+      "block:cracked_blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_1": [
+      "block:cracked_blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_2": [
+      "block:cracked_blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate__gate_3": [
+      "block:cracked_blue_nether_brick_fence_gate",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cracked_blue_nether_brick_horizontal_stairs": [
@@ -1427,6 +1483,90 @@
     ],
     "cinchsmissingblocks:cracked_calcite_bricks": [
       "block:cracked_calcite_bricks"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_slab": [
+      "block:cracked_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_slab__top": [
+      "block:cracked_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_slab_double__full": [
+      "block:cracked_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_stairs": [
+      "block:cracked_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_stairs__lower": [
+      "block:cracked_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_stairs__quarter_lower": [
+      "block:cracked_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_stairs__quarter_upper": [
+      "block:cracked_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_stairs__upper": [
+      "block:cracked_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_wall": [
+      "block:cracked_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_wall__post": [
+      "block:cracked_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_wall__side": [
+      "block:cracked_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_wall__side_tall": [
+      "block:cracked_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_bricks": [
+      "block:cracked_cinnabar_bricks",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cracked_deepslate_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
@@ -1910,6 +2050,26 @@
       "block:cracked_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:cracked_nether_brick_fence_gate": [
+      "block:cracked_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_0": [
+      "block:cracked_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_1": [
+      "block:cracked_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_2": [
+      "block:cracked_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_nether_brick_fence_gate__gate_3": [
+      "block:cracked_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_nether_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:cracked_nether_brick",
@@ -2188,6 +2348,26 @@
       "block:cracked_red_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence_gate": [
+      "block:cracked_red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_0": [
+      "block:cracked_red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_1": [
+      "block:cracked_red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_2": [
+      "block:cracked_red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence_gate__gate_3": [
+      "block:cracked_red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_red_nether_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:cracked_red_nether_brick",
@@ -2324,6 +2504,90 @@
     "cinchsmissingblocks:cracked_red_sandstone_bricks": [
       "block:cracked_red_sandstone_bricks"
     ],
+    "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_slab": [
+      "block:cracked_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_slab__top": [
+      "block:cracked_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_slab_double__full": [
+      "block:cracked_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_stairs": [
+      "block:cracked_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_stairs__lower": [
+      "block:cracked_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_stairs__quarter_lower": [
+      "block:cracked_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_stairs__quarter_upper": [
+      "block:cracked_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_stairs__upper": [
+      "block:cracked_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_wall": [
+      "block:cracked_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_wall__post": [
+      "block:cracked_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_wall__side": [
+      "block:cracked_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_wall__side_tall": [
+      "block:cracked_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_bricks": [
+      "block:cracked_resin_bricks",
+      "requires-vanilla:resin_bricks"
+    ],
     "cinchsmissingblocks:cracked_sandstone_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:cracked_sandstone_brick",
@@ -2391,6 +2655,74 @@
     ],
     "cinchsmissingblocks:cracked_sandstone_bricks": [
       "block:cracked_sandstone_bricks"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_slab": [
+      "block:cracked_soul_sandstone_brick_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_slab__top": [
+      "block:cracked_soul_sandstone_brick_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double__full": [
+      "block:cracked_soul_sandstone_brick_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs": [
+      "block:cracked_soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__lower": [
+      "block:cracked_soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__quarter_lower": [
+      "block:cracked_soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__quarter_upper": [
+      "block:cracked_soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__upper": [
+      "block:cracked_soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_wall": [
+      "block:cracked_soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_wall__post": [
+      "block:cracked_soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_wall__side": [
+      "block:cracked_soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_wall__side_tall": [
+      "block:cracked_soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_bricks": [
+      "block:cracked_soul_sandstone_bricks"
     ],
     "cinchsmissingblocks:cracked_stone_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
@@ -2524,6 +2856,90 @@
     ],
     "cinchsmissingblocks:cracked_stone_tiles": [
       "block:cracked_stone_tiles"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_slab": [
+      "block:cracked_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_slab__top": [
+      "block:cracked_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_slab_double__full": [
+      "block:cracked_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_stairs": [
+      "block:cracked_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_stairs__lower": [
+      "block:cracked_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_stairs__quarter_lower": [
+      "block:cracked_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_stairs__quarter_upper": [
+      "block:cracked_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_stairs__upper": [
+      "block:cracked_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_wall": [
+      "block:cracked_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_wall__post": [
+      "block:cracked_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_wall__side": [
+      "block:cracked_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_wall__side_tall": [
+      "block:cracked_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_bricks": [
+      "block:cracked_sulfur_bricks",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:cracked_tuff_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
@@ -2715,6 +3131,74 @@
     ],
     "cinchsmissingblocks:cut_sandstone_wall__side_tall": [
       "block:cut_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone": [
+      "block:cut_soul_sandstone"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cut_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_slab": [
+      "block:cut_soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_slab__top": [
+      "block:cut_soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_slab_double__full": [
+      "block:cut_soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_stairs": [
+      "block:cut_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_stairs__lower": [
+      "block:cut_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_stairs__quarter_lower": [
+      "block:cut_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_stairs__quarter_upper": [
+      "block:cut_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_stairs__upper": [
+      "block:cut_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cut_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cut_soul_sandstone",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_wall": [
+      "block:cut_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_wall__post": [
+      "block:cut_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_wall__side": [
+      "block:cut_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_wall__side_tall": [
+      "block:cut_soul_sandstone_wall",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cyan_concrete_horizontal_stairs": [
@@ -3341,6 +3825,10 @@
       "vertical-slabs.vanilla",
       "vertical-slabs.material:exposed_cut_copper",
       "doubles.furniture"
+    ],
+    "cinchsmissingblocks:glazed_terracotta": [
+      "block:glazed_terracotta",
+      "terracotta"
     ],
     "cinchsmissingblocks:glow_outline": [],
     "cinchsmissingblocks:granite_brick_horizontal_stairs": [
@@ -4707,6 +5195,90 @@
     "cinchsmissingblocks:mossy_calcite_bricks": [
       "block:mossy_calcite_bricks"
     ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_slab": [
+      "block:mossy_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_slab__top": [
+      "block:mossy_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_slab_double__full": [
+      "block:mossy_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_stairs": [
+      "block:mossy_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_stairs__lower": [
+      "block:mossy_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_stairs__quarter_lower": [
+      "block:mossy_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_stairs__quarter_upper": [
+      "block:mossy_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_stairs__upper": [
+      "block:mossy_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_wall": [
+      "block:mossy_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_wall__post": [
+      "block:mossy_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_wall__side": [
+      "block:mossy_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_wall__side_tall": [
+      "block:mossy_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_bricks": [
+      "block:mossy_cinnabar_bricks",
+      "requires-vanilla:cinnabar_bricks"
+    ],
     "cinchsmissingblocks:mossy_cobbled_deepslate": [
       "block:mossy_cobbled_deepslate"
     ],
@@ -5468,6 +6040,90 @@
     "cinchsmissingblocks:mossy_red_sandstone_bricks": [
       "block:mossy_red_sandstone_bricks"
     ],
+    "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_slab": [
+      "block:mossy_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_slab__top": [
+      "block:mossy_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_slab_double__full": [
+      "block:mossy_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_stairs": [
+      "block:mossy_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_stairs__lower": [
+      "block:mossy_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_stairs__quarter_lower": [
+      "block:mossy_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_stairs__quarter_upper": [
+      "block:mossy_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_stairs__upper": [
+      "block:mossy_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_wall": [
+      "block:mossy_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_wall__post": [
+      "block:mossy_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_wall__side": [
+      "block:mossy_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_wall__side_tall": [
+      "block:mossy_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_bricks": [
+      "block:mossy_resin_bricks",
+      "requires-vanilla:resin_bricks"
+    ],
     "cinchsmissingblocks:mossy_sandstone_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:mossy_sandstone_brick",
@@ -5617,6 +6273,90 @@
     "cinchsmissingblocks:mossy_stone_tiles": [
       "block:mossy_stone_tiles"
     ],
+    "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_slab": [
+      "block:mossy_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_slab__top": [
+      "block:mossy_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_slab_double__full": [
+      "block:mossy_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_stairs": [
+      "block:mossy_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_stairs__lower": [
+      "block:mossy_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_stairs__quarter_lower": [
+      "block:mossy_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_stairs__quarter_upper": [
+      "block:mossy_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_stairs__upper": [
+      "block:mossy_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_wall": [
+      "block:mossy_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_wall__post": [
+      "block:mossy_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_wall__side": [
+      "block:mossy_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_wall__side_tall": [
+      "block:mossy_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_bricks": [
+      "block:mossy_sulfur_bricks",
+      "requires-vanilla:sulfur_bricks"
+    ],
     "cinchsmissingblocks:mossy_tuff_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:mossy_tuff_brick",
@@ -5701,9 +6441,32 @@
       "vertical-slabs.material:mud_brick",
       "doubles.furniture"
     ],
+    "cinchsmissingblocks:nether_brick_fence_gate": [
+      "block:nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:nether_brick_fence_gate__gate_0": [
+      "block:nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:nether_brick_fence_gate__gate_1": [
+      "block:nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:nether_brick_fence_gate__gate_2": [
+      "block:nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:nether_brick_fence_gate__gate_3": [
+      "block:nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:nether_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
       "horizontal-stairs.material:nether_brick"
+    ],
+    "cinchsmissingblocks:nether_brick_pillar": [
+      "block:nether_brick_pillar"
     ],
     "cinchsmissingblocks:nether_brick_vertical": [
       "vertical-slabs.vanilla",
@@ -6358,15 +7121,18 @@
     ],
     "cinchsmissingblocks:polished_cinnabar_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:polished_cinnabar"
+      "horizontal-stairs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:polished_cinnabar_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:polished_cinnabar"
+      "vertical-slabs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:polished_cinnabar_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:polished_deepslate_horizontal_stairs": [
@@ -6578,15 +7344,18 @@
     ],
     "cinchsmissingblocks:polished_sulfur_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:polished_sulfur"
+      "horizontal-stairs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:polished_sulfur_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:polished_sulfur"
+      "vertical-slabs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:polished_sulfur_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:polished_tuff_horizontal_stairs": [
@@ -7053,9 +7822,32 @@
       "block:red_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:red_nether_brick_fence_gate": [
+      "block:red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:red_nether_brick_fence_gate__gate_0": [
+      "block:red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:red_nether_brick_fence_gate__gate_1": [
+      "block:red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:red_nether_brick_fence_gate__gate_2": [
+      "block:red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:red_nether_brick_fence_gate__gate_3": [
+      "block:red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:red_nether_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
       "horizontal-stairs.material:red_nether_brick"
+    ],
+    "cinchsmissingblocks:red_nether_brick_pillar": [
+      "block:red_nether_brick_pillar"
     ],
     "cinchsmissingblocks:red_nether_brick_vertical": [
       "vertical-slabs.vanilla",
@@ -7245,15 +8037,18 @@
     ],
     "cinchsmissingblocks:resin_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:resin_brick"
+      "horizontal-stairs.material:resin_brick",
+      "requires-vanilla:resin_bricks"
     ],
     "cinchsmissingblocks:resin_brick_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:resin_brick"
+      "vertical-slabs.material:resin_brick",
+      "requires-vanilla:resin_bricks"
     ],
     "cinchsmissingblocks:resin_brick_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:resin_brick",
+      "requires-vanilla:resin_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:sandstone_brick_horizontal_stairs": [
@@ -7495,6 +8290,74 @@
       "block:smooth_sandstone_wall",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:smooth_soul_sandstone": [
+      "block:smooth_soul_sandstone"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:smooth_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_slab": [
+      "block:smooth_soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_slab__top": [
+      "block:smooth_soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_slab_double__full": [
+      "block:smooth_soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_stairs": [
+      "block:smooth_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_stairs__lower": [
+      "block:smooth_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_stairs__quarter_lower": [
+      "block:smooth_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_stairs__quarter_upper": [
+      "block:smooth_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_stairs__upper": [
+      "block:smooth_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:smooth_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:smooth_soul_sandstone",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_wall": [
+      "block:smooth_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_wall__post": [
+      "block:smooth_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_wall__side": [
+      "block:smooth_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_wall__side_tall": [
+      "block:smooth_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:smooth_stone_horizontal_stairs": [
       "horizontal-stairs.vanilla|horizontal-stairs.cmb",
       "horizontal-stairs.material:smooth_stone"
@@ -7611,6 +8474,145 @@
     ],
     "cinchsmissingblocks:snow_bricks": [
       "block:snow_bricks"
+    ],
+    "cinchsmissingblocks:soul_sandstone": [
+      "block:soul_sandstone"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_pillar": [
+      "block:soul_sandstone_brick_pillar"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_slab": [
+      "block:soul_sandstone_brick_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_slab__top": [
+      "block:soul_sandstone_brick_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_slab_double__full": [
+      "block:soul_sandstone_brick_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_stairs": [
+      "block:soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_stairs__lower": [
+      "block:soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_stairs__quarter_lower": [
+      "block:soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_stairs__quarter_upper": [
+      "block:soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_stairs__upper": [
+      "block:soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone_brick",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_wall": [
+      "block:soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_wall__post": [
+      "block:soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_wall__side": [
+      "block:soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_wall__side_tall": [
+      "block:soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_bricks": [
+      "block:soul_sandstone_bricks"
+    ],
+    "cinchsmissingblocks:soul_sandstone_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_slab": [
+      "block:soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_slab__top": [
+      "block:soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_slab_double__full": [
+      "block:soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_stairs": [
+      "block:soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_stairs__lower": [
+      "block:soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_stairs__quarter_lower": [
+      "block:soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_stairs__quarter_upper": [
+      "block:soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_stairs__upper": [
+      "block:soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_vertical_double__full": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_wall": [
+      "block:soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_wall__post": [
+      "block:soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_wall__side": [
+      "block:soul_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_wall__side_tall": [
+      "block:soul_sandstone_wall",
+      "furniture-fallback"
     ],
     "cinchsmissingblocks:spruce_horizontal_stairs": [
       "horizontal-stairs.vanilla",
@@ -7740,28 +8742,38 @@
     ],
     "cinchsmissingblocks:sulfur_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:sulfur_brick"
+      "horizontal-stairs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks"
+    ],
+    "cinchsmissingblocks:sulfur_brick_pillar": [
+      "block:sulfur_brick_pillar",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_brick_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:sulfur_brick"
+      "vertical-slabs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_brick_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:sulfur_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:sulfur"
+      "horizontal-stairs.material:sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:sulfur"
+      "vertical-slabs.material:sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_vertical_double__full": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:sulfur",
+      "requires-vanilla:sulfur_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:terracotta_horizontal_stairs": [
@@ -8394,6 +9406,13 @@
       "block:blue_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:blue_nether_brick_fence_gate": [
+      "block:blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:blue_nether_brick_pillar": [
+      "block:blue_nether_brick_pillar"
+    ],
     "cinchsmissingblocks:blue_nether_brick_slab_double": [
       "block:blue_nether_brick_slab",
       "furniture-fallback",
@@ -8530,14 +9549,23 @@
     "cinchsmissingblocks:chiseled_red_nether_bricks": [
       "block:chiseled_red_nether_bricks"
     ],
+    "cinchsmissingblocks:chiseled_soul_sandstone": [
+      "block:chiseled_soul_sandstone"
+    ],
+    "cinchsmissingblocks:cinnabar_brick_pillar": [
+      "block:cinnabar_brick_pillar",
+      "requires-vanilla:cinnabar_bricks"
+    ],
     "cinchsmissingblocks:cinnabar_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:cinnabar_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:cobbled_deepslate_vertical_double": [
@@ -8582,6 +9610,10 @@
       "block:cracked_blue_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate": [
+      "block:cracked_blue_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_blue_nether_brick_slab_double": [
       "block:cracked_blue_nether_brick_slab",
       "furniture-fallback",
@@ -8623,6 +9655,23 @@
     ],
     "cinchsmissingblocks:cracked_calcite_bricks": [
       "block:cracked_calcite_bricks"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_slab_double": [
+      "block:cracked_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_bricks": [
+      "block:cracked_cinnabar_bricks",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cracked_deepslate_brick_slab_double": [
       "block:cracked_deepslate_brick_slab",
@@ -8720,6 +9769,10 @@
       "block:cracked_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:cracked_nether_brick_fence_gate": [
+      "block:cracked_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_nether_brick_slab_double": [
       "block:cracked_nether_brick_slab",
       "furniture-fallback",
@@ -8774,6 +9827,10 @@
       "block:cracked_red_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:cracked_red_nether_brick_fence_gate": [
+      "block:cracked_red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_red_nether_brick_slab_double": [
       "block:cracked_red_nether_brick_slab",
       "furniture-fallback",
@@ -8802,6 +9859,23 @@
     "cinchsmissingblocks:cracked_red_sandstone_bricks": [
       "block:cracked_red_sandstone_bricks"
     ],
+    "cinchsmissingblocks:cracked_resin_brick_slab_double": [
+      "block:cracked_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_resin_bricks": [
+      "block:cracked_resin_bricks",
+      "requires-vanilla:resin_bricks"
+    ],
     "cinchsmissingblocks:cracked_sandstone_brick_slab_double": [
       "block:cracked_sandstone_brick_slab",
       "furniture-fallback",
@@ -8815,6 +9889,20 @@
     ],
     "cinchsmissingblocks:cracked_sandstone_bricks": [
       "block:cracked_sandstone_bricks"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double": [
+      "block:cracked_soul_sandstone_brick_slab",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_bricks": [
+      "block:cracked_soul_sandstone_bricks"
     ],
     "cinchsmissingblocks:cracked_stone_brick_slab_double": [
       "block:cracked_stone_brick_slab",
@@ -8840,6 +9928,23 @@
     ],
     "cinchsmissingblocks:cracked_stone_tiles": [
       "block:cracked_stone_tiles"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_slab_double": [
+      "block:cracked_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_bricks": [
+      "block:cracked_sulfur_bricks",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:cracked_tuff_brick_slab_double": [
       "block:cracked_tuff_brick_slab",
@@ -8873,6 +9978,20 @@
     "cinchsmissingblocks:cut_sandstone_vertical_double": [
       "vertical-slabs.vanilla|vertical-slabs.cmb",
       "vertical-slabs.material:cut_sandstone",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone": [
+      "block:cut_soul_sandstone"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_slab_double": [
+      "block:cut_soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cut_soul_sandstone",
+      "furniture-fallback",
       "doubles.block"
     ],
     "cinchsmissingblocks:cyan_concrete_slab_double": [
@@ -9012,6 +10131,10 @@
       "vertical-slabs.vanilla",
       "vertical-slabs.material:exposed_cut_copper",
       "doubles.block"
+    ],
+    "cinchsmissingblocks:glazed_terracotta": [
+      "block:glazed_terracotta",
+      "terracotta"
     ],
     "cinchsmissingblocks:granite_brick_pillar": [
       "block:granite_brick_pillar"
@@ -9267,6 +10390,23 @@
     "cinchsmissingblocks:mossy_calcite_bricks": [
       "block:mossy_calcite_bricks"
     ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_slab_double": [
+      "block:mossy_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_bricks": [
+      "block:mossy_cinnabar_bricks",
+      "requires-vanilla:cinnabar_bricks"
+    ],
     "cinchsmissingblocks:mossy_cobbled_deepslate": [
       "block:mossy_cobbled_deepslate"
     ],
@@ -9426,6 +10566,23 @@
     "cinchsmissingblocks:mossy_red_sandstone_bricks": [
       "block:mossy_red_sandstone_bricks"
     ],
+    "cinchsmissingblocks:mossy_resin_brick_slab_double": [
+      "block:mossy_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:mossy_resin_bricks": [
+      "block:mossy_resin_bricks",
+      "requires-vanilla:resin_bricks"
+    ],
     "cinchsmissingblocks:mossy_sandstone_brick_slab_double": [
       "block:mossy_sandstone_brick_slab",
       "furniture-fallback",
@@ -9459,6 +10616,23 @@
     "cinchsmissingblocks:mossy_stone_tiles": [
       "block:mossy_stone_tiles"
     ],
+    "cinchsmissingblocks:mossy_sulfur_brick_slab_double": [
+      "block:mossy_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_bricks": [
+      "block:mossy_sulfur_bricks",
+      "requires-vanilla:sulfur_bricks"
+    ],
     "cinchsmissingblocks:mossy_tuff_brick_slab_double": [
       "block:mossy_tuff_brick_slab",
       "furniture-fallback",
@@ -9480,6 +10654,13 @@
       "vertical-slabs.vanilla",
       "vertical-slabs.material:mud_brick",
       "doubles.block"
+    ],
+    "cinchsmissingblocks:nether_brick_fence_gate": [
+      "block:nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:nether_brick_pillar": [
+      "block:nether_brick_pillar"
     ],
     "cinchsmissingblocks:nether_brick_vertical_double": [
       "vertical-slabs.vanilla",
@@ -9615,6 +10796,7 @@
     "cinchsmissingblocks:polished_cinnabar_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:polished_deepslate_vertical_double": [
@@ -9663,6 +10845,7 @@
     "cinchsmissingblocks:polished_sulfur_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:polished_tuff_vertical_double": [
@@ -9755,6 +10938,13 @@
       "block:red_nether_brick_fence",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:red_nether_brick_fence_gate": [
+      "block:red_nether_brick_fence_gate",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:red_nether_brick_pillar": [
+      "block:red_nether_brick_pillar"
+    ],
     "cinchsmissingblocks:red_nether_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:red_nether_brick",
@@ -9803,6 +10993,7 @@
     "cinchsmissingblocks:resin_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:resin_brick",
+      "requires-vanilla:resin_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:sandstone_brick_pillar": [
@@ -9856,6 +11047,20 @@
       "vertical-slabs.material:smooth_sandstone",
       "doubles.block"
     ],
+    "cinchsmissingblocks:smooth_soul_sandstone": [
+      "block:smooth_soul_sandstone"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_slab_double": [
+      "block:smooth_soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:smooth_soul_sandstone",
+      "furniture-fallback",
+      "doubles.block"
+    ],
     "cinchsmissingblocks:smooth_stone_vertical_double": [
       "vertical-slabs.vanilla|vertical-slabs.cmb",
       "vertical-slabs.material:smooth_stone",
@@ -9874,6 +11079,37 @@
     ],
     "cinchsmissingblocks:snow_bricks": [
       "block:snow_bricks"
+    ],
+    "cinchsmissingblocks:soul_sandstone": [
+      "block:soul_sandstone"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_pillar": [
+      "block:soul_sandstone_brick_pillar"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_slab_double": [
+      "block:soul_sandstone_brick_slab",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone_brick",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:soul_sandstone_bricks": [
+      "block:soul_sandstone_bricks"
+    ],
+    "cinchsmissingblocks:soul_sandstone_slab_double": [
+      "block:soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.block"
+    ],
+    "cinchsmissingblocks:soul_sandstone_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone",
+      "furniture-fallback",
+      "doubles.block"
     ],
     "cinchsmissingblocks:spruce_vertical_double": [
       "vertical-slabs.vanilla",
@@ -9907,14 +11143,20 @@
       "vertical-slabs.material:stone",
       "doubles.block"
     ],
+    "cinchsmissingblocks:sulfur_brick_pillar": [
+      "block:sulfur_brick_pillar",
+      "requires-vanilla:sulfur_bricks"
+    ],
     "cinchsmissingblocks:sulfur_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:sulfur_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:sulfur",
+      "requires-vanilla:sulfur_bricks",
       "doubles.block"
     ],
     "cinchsmissingblocks:terracotta_slab_double": [
@@ -10553,28 +11795,34 @@
     ],
     "cinchsmissingblocks:cinnabar_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:cinnabar_brick"
+      "horizontal-stairs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_brick_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:cinnabar_brick"
+      "vertical-slabs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:cinnabar_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:cinnabar"
+      "horizontal-stairs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:cinnabar"
+      "vertical-slabs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:cinnabar_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:cinnabar",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:cobbled_deepslate_horizontal_stairs": [
@@ -10766,6 +12014,46 @@
     ],
     "cinchsmissingblocks:cracked_calcite_brick_wall": [
       "block:cracked_calcite_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_slab": [
+      "block:cracked_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_slab_double": [
+      "block:cracked_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_stairs": [
+      "block:cracked_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_cinnabar_brick_wall": [
+      "block:cracked_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cracked_deepslate_brick_horizontal_stairs": [
@@ -11197,6 +12485,46 @@
       "block:cracked_red_sandstone_brick_wall",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_slab": [
+      "block:cracked_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_slab_double": [
+      "block:cracked_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_stairs": [
+      "block:cracked_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_resin_brick_wall": [
+      "block:cracked_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:cracked_sandstone_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:cracked_sandstone_brick",
@@ -11228,6 +12556,39 @@
     ],
     "cinchsmissingblocks:cracked_sandstone_brick_wall": [
       "block:cracked_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_slab": [
+      "block:cracked_soul_sandstone_brick_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double": [
+      "block:cracked_soul_sandstone_brick_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs": [
+      "block:cracked_soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_soul_sandstone_brick",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_soul_sandstone_brick_wall": [
+      "block:cracked_soul_sandstone_brick_wall",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cracked_stone_brick_horizontal_stairs": [
@@ -11294,6 +12655,46 @@
     ],
     "cinchsmissingblocks:cracked_stone_tile_wall": [
       "block:cracked_stone_tile_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_slab": [
+      "block:cracked_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_slab_double": [
+      "block:cracked_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_stairs": [
+      "block:cracked_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cracked_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cracked_sulfur_brick_wall": [
+      "block:cracked_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cracked_tuff_brick_horizontal_stairs": [
@@ -11395,6 +12796,39 @@
     ],
     "cinchsmissingblocks:cut_sandstone_wall": [
       "block:cut_sandstone_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:cut_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_slab": [
+      "block:cut_soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_slab_double": [
+      "block:cut_soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_stairs": [
+      "block:cut_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cut_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:cut_soul_sandstone",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:cut_soul_sandstone_wall": [
+      "block:cut_soul_sandstone_wall",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:cyan_concrete_horizontal_stairs": [
@@ -12458,6 +13892,46 @@
       "block:mossy_calcite_brick_wall",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_slab": [
+      "block:mossy_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_slab_double": [
+      "block:mossy_cinnabar_brick_slab",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_stairs": [
+      "block:mossy_cinnabar_brick_stairs",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_cinnabar_brick",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_cinnabar_brick_wall": [
+      "block:mossy_cinnabar_brick_wall",
+      "requires-vanilla:cinnabar_bricks",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:mossy_cobbled_deepslate_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:mossy_cobbled_deepslate",
@@ -12834,6 +14308,46 @@
       "block:mossy_red_sandstone_brick_wall",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_slab": [
+      "block:mossy_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_slab_double": [
+      "block:mossy_resin_brick_slab",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_stairs": [
+      "block:mossy_resin_brick_stairs",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_resin_brick",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_resin_brick_wall": [
+      "block:mossy_resin_brick_wall",
+      "requires-vanilla:resin_bricks",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:mossy_sandstone_brick_horizontal_stairs": [
       "horizontal-stairs.cmb",
       "horizontal-stairs.material:mossy_sandstone_brick",
@@ -12911,6 +14425,46 @@
     ],
     "cinchsmissingblocks:mossy_stone_tile_wall": [
       "block:mossy_stone_tile_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_slab": [
+      "block:mossy_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_slab_double": [
+      "block:mossy_sulfur_brick_slab",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_stairs": [
+      "block:mossy_sulfur_brick_stairs",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:mossy_sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:mossy_sulfur_brick_wall": [
+      "block:mossy_sulfur_brick_wall",
+      "requires-vanilla:sulfur_bricks",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:mossy_tuff_brick_horizontal_stairs": [
@@ -13335,15 +14889,18 @@
     ],
     "cinchsmissingblocks:polished_cinnabar_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:polished_cinnabar"
+      "horizontal-stairs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:polished_cinnabar_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:polished_cinnabar"
+      "vertical-slabs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks"
     ],
     "cinchsmissingblocks:polished_cinnabar_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:polished_cinnabar",
+      "requires-vanilla:cinnabar_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:polished_deepslate_horizontal_stairs": [
@@ -13461,15 +15018,18 @@
     ],
     "cinchsmissingblocks:polished_sulfur_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:polished_sulfur"
+      "horizontal-stairs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:polished_sulfur_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:polished_sulfur"
+      "vertical-slabs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:polished_sulfur_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:polished_sulfur",
+      "requires-vanilla:sulfur_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:polished_tuff_horizontal_stairs": [
@@ -13836,15 +15396,18 @@
     ],
     "cinchsmissingblocks:resin_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:resin_brick"
+      "horizontal-stairs.material:resin_brick",
+      "requires-vanilla:resin_bricks"
     ],
     "cinchsmissingblocks:resin_brick_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:resin_brick"
+      "vertical-slabs.material:resin_brick",
+      "requires-vanilla:resin_bricks"
     ],
     "cinchsmissingblocks:resin_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:resin_brick",
+      "requires-vanilla:resin_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:sandstone_brick_horizontal_stairs": [
@@ -13977,6 +15540,39 @@
       "block:smooth_sandstone_wall",
       "furniture-fallback"
     ],
+    "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:smooth_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_slab": [
+      "block:smooth_soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_slab_double": [
+      "block:smooth_soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_stairs": [
+      "block:smooth_soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:smooth_soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:smooth_soul_sandstone",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:smooth_soul_sandstone_wall": [
+      "block:smooth_soul_sandstone_wall",
+      "furniture-fallback"
+    ],
     "cinchsmissingblocks:smooth_stone_horizontal_stairs": [
       "horizontal-stairs.vanilla|horizontal-stairs.cmb",
       "horizontal-stairs.material:smooth_stone"
@@ -14029,6 +15625,72 @@
     ],
     "cinchsmissingblocks:snow_brick_wall": [
       "block:snow_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_slab": [
+      "block:soul_sandstone_brick_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_slab_double": [
+      "block:soul_sandstone_brick_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_stairs": [
+      "block:soul_sandstone_brick_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone_brick",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone_brick",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_brick_wall": [
+      "block:soul_sandstone_brick_wall",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_horizontal_stairs": [
+      "horizontal-stairs.cmb",
+      "horizontal-stairs.material:soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_slab": [
+      "block:soul_sandstone_slab",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_slab_double": [
+      "block:soul_sandstone_slab",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_stairs": [
+      "block:soul_sandstone_stairs",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_vertical": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone",
+      "furniture-fallback"
+    ],
+    "cinchsmissingblocks:soul_sandstone_vertical_double": [
+      "vertical-slabs.cmb",
+      "vertical-slabs.material:soul_sandstone",
+      "furniture-fallback",
+      "doubles.furniture"
+    ],
+    "cinchsmissingblocks:soul_sandstone_wall": [
+      "block:soul_sandstone_wall",
       "furniture-fallback"
     ],
     "cinchsmissingblocks:spruce_horizontal_stairs": [
@@ -14109,28 +15771,34 @@
     ],
     "cinchsmissingblocks:sulfur_brick_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:sulfur_brick"
+      "horizontal-stairs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_brick_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:sulfur_brick"
+      "vertical-slabs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_brick_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:sulfur_brick",
+      "requires-vanilla:sulfur_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:sulfur_horizontal_stairs": [
       "horizontal-stairs.vanilla",
-      "horizontal-stairs.material:sulfur"
+      "horizontal-stairs.material:sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_vertical": [
       "vertical-slabs.vanilla",
-      "vertical-slabs.material:sulfur"
+      "vertical-slabs.material:sulfur",
+      "requires-vanilla:sulfur_bricks"
     ],
     "cinchsmissingblocks:sulfur_vertical_double": [
       "vertical-slabs.vanilla",
       "vertical-slabs.material:sulfur",
+      "requires-vanilla:sulfur_bricks",
       "doubles.furniture"
     ],
     "cinchsmissingblocks:terracotta_horizontal_stairs": [

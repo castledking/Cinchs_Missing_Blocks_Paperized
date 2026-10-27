@@ -1,0 +1,5 @@
+name: WallProbe
+version: 1.0
+main: WallProbe
+api-version: "1.21"
+depend: [CMB, CraftEngine]

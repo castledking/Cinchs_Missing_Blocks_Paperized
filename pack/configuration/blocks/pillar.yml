@@ -91,6 +91,52 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:blue_nether_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blue_nether_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blue_nether_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/blue_nether_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:blue_nether_brick_pillar"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:calcite_brick_pillar":
     states:
       properties:
@@ -130,6 +176,52 @@ blocks:
         hit: "minecraft:block.calcite.hit"
         place: "minecraft:block.calcite.place"
         step: "minecraft:block.calcite.step"
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cinnabar_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cinnabar_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cinnabar_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cinnabar_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:cinnabar_brick_pillar"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.cinnabar.break"
+        fall: "minecraft:block.cinnabar.fall"
+        hit: "minecraft:block.cinnabar.hit"
+        place: "minecraft:block.cinnabar.place"
+        step: "minecraft:block.cinnabar.step"
+      resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -306,14 +398,12 @@ blocks:
           appearance: pillar_axisz
     settings:
       item: "cinchsmissingblocks:end_stone_brick_pillar"
-      hardness: 3.0
       sounds:
         break: "minecraft:block.stone.break"
         fall: "minecraft:block.stone.fall"
         hit: "minecraft:block.stone.hit"
         place: "minecraft:block.stone.place"
         step: "minecraft:block.stone.step"
-      resistance: 9.0
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -412,6 +502,52 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:nether_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/nether_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/nether_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/nether_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:nether_brick_pillar"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.nether_bricks.break"
+        fall: "minecraft:block.nether_bricks.fall"
+        hit: "minecraft:block.nether_bricks.hit"
+        place: "minecraft:block.nether_bricks.place"
+        step: "minecraft:block.nether_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:prismarine_brick_pillar":
     states:
       properties:
@@ -445,6 +581,52 @@ blocks:
     settings:
       item: "cinchsmissingblocks:prismarine_brick_pillar"
       hardness: 1.5
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:red_nether_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_nether_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_nether_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/red_nether_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:red_nether_brick_pillar"
+      hardness: 2.0
       sounds:
         break: "minecraft:block.stone.break"
         fall: "minecraft:block.stone.fall"
@@ -548,6 +730,51 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:soul_sandstone_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_brick_pillar"
+      hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:stone_brick_pillar":
     states:
       properties:
@@ -580,13 +807,60 @@ blocks:
           appearance: pillar_axisz
     settings:
       item: "cinchsmissingblocks:stone_brick_pillar"
-      hardness: 2.0
+      hardness: 1.5
       sounds:
         break: "minecraft:block.stone.break"
         fall: "minecraft:block.stone.fall"
         hit: "minecraft:block.stone.hit"
         place: "minecraft:block.stone.place"
         step: "minecraft:block.stone.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:sulfur_brick_pillar":
+    states:
+      properties:
+        axis:
+          name: axis
+          type: axis
+          default: y
+      appearances:
+        pillar_axisx:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sulfur_brick_pillar"
+            x: 90
+            y: 90
+        pillar_axisy:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sulfur_brick_pillar"
+        pillar_axisz:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/sulfur_brick_pillar"
+            x: 90
+      variants:
+        axis=x:
+          appearance: pillar_axisx
+        axis=y:
+          appearance: pillar_axisy
+        axis=z:
+          appearance: pillar_axisz
+    settings:
+      item: "cinchsmissingblocks:sulfur_brick_pillar"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        fall: "minecraft:block.sulfur.fall"
+        hit: "minecraft:block.sulfur.hit"
+        place: "minecraft:block.sulfur.place"
+        step: "minecraft:block.sulfur.step"
+      resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
       tags:

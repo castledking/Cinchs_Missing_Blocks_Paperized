@@ -1034,6 +1034,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_cinnabar_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_cinnabar_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_cinnabar_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:cracked_deepslate_brick_vertical_double":
     states:
       properties: {}
@@ -1461,6 +1494,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:cracked_resin_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_resin_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_resin_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:cracked_sandstone_brick_vertical_double":
     states:
       properties: {}
@@ -1488,6 +1554,40 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:cracked_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_soul_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical"
               functions:
                 - type: set_count
                   count: 2
@@ -1554,6 +1654,39 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:cracked_stone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cracked_sulfur_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_sulfur_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_sulfur_brick_vertical"
               functions:
                 - type: set_count
                   count: 2
@@ -1725,6 +1858,40 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:cut_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:cut_soul_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cut_soul_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cut_soul_sandstone_vertical"
               functions:
                 - type: set_count
                   count: 2
@@ -3063,6 +3230,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:mossy_cinnabar_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_cinnabar_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_cinnabar_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:mossy_cobbled_deepslate_vertical_double":
     states:
       properties: {}
@@ -3459,6 +3659,39 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:mossy_resin_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_resin_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_resin_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:mossy_sandstone_brick_vertical_double":
     states:
       properties: {}
@@ -3554,6 +3787,39 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:mossy_stone_tile_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:mossy_sulfur_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_sulfur_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 1.5
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_sulfur_brick_vertical"
               functions:
                 - type: set_count
                   count: 2
@@ -5186,6 +5452,41 @@ blocks:
                   count: 2
                   add: false
                 - type: explosion_decay
+  "cinchsmissingblocks:smooth_soul_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/smooth_soul_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 2.0
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_soul_sandstone_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
   "cinchsmissingblocks:smooth_stone_vertical_double":
     states:
       properties: {}
@@ -5249,6 +5550,74 @@ blocks:
           entries:
             - type: item
               item: "cinchsmissingblocks:snow_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:soul_sandstone_brick_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone_bricks"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:soul_sandstone_brick_vertical"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+                - type: explosion_decay
+  "cinchsmissingblocks:soul_sandstone_vertical_double":
+    states:
+      properties: {}
+      appearances:
+        double:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone"
+      variants:
+        "":
+          appearance: double
+    settings:
+      hardness: 0.8
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:soul_sandstone_vertical"
               functions:
                 - type: set_count
                   count: 2

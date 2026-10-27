@@ -154,6 +154,8 @@ blocks:
         place: "minecraft:block.nether_bricks.place"
         step: "minecraft:block.nether_bricks.step"
       resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
       tags:
         - "minecraft:mineable/pickaxe"
     loot:
@@ -427,6 +429,32 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:chiseled_soul_sandstone":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/chiseled_soul_sandstone"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:chiseled_soul_sandstone"
+      hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_andesite_bricks":
     states:
       properties: {}
@@ -555,6 +583,31 @@ blocks:
         hit: "minecraft:block.calcite.hit"
         place: "minecraft:block.calcite.place"
         step: "minecraft:block.calcite.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_cinnabar_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_cinnabar_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_cinnabar_bricks"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.cinnabar.break"
+        fall: "minecraft:block.cinnabar.fall"
+        hit: "minecraft:block.cinnabar.hit"
+        place: "minecraft:block.cinnabar.place"
+        step: "minecraft:block.cinnabar.step"
+      resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -802,6 +855,33 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_resin_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_resin_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_resin_bricks"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.resin_bricks.break"
+        fall: "minecraft:block.resin_bricks.fall"
+        hit: "minecraft:block.resin_bricks.hit"
+        place: "minecraft:block.resin_bricks.place"
+        step: "minecraft:block.resin_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_sandstone_bricks":
     states:
       properties: {}
@@ -828,6 +908,32 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_soul_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_soul_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+      hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:cracked_stone_tiles":
     states:
       properties: {}
@@ -848,6 +954,33 @@ blocks:
         hit: "minecraft:block.stone.hit"
         place: "minecraft:block.stone.place"
         step: "minecraft:block.stone.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cracked_sulfur_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cracked_sulfur_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cracked_sulfur_bricks"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        fall: "minecraft:block.sulfur.fall"
+        hit: "minecraft:block.sulfur.hit"
+        place: "minecraft:block.sulfur.place"
+        step: "minecraft:block.sulfur.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -880,6 +1013,32 @@ blocks:
       respect_tool_component: true
       tags:
         - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:cut_soul_sandstone":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/cut_soul_sandstone"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:cut_soul_sandstone"
+      hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
     loot:
       template: "default:loot_table/self"
   "cinchsmissingblocks:diorite_bricks":
@@ -1037,6 +1196,33 @@ blocks:
         hit: "minecraft:block.calcite.hit"
         place: "minecraft:block.calcite.place"
         step: "minecraft:block.calcite.step"
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_cinnabar_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_cinnabar_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_cinnabar_bricks"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.cinnabar.break"
+        fall: "minecraft:block.cinnabar.fall"
+        hit: "minecraft:block.cinnabar.hit"
+        place: "minecraft:block.cinnabar.place"
+        step: "minecraft:block.cinnabar.step"
+      resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
       tags:
@@ -1338,6 +1524,33 @@ blocks:
         - "minecraft:mineable/pickaxe"
     loot:
       template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_resin_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_resin_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_resin_bricks"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.resin_bricks.break"
+        fall: "minecraft:block.resin_bricks.fall"
+        hit: "minecraft:block.resin_bricks.hit"
+        place: "minecraft:block.resin_bricks.place"
+        step: "minecraft:block.resin_bricks.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:mossy_sandstone_bricks":
     states:
       properties: {}
@@ -1384,6 +1597,33 @@ blocks:
         hit: "minecraft:block.stone.hit"
         place: "minecraft:block.stone.place"
         step: "minecraft:block.stone.step"
+      resistance: 6.0
+      require_correct_tools: true
+      respect_tool_component: true
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:mossy_sulfur_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/mossy_sulfur_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:mossy_sulfur_bricks"
+      hardness: 1.5
+      sounds:
+        break: "minecraft:block.sulfur.break"
+        fall: "minecraft:block.sulfur.fall"
+        hit: "minecraft:block.sulfur.hit"
+        place: "minecraft:block.sulfur.place"
+        step: "minecraft:block.sulfur.step"
       resistance: 6.0
       require_correct_tools: true
       respect_tool_component: true
@@ -1584,6 +1824,33 @@ blocks:
       template: "default:loot_table/silk_touch"
       arguments:
         item: "cinchsmissingblocks:sculk_inlaid_deepslate"
+  "cinchsmissingblocks:smooth_soul_sandstone":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/smooth_soul_sandstone"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:smooth_soul_sandstone"
+      hardness: 2.0
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      resistance: 6.0
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:snow_bricks":
     states:
       properties: {}
@@ -1626,6 +1893,58 @@ blocks:
                       add: false
                       count: 4
                     - type: explosion_decay
+  "cinchsmissingblocks:soul_sandstone":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone"
+      hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+    loot:
+      template: "default:loot_table/self"
+  "cinchsmissingblocks:soul_sandstone_bricks":
+    states:
+      properties: {}
+      appearances:
+        cube_:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/soul_sandstone_bricks"
+      variants:
+        "":
+          appearance: cube_
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_bricks"
+      hardness: 0.8
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      tags:
+        - "minecraft:mineable/pickaxe"
+        - "minecraft:soul_fire_base_blocks"
+        - "minecraft:soul_speed_blocks"
+    loot:
+      template: "default:loot_table/self"
   "cinchsmissingblocks:stone_tiles":
     states:
       properties: {}

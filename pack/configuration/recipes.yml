@@ -88,7 +88,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:andesite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -239,7 +238,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:blackstone_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -315,7 +313,6 @@ recipes:
       count: 4
   "cinchsmissingblocks:blue_nether_brick_fence":
     type: shaped
-    category: misc
     group: blue_nether_brick_fence
     pattern:
       - ATA
@@ -326,6 +323,36 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_nether_brick_fence"
       count: 3
+  "cinchsmissingblocks:blue_nether_brick_fence_gate":
+    type: shaped
+    category: redstone
+    group: nether_brick_fence_gates
+    pattern:
+      - TAT
+      - TAT
+    ingredients:
+      A: "cinchsmissingblocks:blue_nether_bricks"
+      T: "cinchsmissingblocks:blue_nether_brick"
+    result:
+      id: "cinchsmissingblocks:blue_nether_brick_fence_gate"
+      count: 1
+  "cinchsmissingblocks:blue_nether_brick_pillar":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:blue_nether_bricks"
+    result:
+      id: "cinchsmissingblocks:blue_nether_brick_pillar"
+      count: 2
+  "cinchsmissingblocks:blue_nether_brick_pillar_from_blue_nether_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:blue_nether_bricks"
+    result:
+      id: "cinchsmissingblocks:blue_nether_brick_pillar"
+      count: 1
   "cinchsmissingblocks:blue_nether_brick_slab":
     type: shaped
     category: building
@@ -362,7 +389,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:blue_nether_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -477,7 +503,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:calcite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -563,7 +588,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:calcite_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -866,6 +890,23 @@ recipes:
     result:
       id: "cinchsmissingblocks:chiseled_red_nether_bricks"
       count: 1
+  "cinchsmissingblocks:chiseled_soul_sandstone":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_slab"
+    result:
+      id: "cinchsmissingblocks:chiseled_soul_sandstone"
+      count: 1
+  "cinchsmissingblocks:chiseled_soul_sandstone_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:chiseled_soul_sandstone"
+      count: 1
   "cinchsmissingblocks:chiseled_tuff_from_polished_tuff_stonecutting":
     type: stonecutting
     ingredient: "minecraft:polished_tuff"
@@ -877,6 +918,35 @@ recipes:
     ingredient: "minecraft:tuff_bricks"
     result:
       id: "minecraft:chiseled_tuff"
+      count: 1
+  "cinchsmissingblocks:cinnabar_brick_pillar":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "minecraft:cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cinnabar_brick_pillar"
+      count: 2
+  "cinchsmissingblocks:cinnabar_brick_pillar_from_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cinnabar_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:cinnabar_brick_pillar_from_cinnabar_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:cinnabar"
+    result:
+      id: "cinchsmissingblocks:cinnabar_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:cinnabar_brick_pillar_from_polished_cinnabar_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:polished_cinnabar"
+    result:
+      id: "cinchsmissingblocks:cinnabar_brick_pillar"
       count: 1
   "cinchsmissingblocks:cracked_andesite_brick_slab":
     type: shaped
@@ -914,7 +984,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_andesite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -974,7 +1043,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_blackstone_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1000,7 +1068,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_blue_nether_brick_fence":
     type: shaped
-    category: misc
     group: cracked_blue_nether_brick_fence
     pattern:
       - ATA
@@ -1011,6 +1078,19 @@ recipes:
     result:
       id: "cinchsmissingblocks:cracked_blue_nether_brick_fence"
       count: 3
+  "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate":
+    type: shaped
+    category: redstone
+    group: nether_brick_fence_gates
+    pattern:
+      - TAT
+      - TAT
+    ingredients:
+      A: "cinchsmissingblocks:cracked_blue_nether_bricks"
+      T: "cinchsmissingblocks:blue_nether_brick"
+    result:
+      id: "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate"
+      count: 1
   "cinchsmissingblocks:cracked_blue_nether_brick_slab":
     type: shaped
     category: building
@@ -1047,7 +1127,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_blue_nether_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1107,7 +1186,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1167,7 +1245,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_calcite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1190,6 +1267,65 @@ recipes:
     experience: 0.1
     result:
       id: "cinchsmissingblocks:cracked_calcite_bricks"
+      count: 1
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+      count: 6
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab_from_cracked_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+      count: 2
+  "cinchsmissingblocks:cracked_cinnabar_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_cinnabar_brick_stairs_from_cracked_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:cracked_cinnabar_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_wall"
+      count: 6
+  "cinchsmissingblocks:cracked_cinnabar_brick_wall_from_cracked_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_wall"
+      count: 1
+  "cinchsmissingblocks:cracked_cinnabar_bricks":
+    type: smelting
+    category: blocks
+    ingredient: "minecraft:cinnabar_bricks"
+    time: 200
+    experience: 0.1
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_bricks"
       count: 1
   "cinchsmissingblocks:cracked_deepslate_brick_slab":
     type: shaped
@@ -1227,7 +1363,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_deepslate_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1278,7 +1413,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_deepslate_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1329,7 +1463,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_diorite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1389,7 +1522,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_dripstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1449,7 +1581,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_end_stone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1509,7 +1640,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_granite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1569,7 +1699,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_mud_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1595,7 +1724,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_nether_brick_fence":
     type: shaped
-    category: misc
     group: cracked_nether_brick_fence
     pattern:
       - ATA
@@ -1606,6 +1734,19 @@ recipes:
     result:
       id: "cinchsmissingblocks:cracked_nether_brick_fence"
       count: 3
+  "cinchsmissingblocks:cracked_nether_brick_fence_gate":
+    type: shaped
+    category: redstone
+    group: nether_brick_fence_gates
+    pattern:
+      - TAT
+      - TAT
+    ingredients:
+      A: "minecraft:cracked_nether_bricks"
+      T: "minecraft:nether_brick"
+    result:
+      id: "cinchsmissingblocks:cracked_nether_brick_fence_gate"
+      count: 1
   "cinchsmissingblocks:cracked_nether_brick_slab":
     type: shaped
     category: building
@@ -1642,7 +1783,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_nether_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1693,7 +1833,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_polished_blackstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1744,7 +1883,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_prismarine_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1804,7 +1942,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_quartz_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1830,7 +1967,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_red_nether_brick_fence":
     type: shaped
-    category: misc
     group: cracked_red_nether_brick_fence
     pattern:
       - ATA
@@ -1841,6 +1977,19 @@ recipes:
     result:
       id: "cinchsmissingblocks:cracked_red_nether_brick_fence"
       count: 3
+  "cinchsmissingblocks:cracked_red_nether_brick_fence_gate":
+    type: shaped
+    category: redstone
+    group: nether_brick_fence_gates
+    pattern:
+      - TAT
+      - TAT
+    ingredients:
+      A: "cinchsmissingblocks:cracked_red_nether_bricks"
+      T: "cinchsmissingblocks:red_nether_brick"
+    result:
+      id: "cinchsmissingblocks:cracked_red_nether_brick_fence_gate"
+      count: 1
   "cinchsmissingblocks:cracked_red_nether_brick_slab":
     type: shaped
     category: building
@@ -1877,7 +2026,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_red_nether_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1937,7 +2085,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_red_sandstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -1960,6 +2107,65 @@ recipes:
     experience: 0.1
     result:
       id: "cinchsmissingblocks:cracked_red_sandstone_bricks"
+      count: 1
+  "cinchsmissingblocks:cracked_resin_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_slab"
+      count: 6
+  "cinchsmissingblocks:cracked_resin_brick_slab_from_cracked_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_slab"
+      count: 2
+  "cinchsmissingblocks:cracked_resin_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_resin_brick_stairs_from_cracked_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:cracked_resin_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_wall"
+      count: 6
+  "cinchsmissingblocks:cracked_resin_brick_wall_from_cracked_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_wall"
+      count: 1
+  "cinchsmissingblocks:cracked_resin_bricks":
+    type: smelting
+    category: blocks
+    ingredient: "minecraft:resin_bricks"
+    time: 200
+    experience: 0.1
+    result:
+      id: "cinchsmissingblocks:cracked_resin_bricks"
       count: 1
   "cinchsmissingblocks:cracked_sandstone_brick_slab":
     type: shaped
@@ -1997,7 +2203,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_sandstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2020,6 +2225,65 @@ recipes:
     experience: 0.1
     result:
       id: "cinchsmissingblocks:cracked_sandstone_bricks"
+      count: 1
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+      count: 6
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_from_cracked_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+      count: 2
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs_from_cracked_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall"
+      count: 6
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_wall_from_cracked_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall"
+      count: 1
+  "cinchsmissingblocks:cracked_soul_sandstone_bricks":
+    type: smelting
+    category: blocks
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    time: 200
+    experience: 0.1
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
       count: 1
   "cinchsmissingblocks:cracked_stone_brick_slab":
     type: shaped
@@ -2057,7 +2321,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_stone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2108,7 +2371,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_stone_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2131,6 +2393,65 @@ recipes:
     experience: 0.1
     result:
       id: "cinchsmissingblocks:cracked_stone_tiles"
+      count: 1
+  "cinchsmissingblocks:cracked_sulfur_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+      count: 6
+  "cinchsmissingblocks:cracked_sulfur_brick_slab_from_cracked_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+      count: 2
+  "cinchsmissingblocks:cracked_sulfur_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_sulfur_brick_stairs_from_cracked_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:cracked_sulfur_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_wall"
+      count: 6
+  "cinchsmissingblocks:cracked_sulfur_brick_wall_from_cracked_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_wall"
+      count: 1
+  "cinchsmissingblocks:cracked_sulfur_bricks":
+    type: smelting
+    category: blocks
+    ingredient: "minecraft:sulfur_bricks"
+    time: 200
+    experience: 0.1
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_bricks"
       count: 1
   "cinchsmissingblocks:cracked_tuff_brick_slab":
     type: shaped
@@ -2168,7 +2489,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_tuff_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2218,7 +2538,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cut_red_sandstone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2265,7 +2584,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:cut_sandstone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2286,9 +2604,92 @@ recipes:
     result:
       id: "cinchsmissingblocks:cut_sandstone_wall"
       count: 1
+  "cinchsmissingblocks:cut_soul_sandstone":
+    type: shaped
+    category: building
+    pattern:
+      - SS
+      - SS
+    ingredients:
+      S: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone"
+      count: 4
+  "cinchsmissingblocks:cut_soul_sandstone_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_slab":
+    type: shaped
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_slab"
+      count: 6
+  "cinchsmissingblocks:cut_soul_sandstone_slab_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_slab"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_slab_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_slab"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_stairs"
+      count: 4
+  "cinchsmissingblocks:cut_soul_sandstone_stairs_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_stairs"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_stairs_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_stairs"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_wall"
+      count: 6
+  "cinchsmissingblocks:cut_soul_sandstone_wall_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_wall"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_wall_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_wall"
+      count: 1
   "cinchsmissingblocks:dark_prismarine_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2314,15 +2715,15 @@ recipes:
     result:
       id: "cinchsmissingblocks:deepslate_brick_pillar"
       count: 2
-  "cinchsmissingblocks:deepslate_brick_pillar_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "cinchsmissingblocks:deepslate_brick_pillar"
-      count: 1
   "cinchsmissingblocks:deepslate_brick_pillar_from_deepslate_bricks_stonecutting":
     type: stonecutting
     ingredient: "minecraft:deepslate_bricks"
+    result:
+      id: "cinchsmissingblocks:deepslate_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:deepslate_brick_pillar_from_deepslate_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:deepslate"
     result:
       id: "cinchsmissingblocks:deepslate_brick_pillar"
       count: 1
@@ -2368,7 +2769,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:deepslate_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2472,7 +2872,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:diorite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2611,7 +3010,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:dripstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2697,7 +3095,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:dripstone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2801,7 +3198,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:end_stone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2815,6 +3211,15 @@ recipes:
     ingredient: "minecraft:end_stone"
     result:
       id: "cinchsmissingblocks:end_stone_wall"
+      count: 1
+  "cinchsmissingblocks:glazed_terracotta":
+    type: smelting
+    category: blocks
+    ingredient: "minecraft:terracotta"
+    time: 200
+    experience: 0.1
+    result:
+      id: "cinchsmissingblocks:glazed_terracotta"
       count: 1
   "cinchsmissingblocks:granite_brick_pillar":
     type: shaped
@@ -2905,7 +3310,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:granite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -2991,7 +3395,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_andesite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3076,7 +3479,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3161,7 +3563,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_calcite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3209,6 +3610,90 @@ recipes:
       - "minecraft:vine"
     result:
       id: "cinchsmissingblocks:mossy_calcite_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+      count: 6
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab_from_mossy_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+      count: 2
+  "cinchsmissingblocks:mossy_cinnabar_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:mossy_cinnabar_brick_stairs_from_mossy_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:mossy_cinnabar_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_wall"
+      count: 6
+  "cinchsmissingblocks:mossy_cinnabar_brick_wall_from_mossy_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_wall"
+      count: 1
+  "cinchsmissingblocks:mossy_cinnabar_bricks_from_moss_block":
+    type: shapeless
+    category: building
+    group: mossy_cinnabar_bricks
+    ingredients:
+      - "minecraft:cinnabar_bricks"
+      - "minecraft:moss_block"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_cinnabar_bricks_from_moss_carpet":
+    type: shaped
+    category: building
+    group: mossy_cinnabar_bricks
+    pattern:
+      - "#"
+      - B
+      - "#"
+    ingredients:
+      "#": "minecraft:moss_carpet"
+      B: "minecraft:cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_cinnabar_bricks_from_vine":
+    type: shapeless
+    category: building
+    group: mossy_cinnabar_bricks
+    ingredients:
+      - "minecraft:cinnabar_bricks"
+      - "minecraft:vine"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_bricks"
       count: 1
   "cinchsmissingblocks:mossy_cobbled_deepslate_from_moss_block":
     type: shapeless
@@ -3280,7 +3765,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_cobbled_deepslate_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3345,7 +3829,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_deepslate_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3430,7 +3913,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_deepslate_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3515,7 +3997,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_diorite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3600,7 +4081,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_dripstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3685,7 +4165,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_end_stone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3746,7 +4225,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_granite_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3831,7 +4309,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_mud_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -3916,7 +4393,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_prismarine_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4001,7 +4477,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_quartz_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4086,7 +4561,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_red_sandstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4135,6 +4609,90 @@ recipes:
     result:
       id: "cinchsmissingblocks:mossy_red_sandstone_bricks"
       count: 1
+  "cinchsmissingblocks:mossy_resin_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_slab"
+      count: 6
+  "cinchsmissingblocks:mossy_resin_brick_slab_from_mossy_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_slab"
+      count: 2
+  "cinchsmissingblocks:mossy_resin_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:mossy_resin_brick_stairs_from_mossy_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:mossy_resin_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_wall"
+      count: 6
+  "cinchsmissingblocks:mossy_resin_brick_wall_from_mossy_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_wall"
+      count: 1
+  "cinchsmissingblocks:mossy_resin_bricks_from_pale_hanging_moss":
+    type: shapeless
+    category: building
+    group: mossy_resin_bricks
+    ingredients:
+      - "minecraft:resin_bricks"
+      - "minecraft:pale_hanging_moss"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_resin_bricks_from_pale_moss_block":
+    type: shapeless
+    category: building
+    group: mossy_resin_bricks
+    ingredients:
+      - "minecraft:resin_bricks"
+      - "minecraft:pale_moss_block"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_resin_bricks_from_pale_moss_carpet":
+    type: shaped
+    category: building
+    group: mossy_resin_bricks
+    pattern:
+      - "#"
+      - B
+      - "#"
+    ingredients:
+      "#": "minecraft:pale_moss_carpet"
+      B: "minecraft:resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_bricks"
+      count: 1
   "cinchsmissingblocks:mossy_sandstone_brick_slab":
     type: shaped
     category: building
@@ -4171,7 +4729,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_sandstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4270,7 +4827,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_stone_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4319,6 +4875,90 @@ recipes:
     result:
       id: "cinchsmissingblocks:mossy_stone_tiles"
       count: 1
+  "cinchsmissingblocks:mossy_sulfur_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+      count: 6
+  "cinchsmissingblocks:mossy_sulfur_brick_slab_from_mossy_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+      count: 2
+  "cinchsmissingblocks:mossy_sulfur_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:mossy_sulfur_brick_stairs_from_mossy_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:mossy_sulfur_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_wall"
+      count: 6
+  "cinchsmissingblocks:mossy_sulfur_brick_wall_from_mossy_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_wall"
+      count: 1
+  "cinchsmissingblocks:mossy_sulfur_bricks_from_moss_block":
+    type: shapeless
+    category: building
+    group: mossy_sulfur_bricks
+    ingredients:
+      - "minecraft:sulfur_bricks"
+      - "minecraft:moss_block"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_sulfur_bricks_from_moss_carpet":
+    type: shaped
+    category: building
+    group: mossy_sulfur_bricks
+    pattern:
+      - "#"
+      - B
+      - "#"
+    ingredients:
+      "#": "minecraft:moss_carpet"
+      B: "minecraft:sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_bricks"
+      count: 1
+  "cinchsmissingblocks:mossy_sulfur_bricks_from_vine":
+    type: shapeless
+    category: building
+    group: mossy_sulfur_bricks
+    ingredients:
+      - "minecraft:sulfur_bricks"
+      - "minecraft:vine"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_bricks"
+      count: 1
   "cinchsmissingblocks:mossy_tuff_brick_slab":
     type: shaped
     category: building
@@ -4355,7 +4995,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:mossy_tuff_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4421,6 +5060,36 @@ recipes:
     result:
       id: "cinchsmissingblocks:mud_brick_pillar"
       count: 1
+  "cinchsmissingblocks:nether_brick_fence_gate":
+    type: shaped
+    category: redstone
+    group: nether_brick_fence_gates
+    pattern:
+      - TAT
+      - TAT
+    ingredients:
+      A: "minecraft:nether_bricks"
+      T: "minecraft:nether_brick"
+    result:
+      id: "cinchsmissingblocks:nether_brick_fence_gate"
+      count: 1
+  "cinchsmissingblocks:nether_brick_pillar":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "minecraft:nether_bricks"
+    result:
+      id: "cinchsmissingblocks:nether_brick_pillar"
+      count: 2
+  "cinchsmissingblocks:nether_brick_pillar_from_nether_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:nether_bricks"
+    result:
+      id: "cinchsmissingblocks:nether_brick_pillar"
+      count: 1
   "cinchsmissingblocks:netherrack_slab":
     type: shaped
     category: building
@@ -4457,7 +5126,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:netherrack_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4508,7 +5176,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:packed_mud_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4525,7 +5192,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:polished_andesite_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4611,7 +5277,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:polished_calcite_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4634,7 +5299,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:polished_diorite_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4720,7 +5384,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:polished_dripstone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4806,7 +5469,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:polished_end_stone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4829,7 +5491,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:polished_granite_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4869,7 +5530,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:prismarine_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4886,7 +5546,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:purpur_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4949,7 +5608,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:quartz_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -4972,7 +5630,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:quartz_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5001,7 +5658,6 @@ recipes:
       count: 4
   "cinchsmissingblocks:red_nether_brick_fence":
     type: shaped
-    category: misc
     group: red_nether_brick_fence
     pattern:
       - ATA
@@ -5012,6 +5668,36 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_nether_brick_fence"
       count: 3
+  "cinchsmissingblocks:red_nether_brick_fence_gate":
+    type: shaped
+    category: redstone
+    group: nether_brick_fence_gates
+    pattern:
+      - TAT
+      - TAT
+    ingredients:
+      A: "minecraft:red_nether_bricks"
+      T: "cinchsmissingblocks:red_nether_brick"
+    result:
+      id: "cinchsmissingblocks:red_nether_brick_fence_gate"
+      count: 1
+  "cinchsmissingblocks:red_nether_brick_pillar":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "minecraft:red_nether_bricks"
+    result:
+      id: "cinchsmissingblocks:red_nether_brick_pillar"
+      count: 2
+  "cinchsmissingblocks:red_nether_brick_pillar_from_red_nether_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:red_nether_bricks"
+    result:
+      id: "cinchsmissingblocks:red_nether_brick_pillar"
+      count: 1
   "cinchsmissingblocks:red_sandstone_brick_pillar":
     type: shaped
     category: building
@@ -5019,7 +5705,7 @@ recipes:
       - "#"
       - "#"
     ingredients:
-      "#": "cinchsmissingblocks:red_sandstone_brick_slab"
+      "#": "cinchsmissingblocks:red_sandstone_bricks"
     result:
       id: "cinchsmissingblocks:red_sandstone_brick_pillar"
       count: 2
@@ -5101,7 +5787,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:red_sandstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5158,7 +5843,7 @@ recipes:
       - "#"
       - "#"
     ingredients:
-      "#": "cinchsmissingblocks:sandstone_brick_slab"
+      "#": "cinchsmissingblocks:sandstone_bricks"
     result:
       id: "cinchsmissingblocks:sandstone_brick_pillar"
       count: 2
@@ -5240,7 +5925,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:sandstone_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5339,7 +6023,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:smooth_basalt_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5356,7 +6039,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:smooth_quartz_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5373,7 +6055,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:smooth_red_sandstone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5390,7 +6071,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:smooth_sandstone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5404,6 +6084,63 @@ recipes:
     ingredient: "minecraft:smooth_sandstone"
     result:
       id: "cinchsmissingblocks:smooth_sandstone_wall"
+      count: 1
+  "cinchsmissingblocks:smooth_soul_sandstone":
+    type: smelting
+    category: blocks
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    time: 200
+    experience: 0.1
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone"
+      count: 1
+  "cinchsmissingblocks:smooth_soul_sandstone_slab":
+    type: shaped
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+      count: 6
+  "cinchsmissingblocks:smooth_soul_sandstone_slab_from_smooth_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+      count: 1
+  "cinchsmissingblocks:smooth_soul_sandstone_stairs":
+    type: shaped
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_stairs"
+      count: 4
+  "cinchsmissingblocks:smooth_soul_sandstone_stairs_from_smooth_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_stairs"
+      count: 1
+  "cinchsmissingblocks:smooth_soul_sandstone_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_wall"
+      count: 6
+  "cinchsmissingblocks:smooth_soul_sandstone_wall_from_smooth_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_wall"
       count: 1
   "cinchsmissingblocks:smooth_stone_stairs":
     type: shaped
@@ -5425,7 +6162,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:smooth_stone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5464,7 +6200,6 @@ recipes:
       count: 4
   "cinchsmissingblocks:snow_brick_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5484,6 +6219,204 @@ recipes:
     result:
       id: "cinchsmissingblocks:snow_bricks"
       count: 4
+  "cinchsmissingblocks:soul_sandstone":
+    type: shaped
+    category: building
+    pattern:
+      - SS
+      - SS
+    ingredients:
+      S: "minecraft:soul_sand"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone"
+      count: 4
+  "cinchsmissingblocks:soul_sandstone_brick_pillar":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_pillar"
+      count: 2
+  "cinchsmissingblocks:soul_sandstone_brick_pillar_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_pillar_from_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_pillar_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_slab":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_slab"
+      count: 6
+  "cinchsmissingblocks:soul_sandstone_brick_slab_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_slab"
+      count: 2
+  "cinchsmissingblocks:soul_sandstone_brick_slab_from_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_slab"
+      count: 2
+  "cinchsmissingblocks:soul_sandstone_brick_slab_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_slab"
+      count: 2
+  "cinchsmissingblocks:soul_sandstone_brick_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_stairs"
+      count: 4
+  "cinchsmissingblocks:soul_sandstone_brick_stairs_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_stairs_from_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_stairs_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_stairs"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_wall"
+      count: 6
+  "cinchsmissingblocks:soul_sandstone_brick_wall_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_wall"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_wall_from_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_wall"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_wall_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_wall"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_bricks":
+    type: shaped
+    category: building
+    pattern:
+      - SS
+      - SS
+    ingredients:
+      S: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_bricks"
+      count: 4
+  "cinchsmissingblocks:soul_sandstone_bricks_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_bricks"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_bricks_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_bricks"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_slab":
+    type: shaped
+    pattern:
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_slab"
+      count: 6
+  "cinchsmissingblocks:soul_sandstone_slab_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_slab"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "#  "
+      - "## "
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_stairs"
+      count: 4
+  "cinchsmissingblocks:soul_sandstone_stairs_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_stairs"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_wall":
+    type: shaped
+    pattern:
+      - "###"
+      - "###"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_wall"
+      count: 6
+  "cinchsmissingblocks:soul_sandstone_wall_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_wall"
+      count: 1
   "cinchsmissingblocks:stone_brick_pillar":
     type: shaped
     category: building
@@ -5567,7 +6500,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:stone_tile_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5619,7 +6551,6 @@ recipes:
       count: 1
   "cinchsmissingblocks:stone_wall":
     type: shaped
-    category: misc
     pattern:
       - "###"
       - "###"
@@ -5634,9 +6565,37 @@ recipes:
     result:
       id: "cinchsmissingblocks:stone_wall"
       count: 1
+  "cinchsmissingblocks:sulfur_brick_pillar":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+    ingredients:
+      "#": "minecraft:sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:sulfur_brick_pillar"
+      count: 2
+  "cinchsmissingblocks:sulfur_brick_pillar_from_polished_sulfur_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:polished_sulfur"
+    result:
+      id: "cinchsmissingblocks:sulfur_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:sulfur_brick_pillar_from_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:sulfur_brick_pillar"
+      count: 1
+  "cinchsmissingblocks:sulfur_brick_pillar_from_sulfur_stonecutting":
+    type: stonecutting
+    ingredient: "minecraft:sulfur"
+    result:
+      id: "cinchsmissingblocks:sulfur_brick_pillar"
+      count: 1
   "cinchsmissingblocks:tinted_glass_pane":
     type: shaped
-    category: misc
     group: stained_glass_pane
     pattern:
       - "###"
@@ -5660,6 +6619,7 @@ recipes:
   "minecraft:nether_brick_fence":
     type: shaped
     category: misc
+    group: nether_brick_fences
     pattern:
       - "W#W"
       - "W#W"
@@ -5711,7 +6671,7 @@ recipes:
       - "## "
       - "###"
     ingredients:
-      "#": "minecraft:sandstone"
+      "#": "minecraft:red_sandstone"
     result:
       id: "minecraft:sandstone_stairs"
       count: 4
@@ -5726,12 +6686,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:black_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:black_terracotta_slab_from_black_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:black_terracotta"
-    result:
-      id: "cinchsmissingblocks:black_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:black_terracotta_stairs":
     type: shaped
     category: building
@@ -5745,15 +6699,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:black_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:black_terracotta_stairs_from_black_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:black_terracotta"
-    result:
-      id: "cinchsmissingblocks:black_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:black_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -5763,12 +6710,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:black_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:black_terracotta_wall_from_black_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:black_terracotta"
-    result:
-      id: "cinchsmissingblocks:black_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:blue_terracotta_slab":
     type: shaped
     category: building
@@ -5780,12 +6721,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:blue_terracotta_slab_from_blue_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:blue_terracotta"
-    result:
-      id: "cinchsmissingblocks:blue_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:blue_terracotta_stairs":
     type: shaped
     category: building
@@ -5799,15 +6734,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:blue_terracotta_stairs_from_blue_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:blue_terracotta"
-    result:
-      id: "cinchsmissingblocks:blue_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:blue_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -5817,12 +6745,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:blue_terracotta_wall_from_blue_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:blue_terracotta"
-    result:
-      id: "cinchsmissingblocks:blue_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:brown_terracotta_slab":
     type: shaped
     category: building
@@ -5834,12 +6756,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:brown_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:brown_terracotta_slab_from_brown_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:brown_terracotta"
-    result:
-      id: "cinchsmissingblocks:brown_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:brown_terracotta_stairs":
     type: shaped
     category: building
@@ -5853,15 +6769,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:brown_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:brown_terracotta_stairs_from_brown_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:brown_terracotta"
-    result:
-      id: "cinchsmissingblocks:brown_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:brown_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -5871,12 +6780,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:brown_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:brown_terracotta_wall_from_brown_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:brown_terracotta"
-    result:
-      id: "cinchsmissingblocks:brown_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:cyan_terracotta_slab":
     type: shaped
     category: building
@@ -5888,12 +6791,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:cyan_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:cyan_terracotta_slab_from_cyan_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:cyan_terracotta"
-    result:
-      id: "cinchsmissingblocks:cyan_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:cyan_terracotta_stairs":
     type: shaped
     category: building
@@ -5907,15 +6804,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:cyan_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:cyan_terracotta_stairs_from_cyan_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:cyan_terracotta"
-    result:
-      id: "cinchsmissingblocks:cyan_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:cyan_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -5925,12 +6815,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:cyan_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:cyan_terracotta_wall_from_cyan_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:cyan_terracotta"
-    result:
-      id: "cinchsmissingblocks:cyan_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:gray_terracotta_slab":
     type: shaped
     category: building
@@ -5942,12 +6826,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:gray_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:gray_terracotta_slab_from_gray_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:gray_terracotta"
-    result:
-      id: "cinchsmissingblocks:gray_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:gray_terracotta_stairs":
     type: shaped
     category: building
@@ -5961,15 +6839,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:gray_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:gray_terracotta_stairs_from_gray_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:gray_terracotta"
-    result:
-      id: "cinchsmissingblocks:gray_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:gray_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -5979,12 +6850,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:gray_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:gray_terracotta_wall_from_gray_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:gray_terracotta"
-    result:
-      id: "cinchsmissingblocks:gray_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:green_terracotta_slab":
     type: shaped
     category: building
@@ -5996,12 +6861,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:green_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:green_terracotta_slab_from_green_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:green_terracotta"
-    result:
-      id: "cinchsmissingblocks:green_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:green_terracotta_stairs":
     type: shaped
     category: building
@@ -6015,15 +6874,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:green_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:green_terracotta_stairs_from_green_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:green_terracotta"
-    result:
-      id: "cinchsmissingblocks:green_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:green_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6033,12 +6885,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:green_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:green_terracotta_wall_from_green_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:green_terracotta"
-    result:
-      id: "cinchsmissingblocks:green_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:light_blue_terracotta_slab":
     type: shaped
     category: building
@@ -6050,12 +6896,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_blue_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:light_blue_terracotta_slab_from_light_blue_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_blue_terracotta"
-    result:
-      id: "cinchsmissingblocks:light_blue_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:light_blue_terracotta_stairs":
     type: shaped
     category: building
@@ -6069,15 +6909,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_blue_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:light_blue_terracotta_stairs_from_light_blue_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_blue_terracotta"
-    result:
-      id: "cinchsmissingblocks:light_blue_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:light_blue_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6087,12 +6920,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_blue_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:light_blue_terracotta_wall_from_light_blue_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_blue_terracotta"
-    result:
-      id: "cinchsmissingblocks:light_blue_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:light_gray_terracotta_slab":
     type: shaped
     category: building
@@ -6104,12 +6931,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_gray_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:light_gray_terracotta_slab_from_light_gray_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_gray_terracotta"
-    result:
-      id: "cinchsmissingblocks:light_gray_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:light_gray_terracotta_stairs":
     type: shaped
     category: building
@@ -6123,15 +6944,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_gray_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:light_gray_terracotta_stairs_from_light_gray_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_gray_terracotta"
-    result:
-      id: "cinchsmissingblocks:light_gray_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:light_gray_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6141,12 +6955,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_gray_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:light_gray_terracotta_wall_from_light_gray_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_gray_terracotta"
-    result:
-      id: "cinchsmissingblocks:light_gray_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:lime_terracotta_slab":
     type: shaped
     category: building
@@ -6158,12 +6966,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:lime_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:lime_terracotta_slab_from_lime_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:lime_terracotta"
-    result:
-      id: "cinchsmissingblocks:lime_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:lime_terracotta_stairs":
     type: shaped
     category: building
@@ -6177,15 +6979,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:lime_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:lime_terracotta_stairs_from_lime_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:lime_terracotta"
-    result:
-      id: "cinchsmissingblocks:lime_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:lime_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6195,12 +6990,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:lime_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:lime_terracotta_wall_from_lime_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:lime_terracotta"
-    result:
-      id: "cinchsmissingblocks:lime_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:magenta_terracotta_slab":
     type: shaped
     category: building
@@ -6212,12 +7001,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:magenta_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:magenta_terracotta_slab_from_magenta_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:magenta_terracotta"
-    result:
-      id: "cinchsmissingblocks:magenta_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:magenta_terracotta_stairs":
     type: shaped
     category: building
@@ -6231,15 +7014,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:magenta_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:magenta_terracotta_stairs_from_magenta_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:magenta_terracotta"
-    result:
-      id: "cinchsmissingblocks:magenta_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:magenta_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6249,12 +7025,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:magenta_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:magenta_terracotta_wall_from_magenta_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:magenta_terracotta"
-    result:
-      id: "cinchsmissingblocks:magenta_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:orange_terracotta_slab":
     type: shaped
     category: building
@@ -6266,12 +7036,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:orange_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:orange_terracotta_slab_from_orange_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:orange_terracotta"
-    result:
-      id: "cinchsmissingblocks:orange_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:orange_terracotta_stairs":
     type: shaped
     category: building
@@ -6285,15 +7049,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:orange_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:orange_terracotta_stairs_from_orange_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:orange_terracotta"
-    result:
-      id: "cinchsmissingblocks:orange_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:orange_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6303,12 +7060,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:orange_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:orange_terracotta_wall_from_orange_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:orange_terracotta"
-    result:
-      id: "cinchsmissingblocks:orange_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:pink_terracotta_slab":
     type: shaped
     category: building
@@ -6320,12 +7071,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:pink_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:pink_terracotta_slab_from_pink_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:pink_terracotta"
-    result:
-      id: "cinchsmissingblocks:pink_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:pink_terracotta_stairs":
     type: shaped
     category: building
@@ -6339,15 +7084,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:pink_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:pink_terracotta_stairs_from_pink_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:pink_terracotta"
-    result:
-      id: "cinchsmissingblocks:pink_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:pink_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6357,12 +7095,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:pink_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:pink_terracotta_wall_from_pink_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:pink_terracotta"
-    result:
-      id: "cinchsmissingblocks:pink_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:purple_terracotta_slab":
     type: shaped
     category: building
@@ -6374,12 +7106,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:purple_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:purple_terracotta_slab_from_purple_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:purple_terracotta"
-    result:
-      id: "cinchsmissingblocks:purple_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:purple_terracotta_stairs":
     type: shaped
     category: building
@@ -6393,15 +7119,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:purple_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:purple_terracotta_stairs_from_purple_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:purple_terracotta"
-    result:
-      id: "cinchsmissingblocks:purple_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:purple_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6411,12 +7130,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:purple_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:purple_terracotta_wall_from_purple_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:purple_terracotta"
-    result:
-      id: "cinchsmissingblocks:purple_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:red_terracotta_slab":
     type: shaped
     category: building
@@ -6428,12 +7141,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:red_terracotta_slab_from_red_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:red_terracotta"
-    result:
-      id: "cinchsmissingblocks:red_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:red_terracotta_stairs":
     type: shaped
     category: building
@@ -6447,15 +7154,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:red_terracotta_stairs_from_red_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:red_terracotta"
-    result:
-      id: "cinchsmissingblocks:red_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:red_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6465,11 +7165,311 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:red_terracotta_wall_from_red_terracotta_stonecutting":
+  "cinchsmissingblocks:stonecutting/black_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:black_terracotta"
+    result:
+      id: "cinchsmissingblocks:black_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/black_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:black_terracotta"
+    result:
+      id: "cinchsmissingblocks:black_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/black_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:black_terracotta"
+    result:
+      id: "cinchsmissingblocks:black_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/blue_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:blue_terracotta"
+    result:
+      id: "cinchsmissingblocks:blue_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/blue_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:blue_terracotta"
+    result:
+      id: "cinchsmissingblocks:blue_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/blue_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:blue_terracotta"
+    result:
+      id: "cinchsmissingblocks:blue_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/brown_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:brown_terracotta"
+    result:
+      id: "cinchsmissingblocks:brown_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/brown_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:brown_terracotta"
+    result:
+      id: "cinchsmissingblocks:brown_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/brown_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:brown_terracotta"
+    result:
+      id: "cinchsmissingblocks:brown_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/cyan_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:cyan_terracotta"
+    result:
+      id: "cinchsmissingblocks:cyan_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/cyan_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:cyan_terracotta"
+    result:
+      id: "cinchsmissingblocks:cyan_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/cyan_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:cyan_terracotta"
+    result:
+      id: "cinchsmissingblocks:cyan_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/gray_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:gray_terracotta"
+    result:
+      id: "cinchsmissingblocks:gray_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/gray_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:gray_terracotta"
+    result:
+      id: "cinchsmissingblocks:gray_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/gray_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:gray_terracotta"
+    result:
+      id: "cinchsmissingblocks:gray_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/green_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:green_terracotta"
+    result:
+      id: "cinchsmissingblocks:green_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/green_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:green_terracotta"
+    result:
+      id: "cinchsmissingblocks:green_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/green_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:green_terracotta"
+    result:
+      id: "cinchsmissingblocks:green_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_blue_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:light_blue_terracotta"
+    result:
+      id: "cinchsmissingblocks:light_blue_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/light_blue_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:light_blue_terracotta"
+    result:
+      id: "cinchsmissingblocks:light_blue_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_blue_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:light_blue_terracotta"
+    result:
+      id: "cinchsmissingblocks:light_blue_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_gray_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:light_gray_terracotta"
+    result:
+      id: "cinchsmissingblocks:light_gray_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/light_gray_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:light_gray_terracotta"
+    result:
+      id: "cinchsmissingblocks:light_gray_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_gray_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:light_gray_terracotta"
+    result:
+      id: "cinchsmissingblocks:light_gray_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/lime_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:lime_terracotta"
+    result:
+      id: "cinchsmissingblocks:lime_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/lime_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:lime_terracotta"
+    result:
+      id: "cinchsmissingblocks:lime_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/lime_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:lime_terracotta"
+    result:
+      id: "cinchsmissingblocks:lime_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/magenta_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:magenta_terracotta"
+    result:
+      id: "cinchsmissingblocks:magenta_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/magenta_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:magenta_terracotta"
+    result:
+      id: "cinchsmissingblocks:magenta_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/magenta_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:magenta_terracotta"
+    result:
+      id: "cinchsmissingblocks:magenta_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/orange_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:orange_terracotta"
+    result:
+      id: "cinchsmissingblocks:orange_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/orange_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:orange_terracotta"
+    result:
+      id: "cinchsmissingblocks:orange_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/orange_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:orange_terracotta"
+    result:
+      id: "cinchsmissingblocks:orange_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/pink_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:pink_terracotta"
+    result:
+      id: "cinchsmissingblocks:pink_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/pink_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:pink_terracotta"
+    result:
+      id: "cinchsmissingblocks:pink_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/pink_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:pink_terracotta"
+    result:
+      id: "cinchsmissingblocks:pink_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/purple_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:purple_terracotta"
+    result:
+      id: "cinchsmissingblocks:purple_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/purple_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:purple_terracotta"
+    result:
+      id: "cinchsmissingblocks:purple_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/purple_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:purple_terracotta"
+    result:
+      id: "cinchsmissingblocks:purple_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/red_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:red_terracotta"
+    result:
+      id: "cinchsmissingblocks:red_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/red_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:red_terracotta"
+    result:
+      id: "cinchsmissingblocks:red_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/red_terracotta_wall":
     type: stonecutting
     ingredient: "minecraft:red_terracotta"
     result:
       id: "cinchsmissingblocks:red_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:terracotta"
+    result:
+      id: "cinchsmissingblocks:terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:terracotta"
+    result:
+      id: "cinchsmissingblocks:terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:terracotta"
+    result:
+      id: "cinchsmissingblocks:terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/white_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:white_terracotta"
+    result:
+      id: "cinchsmissingblocks:white_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/white_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:white_terracotta"
+    result:
+      id: "cinchsmissingblocks:white_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/white_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:white_terracotta"
+    result:
+      id: "cinchsmissingblocks:white_terracotta_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/yellow_terracotta_slab":
+    type: stonecutting
+    ingredient: "minecraft:yellow_terracotta"
+    result:
+      id: "cinchsmissingblocks:yellow_terracotta_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/yellow_terracotta_stairs":
+    type: stonecutting
+    ingredient: "minecraft:yellow_terracotta"
+    result:
+      id: "cinchsmissingblocks:yellow_terracotta_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/yellow_terracotta_wall":
+    type: stonecutting
+    ingredient: "minecraft:yellow_terracotta"
+    result:
+      id: "cinchsmissingblocks:yellow_terracotta_wall"
       count: 1
   "cinchsmissingblocks:terracotta_slab":
     type: shaped
@@ -6482,12 +7482,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:terracotta_slab"
       count: 6
-  "cinchsmissingblocks:terracotta_slab_from_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:terracotta"
-    result:
-      id: "cinchsmissingblocks:terracotta_slab"
-      count: 2
   "cinchsmissingblocks:terracotta_stairs":
     type: shaped
     category: building
@@ -6501,15 +7495,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:terracotta_stairs_from_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:terracotta"
-    result:
-      id: "cinchsmissingblocks:terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6519,12 +7506,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:terracotta_wall"
       count: 6
-  "cinchsmissingblocks:terracotta_wall_from_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:terracotta"
-    result:
-      id: "cinchsmissingblocks:terracotta_wall"
-      count: 1
   "cinchsmissingblocks:white_terracotta_slab":
     type: shaped
     category: building
@@ -6536,12 +7517,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:white_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:white_terracotta_slab_from_white_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:white_terracotta"
-    result:
-      id: "cinchsmissingblocks:white_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:white_terracotta_stairs":
     type: shaped
     category: building
@@ -6555,15 +7530,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:white_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:white_terracotta_stairs_from_white_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:white_terracotta"
-    result:
-      id: "cinchsmissingblocks:white_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:white_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6573,12 +7541,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:white_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:white_terracotta_wall_from_white_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:white_terracotta"
-    result:
-      id: "cinchsmissingblocks:white_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:yellow_terracotta_slab":
     type: shaped
     category: building
@@ -6590,12 +7552,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:yellow_terracotta_slab"
       count: 6
-  "cinchsmissingblocks:yellow_terracotta_slab_from_yellow_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:yellow_terracotta"
-    result:
-      id: "cinchsmissingblocks:yellow_terracotta_slab"
-      count: 2
   "cinchsmissingblocks:yellow_terracotta_stairs":
     type: shaped
     category: building
@@ -6609,15 +7565,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:yellow_terracotta_stairs"
       count: 4
-  "cinchsmissingblocks:yellow_terracotta_stairs_from_yellow_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:yellow_terracotta"
-    result:
-      id: "cinchsmissingblocks:yellow_terracotta_stairs"
-      count: 1
   "cinchsmissingblocks:yellow_terracotta_wall":
     type: shaped
-    category: misc
     group: terracotta_wall
     pattern:
       - "###"
@@ -6627,12 +7576,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:yellow_terracotta_wall"
       count: 6
-  "cinchsmissingblocks:yellow_terracotta_wall_from_yellow_terracotta_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:yellow_terracotta"
-    result:
-      id: "cinchsmissingblocks:yellow_terracotta_wall"
-      count: 1
   "cinchsmissingblocks:black_concrete_slab":
     type: shaped
     category: building
@@ -6644,12 +7587,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:black_concrete_slab"
       count: 6
-  "cinchsmissingblocks:black_concrete_slab_from_black_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:black_concrete"
-    result:
-      id: "cinchsmissingblocks:black_concrete_slab"
-      count: 2
   "cinchsmissingblocks:black_concrete_stairs":
     type: shaped
     category: building
@@ -6663,15 +7600,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:black_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:black_concrete_stairs_from_black_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:black_concrete"
-    result:
-      id: "cinchsmissingblocks:black_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:black_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -6681,12 +7611,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:black_concrete_wall"
       count: 6
-  "cinchsmissingblocks:black_concrete_wall_from_black_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:black_concrete"
-    result:
-      id: "cinchsmissingblocks:black_concrete_wall"
-      count: 1
   "cinchsmissingblocks:blue_concrete_slab":
     type: shaped
     category: building
@@ -6698,12 +7622,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_concrete_slab"
       count: 6
-  "cinchsmissingblocks:blue_concrete_slab_from_blue_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:blue_concrete"
-    result:
-      id: "cinchsmissingblocks:blue_concrete_slab"
-      count: 2
   "cinchsmissingblocks:blue_concrete_stairs":
     type: shaped
     category: building
@@ -6717,15 +7635,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:blue_concrete_stairs_from_blue_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:blue_concrete"
-    result:
-      id: "cinchsmissingblocks:blue_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:blue_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -6735,12 +7646,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:blue_concrete_wall"
       count: 6
-  "cinchsmissingblocks:blue_concrete_wall_from_blue_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:blue_concrete"
-    result:
-      id: "cinchsmissingblocks:blue_concrete_wall"
-      count: 1
   "cinchsmissingblocks:brown_concrete_slab":
     type: shaped
     category: building
@@ -6752,12 +7657,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:brown_concrete_slab"
       count: 6
-  "cinchsmissingblocks:brown_concrete_slab_from_brown_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:brown_concrete"
-    result:
-      id: "cinchsmissingblocks:brown_concrete_slab"
-      count: 2
   "cinchsmissingblocks:brown_concrete_stairs":
     type: shaped
     category: building
@@ -6771,15 +7670,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:brown_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:brown_concrete_stairs_from_brown_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:brown_concrete"
-    result:
-      id: "cinchsmissingblocks:brown_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:brown_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -6789,12 +7681,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:brown_concrete_wall"
       count: 6
-  "cinchsmissingblocks:brown_concrete_wall_from_brown_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:brown_concrete"
-    result:
-      id: "cinchsmissingblocks:brown_concrete_wall"
-      count: 1
   "cinchsmissingblocks:cyan_concrete_slab":
     type: shaped
     category: building
@@ -6806,12 +7692,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:cyan_concrete_slab"
       count: 6
-  "cinchsmissingblocks:cyan_concrete_slab_from_cyan_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:cyan_concrete"
-    result:
-      id: "cinchsmissingblocks:cyan_concrete_slab"
-      count: 2
   "cinchsmissingblocks:cyan_concrete_stairs":
     type: shaped
     category: building
@@ -6825,15 +7705,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:cyan_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:cyan_concrete_stairs_from_cyan_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:cyan_concrete"
-    result:
-      id: "cinchsmissingblocks:cyan_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:cyan_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -6843,12 +7716,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:cyan_concrete_wall"
       count: 6
-  "cinchsmissingblocks:cyan_concrete_wall_from_cyan_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:cyan_concrete"
-    result:
-      id: "cinchsmissingblocks:cyan_concrete_wall"
-      count: 1
   "cinchsmissingblocks:gray_concrete_slab":
     type: shaped
     category: building
@@ -6860,12 +7727,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:gray_concrete_slab"
       count: 6
-  "cinchsmissingblocks:gray_concrete_slab_from_gray_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:gray_concrete"
-    result:
-      id: "cinchsmissingblocks:gray_concrete_slab"
-      count: 2
   "cinchsmissingblocks:gray_concrete_stairs":
     type: shaped
     category: building
@@ -6879,15 +7740,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:gray_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:gray_concrete_stairs_from_gray_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:gray_concrete"
-    result:
-      id: "cinchsmissingblocks:gray_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:gray_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -6897,12 +7751,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:gray_concrete_wall"
       count: 6
-  "cinchsmissingblocks:gray_concrete_wall_from_gray_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:gray_concrete"
-    result:
-      id: "cinchsmissingblocks:gray_concrete_wall"
-      count: 1
   "cinchsmissingblocks:green_concrete_slab":
     type: shaped
     category: building
@@ -6914,12 +7762,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:green_concrete_slab"
       count: 6
-  "cinchsmissingblocks:green_concrete_slab_from_green_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:green_concrete"
-    result:
-      id: "cinchsmissingblocks:green_concrete_slab"
-      count: 2
   "cinchsmissingblocks:green_concrete_stairs":
     type: shaped
     category: building
@@ -6933,15 +7775,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:green_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:green_concrete_stairs_from_green_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:green_concrete"
-    result:
-      id: "cinchsmissingblocks:green_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:green_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -6951,12 +7786,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:green_concrete_wall"
       count: 6
-  "cinchsmissingblocks:green_concrete_wall_from_green_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:green_concrete"
-    result:
-      id: "cinchsmissingblocks:green_concrete_wall"
-      count: 1
   "cinchsmissingblocks:light_blue_concrete_slab":
     type: shaped
     category: building
@@ -6968,12 +7797,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_blue_concrete_slab"
       count: 6
-  "cinchsmissingblocks:light_blue_concrete_slab_from_light_blue_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_blue_concrete"
-    result:
-      id: "cinchsmissingblocks:light_blue_concrete_slab"
-      count: 2
   "cinchsmissingblocks:light_blue_concrete_stairs":
     type: shaped
     category: building
@@ -6987,15 +7810,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_blue_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:light_blue_concrete_stairs_from_light_blue_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_blue_concrete"
-    result:
-      id: "cinchsmissingblocks:light_blue_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:light_blue_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7005,12 +7821,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_blue_concrete_wall"
       count: 6
-  "cinchsmissingblocks:light_blue_concrete_wall_from_light_blue_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_blue_concrete"
-    result:
-      id: "cinchsmissingblocks:light_blue_concrete_wall"
-      count: 1
   "cinchsmissingblocks:light_gray_concrete_slab":
     type: shaped
     category: building
@@ -7022,12 +7832,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_gray_concrete_slab"
       count: 6
-  "cinchsmissingblocks:light_gray_concrete_slab_from_light_gray_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_gray_concrete"
-    result:
-      id: "cinchsmissingblocks:light_gray_concrete_slab"
-      count: 2
   "cinchsmissingblocks:light_gray_concrete_stairs":
     type: shaped
     category: building
@@ -7041,15 +7845,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_gray_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:light_gray_concrete_stairs_from_light_gray_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_gray_concrete"
-    result:
-      id: "cinchsmissingblocks:light_gray_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:light_gray_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7059,12 +7856,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:light_gray_concrete_wall"
       count: 6
-  "cinchsmissingblocks:light_gray_concrete_wall_from_light_gray_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:light_gray_concrete"
-    result:
-      id: "cinchsmissingblocks:light_gray_concrete_wall"
-      count: 1
   "cinchsmissingblocks:lime_concrete_slab":
     type: shaped
     category: building
@@ -7076,12 +7867,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:lime_concrete_slab"
       count: 6
-  "cinchsmissingblocks:lime_concrete_slab_from_lime_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:lime_concrete"
-    result:
-      id: "cinchsmissingblocks:lime_concrete_slab"
-      count: 2
   "cinchsmissingblocks:lime_concrete_stairs":
     type: shaped
     category: building
@@ -7095,15 +7880,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:lime_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:lime_concrete_stairs_from_lime_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:lime_concrete"
-    result:
-      id: "cinchsmissingblocks:lime_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:lime_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7113,12 +7891,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:lime_concrete_wall"
       count: 6
-  "cinchsmissingblocks:lime_concrete_wall_from_lime_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:lime_concrete"
-    result:
-      id: "cinchsmissingblocks:lime_concrete_wall"
-      count: 1
   "cinchsmissingblocks:magenta_concrete_slab":
     type: shaped
     category: building
@@ -7130,12 +7902,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:magenta_concrete_slab"
       count: 6
-  "cinchsmissingblocks:magenta_concrete_slab_from_magenta_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:magenta_concrete"
-    result:
-      id: "cinchsmissingblocks:magenta_concrete_slab"
-      count: 2
   "cinchsmissingblocks:magenta_concrete_stairs":
     type: shaped
     category: building
@@ -7149,15 +7915,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:magenta_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:magenta_concrete_stairs_from_magenta_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:magenta_concrete"
-    result:
-      id: "cinchsmissingblocks:magenta_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:magenta_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7167,12 +7926,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:magenta_concrete_wall"
       count: 6
-  "cinchsmissingblocks:magenta_concrete_wall_from_magenta_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:magenta_concrete"
-    result:
-      id: "cinchsmissingblocks:magenta_concrete_wall"
-      count: 1
   "cinchsmissingblocks:orange_concrete_slab":
     type: shaped
     category: building
@@ -7184,12 +7937,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:orange_concrete_slab"
       count: 6
-  "cinchsmissingblocks:orange_concrete_slab_from_orange_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:orange_concrete"
-    result:
-      id: "cinchsmissingblocks:orange_concrete_slab"
-      count: 2
   "cinchsmissingblocks:orange_concrete_stairs":
     type: shaped
     category: building
@@ -7203,15 +7950,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:orange_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:orange_concrete_stairs_from_orange_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:orange_concrete"
-    result:
-      id: "cinchsmissingblocks:orange_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:orange_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7221,12 +7961,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:orange_concrete_wall"
       count: 6
-  "cinchsmissingblocks:orange_concrete_wall_from_orange_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:orange_concrete"
-    result:
-      id: "cinchsmissingblocks:orange_concrete_wall"
-      count: 1
   "cinchsmissingblocks:pink_concrete_slab":
     type: shaped
     category: building
@@ -7238,12 +7972,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:pink_concrete_slab"
       count: 6
-  "cinchsmissingblocks:pink_concrete_slab_from_pink_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:pink_concrete"
-    result:
-      id: "cinchsmissingblocks:pink_concrete_slab"
-      count: 2
   "cinchsmissingblocks:pink_concrete_stairs":
     type: shaped
     category: building
@@ -7257,15 +7985,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:pink_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:pink_concrete_stairs_from_pink_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:pink_concrete"
-    result:
-      id: "cinchsmissingblocks:pink_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:pink_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7275,12 +7996,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:pink_concrete_wall"
       count: 6
-  "cinchsmissingblocks:pink_concrete_wall_from_pink_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:pink_concrete"
-    result:
-      id: "cinchsmissingblocks:pink_concrete_wall"
-      count: 1
   "cinchsmissingblocks:purple_concrete_slab":
     type: shaped
     category: building
@@ -7292,12 +8007,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:purple_concrete_slab"
       count: 6
-  "cinchsmissingblocks:purple_concrete_slab_from_purple_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:purple_concrete"
-    result:
-      id: "cinchsmissingblocks:purple_concrete_slab"
-      count: 2
   "cinchsmissingblocks:purple_concrete_stairs":
     type: shaped
     category: building
@@ -7311,15 +8020,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:purple_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:purple_concrete_stairs_from_purple_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:purple_concrete"
-    result:
-      id: "cinchsmissingblocks:purple_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:purple_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7329,12 +8031,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:purple_concrete_wall"
       count: 6
-  "cinchsmissingblocks:purple_concrete_wall_from_purple_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:purple_concrete"
-    result:
-      id: "cinchsmissingblocks:purple_concrete_wall"
-      count: 1
   "cinchsmissingblocks:red_concrete_slab":
     type: shaped
     category: building
@@ -7346,12 +8042,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_concrete_slab"
       count: 6
-  "cinchsmissingblocks:red_concrete_slab_from_red_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:red_concrete"
-    result:
-      id: "cinchsmissingblocks:red_concrete_slab"
-      count: 2
   "cinchsmissingblocks:red_concrete_stairs":
     type: shaped
     category: building
@@ -7365,15 +8055,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:red_concrete_stairs_from_red_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:red_concrete"
-    result:
-      id: "cinchsmissingblocks:red_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:red_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7383,11 +8066,293 @@ recipes:
     result:
       id: "cinchsmissingblocks:red_concrete_wall"
       count: 6
-  "cinchsmissingblocks:red_concrete_wall_from_red_concrete_stonecutting":
+  "cinchsmissingblocks:stonecutting/black_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:black_concrete"
+    result:
+      id: "cinchsmissingblocks:black_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/black_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:black_concrete"
+    result:
+      id: "cinchsmissingblocks:black_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/black_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:black_concrete"
+    result:
+      id: "cinchsmissingblocks:black_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/blue_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:blue_concrete"
+    result:
+      id: "cinchsmissingblocks:blue_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/blue_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:blue_concrete"
+    result:
+      id: "cinchsmissingblocks:blue_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/blue_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:blue_concrete"
+    result:
+      id: "cinchsmissingblocks:blue_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/brown_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:brown_concrete"
+    result:
+      id: "cinchsmissingblocks:brown_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/brown_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:brown_concrete"
+    result:
+      id: "cinchsmissingblocks:brown_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/brown_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:brown_concrete"
+    result:
+      id: "cinchsmissingblocks:brown_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/cyan_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:cyan_concrete"
+    result:
+      id: "cinchsmissingblocks:cyan_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/cyan_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:cyan_concrete"
+    result:
+      id: "cinchsmissingblocks:cyan_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/cyan_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:cyan_concrete"
+    result:
+      id: "cinchsmissingblocks:cyan_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/gray_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:gray_concrete"
+    result:
+      id: "cinchsmissingblocks:gray_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/gray_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:gray_concrete"
+    result:
+      id: "cinchsmissingblocks:gray_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/gray_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:gray_concrete"
+    result:
+      id: "cinchsmissingblocks:gray_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/green_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:green_concrete"
+    result:
+      id: "cinchsmissingblocks:green_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/green_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:green_concrete"
+    result:
+      id: "cinchsmissingblocks:green_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/green_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:green_concrete"
+    result:
+      id: "cinchsmissingblocks:green_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_blue_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:light_blue_concrete"
+    result:
+      id: "cinchsmissingblocks:light_blue_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/light_blue_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:light_blue_concrete"
+    result:
+      id: "cinchsmissingblocks:light_blue_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_blue_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:light_blue_concrete"
+    result:
+      id: "cinchsmissingblocks:light_blue_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_gray_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:light_gray_concrete"
+    result:
+      id: "cinchsmissingblocks:light_gray_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/light_gray_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:light_gray_concrete"
+    result:
+      id: "cinchsmissingblocks:light_gray_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/light_gray_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:light_gray_concrete"
+    result:
+      id: "cinchsmissingblocks:light_gray_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/lime_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:lime_concrete"
+    result:
+      id: "cinchsmissingblocks:lime_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/lime_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:lime_concrete"
+    result:
+      id: "cinchsmissingblocks:lime_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/lime_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:lime_concrete"
+    result:
+      id: "cinchsmissingblocks:lime_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/magenta_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:magenta_concrete"
+    result:
+      id: "cinchsmissingblocks:magenta_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/magenta_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:magenta_concrete"
+    result:
+      id: "cinchsmissingblocks:magenta_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/magenta_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:magenta_concrete"
+    result:
+      id: "cinchsmissingblocks:magenta_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/orange_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:orange_concrete"
+    result:
+      id: "cinchsmissingblocks:orange_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/orange_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:orange_concrete"
+    result:
+      id: "cinchsmissingblocks:orange_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/orange_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:orange_concrete"
+    result:
+      id: "cinchsmissingblocks:orange_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/pink_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:pink_concrete"
+    result:
+      id: "cinchsmissingblocks:pink_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/pink_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:pink_concrete"
+    result:
+      id: "cinchsmissingblocks:pink_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/pink_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:pink_concrete"
+    result:
+      id: "cinchsmissingblocks:pink_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/purple_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:purple_concrete"
+    result:
+      id: "cinchsmissingblocks:purple_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/purple_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:purple_concrete"
+    result:
+      id: "cinchsmissingblocks:purple_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/purple_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:purple_concrete"
+    result:
+      id: "cinchsmissingblocks:purple_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/red_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:red_concrete"
+    result:
+      id: "cinchsmissingblocks:red_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/red_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:red_concrete"
+    result:
+      id: "cinchsmissingblocks:red_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/red_concrete_wall":
     type: stonecutting
     ingredient: "minecraft:red_concrete"
     result:
       id: "cinchsmissingblocks:red_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/white_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:white_concrete"
+    result:
+      id: "cinchsmissingblocks:white_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/white_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:white_concrete"
+    result:
+      id: "cinchsmissingblocks:white_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/white_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:white_concrete"
+    result:
+      id: "cinchsmissingblocks:white_concrete_wall"
+      count: 1
+  "cinchsmissingblocks:stonecutting/yellow_concrete_slab":
+    type: stonecutting
+    ingredient: "minecraft:yellow_concrete"
+    result:
+      id: "cinchsmissingblocks:yellow_concrete_slab"
+      count: 2
+  "cinchsmissingblocks:stonecutting/yellow_concrete_stairs":
+    type: stonecutting
+    ingredient: "minecraft:yellow_concrete"
+    result:
+      id: "cinchsmissingblocks:yellow_concrete_stairs"
+      count: 1
+  "cinchsmissingblocks:stonecutting/yellow_concrete_wall":
+    type: stonecutting
+    ingredient: "minecraft:yellow_concrete"
+    result:
+      id: "cinchsmissingblocks:yellow_concrete_wall"
       count: 1
   "cinchsmissingblocks:white_concrete_slab":
     type: shaped
@@ -7400,12 +8365,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:white_concrete_slab"
       count: 6
-  "cinchsmissingblocks:white_concrete_slab_from_white_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:white_concrete"
-    result:
-      id: "cinchsmissingblocks:white_concrete_slab"
-      count: 2
   "cinchsmissingblocks:white_concrete_stairs":
     type: shaped
     category: building
@@ -7419,15 +8378,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:white_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:white_concrete_stairs_from_white_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:white_concrete"
-    result:
-      id: "cinchsmissingblocks:white_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:white_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7437,12 +8389,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:white_concrete_wall"
       count: 6
-  "cinchsmissingblocks:white_concrete_wall_from_white_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:white_concrete"
-    result:
-      id: "cinchsmissingblocks:white_concrete_wall"
-      count: 1
   "cinchsmissingblocks:yellow_concrete_slab":
     type: shaped
     category: building
@@ -7454,12 +8400,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:yellow_concrete_slab"
       count: 6
-  "cinchsmissingblocks:yellow_concrete_slab_from_yellow_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:yellow_concrete"
-    result:
-      id: "cinchsmissingblocks:yellow_concrete_slab"
-      count: 2
   "cinchsmissingblocks:yellow_concrete_stairs":
     type: shaped
     category: building
@@ -7473,15 +8413,8 @@ recipes:
     result:
       id: "cinchsmissingblocks:yellow_concrete_stairs"
       count: 4
-  "cinchsmissingblocks:yellow_concrete_stairs_from_yellow_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:yellow_concrete"
-    result:
-      id: "cinchsmissingblocks:yellow_concrete_stairs"
-      count: 1
   "cinchsmissingblocks:yellow_concrete_wall":
     type: shaped
-    category: misc
     group: concrete_wall
     pattern:
       - "###"
@@ -7491,12 +8424,6 @@ recipes:
     result:
       id: "cinchsmissingblocks:yellow_concrete_wall"
       count: 6
-  "cinchsmissingblocks:yellow_concrete_wall_from_yellow_concrete_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:yellow_concrete"
-    result:
-      id: "cinchsmissingblocks:yellow_concrete_wall"
-      count: 1
   "minecraft:chiseled_deepslate":
     type: shaped
     category: building
@@ -7507,60 +8434,6 @@ recipes:
       "#": "minecraft:deepslate_brick_slab"
     result:
       id: "minecraft:chiseled_deepslate"
-      count: 1
-  "minecraft:chiseled_deepslate_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:chiseled_deepslate"
-      count: 1
-  "minecraft:deepslate_brick_slab_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_brick_slab"
-      count: 2
-  "minecraft:deepslate_brick_stairs_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_brick_stairs"
-      count: 1
-  "minecraft:deepslate_brick_wall_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_brick_wall"
-      count: 1
-  "minecraft:deepslate_bricks_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_bricks"
-      count: 1
-  "minecraft:deepslate_tile_slab_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_tile_slab"
-      count: 2
-  "minecraft:deepslate_tile_stairs_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_tile_stairs"
-      count: 1
-  "minecraft:deepslate_tile_wall_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_tile_wall"
-      count: 1
-  "minecraft:deepslate_tiles_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:deepslate_tiles"
       count: 1
   "minecraft:polished_deepslate":
     type: shaped
@@ -7573,30 +8446,6 @@ recipes:
     result:
       id: "minecraft:polished_deepslate"
       count: 4
-  "minecraft:polished_deepslate_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:polished_deepslate"
-      count: 1
-  "minecraft:polished_deepslate_slab_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:polished_deepslate_slab"
-      count: 2
-  "minecraft:polished_deepslate_stairs_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:polished_deepslate_stairs"
-      count: 1
-  "minecraft:polished_deepslate_wall_from_cobbled_deepslate_stonecutting":
-    type: stonecutting
-    ingredient: "minecraft:deepslate"
-    result:
-      id: "minecraft:polished_deepslate_wall"
-      count: 1
   "cinchsmissingblocks:andesite_brick_vertical":
     type: shaped
     category: building
@@ -8064,6 +8913,42 @@ recipes:
     ingredient: "cinchsmissingblocks:cracked_calcite_bricks"
     result:
       id: "cinchsmissingblocks:cracked_calcite_brick_horizontal_stairs"
+      count: 1
+  "cinchsmissingblocks:cracked_cinnabar_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:cracked_cinnabar_brick_vertical_from_cracked_cinnabar_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs_from_cracked_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs"
       count: 1
   "cinchsmissingblocks:cracked_deepslate_brick_vertical":
     type: shaped
@@ -8533,6 +9418,42 @@ recipes:
     result:
       id: "cinchsmissingblocks:cracked_red_sandstone_brick_horizontal_stairs"
       count: 1
+  "cinchsmissingblocks:cracked_resin_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:cracked_resin_brick_vertical_from_cracked_resin_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs_from_cracked_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs"
+      count: 1
   "cinchsmissingblocks:cracked_sandstone_brick_vertical":
     type: shaped
     category: building
@@ -8568,6 +9489,42 @@ recipes:
     ingredient: "cinchsmissingblocks:cracked_sandstone_bricks"
     result:
       id: "cinchsmissingblocks:cracked_sandstone_brick_horizontal_stairs"
+      count: 1
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical_from_cracked_soul_sandstone_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs_from_cracked_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs"
       count: 1
   "cinchsmissingblocks:cracked_stone_brick_vertical":
     type: shaped
@@ -8641,6 +9598,42 @@ recipes:
     result:
       id: "cinchsmissingblocks:cracked_stone_tile_horizontal_stairs"
       count: 1
+  "cinchsmissingblocks:cracked_sulfur_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:cracked_sulfur_brick_vertical_from_cracked_sulfur_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs_from_cracked_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cracked_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs"
+      count: 1
   "cinchsmissingblocks:cracked_tuff_brick_vertical":
     type: shaped
     category: building
@@ -8676,6 +9669,42 @@ recipes:
     ingredient: "cinchsmissingblocks:cracked_tuff_bricks"
     result:
       id: "cinchsmissingblocks:cracked_tuff_brick_horizontal_stairs"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_vertical"
+      count: 6
+  "cinchsmissingblocks:cut_soul_sandstone_vertical_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_vertical"
+      count: 1
+  "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs_from_cut_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:cut_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs"
       count: 1
   "cinchsmissingblocks:cyan_terracotta_vertical":
     type: shaped
@@ -9253,6 +10282,42 @@ recipes:
     result:
       id: "cinchsmissingblocks:mossy_calcite_brick_horizontal_stairs"
       count: 1
+  "cinchsmissingblocks:mossy_cinnabar_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:mossy_cinnabar_brick_vertical_from_mossy_cinnabar_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs_from_mossy_cinnabar_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_cinnabar_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs"
+      count: 1
   "cinchsmissingblocks:mossy_cobbled_deepslate_vertical":
     type: shaped
     category: building
@@ -9649,6 +10714,42 @@ recipes:
     result:
       id: "cinchsmissingblocks:mossy_red_sandstone_brick_horizontal_stairs"
       count: 1
+  "cinchsmissingblocks:mossy_resin_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:mossy_resin_brick_vertical_from_mossy_resin_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs_from_mossy_resin_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_resin_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs"
+      count: 1
   "cinchsmissingblocks:mossy_sandstone_brick_vertical":
     type: shaped
     category: building
@@ -9720,6 +10821,42 @@ recipes:
     ingredient: "cinchsmissingblocks:mossy_stone_tiles"
     result:
       id: "cinchsmissingblocks:mossy_stone_tile_horizontal_stairs"
+      count: 1
+  "cinchsmissingblocks:mossy_sulfur_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:mossy_sulfur_brick_vertical_from_mossy_sulfur_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs_from_mossy_sulfur_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:mossy_sulfur_bricks"
+    result:
+      id: "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs"
       count: 1
   "cinchsmissingblocks:mossy_tuff_brick_vertical":
     type: shaped
@@ -10225,6 +11362,42 @@ recipes:
     result:
       id: "cinchsmissingblocks:smooth_basalt_horizontal_stairs"
       count: 1
+  "cinchsmissingblocks:smooth_soul_sandstone_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_vertical"
+      count: 6
+  "cinchsmissingblocks:smooth_soul_sandstone_vertical_from_smooth_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_vertical"
+      count: 1
+  "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs_from_smooth_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:smooth_soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs"
+      count: 1
   "cinchsmissingblocks:snow_brick_vertical":
     type: shaped
     category: building
@@ -10249,6 +11422,78 @@ recipes:
     result:
       id: "cinchsmissingblocks:snow_brick_horizontal_stairs"
       count: 4
+  "cinchsmissingblocks:soul_sandstone_brick_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_vertical"
+      count: 6
+  "cinchsmissingblocks:soul_sandstone_brick_vertical_from_soul_sandstone_brick_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_vertical"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs_from_soul_sandstone_bricks_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone_bricks"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_vertical":
+    type: shaped
+    category: building
+    pattern:
+      - "#"
+      - "#"
+      - "#"
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_vertical"
+      count: 6
+  "cinchsmissingblocks:soul_sandstone_vertical_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_vertical"
+      count: 1
+  "cinchsmissingblocks:soul_sandstone_horizontal_stairs":
+    type: shaped
+    category: building
+    pattern:
+      - "###"
+      - "## "
+      - "#  "
+    ingredients:
+      "#": "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_horizontal_stairs"
+      count: 4
+  "cinchsmissingblocks:soul_sandstone_horizontal_stairs_from_soul_sandstone_stonecutting":
+    type: stonecutting
+    ingredient: "cinchsmissingblocks:soul_sandstone"
+    result:
+      id: "cinchsmissingblocks:soul_sandstone_horizontal_stairs"
+      count: 1
   "cinchsmissingblocks:stone_tile_vertical":
     type: shaped
     category: building

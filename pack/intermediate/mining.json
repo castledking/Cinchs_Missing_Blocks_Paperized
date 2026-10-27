@@ -271,6 +271,14 @@
     "reference": "minecraft:stone",
     "hardness": 2.0
   },
+  "cinchsmissingblocks:blue_nether_brick_fence_gate": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:blue_nether_brick_fence_gate_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
   "cinchsmissingblocks:blue_nether_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 2.0
@@ -663,6 +671,14 @@
     "reference": "minecraft:stone",
     "hardness": 2.0
   },
+  "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:cracked_blue_nether_brick_fence_gate_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
   "cinchsmissingblocks:cracked_blue_nether_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 2.0
@@ -770,6 +786,42 @@
   "cinchsmissingblocks:cracked_calcite_brick_wall_double": {
     "reference": "minecraft:stone",
     "hardness": 1.0
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_cinnabar_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
   },
   "cinchsmissingblocks:cracked_deepslate_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
@@ -1031,6 +1083,14 @@
     "reference": "minecraft:stone",
     "hardness": 2.0
   },
+  "cinchsmissingblocks:cracked_nether_brick_fence_gate": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:cracked_nether_brick_fence_gate_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
   "cinchsmissingblocks:cracked_nether_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 2.0
@@ -1183,6 +1243,14 @@
     "reference": "minecraft:stone",
     "hardness": 2.0
   },
+  "cinchsmissingblocks:cracked_red_nether_brick_fence_gate": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:cracked_red_nether_brick_fence_gate_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
   "cinchsmissingblocks:cracked_red_nether_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 2.0
@@ -1255,6 +1323,42 @@
     "reference": "minecraft:stone",
     "hardness": 0.8
   },
+  "cinchsmissingblocks:cracked_resin_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_resin_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
   "cinchsmissingblocks:cracked_sandstone_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 0.8
@@ -1288,6 +1392,42 @@
     "hardness": 0.8
   },
   "cinchsmissingblocks:cracked_sandstone_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_wall_double": {
     "reference": "minecraft:stone",
     "hardness": 0.8
   },
@@ -1360,6 +1500,42 @@
     "hardness": 1.5
   },
   "cinchsmissingblocks:cracked_stone_tile_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:cracked_sulfur_brick_wall_double": {
     "reference": "minecraft:stone",
     "hardness": 1.5
   },
@@ -1476,6 +1652,42 @@
     "hardness": 0.8
   },
   "cinchsmissingblocks:cut_sandstone_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:cut_soul_sandstone_wall_double": {
     "reference": "minecraft:stone",
     "hardness": 0.8
   },
@@ -1685,11 +1897,11 @@
   },
   "cinchsmissingblocks:diorite_brick_wall": {
     "reference": "minecraft:stone",
-    "hardness": 2.0
+    "hardness": 1.5
   },
   "cinchsmissingblocks:diorite_brick_wall_double": {
     "reference": "minecraft:stone",
-    "hardness": 2.0
+    "hardness": 1.5
   },
   "cinchsmissingblocks:diorite_horizontal_stairs": {
     "reference": "minecraft:diorite_slab",
@@ -2519,6 +2731,42 @@
     "reference": "minecraft:stone",
     "hardness": 1.0
   },
+  "cinchsmissingblocks:mossy_cinnabar_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_cinnabar_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
   "cinchsmissingblocks:mossy_cobbled_deepslate_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 3.5
@@ -2927,6 +3175,42 @@
     "reference": "minecraft:stone",
     "hardness": 0.8
   },
+  "cinchsmissingblocks:mossy_resin_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_resin_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
   "cinchsmissingblocks:mossy_sandstone_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 0.8
@@ -3011,6 +3295,42 @@
     "reference": "minecraft:stone",
     "hardness": 1.5
   },
+  "cinchsmissingblocks:mossy_sulfur_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
+  "cinchsmissingblocks:mossy_sulfur_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 1.5
+  },
   "cinchsmissingblocks:mossy_tuff_brick_horizontal_stairs": {
     "reference": "minecraft:stone",
     "hardness": 1.5
@@ -3058,6 +3378,14 @@
   "cinchsmissingblocks:mud_brick_vertical_double": {
     "reference": "minecraft:mud_brick_slab",
     "hardness": 1.5
+  },
+  "cinchsmissingblocks:nether_brick_fence_gate": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:nether_brick_fence_gate_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
   },
   "cinchsmissingblocks:nether_brick_horizontal_stairs": {
     "reference": "minecraft:nether_brick_slab",
@@ -3835,6 +4163,14 @@
     "reference": "minecraft:stone",
     "hardness": 2.0
   },
+  "cinchsmissingblocks:red_nether_brick_fence_gate": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:red_nether_brick_fence_gate_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
   "cinchsmissingblocks:red_nether_brick_horizontal_stairs": {
     "reference": "minecraft:red_nether_brick_slab",
     "hardness": 2.0
@@ -4099,6 +4435,42 @@
     "reference": "minecraft:stone",
     "hardness": 2.0
   },
+  "cinchsmissingblocks:smooth_soul_sandstone_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
+  "cinchsmissingblocks:smooth_soul_sandstone_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 2.0
+  },
   "cinchsmissingblocks:smooth_stone_horizontal_stairs": {
     "reference": "minecraft:smooth_stone_slab",
     "hardness": 2.0
@@ -4162,6 +4534,78 @@
   "cinchsmissingblocks:snow_brick_wall_double": {
     "reference": "minecraft:dirt",
     "hardness": 0.2
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_brick_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_horizontal_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_slab": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_slab_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_stairs": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_stairs_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_vertical": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_vertical_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_wall": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
+  },
+  "cinchsmissingblocks:soul_sandstone_wall_double": {
+    "reference": "minecraft:stone",
+    "hardness": 0.8
   },
   "cinchsmissingblocks:spruce_horizontal_stairs": {
     "reference": "minecraft:spruce_slab",

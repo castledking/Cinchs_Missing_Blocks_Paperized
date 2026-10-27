@@ -20,6 +20,8 @@ import net.momirealms.craftengine.bukkit.plugin.user.BukkitServerPlayer;
 import net.momirealms.craftengine.bukkit.util.DirectionUtils;
 import net.momirealms.craftengine.bukkit.util.LocationUtils;
 import net.momirealms.craftengine.core.block.UpdateFlags;
+import net.momirealms.craftengine.core.block.ImmutableBlockState;
+import net.momirealms.craftengine.core.block.property.Property;
 import net.momirealms.craftengine.proxy.minecraft.network.protocol.game.ClientboundBlockUpdatePacketProxy;
 import net.momirealms.craftengine.proxy.minecraft.network.protocol.game.ServerboundUseItemOnPacketProxy;
 import net.momirealms.craftengine.proxy.minecraft.server.level.ServerLevelProxy;
@@ -36,9 +38,12 @@ import net.momirealms.craftengine.core.item.ItemDefinition;
 import net.momirealms.craftengine.core.item.behavior.FurnitureItem;
 import net.momirealms.craftengine.core.item.behavior.ItemBehavior;
 import net.momirealms.craftengine.core.util.Key;
+import net.momirealms.craftengine.core.util.Direction;
 import net.momirealms.craftengine.core.world.BlockHitResult;
 import net.momirealms.craftengine.core.world.BlockPos;
+import net.momirealms.craftengine.core.world.CEWorld;
 import net.momirealms.craftengine.core.world.Vec3d;
+import net.momirealms.craftengine.core.world.chunk.CEChunk;
 import net.momirealms.craftengine.core.world.context.UseOnContext;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -51,6 +56,7 @@ import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.Levelled;
+import org.bukkit.block.data.Snowable;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.ItemDisplay;
 import org.bukkit.entity.LivingEntity;
@@ -64,6 +70,8 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerBucketEmptyEvent;
 import org.bukkit.event.player.PlayerBucketFillEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.server.ServerLoadEvent;
+import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.RayTraceResult;
@@ -193,6 +201,8 @@ public final class VerticalSlabListener implements Listener {
     }
 
     private final Map<UUID, Integer> bucketHandledAt = new ConcurrentHashMap<>();
+    private record HandledFurnitureUse(int entityId, long atNanos) {}
+    private final Map<UUID, HandledFurnitureUse> handledFurnitureUses = new ConcurrentHashMap<>();
     /** Set while this class fires its own protection-check events. */
     private final ThreadLocal<Boolean> firing = ThreadLocal.withInitial(() -> false);
 
@@ -706,7 +716,8 @@ public final class VerticalSlabListener implements Listener {
      * Removes what a placement replaces, as vanilla does - no drops - leaving water
      * where the replaced block was underwater (seagrass, a waterlogged plant). A two-tall
      * plant (tall grass, large fern, tall seagrass) goes whole, whichever half was
-     * clicked: without physics its other half was left standing on its own.
+     * clicked: without physics its other half was left standing on its own. Removing
+     * snow also clears the snowy texture of the ground immediately below it.
      */
     static void clearForPlacement(Block cell) {
         Material type = cell.getType();
@@ -721,12 +732,18 @@ public final class VerticalSlabListener implements Listener {
                 other = null;
             }
         }
-        // No physics: vanilla removes the plant as part of placing, not as a change that
-        // notifies neighbours, and letting it do would let a grass placement tick whatever
-        // happened to be beside it.
+        // Keep clearing local: furniture occupies an air cell, and general neighbour
+        // physics here can update unrelated blocks around the new piece.
         cell.setType(wet(cell) ? Material.WATER : Material.AIR, false);
         if (other != null) {
             other.setType(wet(other) ? Material.WATER : Material.AIR, false);
+        }
+        if (type == Material.SNOW) {
+            Block ground = cell.getRelative(BlockFace.DOWN);
+            if (ground.getBlockData() instanceof Snowable snowy && snowy.isSnowy()) {
+                snowy.setSnowy(false);
+                ground.setBlockData(snowy, false);
+            }
         }
     }
 
@@ -846,6 +863,12 @@ public final class VerticalSlabListener implements Listener {
     /** Re-shapes the furniture stairs beside a cell, after one there came or went. */
     static void reshapeAround(Block cell) {
         wakeWater(cell);
+        // A gate is a real block, but a furniture wall is air to CraftEngine's
+        // native gate behavior. Recompute its in-wall state when either changes.
+        refreshGate(cell);
+        for (BlockFace face : HORIZONTAL) {
+            refreshGate(cell.getRelative(face));
+        }
         // The cell itself, if it is bars, a wall or a fence that just went in; those
         // beside the cell join or let go of a piece that came or went, and a vanilla
         // wall below takes its tall sides and post from a piece wall above it.
@@ -865,6 +888,62 @@ public final class VerticalSlabListener implements Listener {
                 BlockFace.EAST, BlockFace.WEST, BlockFace.DOWN}) {
             reshape(cell.getRelative(face));
         }
+    }
+
+    /** Reconnect saved furniture walls and fences when their chunks load. */
+    static void reconnectIndexedPiece(Plate plate) {
+        if (plate.kind() != Kind.WALL && plate.kind() != Kind.FENCE) {
+            return;
+        }
+        for (BlockFace face : HORIZONTAL) {
+            Block next = plate.cell().getRelative(face);
+            if (cmbGate(next) != null) {
+                reshapeAround(next);
+            }
+        }
+    }
+
+    /** Existing gate connections from an older build are refreshed when a chunk loads. */
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onGateChunkLoad(ChunkLoadEvent event) {
+        if (!event.isNewChunk()) {
+            scheduleGateChunk(event.getWorld(), event.getChunk().getX(), event.getChunk().getZ(), 20);
+        }
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onGateServerLoad(ServerLoadEvent event) {
+        for (org.bukkit.World world : Bukkit.getWorlds()) {
+            for (org.bukkit.Chunk chunk : world.getLoadedChunks()) {
+                scheduleGateChunk(world, chunk.getX(), chunk.getZ(), 20);
+            }
+        }
+    }
+
+    private void scheduleGateChunk(org.bukkit.World world, int x, int z, int attempts) {
+        Location location = new Location(world, x << 4, world.getMinHeight(), z << 4);
+        Schedulers.atLocation(plugin, location, () -> {
+            if (!world.isChunkLoaded(x, z)) {
+                return;
+            }
+            net.momirealms.craftengine.core.world.World adapted = BukkitAdaptor.adapt(world);
+            CEWorld ceWorld = adapted == null ? null : adapted.ceWorld();
+            CEChunk chunk = ceWorld == null ? null : ceWorld.getChunkAtIfLoaded(x, z);
+            if (chunk == null || !chunk.isLoaded()) {
+                if (attempts > 1) {
+                    scheduleGateChunk(world, x, z, attempts - 1);
+                }
+                return;
+            }
+            // CraftEngine already indexes the positions of blocks with renderers.
+            // Inspect that small list instead of scanning every block in each chunk.
+            for (BlockPos pos : chunk.constantBlockEntityRendererPositions()) {
+                Block block = world.getBlockAt(pos.x(), pos.y(), pos.z());
+                if (cmbGate(block) != null) {
+                    reshapeAround(block);
+                }
+            }
+        });
     }
 
     /**
@@ -1074,7 +1153,9 @@ public final class VerticalSlabListener implements Listener {
         }
         boolean beside = wall && PieceIndex.mayContain(block.getRelative(BlockFace.UP));
         for (BlockFace side : HORIZONTAL) {
-            beside |= PieceIndex.mayContain(block.getRelative(side));
+            Block next = block.getRelative(side);
+            beside |= PieceIndex.mayContain(next)
+                    || ((wall || type == Material.NETHER_BRICK_FENCE) && cmbGate(next) != null);
         }
         // Once per block per tick: a block gets a physics event from each neighbour that
         // changes, and a task for each piled up.
@@ -1138,13 +1219,21 @@ public final class VerticalSlabListener implements Listener {
         boolean changed = false;
         for (int i = 0; i < 4; i++) {
             BlockFace side = order[i];
-            List<Plate> pieces = platesIn(block.getRelative(side));
+            Block next = block.getRelative(side);
+            List<Plate> pieces = platesIn(next);
+            ImmutableBlockState gate = cmbGate(next);
             boolean joined;
             if (!pieces.isEmpty()) {
                 joined = false;
                 for (Plate plate : pieces) {
                     joined |= wallJoins(plate, side.getOppositeFace());
                 }
+            } else if (gate != null) {
+                joined = gateConnects(gate, side);
+            } else if (next.getType().isAir() || next.getType() == Material.WATER) {
+                // Furniture leaves air or water behind, so vanilla does not get a
+                // block update to remove the side we previously connected to it.
+                joined = false;
             } else {
                 joined = data.getHeight(side) != org.bukkit.block.data.type.Wall.Height.NONE;
             }
@@ -1152,7 +1241,7 @@ public final class VerticalSlabListener implements Listener {
                     ? org.bukkit.block.data.type.Wall.Height.NONE
                     // Toward a piece, or under one, tall and low are this plugin's call;
                     // otherwise vanilla's own answer stands.
-                    : (!pieces.isEmpty() || fromAbove)
+                    : (!pieces.isEmpty() || gate != null || fromAbove)
                             ? (coversSide(above, side) ? org.bukkit.block.data.type.Wall.Height.TALL
                                                        : org.bukkit.block.data.type.Wall.Height.LOW)
                             : data.getHeight(side);
@@ -1224,16 +1313,22 @@ public final class VerticalSlabListener implements Listener {
         }
         boolean changed = false;
         for (BlockFace side : HORIZONTAL) {
-            List<Plate> pieces = platesIn(block.getRelative(side));
-            if (pieces.isEmpty()) {
-                continue;
+            Block next = block.getRelative(side);
+            List<Plate> pieces = platesIn(next);
+            ImmutableBlockState gate = cmbGate(next);
+            Boolean join = null;
+            if (!pieces.isEmpty()) {
+                join = false;
+                for (Plate plate : pieces) {
+                    join |= plate.kind() == Kind.FENCE || plate.kind() == Kind.DOUBLE
+                            || plate.solid().contains(side.getOppositeFace());
+                }
+            } else if (gate != null) {
+                join = gateConnects(gate, side);
+            } else if (next.getType().isAir() || next.getType() == Material.WATER) {
+                join = false;
             }
-            boolean join = false;
-            for (Plate plate : pieces) {
-                join |= plate.kind() == Kind.FENCE || plate.kind() == Kind.DOUBLE
-                        || plate.solid().contains(side.getOppositeFace());
-            }
-            if (data.hasFace(side) != join) {
+            if (join != null && data.hasFace(side) != join) {
                 data.setFace(side, join);
                 changed = true;
             }
@@ -1411,6 +1506,10 @@ public final class VerticalSlabListener implements Listener {
                 return true;
             }
         }
+        ImmutableBlockState gate = cmbGate(next);
+        if (gate != null) {
+            return kind != Kind.PANE && gateConnects(gate, side);
+        }
         Material type = next.getType();
         // Panes never join fence gates (vanilla's IronBarsBlock); walls and fences do.
         if (kind != Kind.PANE && Tag.FENCE_GATES.isTagged(type)) {
@@ -1428,6 +1527,60 @@ public final class VerticalSlabListener implements Listener {
             return false;
         }
         return next.getBlockData().isFaceSturdy(side.getOppositeFace(), BlockSupport.FULL);
+    }
+
+    /** Only the six CMB nether brick gates use this compatibility path. */
+    private static ImmutableBlockState cmbGate(Block block) {
+        if (block.getType().isAir()) {
+            return null;
+        }
+        ImmutableBlockState state = CraftEngineBlocks.getCustomBlockState(block);
+        if (state == null || state.isEmpty()) {
+            return null;
+        }
+        Key id = state.owner().value().id();
+        String name = id.value();
+        return NAMESPACE.equals(id.namespace())
+                && (name.equals("nether_brick_fence_gate") || name.endsWith("_nether_brick_fence_gate"))
+                ? state : null;
+    }
+
+    /** Gates join at their ends, perpendicular to the direction they face. */
+    private static boolean gateConnects(ImmutableBlockState gate, BlockFace side) {
+        Property<Direction> facing = gate.getProperty("facing");
+        return facing != null && gate.get(facing).axis() != DirectionUtils.toDirection(side).axis();
+    }
+
+    private static boolean wallAt(Block block) {
+        if (Tag.WALLS.isTagged(block.getType())) {
+            return true;
+        }
+        for (Plate plate : platesIn(block)) {
+            if (plate.kind() == Kind.WALL) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /** Keep the native gate's wall-height visual in sync with furniture walls. */
+    private static void refreshGate(Block block) {
+        ImmutableBlockState gate = cmbGate(block);
+        if (gate == null) {
+            return;
+        }
+        Property<Direction> facing = gate.getProperty("facing");
+        Property<Boolean> inWall = gate.getProperty("in_wall");
+        if (facing == null || inWall == null) {
+            return;
+        }
+        boolean x = gate.get(facing).axis() == Direction.Axis.X;
+        BlockFace a = x ? BlockFace.NORTH : BlockFace.EAST;
+        BlockFace b = a.getOppositeFace();
+        boolean want = wallAt(block.getRelative(a)) || wallAt(block.getRelative(b));
+        if (gate.get(inWall) != want) {
+            CraftEngineBlocks.place(block.getLocation(), gate.with(inWall, want), UpdateFlags.UPDATE_CLIENTS, false);
+        }
     }
 
     /**
@@ -1531,6 +1684,15 @@ public final class VerticalSlabListener implements Listener {
             return;
         }
         Player player = event.player();
+        HandledFurnitureUse previous = handledFurnitureUses.get(player.getUniqueId());
+        if (event.hand() == InteractionHand.OFF_HAND && previous != null
+                && previous.entityId() == event.furniture().entityId()
+                && System.nanoTime() - previous.atNanos() < PLACE_GUARD_NANOS) {
+            // The client can try its off hand after the handled main-hand click.
+            // CraftEngine's sneak fallback otherwise uses the main-hand item again.
+            event.setCancelled(true);
+            return;
+        }
         EquipmentSlot slot = event.hand() == InteractionHand.OFF_HAND
                 ? EquipmentSlot.OFF_HAND : EquipmentSlot.HAND;
         ItemStack held = player.getInventory().getItem(slot);
@@ -1562,14 +1724,21 @@ public final class VerticalSlabListener implements Listener {
                         yield true;
                     }
                 }
-                // Anything else in hand goes against the clicked face, as vanilla places
-                // against a stair or slab. Sneaking is CraftEngine's own placement,
-                // which does the same.
-                yield !player.isSneaking()
+                // A wall's upper collision extends into the cell above it. CraftEngine's
+                // sneak path treats a hit on that extension as a side of the upper cell,
+                // placing diagonally; route it through the same top-face correction as
+                // a normal click. Other sneak clicks keep CraftEngine's placement.
+                boolean wallTop = (plate.kind() == Kind.WALL || plate.kind() == Kind.FENCE)
+                        && point.getY() >= plate.cell().getY() + 1 - 1e-3;
+                yield (!player.isSneaking() || wallTop)
                         && placeAgainst(player, plate, event.hitBox(), event.hand(), point, held);
             }
         };
         if (handled) {
+            if (event.hand() == InteractionHand.MAIN_HAND) {
+                handledFurnitureUses.put(player.getUniqueId(),
+                        new HandledFurnitureUse(event.furniture().entityId(), System.nanoTime()));
+            }
             event.setCancelled(true);
             player.swingHand(slot);
         }
@@ -1945,5 +2114,7 @@ public final class VerticalSlabListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
         bucketHandledAt.remove(event.getPlayer().getUniqueId());
+        placedAt.remove(event.getPlayer().getUniqueId());
+        handledFurnitureUses.remove(event.getPlayer().getUniqueId());
     }
 }

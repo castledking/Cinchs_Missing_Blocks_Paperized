@@ -44,6 +44,14 @@ class PackInstallerSwitchTest {
 
     private static final CmbConfig DEFAULTS = ConfigLoader.defaults();
 
+    @Test
+    void resinRequiresItsVanillaMaterial() {
+        assertFalse(PackInstaller.on("requires-vanilla:resin_bricks", DEFAULTS,
+                new PackInstaller.Server(false, name -> false), "mossy_resin_bricks"));
+        assertTrue(PackInstaller.on("requires-vanilla:resin_bricks", DEFAULTS,
+                new PackInstaller.Server(false, Set.of("resin_bricks")::contains), "mossy_resin_bricks"));
+    }
+
     /** A 26.x server: vanilla has concrete slabs. */
     private static PackInstaller.Server withVanillaConcrete(boolean viaBackwards) {
         return new PackInstaller.Server(viaBackwards, Set.of("black_concrete_slab")::contains);

@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/deepslate",
-    "all": "minecraft:block/deepslate"
+    "particle": "minecraft:block/deepslate_top",
+    "all": "minecraft:block/deepslate_top"
   },
   "elements": [
     {

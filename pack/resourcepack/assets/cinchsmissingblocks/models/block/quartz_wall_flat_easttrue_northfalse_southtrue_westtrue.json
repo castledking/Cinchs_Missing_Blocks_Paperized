@@ -1,6 +1,6 @@
 {
   "textures": {
-    "particle": "minecraft:block/quartz_block_side"
+    "particle": "minecraft:block/quartz_block_top"
   },
   "elements": [
     {
@@ -16,11 +16,11 @@
       ],
       "faces": {
         "down": {
-          "texture": "minecraft:block/quartz_block_side",
+          "texture": "minecraft:block/quartz_block_bottom",
           "cullface": "down"
         },
         "up": {
-          "texture": "minecraft:block/quartz_block_side",
+          "texture": "minecraft:block/quartz_block_top",
           "cullface": "up"
         },
         "north": {
@@ -50,11 +50,11 @@
       ],
       "faces": {
         "down": {
-          "texture": "minecraft:block/quartz_block_side",
+          "texture": "minecraft:block/quartz_block_bottom",
           "cullface": "down"
         },
         "up": {
-          "texture": "minecraft:block/quartz_block_side"
+          "texture": "minecraft:block/quartz_block_top"
         },
         "east": {
           "texture": "minecraft:block/quartz_block_side",
@@ -81,11 +81,11 @@
       ],
       "faces": {
         "down": {
-          "texture": "minecraft:block/quartz_block_side",
+          "texture": "minecraft:block/quartz_block_bottom",
           "cullface": "down"
         },
         "up": {
-          "texture": "minecraft:block/quartz_block_side"
+          "texture": "minecraft:block/quartz_block_top"
         },
         "south": {
           "texture": "minecraft:block/quartz_block_side",
@@ -112,11 +112,11 @@
       ],
       "faces": {
         "down": {
-          "texture": "minecraft:block/quartz_block_side",
+          "texture": "minecraft:block/quartz_block_bottom",
           "cullface": "down"
         },
         "up": {
-          "texture": "minecraft:block/quartz_block_side"
+          "texture": "minecraft:block/quartz_block_top"
         },
         "west": {
           "texture": "minecraft:block/quartz_block_side",

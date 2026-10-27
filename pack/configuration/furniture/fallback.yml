@@ -1935,6 +1935,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_calcite_brick_wall"
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_cinnabar_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_cinnabar_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+        top: "cinchsmissingblocks:cracked_cinnabar_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+  "cinchsmissingblocks:cracked_cinnabar_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_cinnabar_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_cinnabar_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:cracked_cinnabar_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_cinnabar_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:cracked_cinnabar_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_cinnabar_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_cinnabar_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:cracked_cinnabar_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:cracked_cinnabar_brick_stairs__lower"
+        upper: "cinchsmissingblocks:cracked_cinnabar_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:cracked_cinnabar_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:cracked_cinnabar_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_cinnabar_brick_stairs"
+  "cinchsmissingblocks:cracked_cinnabar_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_cinnabar_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_cinnabar_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:cracked_cinnabar_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:cracked_cinnabar_brick_wall__post"
+        side: "cinchsmissingblocks:cracked_cinnabar_brick_wall__side"
+        side_tall: "cinchsmissingblocks:cracked_cinnabar_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_cinnabar_brick_wall"
   "cinchsmissingblocks:cracked_deepslate_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_deepslate_brick_slab>"
@@ -3508,6 +3629,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_red_sandstone_brick_wall"
+  "cinchsmissingblocks:cracked_resin_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_resin_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_resin_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:cracked_resin_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:cracked_resin_brick_slab"
+        top: "cinchsmissingblocks:cracked_resin_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_resin_brick_slab"
+  "cinchsmissingblocks:cracked_resin_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_resin_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_resin_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:cracked_resin_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:cracked_resin_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_resin_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:cracked_resin_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_resin_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_resin_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:cracked_resin_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:cracked_resin_brick_stairs__lower"
+        upper: "cinchsmissingblocks:cracked_resin_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:cracked_resin_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:cracked_resin_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_resin_brick_stairs"
+  "cinchsmissingblocks:cracked_resin_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_resin_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_resin_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:cracked_resin_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:cracked_resin_brick_wall__post"
+        side: "cinchsmissingblocks:cracked_resin_brick_wall__side"
+        side_tall: "cinchsmissingblocks:cracked_resin_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_resin_brick_wall"
   "cinchsmissingblocks:cracked_sandstone_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_sandstone_brick_slab>"
@@ -3629,6 +3871,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_sandstone_brick_wall"
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_soul_sandstone_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_soul_sandstone_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+        top: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_soul_sandstone_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_soul_sandstone_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_soul_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_soul_sandstone_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_soul_sandstone_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__lower"
+        upper: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_soul_sandstone_brick_stairs"
+  "cinchsmissingblocks:cracked_soul_sandstone_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_soul_sandstone_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_soul_sandstone_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall__post"
+        side: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall__side"
+        side_tall: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_soul_sandstone_brick_wall"
   "cinchsmissingblocks:cracked_stone_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_stone_brick_slab>"
@@ -3871,6 +4234,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cracked_stone_tile_wall"
+  "cinchsmissingblocks:cracked_sulfur_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_sulfur_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_sulfur_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+        top: "cinchsmissingblocks:cracked_sulfur_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+  "cinchsmissingblocks:cracked_sulfur_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_sulfur_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_sulfur_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:cracked_sulfur_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cracked_sulfur_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:cracked_sulfur_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_sulfur_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_sulfur_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:cracked_sulfur_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:cracked_sulfur_brick_stairs__lower"
+        upper: "cinchsmissingblocks:cracked_sulfur_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:cracked_sulfur_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:cracked_sulfur_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_sulfur_brick_stairs"
+  "cinchsmissingblocks:cracked_sulfur_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_sulfur_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/cracked_sulfur_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:cracked_sulfur_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:cracked_sulfur_brick_wall__post"
+        side: "cinchsmissingblocks:cracked_sulfur_brick_wall__side"
+        side_tall: "cinchsmissingblocks:cracked_sulfur_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cracked_sulfur_brick_wall"
   "cinchsmissingblocks:cracked_tuff_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cracked_tuff_brick_slab>"
@@ -4082,6 +4566,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:cut_sandstone_wall"
+  "cinchsmissingblocks:cut_soul_sandstone_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cut_soul_sandstone_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cut_soul_sandstone_slab"
+    settings:
+      item: "cinchsmissingblocks:cut_soul_sandstone_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:cut_soul_sandstone_slab"
+        top: "cinchsmissingblocks:cut_soul_sandstone_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cut_soul_sandstone_slab"
+  "cinchsmissingblocks:cut_soul_sandstone_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cut_soul_sandstone_slab>"
+    model:
+      path: "cinchsmissingblocks:item/cut_soul_sandstone_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:cut_soul_sandstone_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:cut_soul_sandstone_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:cut_soul_sandstone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:cut_soul_sandstone_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cut_soul_sandstone_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/cut_soul_sandstone_stairs"
+    settings:
+      item: "cinchsmissingblocks:cut_soul_sandstone_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:cut_soul_sandstone_stairs__lower"
+        upper: "cinchsmissingblocks:cut_soul_sandstone_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:cut_soul_sandstone_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:cut_soul_sandstone_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cut_soul_sandstone_stairs"
+  "cinchsmissingblocks:cut_soul_sandstone_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.cut_soul_sandstone_wall>"
+    model:
+      path: "cinchsmissingblocks:item/cut_soul_sandstone_wall"
+    settings:
+      item: "cinchsmissingblocks:cut_soul_sandstone_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:cut_soul_sandstone_wall__post"
+        side: "cinchsmissingblocks:cut_soul_sandstone_wall__side"
+        side_tall: "cinchsmissingblocks:cut_soul_sandstone_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:cut_soul_sandstone_wall"
   "cinchsmissingblocks:cyan_concrete_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.cyan_concrete_slab>"
@@ -6887,6 +7492,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:mossy_calcite_brick_wall"
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_cinnabar_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_cinnabar_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+        top: "cinchsmissingblocks:mossy_cinnabar_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+  "cinchsmissingblocks:mossy_cinnabar_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_cinnabar_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_cinnabar_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:mossy_cinnabar_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_cinnabar_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:mossy_cinnabar_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_cinnabar_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_cinnabar_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:mossy_cinnabar_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:mossy_cinnabar_brick_stairs__lower"
+        upper: "cinchsmissingblocks:mossy_cinnabar_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:mossy_cinnabar_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:mossy_cinnabar_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_cinnabar_brick_stairs"
+  "cinchsmissingblocks:mossy_cinnabar_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_cinnabar_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_cinnabar_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:mossy_cinnabar_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:mossy_cinnabar_brick_wall__post"
+        side: "cinchsmissingblocks:mossy_cinnabar_brick_wall__side"
+        side_tall: "cinchsmissingblocks:mossy_cinnabar_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_cinnabar_brick_wall"
   "cinchsmissingblocks:mossy_cobbled_deepslate_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_cobbled_deepslate_slab>"
@@ -8218,6 +8944,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:mossy_red_sandstone_brick_wall"
+  "cinchsmissingblocks:mossy_resin_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_resin_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_resin_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:mossy_resin_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:mossy_resin_brick_slab"
+        top: "cinchsmissingblocks:mossy_resin_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_resin_brick_slab"
+  "cinchsmissingblocks:mossy_resin_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_resin_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_resin_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:mossy_resin_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:mossy_resin_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_resin_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:mossy_resin_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_resin_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_resin_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:mossy_resin_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:mossy_resin_brick_stairs__lower"
+        upper: "cinchsmissingblocks:mossy_resin_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:mossy_resin_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:mossy_resin_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_resin_brick_stairs"
+  "cinchsmissingblocks:mossy_resin_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_resin_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_resin_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:mossy_resin_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:mossy_resin_brick_wall__post"
+        side: "cinchsmissingblocks:mossy_resin_brick_wall__side"
+        side_tall: "cinchsmissingblocks:mossy_resin_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_resin_brick_wall"
   "cinchsmissingblocks:mossy_sandstone_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_sandstone_brick_slab>"
@@ -8460,6 +9307,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:mossy_stone_tile_wall"
+  "cinchsmissingblocks:mossy_sulfur_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_sulfur_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_sulfur_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+        top: "cinchsmissingblocks:mossy_sulfur_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+  "cinchsmissingblocks:mossy_sulfur_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_sulfur_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_sulfur_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:mossy_sulfur_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:mossy_sulfur_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:mossy_sulfur_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_sulfur_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_sulfur_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:mossy_sulfur_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:mossy_sulfur_brick_stairs__lower"
+        upper: "cinchsmissingblocks:mossy_sulfur_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:mossy_sulfur_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:mossy_sulfur_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_sulfur_brick_stairs"
+  "cinchsmissingblocks:mossy_sulfur_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_sulfur_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/mossy_sulfur_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:mossy_sulfur_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:mossy_sulfur_brick_wall__post"
+        side: "cinchsmissingblocks:mossy_sulfur_brick_wall__side"
+        side_tall: "cinchsmissingblocks:mossy_sulfur_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:mossy_sulfur_brick_wall"
   "cinchsmissingblocks:mossy_tuff_brick_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.mossy_tuff_brick_slab>"
@@ -10836,6 +11804,127 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:smooth_sandstone_wall"
+  "cinchsmissingblocks:smooth_soul_sandstone_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.smooth_soul_sandstone_slab>"
+    model:
+      path: "cinchsmissingblocks:item/smooth_soul_sandstone_slab"
+    settings:
+      item: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+        top: "cinchsmissingblocks:smooth_soul_sandstone_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+  "cinchsmissingblocks:smooth_soul_sandstone_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.smooth_soul_sandstone_slab>"
+    model:
+      path: "cinchsmissingblocks:item/smooth_soul_sandstone_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:smooth_soul_sandstone_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:smooth_soul_sandstone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:smooth_soul_sandstone_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.smooth_soul_sandstone_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/smooth_soul_sandstone_stairs"
+    settings:
+      item: "cinchsmissingblocks:smooth_soul_sandstone_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:smooth_soul_sandstone_stairs__lower"
+        upper: "cinchsmissingblocks:smooth_soul_sandstone_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:smooth_soul_sandstone_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:smooth_soul_sandstone_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:smooth_soul_sandstone_stairs"
+  "cinchsmissingblocks:smooth_soul_sandstone_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.smooth_soul_sandstone_wall>"
+    model:
+      path: "cinchsmissingblocks:item/smooth_soul_sandstone_wall"
+    settings:
+      item: "cinchsmissingblocks:smooth_soul_sandstone_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:smooth_soul_sandstone_wall__post"
+        side: "cinchsmissingblocks:smooth_soul_sandstone_wall__side"
+        side_tall: "cinchsmissingblocks:smooth_soul_sandstone_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:smooth_soul_sandstone_wall"
   "cinchsmissingblocks:smooth_stone_stairs":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.smooth_stone_stairs>"
@@ -11002,6 +12091,248 @@ furniture:
       template: "default:loot_table/furniture"
       arguments:
         item: "cinchsmissingblocks:snow_brick_wall"
+  "cinchsmissingblocks:soul_sandstone_brick_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_brick_slab"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:soul_sandstone_brick_slab"
+        top: "cinchsmissingblocks:soul_sandstone_brick_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:soul_sandstone_brick_slab"
+  "cinchsmissingblocks:soul_sandstone_brick_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_brick_slab>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_brick_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_brick_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:soul_sandstone_brick_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:soul_sandstone_brick_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:soul_sandstone_brick_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_brick_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_brick_stairs"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_brick_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:soul_sandstone_brick_stairs__lower"
+        upper: "cinchsmissingblocks:soul_sandstone_brick_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:soul_sandstone_brick_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:soul_sandstone_brick_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:soul_sandstone_brick_stairs"
+  "cinchsmissingblocks:soul_sandstone_brick_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_brick_wall>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_brick_wall"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_brick_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:soul_sandstone_brick_wall__post"
+        side: "cinchsmissingblocks:soul_sandstone_brick_wall__side"
+        side_tall: "cinchsmissingblocks:soul_sandstone_brick_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:soul_sandstone_brick_wall"
+  "cinchsmissingblocks:soul_sandstone_slab":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_slab>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_slab"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/slab"
+      arguments:
+        bottom: "cinchsmissingblocks:soul_sandstone_slab"
+        top: "cinchsmissingblocks:soul_sandstone_slab__top"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:soul_sandstone_slab"
+  "cinchsmissingblocks:soul_sandstone_slab_double":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_slab>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_slab_double__full"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_slab"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      ground:
+        elements:
+          - item: "cinchsmissingblocks:soul_sandstone_slab_double__full"
+            position: "0,0.5,0"
+            rotation: 180
+            shadow_strength: 0.3
+        hitboxes:
+          - position: "-0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "-0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.0,0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,-0.25"
+            type: shulker
+            scale: 0.5
+          - position: "0.25,0.5,0.25"
+            type: shulker
+            scale: 0.5
+        loot_spawn_offset: "0,0.5,0"
+    loot:
+      pools:
+        - rolls: 1
+          entries:
+            - type: item
+              item: "cinchsmissingblocks:soul_sandstone_slab"
+              functions:
+                - type: set_count
+                  count: 2
+                  add: false
+  "cinchsmissingblocks:soul_sandstone_stairs":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_stairs>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_stairs"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_stairs"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/stairs"
+      arguments:
+        lower: "cinchsmissingblocks:soul_sandstone_stairs__lower"
+        upper: "cinchsmissingblocks:soul_sandstone_stairs__upper"
+        quarter_lower: "cinchsmissingblocks:soul_sandstone_stairs__quarter_lower"
+        quarter_upper: "cinchsmissingblocks:soul_sandstone_stairs__quarter_upper"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:soul_sandstone_stairs"
+  "cinchsmissingblocks:soul_sandstone_wall":
+    data:
+      item_name: "<!i><white><lang:block.cinchsmissingblocks.soul_sandstone_wall>"
+    model:
+      path: "cinchsmissingblocks:item/soul_sandstone_wall"
+    settings:
+      item: "cinchsmissingblocks:soul_sandstone_wall"
+      hit_times: 1
+      sounds:
+        break: "minecraft:block.stone.break"
+        place: "minecraft:block.stone.place"
+        hit: "minecraft:block.stone.hit"
+    variants:
+      template: "cinchsmissingblocks:fallback/wall"
+      arguments:
+        post: "cinchsmissingblocks:soul_sandstone_wall__post"
+        side: "cinchsmissingblocks:soul_sandstone_wall__side"
+        side_tall: "cinchsmissingblocks:soul_sandstone_wall__side_tall"
+    loot:
+      template: "default:loot_table/furniture"
+      arguments:
+        item: "cinchsmissingblocks:soul_sandstone_wall"
   "cinchsmissingblocks:stone_tile_slab":
     data:
       item_name: "<!i><white><lang:block.cinchsmissingblocks.stone_tile_slab>"

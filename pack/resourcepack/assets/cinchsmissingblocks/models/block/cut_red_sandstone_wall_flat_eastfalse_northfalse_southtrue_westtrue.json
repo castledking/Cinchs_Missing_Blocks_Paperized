@@ -1,6 +1,6 @@
 {
   "textures": {
-    "particle": "minecraft:block/cut_red_sandstone"
+    "particle": "minecraft:block/red_sandstone_top"
   },
   "elements": [
     {

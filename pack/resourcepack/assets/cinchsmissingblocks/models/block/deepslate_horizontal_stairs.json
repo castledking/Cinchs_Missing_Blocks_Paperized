@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/deepslate",
-    "top": "minecraft:block/deepslate",
-    "side": "minecraft:block/deepslate",
-    "bottom": "minecraft:block/deepslate"
+    "particle": "minecraft:block/deepslate_top",
+    "top": "minecraft:block/deepslate_top",
+    "side": "minecraft:block/deepslate_top",
+    "bottom": "minecraft:block/deepslate_top"
   },
   "elements": [
     {

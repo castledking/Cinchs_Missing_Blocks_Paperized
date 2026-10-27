@@ -16,27 +16,28 @@
 
 ## What you get
 
-**996 pieces** across every family the mod has — **347 blocks** and **649 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
+**1,098 pieces** across every family the mod has — **394 blocks** and **704 furniture** — all of them placeable. Every count below is read out of the committed `pack/` in this repository, not typed by hand.
 
 **Blocks** — real CraftEngine blocks on a borrowed vanilla state, with vanilla collision:
 
 | | |
 |---|---|
-| 174 | vertical slab doubles — two vertical slabs stacked make the full block |
-| 94 | horizontal slab doubles |
-| 61 | full blocks: bricks, tiles, polished, cracked and mossy variants across andesite, calcite, deepslate, diorite, dripstone, end stone, granite, mud, prismarine, quartz, sandstone, stone, tuff and more |
-| 13 | pillars, rotating on all three axes |
+| 185 | vertical slab doubles — two vertical slabs stacked make the full block |
+| 105 | horizontal slab doubles |
+| 74 | full blocks, including glazed terracotta and the soul sandstone, cinnabar and sulfur variants |
+| 19 | pillars, rotating on all three axes |
 | 5 | fences — drawn over vanilla's nether brick fence, so they get its outline, its hold-to-break mining and its connections |
+| 6 | nether brick fence gates — native hand, redstone and wind-charge behavior |
 
 **Furniture** — every material, spending no vanilla states:
 
 | | |
 |---|---|
-| 174 | horizontal stairs — a stair on its side, the corner piece for vertical slab walls |
-| 174 | vertical slabs — a slab stood on edge, for CMB **and** all vanilla materials |
-| 108 | walls, with proper posts and connection behaviour |
-| 97 | stairs |
-| 94 | horizontal slabs |
+| 185 | horizontal stairs — a stair on its side, the corner piece for vertical slab walls |
+| 185 | vertical slabs — a slab stood on edge, for CMB **and** all vanilla materials |
+| 119 | walls, with proper posts and connection behaviour |
+| 108 | stairs |
+| 105 | horizontal slabs |
 | 1 | tinted glass pane |
 | 1 | warped nether wart crop, this port's own addition |
 
@@ -48,9 +49,9 @@ The release bundle contains both and the plugin defaults to `furniture`. That is
 *representations* of one piece, which is why the
 counts above do not add it twice.
 
-Of the mod's **381 registered types**, **379 are served**. The polished deepslate button
-and pressure plate remain unavailable. Alongside the building pieces come **1,822 items**
-and **1,535 recipes**, with drops, loot tables, mining tags and creative categories generated
+Of the mod's **439 registered types**, **437 are served**. The polished deepslate button
+and pressure plate remain unavailable. Alongside the building pieces come **2,036 items**
+and **1,688 recipes**, with drops, loot tables, mining tags and creative categories generated
 from the mod's own data.
 
 The bundle includes optional pieces. Fresh configs enable the mod's terracotta and
@@ -63,6 +64,21 @@ Nether wart and nether bricks make four red nether brick **items**; four of thos
 items make the vanilla red nether brick block. `cheaper-nether-brick-recipe: false`
 changes both red and blue brick item recipes to yield two instead of four. Moss-carpet variants keep their source
 patterns and yields.
+
+The source pin follows Cinch's 5.0.0 development snapshot on `Multi-Loader-26.2`, at
+the exact commit recorded in `pack/upstream.properties`. It adds 50 registered
+types over 4.4.0: soul sandstone, plain glazed terracotta, cinnabar and sulfur
+variants, six pillars and six nether brick fence gates. Cinnabar and sulfur pieces
+are left out on servers without their vanilla ingredients.
+
+Mossy and cracked resin bricks, stairs, slabs and walls remain included. Mossy resin bricks use pale
+moss blocks, pale hanging moss, or two pale moss carpets around a resin brick block,
+matching the mod. The resin family is left out on 1.21.1, which lacks its ingredients.
+
+Nether brick and sandstone pillar textures use Cinch's updated art from the
+`Multi-Loader-26.2` branch. The source commit and file hashes are pinned in
+[`texture-overrides/manifest.json`](texture-overrides/manifest.json), and pack
+regeneration verifies and applies those files.
 
 Hidden recipe advancements retain the mod's criteria, requirements and native recipe
 rewards. Obtaining the prerequisite item unlocks its recipes during normal play;

@@ -252,6 +252,7 @@ public final class PackInstaller {
             case "horizontal-stairs.material" -> !features.horizontalStairs().isDisabled(arg);
             case "furniture-fallback" -> features.furnitureFallback();
             case "block" -> !cfg.disabledBlocks().blocks().contains(arg);
+            case "requires-vanilla" -> server.vanillaHas().test(arg);
             case "terracotta" -> !features.disableTerracotta();
             case "concrete" -> !features.disableConcrete();
             // A CMB block that vanilla later added under the same name (concrete slabs

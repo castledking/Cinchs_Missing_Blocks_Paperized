@@ -1,0 +1,5 @@
+name: GateProbe
+version: 1
+main: GateProbe
+api-version: "1.21"
+depend: [CMB, CraftEngine]

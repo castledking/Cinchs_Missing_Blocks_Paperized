@@ -1,6 +1,6 @@
 {
   "textures": {
-    "particle": "minecraft:block/deepslate"
+    "particle": "minecraft:block/deepslate_top"
   },
   "elements": [
     {

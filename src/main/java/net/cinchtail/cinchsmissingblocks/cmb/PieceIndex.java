@@ -72,6 +72,7 @@ public final class PieceIndex implements Listener {
                 .computeIfAbsent(cell, c -> ConcurrentHashMap.newKeySet())
                 .add(entity.getUniqueId());
         BY_ENTITY.put(entity.getUniqueId(), new Object[] {world, cell});
+        VerticalSlabListener.reconnectIndexedPiece(plate);
     }
 
     static void remove(UUID entity) {

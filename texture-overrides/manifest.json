@@ -1,0 +1,18 @@
+{
+  "repo": "cinchtail/Cinchs_Missing_Blocks",
+  "branch": "Multi-Loader-26.2",
+  "commit": "17ecc6bccba1b29c2ba9126886dee472eb951336",
+  "files": {
+    "assets/cinchsmissingblocks/textures/block/blue_nether_bricks.png": "4d8e41338959ce82a49eab8f3efaee84bdf20d42d086161353396afef35328e1",
+    "assets/cinchsmissingblocks/textures/block/chiseled_blue_nether_bricks.png": "78a690a3f296aeeedeffca9ec8ee530256413d77bbeb0d895a5667e5388906a6",
+    "assets/cinchsmissingblocks/textures/block/chiseled_red_nether_bricks.png": "8b10ea2164ef3b71b5f36ba4d3a6cd5897b0823057456b311fd6db1c9a72c26f",
+    "assets/cinchsmissingblocks/textures/block/cracked_blue_nether_bricks.png": "e3e184ae4ff1ea3d6004d1fdbae62e066d8d58216c89eb4a9e62cab03c046015",
+    "assets/cinchsmissingblocks/textures/block/cracked_red_nether_bricks.png": "06d3bfad533dfc1a67ead8e2d4917cb7034287c9d5cadb50d0473880dc5f094e",
+    "assets/cinchsmissingblocks/textures/block/red_sandstone_brick_pillar_side.png": "5456c16814f3ce6e9fc549b5a7e037cf784e5258422cdcb00afc2218f3c0300a",
+    "assets/cinchsmissingblocks/textures/block/red_sandstone_brick_pillar_top.png": "fdae715bcfc8eae1805b952ae92c50f53fe5aff78a1efe6712fff76e8a765107",
+    "assets/cinchsmissingblocks/textures/block/sandstone_brick_pillar_side.png": "ba83e4ca97641185f636011a42edc1564a62433c53566d1bc096763f2ca9b726",
+    "assets/cinchsmissingblocks/textures/block/sandstone_brick_pillar_top.png": "5d569024471fc4dedf54c237b52b85c686e49c7d7ce4c53bfc7cc4e3e443adc2",
+    "assets/cinchsmissingblocks/textures/item/blue_nether_brick.png": "37e0e8816cf4144029834d46036994446c5001fba63a8aa4214e43c7554e17a4",
+    "assets/cinchsmissingblocks/textures/item/red_nether_brick.png": "6a9ec6a8916a3c819838d9e5f15a4767b6e055d144080c0ee8928539fe03f3ae"
+  }
+}

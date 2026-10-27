@@ -3,8 +3,8 @@
 # upstream commit (pack/upstream.properties); following a new upstream version means
 # regenerating it, which happens off GitHub, so this only raises the flag.
 #
-# Upstream doesn't tag releases; a release is a change of `version=` in its
-# gradle.properties on the default branch.
+# Upstream doesn't tag releases; its version is `version=` (multi-loader) or
+# `mod_version=` (Fabric) in gradle.properties on the pinned branch.
 name: upstream-watch
 
 on:
@@ -32,7 +32,7 @@ jobs:
           branch=$(prop branch)
           pinned=$(prop version)
           latest=$(curl -fsSL "https://raw.githubusercontent.com/$repo/$branch/gradle.properties" \
-                   | grep -m1 '^version=' | cut -d= -f2- | tr -d '[:space:]')
+                   | grep -m1 -E '^(mod_)?version=' | cut -d= -f2- | tr -d '[:space:]')
           echo "pinned $pinned, upstream $latest"
           if [ -z "$latest" ] || [ "$latest" = "$pinned" ]; then
             exit 0

@@ -1,0 +1,41 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/soul_sandstone_top"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        }
+      }
+    }
+  ]
+}

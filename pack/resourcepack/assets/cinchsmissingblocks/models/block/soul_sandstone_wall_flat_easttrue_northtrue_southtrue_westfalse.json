@@ -1,0 +1,134 @@
+{
+  "textures": {
+    "particle": "cinchsmissingblocks:block/soul_sandstone_top"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_top",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        0
+      ],
+      "to": [
+        11,
+        14,
+        8
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_top"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side",
+          "cullface": "north"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        }
+      }
+    },
+    {
+      "from": [
+        8,
+        0,
+        5
+      ],
+      "to": [
+        16,
+        14,
+        11
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_top"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side",
+          "cullface": "north"
+        },
+        "north": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        }
+      }
+    },
+    {
+      "from": [
+        5,
+        0,
+        8
+      ],
+      "to": [
+        11,
+        14,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_bottom",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_top"
+        },
+        "south": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        },
+        "west": {
+          "texture": "cinchsmissingblocks:block/soul_sandstone_side"
+        }
+      }
+    }
+  ]
+}

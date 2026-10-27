@@ -1,0 +1,53 @@
+blocks:
+  "cinchsmissingblocks:glazed_terracotta":
+    states:
+      properties:
+        facing:
+          name: facing
+          type: horizontal_direction
+          default: north
+      appearances:
+        horizontal_cube_facingnorth:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/glazed_terracotta"
+        horizontal_cube_facingeast:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/glazed_terracotta"
+            y: 90
+        horizontal_cube_facingsouth:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/glazed_terracotta"
+            y: 180
+        horizontal_cube_facingwest:
+          auto_state: solid
+          model:
+            path: "cinchsmissingblocks:block/glazed_terracotta"
+            y: 270
+      variants:
+        facing=north:
+          appearance: horizontal_cube_facingnorth
+        facing=east:
+          appearance: horizontal_cube_facingeast
+        facing=south:
+          appearance: horizontal_cube_facingsouth
+        facing=west:
+          appearance: horizontal_cube_facingwest
+    settings:
+      item: "cinchsmissingblocks:glazed_terracotta"
+      hardness: 1.4
+      sounds:
+        break: "minecraft:block.stone.break"
+        fall: "minecraft:block.stone.fall"
+        hit: "minecraft:block.stone.hit"
+        place: "minecraft:block.stone.place"
+        step: "minecraft:block.stone.step"
+      require_correct_tools: true
+      respect_tool_component: true
+      push_reaction: push_only
+      tags:
+        - "minecraft:mineable/pickaxe"
+    loot:
+      template: "default:loot_table/self"
