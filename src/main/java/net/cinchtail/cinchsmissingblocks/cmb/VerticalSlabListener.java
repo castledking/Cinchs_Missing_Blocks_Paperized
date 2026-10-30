@@ -65,6 +65,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockFromToEvent;
+import org.bukkit.event.block.BlockFormEvent;
+import org.bukkit.event.block.EntityBlockFormEvent;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerBucketEmptyEvent;
@@ -1080,6 +1082,52 @@ public final class VerticalSlabListener implements Listener {
             }
         }
         return false;
+    }
+
+    /**
+     * Snow doesn't settle, nor water freeze, in a piece's cell or under a piece. Weather
+     * settles on the topmost block that blocks motion (the MOTION_BLOCKING heightmap),
+     * and a piece's cell is air to that: snow settled inside pieces, its sides z-fighting
+     * theirs at the floor, snow fell through a roof of pieces, and a waterlogged piece
+     * froze. A real slab or stair stops all three. Snow doesn't settle on top of a piece
+     * either, as it would on a full top face: a snow layer there would stand on air.
+     * A snow golem's trail and frost walker's ice aren't weather, so only a piece in the
+     * cell itself keeps them out.
+     */
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.LOW)
+    public void onForm(BlockFormEvent event) {
+        Material formed = event.getNewState().getType();
+        if (formed != Material.SNOW && formed != Material.ICE && formed != Material.FROSTED_ICE) {
+            return;
+        }
+        Block cell = event.getBlock();
+        boolean weather = !(event instanceof EntityBlockFormEvent);
+        if (weather ? pieceAtOrAbove(cell) : !platesIn(cell).isEmpty()) {
+            event.setCancelled(true);
+        }
+    }
+
+    private static boolean pieceAtOrAbove(Block cell) {
+        org.bukkit.World world = cell.getWorld();
+        for (int y = cell.getY(); y < world.getMaxHeight(); y++) {
+            if (!platesIn(world.getBlockAt(cell.getX(), y, cell.getZ())).isEmpty()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Clears snow from a piece's cell as the piece is indexed: placed, or loaded with its
+     * chunk. Builds before onForm let snow settle there, where the piece stands in the
+     * way of digging it out.
+     */
+    static void clearSettledSnow(Plate plate) {
+        Block cell = plate.cell();
+        if (cell.getWorld().isChunkLoaded(cell.getX() >> 4, cell.getZ() >> 4)
+                && cell.getType() == Material.SNOW) {
+            clearForPlacement(cell);
+        }
     }
 
     // --- bars and panes joining pieces -----------------------------------------
