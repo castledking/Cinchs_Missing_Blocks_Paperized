@@ -1,0 +1,5 @@
+name: SnowProbe
+version: 1
+main: SnowProbe
+api-version: "1.21"
+depend: [CMB, CraftEngine]
