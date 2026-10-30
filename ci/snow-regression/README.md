@@ -15,7 +15,7 @@ Prepare a disposable Paper 26.3 test server with CraftEngine and Java 25. Then r
 ./gradlew build
 python3 ci/snow-regression/run.py \
   --cache-server /path/to/prepared-test-server \
-  --cmb build/libs/cmb-1.0.3.jar \
+  --cmb build/libs/cmb-1.0.4.jar \
   --java-home /path/to/java-25 \
   --output build/snow-regression
 ```

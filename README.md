@@ -140,6 +140,11 @@ Furniture is not blocks. No redstone or neighbour updates, and each piece is an 
 panes. The port's separate vertical slab items and horizontal stairs are opt-in through
 `features.vertical-slabs` and `features.horizontal-stairs`.
 
+Snow and ice respect pieces: snow doesn't settle inside a piece or under a roof built
+from pieces, and water in or under one doesn't freeze. Snow doesn't settle **on top
+of** a piece either, so a full top face, like a top slab's, stays bare where vanilla
+would lay snow on it.
+
 ## Requirements
 
 *   Paper **1.21.1 – 26.3**
