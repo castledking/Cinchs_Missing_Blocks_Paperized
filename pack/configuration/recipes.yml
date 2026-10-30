@@ -313,7 +313,8 @@ recipes:
       count: 4
   "cinchsmissingblocks:blue_nether_brick_fence":
     type: shaped
-    group: blue_nether_brick_fence
+    category: misc
+    group: nether_brick_fences
     pattern:
       - ATA
       - ATA
@@ -1068,7 +1069,8 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_blue_nether_brick_fence":
     type: shaped
-    group: cracked_blue_nether_brick_fence
+    category: misc
+    group: nether_brick_fences
     pattern:
       - ATA
       - ATA
@@ -1724,7 +1726,8 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_nether_brick_fence":
     type: shaped
-    group: cracked_nether_brick_fence
+    category: misc
+    group: nether_brick_fences
     pattern:
       - ATA
       - ATA
@@ -1967,7 +1970,8 @@ recipes:
       count: 1
   "cinchsmissingblocks:cracked_red_nether_brick_fence":
     type: shaped
-    group: cracked_red_nether_brick_fence
+    category: misc
+    group: nether_brick_fences
     pattern:
       - ATA
       - ATA
@@ -5658,7 +5662,8 @@ recipes:
       count: 4
   "cinchsmissingblocks:red_nether_brick_fence":
     type: shaped
-    group: red_nether_brick_fence
+    category: misc
+    group: nether_brick_fences
     pattern:
       - ATA
       - ATA

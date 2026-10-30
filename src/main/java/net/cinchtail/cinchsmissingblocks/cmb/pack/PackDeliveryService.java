@@ -55,10 +55,12 @@ public final class PackDeliveryService implements Listener {
      * has set it to either boolean is still found.
      */
     private static final Pattern SEND_ON_JOIN =
-            Pattern.compile("^(\\s*)([#-]?\\s*send-on-join\\s*:\\s*)([^\\r\\n#]*)(\\s*(#.*)?)$");
+            Pattern.compile("^([ \\t]*)(send-on-join[ \\t]*:[ \\t]*)([^\\r\\n#]*?)([ \\t]*(#.*)?)$",
+                    Pattern.MULTILINE);
 
     private final Plugin plugin;
-    private final boolean rspmInstalled;
+    private volatile boolean rspmInstalled;
+    private volatile CmbConfig.ResourcePack.Delivery delivery = CmbConfig.ResourcePack.Delivery.CRAFTENGINE;
 
     /** Guards against re-entering the copy when a reload is triggered by our own command. */
     private final AtomicBoolean delivering = new AtomicBoolean();
@@ -87,11 +89,12 @@ public final class PackDeliveryService implements Listener {
      * @return the mode that will actually be used
      */
     public CmbConfig.ResourcePack.Delivery resolve(CmbConfig config) {
+        rspmInstalled = plugin.getServer().getPluginManager().getPlugin(RSPM_PLUGIN) != null;
         CmbConfig.ResourcePack.Delivery configured = config.resourcePack().delivery();
 
         if (configured == CmbConfig.ResourcePack.Delivery.RSPM) {
             if (rspmInstalled) {
-                return CmbConfig.ResourcePack.Delivery.RSPM;
+                return delivery = CmbConfig.ResourcePack.Delivery.RSPM;
             }
             plugin
                     .getLogger()
@@ -99,7 +102,7 @@ public final class PackDeliveryService implements Listener {
                             "resource-pack.delivery is 'rspm' but ResourcePackManager is not "
                                     + "installed; falling back to CraftEngine so players still "
                                     + "receive a pack.");
-            return CmbConfig.ResourcePack.Delivery.CRAFTENGINE;
+            return delivery = CmbConfig.ResourcePack.Delivery.CRAFTENGINE;
         }
 
         // Configured for CraftEngine, but RSPM is present. Do not switch behind the admin's
@@ -108,13 +111,11 @@ public final class PackDeliveryService implements Listener {
             plugin
                     .getLogger()
                     .info(
-                            "ResourcePackManager is installed. To have it merge the CMB pack "
-                                    + "instead of CraftEngine sending it, set "
-                                    + "resource-pack.delivery: rspm in CMB's config.yml and "
-                                    + "restart; CMB will then stop CraftEngine sending and "
-                                    + "hand it to RSPM.");
+                            "CMB leaves pack delivery to CraftEngine. If ResourcePackManager already "
+                                    + "imports CraftEngine/generated/resource_pack.zip, keep this mode "
+                                    + "and CraftEngine's send-on-join disabled; RSPM watches that file.");
         }
-        return CmbConfig.ResourcePack.Delivery.CRAFTENGINE;
+        return delivery = CmbConfig.ResourcePack.Delivery.CRAFTENGINE;
     }
 
     /**
@@ -137,6 +138,12 @@ public final class PackDeliveryService implements Listener {
             StringBuilder out = new StringBuilder(original.length());
             boolean changed = false;
             Matcher matcher = SEND_ON_JOIN.matcher(original);
+            if (!matcher.find()) {
+                plugin.getLogger().warning("CraftEngine send-on-join setting not found; set "
+                        + "resource-pack.delivery.send-on-join: false manually for RSPM delivery.");
+                return false;
+            }
+            matcher.reset();
             int cursor = 0;
             while (matcher.find()) {
                 out.append(original, cursor, matcher.start());
@@ -186,6 +193,12 @@ public final class PackDeliveryService implements Listener {
      */
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPackGenerated(AsyncResourcePackGenerateEvent event) {
+        // The listener also receives startup builds and other packs' reloads. Merely
+        // registering it must not opt into RSPM: its own CraftEngine file watcher may
+        // already handle delivery, and a second copy/reload sends players the pack twice.
+        if (delivery != CmbConfig.ResourcePack.Delivery.RSPM || !rspmInstalled) {
+            return;
+        }
         if (!delivering.compareAndSet(false, true)) {
             return;
         }
@@ -196,7 +209,9 @@ public final class PackDeliveryService implements Listener {
                     plugin,
                     () -> {
                         try {
-                            copyToMixer(event.zipFilePath());
+                            if (delivery == CmbConfig.ResourcePack.Delivery.RSPM && rspmInstalled) {
+                                copyToMixer(event.zipFilePath());
+                            }
                         } catch (IOException e) {
                             plugin
                                     .getLogger()

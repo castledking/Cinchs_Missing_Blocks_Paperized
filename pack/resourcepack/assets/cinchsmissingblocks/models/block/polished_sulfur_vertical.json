@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/polished_sulfur",
-    "top": "minecraft:block/polished_sulfur",
-    "side": "minecraft:block/polished_sulfur",
-    "bottom": "minecraft:block/polished_sulfur"
+    "particle": "cinchsmissingblocks:block/vanilla/polished_sulfur",
+    "top": "cinchsmissingblocks:block/vanilla/polished_sulfur",
+    "side": "cinchsmissingblocks:block/vanilla/polished_sulfur",
+    "bottom": "cinchsmissingblocks:block/vanilla/polished_sulfur"
   },
   "elements": [
     {

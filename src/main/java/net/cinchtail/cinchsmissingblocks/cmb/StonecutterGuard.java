@@ -10,8 +10,12 @@ import java.util.Map;
 import java.util.Set;
 import net.momirealms.craftengine.bukkit.api.CraftEngineItems;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryAction;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.view.StonecutterView;
 import org.bukkit.plugin.Plugin;
 import org.yaml.snakeyaml.LoaderOptions;
 import org.yaml.snakeyaml.Yaml;
@@ -44,6 +48,8 @@ final class StonecutterGuard implements Listener {
             plugin.getLogger().warning("Could not read the stonecutting recipes: " + e);
         }
         this.ingredients = read;
+        plugin.getServer().getPluginManager().registerEvents(
+                new net.cinchtail.cinchsmissingblocks.cmb.compat.StonecutterRecipeFilter(plugin, read), plugin);
     }
 
     /** Stonecutting recipe id -> the item ids it takes, from a CraftEngine recipes file. */
@@ -84,6 +90,17 @@ final class StonecutterGuard implements Listener {
         if (!accepts(needed, id(event.getStonecutterInventory().getInputItem()))) {
             event.setCancelled(true);
         }
+    }
+
+    @EventHandler(ignoreCancelled = true, priority = EventPriority.HIGHEST)
+    public void onTake(InventoryClickEvent event) {
+        if (!(event.getView() instanceof StonecutterView view)
+                || event.getRawSlot() != 1 && event.getAction() != InventoryAction.COLLECT_TO_CURSOR) return;
+        int selected = view.getSelectedRecipeIndex();
+        List<org.bukkit.inventory.StonecuttingRecipe> choices = view.getRecipes();
+        if (selected < 0 || selected >= choices.size()) return;
+        Set<String> needed = ingredients.get(choices.get(selected).getKey().toString());
+        if (needed != null && !accepts(needed, id(view.getTopInventory().getInputItem()))) event.setCancelled(true);
     }
 
     private static String id(ItemStack stack) {

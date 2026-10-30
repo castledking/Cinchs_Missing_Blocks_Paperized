@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/resin_bricks",
-    "top": "minecraft:block/resin_bricks",
-    "side": "minecraft:block/resin_bricks",
-    "bottom": "minecraft:block/resin_bricks"
+    "particle": "cinchsmissingblocks:block/vanilla/resin_bricks",
+    "top": "cinchsmissingblocks:block/vanilla/resin_bricks",
+    "side": "cinchsmissingblocks:block/vanilla/resin_bricks",
+    "bottom": "cinchsmissingblocks:block/vanilla/resin_bricks"
   },
   "elements": [
     {

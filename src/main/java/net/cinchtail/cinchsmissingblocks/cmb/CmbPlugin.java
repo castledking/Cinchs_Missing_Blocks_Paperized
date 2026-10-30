@@ -33,6 +33,7 @@ public final class CmbPlugin extends JavaPlugin {
     private final Lang lang = new Lang(this);
     private SetupNotice setupNotice;
     private PieceTools pieceTools;
+    private FurnitureMining furnitureMining;
     /** When this plugin started loading, so the banner can say how long the boot took. */
     private final long startupStartTime = System.currentTimeMillis();
     /** Resolved once on enable: the mode actually in force, after install checks. */
@@ -132,8 +133,11 @@ public final class CmbPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Protection(this), this);
         getServer().getPluginManager().registerEvents(new VerticalSlabListener(this), this);
         // Several hits to break a furniture piece, by hardness and tool.
-        getServer().getPluginManager().registerEvents(new FurnitureMining(this), this);
+        this.furnitureMining = new FurnitureMining(this);
+        getServer().getPluginManager().registerEvents(furnitureMining, this);
         getServer().getPluginManager().registerEvents(new StonecutterGuard(this), this);
+        getServer().getPluginManager().registerEvents(
+                new net.cinchtail.cinchsmissingblocks.cmb.compat.RecipeBookFilter(this), this);
         try {
             getServer().getPluginManager().registerEvents(new RecipeAdvancements(this), this);
         } catch (java.io.IOException ex) {
@@ -276,6 +280,7 @@ public final class CmbPlugin extends JavaPlugin {
     /** The loaded config.yml. */
     @Override
     public void onDisable() {
+        if (furnitureMining != null) furnitureMining.clearAll();
         // Outlines are not persistent, but a /reload keeps the world: take them down.
         if (pieceTools != null) {
             pieceTools.clearAll();

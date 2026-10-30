@@ -44,6 +44,8 @@ dependencies {
     // Unit tests run without a server: paper-api supplies the Bukkit types the classes
     // under test load, nothing more.
     testImplementation("io.papermc.paper:paper-api:${property("paperApiVersion")}")
+    testImplementation("net.momirealms:craft-engine-bukkit:${property("craftEngineVersion")}")
+    testImplementation("net.momirealms:craft-engine-core:${property("craftEngineVersion")}")
     testImplementation(platform("org.junit:junit-bom:5.13.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
@@ -128,6 +130,7 @@ if (generator.isFile) {
                     "--out", generated.get().asFile.path,
                     "--mc-version", "26.3",
                     "--texture-overrides", file("texture-overrides").path,
+                    "--client-fallbacks", file("client-fallbacks").path,
                     "--build-config", workspace.resolve("tools/build-config.release.yml").path)
         doLast {
             val root = generated.get().asFile
@@ -154,15 +157,20 @@ if (generator.isFile) {
 /** What the jar carries: the pack itself and the two files the plugin reads. */
 fun bundled(path: String): Boolean =
     (path == "pack.yml" || path.startsWith("configuration/") || path.startsWith("resourcepack/")
-        || path == "intermediate/mining.json" || path == "intermediate/pieces.json"
+        || path == "intermediate/mining.json" || path == "intermediate/mining-models.json"
+        || path == "intermediate/pieces.json"
         || path == "intermediate/recipe-advancements.json")
         // The generator's notes on its build settings; plugins/CMB/config.yml is the
         // config now, and these would describe the release build, not this server.
         && path != "configuration/config.yml"
 
 tasks.processResources {
+    val pluginVersion = project.version.toString()
+    val pluginDescription = "Cinch's Missing Blocks companion behaviours"
+    inputs.property("pluginVersion", pluginVersion)
+    inputs.property("pluginDescription", pluginDescription)
     filesMatching("paper-plugin.yml") {
-        expand("version" to project.version, "description" to "Cinch's Missing Blocks companion behaviours")
+        expand("version" to pluginVersion, "description" to pluginDescription)
     }
     from("pack") {
         into("pack")

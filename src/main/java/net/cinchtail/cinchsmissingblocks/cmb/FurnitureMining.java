@@ -12,11 +12,14 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import net.momirealms.craftengine.bukkit.api.CraftEngineFurniture;
+import net.momirealms.craftengine.bukkit.api.BukkitAdaptor;
 import net.momirealms.craftengine.bukkit.api.CraftEngineItems;
 import net.momirealms.craftengine.bukkit.api.event.FurnitureBreakEvent;
 import net.momirealms.craftengine.bukkit.api.event.FurnitureHitEvent;
 import net.momirealms.craftengine.bukkit.entity.furniture.BukkitFurniture;
 import net.momirealms.craftengine.bukkit.item.BukkitItemDefinition;
+import net.momirealms.craftengine.bukkit.util.BlockStateUtils;
+import net.momirealms.craftengine.core.world.BlockPos;
 import net.momirealms.craftengine.core.util.Key;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -34,23 +37,18 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 
 /**
- * Hit-to-break for the CMB furniture pieces: several punches instead of one.
+ * Tool-sensitive mining progress for furniture-backed CMB pieces.
  *
  * <p>Furniture can't be mined like a block. A client sends mining progress only for
  * blocks, and for an entity it sends one attack per click, with nothing for a held
- * button. Its cell is air to the client, so there are no crack overlays either. What
- * it does send is every click, so a piece takes a number of hits worked out the way
- * vanilla works out mining time:
- *
- * <pre>
- *   per tick = tool speed / hardness / (correct tool ? 30 : 100)
- *   hits     = ceil(ticks to break / TICKS_PER_HIT), between 1 and MAX_HITS
- * </pre>
+ * button. Each attack contributes elapsed mining time, with a bounded allowance for
+ * the interval between clicks. Crack displays follow the furniture's own geometry.
  *
  * <p>Tool speed and the correct-tool rule come from a vanilla reference block: the
  * vanilla slab itself for a vanilla material, and a block mined with the same tool
  * for a CMB one (generate_pack writes this to the pack's intermediate/mining.json).
- * Efficiency counts. As in vanilla, a piece that needs a tool breaks without one but
+ * The native player calculation includes Efficiency, effects, attributes, being
+ * airborne and underwater. As in vanilla, a piece that needs a tool breaks without one but
  * drops nothing. Every hit shows crumbs of the piece and plays its hit sound.
  *
  * <p>CraftEngine fires FurnitureHitEvent on each hit and, with {@code hit_times: 1},
@@ -59,25 +57,22 @@ import org.bukkit.inventory.ItemStack;
  */
 public final class FurnitureMining implements Listener {
 
-    /** Roughly how long one hit stands in for, in mining ticks. */
-    private static final int TICKS_PER_HIT = 6;
-    private static final int MAX_HITS = 20;
-    /** Hits closer together than this don't count, so an autoclicker isn't instant. */
-    private static final int MIN_TICKS_BETWEEN_HITS = 3;
     /** Progress resets after this long without a hit, as vanilla mining does. */
     private static final int IDLE_RESET_TICKS = 40;
 
     record Spec(BlockData reference, float hardness) {}
 
-    record Progress(UUID furniture, int hits, int lastTick) {}
+    record Progress(UUID furniture, double amount, int lastTick, ItemStack tool) {}
 
     private final CmbPlugin plugin;
+    private final FurnitureCracks cracks;
     private final Map<UUID, Progress> progress = new ConcurrentHashMap<>();
     private volatile Map<String, Spec> specs = Map.of();
     private volatile long loadedModified = Long.MIN_VALUE;
 
     public FurnitureMining(CmbPlugin plugin) {
         this.plugin = plugin;
+        this.cracks = new FurnitureCracks(plugin);
     }
 
     /**
@@ -104,6 +99,7 @@ public final class FurnitureMining implements Listener {
     public void onHit(FurnitureHitEvent event) {
         Player player = event.player();
         if (player.getGameMode() == GameMode.CREATIVE) {
+            clear(player.getUniqueId());
             return;
         }
         Spec spec = spec(event.furniture().id());
@@ -114,24 +110,38 @@ public final class FurnitureMining implements Listener {
         UUID target = event.furniture().uuid();
         Progress previous = progress.get(player.getUniqueId());
         boolean continuing = previous != null && previous.furniture().equals(target)
-                && now - previous.lastTick() <= IDLE_RESET_TICKS;
-        if (continuing && now - previous.lastTick() < MIN_TICKS_BETWEEN_HITS) {
+                && now - previous.lastTick() <= IDLE_RESET_TICKS
+                && previous.tool().isSimilar(player.getInventory().getItemInMainHand());
+        if (continuing && now == previous.lastTick()) {
             event.setCancelled(true);
             return;
         }
-        int hits = continuing ? previous.hits() + 1 : 1;
-        if (hits < hitsNeeded(spec, player.getInventory().getItemInMainHand())) {
-            progress.put(player.getUniqueId(), new Progress(target, hits, now));
+        if (!continuing) clear(player.getUniqueId());
+        Location at = event.furniture().location();
+        double speed = spec.hardness() < 0 ? 0 : spec.hardness() == 0 ? 1
+                : BukkitAdaptor.adapt(player).getDestroyProgress(
+                        BlockStateUtils.blockDataToBlockState(spec.reference()),
+                        new BlockPos(at.getBlockX(), at.getBlockY(), at.getBlockZ()))
+                        * spec.reference().getMaterial().getHardness() / spec.hardness();
+        double amount = MiningProgress.advance(continuing ? previous.amount() : 0, speed,
+                continuing ? now - previous.lastTick() : 0);
+        if (amount < 1) {
+            progress.put(player.getUniqueId(), new Progress(target, amount, now,
+                    player.getInventory().getItemInMainHand().clone()));
             event.setCancelled(true);
             feedback(event, spec);
+            cracks.update(player, event.furniture(), amount);
+            if (!continuing) watch(player, event.furniture());
             return;
         }
         // The last hit: CraftEngine breaks the piece.
-        progress.remove(player.getUniqueId());
+        clear(player.getUniqueId());
     }
 
     @EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
     public void onBreak(FurnitureBreakEvent event) {
+        progress.entrySet().stream().filter(entry -> entry.getValue().furniture().equals(event.furniture().uuid()))
+                .map(Map.Entry::getKey).toList().forEach(this::clear);
         Player player = event.player();
         if (player.getGameMode() == GameMode.CREATIVE) {
             return;
@@ -144,18 +154,33 @@ public final class FurnitureMining implements Listener {
 
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
-        progress.remove(event.getPlayer().getUniqueId());
+        clear(event.getPlayer().getUniqueId());
     }
 
-    static int hitsNeeded(Spec spec, ItemStack tool) {
-        if (spec.hardness() <= 0) {
-            return 1;
-        }
-        float speed = spec.reference().getDestroySpeed(tool, true);
-        double perTick = speed / spec.hardness() / (correctTool(spec, tool) ? 30.0 : 100.0);
-        int ticks = (int) Math.ceil(1.0 / perTick);
-        return Math.clamp((long) Math.ceil(ticks / (double) TICKS_PER_HIT), 1, MAX_HITS);
+    private void watch(Player player, BukkitFurniture furniture) {
+        player.getScheduler().runAtFixedRate(plugin, task -> {
+            Progress active = progress.get(player.getUniqueId());
+            if (active == null || !active.furniture().equals(furniture.uuid())) { task.cancel(); return; }
+            boolean expired = Bukkit.getCurrentTick() - active.lastTick() > IDLE_RESET_TICKS;
+            if (expired || !furniture.isValid() || !player.getWorld().equals(furniture.location().getWorld())
+                    || player.getEyeLocation().distanceSquared(furniture.location()) > 64
+                    || !active.tool().isSimilar(player.getInventory().getItemInMainHand()) || !aimingAt(player, furniture)) {
+                clear(player.getUniqueId()); task.cancel();
+            }
+        }, () -> clear(player.getUniqueId()), 2, 2);
     }
+
+    private static boolean aimingAt(Player player, BukkitFurniture furniture) {
+        var plate = VerticalSlabListener.plate(furniture);
+        if (plate == null) return true;
+        double[] b = plate.box();
+        return new org.bukkit.util.BoundingBox(b[0], b[1], b[2], b[3], b[4], b[5]).rayTrace(
+                player.getEyeLocation().toVector(), player.getEyeLocation().getDirection(), 8) != null;
+    }
+
+    private void clear(UUID player) { progress.remove(player); cracks.clear(player); }
+
+    public void clearAll() { progress.clear(); cracks.clearAll(); }
 
     static boolean correctTool(Spec spec, ItemStack tool) {
         return !spec.reference().requiresCorrectToolForDrops()

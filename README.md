@@ -54,6 +54,14 @@ and pressure plate remain unavailable. Alongside the building pieces come **2,03
 and **1,688 recipes**, with drops, loot tables, mining tags and creative categories generated
 from the mod's own data.
 
+For older clients joining through ViaBackwards, the pack includes the newer vanilla
+textures and model parents used by CMB pieces, including cinnabar, sulfur and poplar.
+ViaBackwards translates the protocol; the pack supplies assets those clients lack.
+
+The installer also removes CMB models that the enabled configuration and pack
+assets cannot reach. This reduces client model baking while keeping parent
+models, legacy overrides and version overlays used by supported clients.
+
 The bundle includes optional pieces. Fresh configs enable the mod's terracotta and
 concrete variants and leave the port's separate vertical slab items, horizontal stairs,
 and warped nether wart crop off. Existing server configs are preserved when upgrading.
@@ -64,6 +72,16 @@ Nether wart and nether bricks make four red nether brick **items**; four of thos
 items make the vanilla red nether brick block. `cheaper-nether-brick-recipe: false`
 changes both red and blue brick item recipes to yield two instead of four. Moss-carpet variants keep their source
 patterns and yields.
+
+Nether brick fence recipes share one recipe-book group. On modern clients, the
+craftable filter checks custom item identities and the full ingredient quantities;
+the stonecutter also lists only recipes that accept its actual input.
+
+Furniture-backed shapes use the player's native tool speed, effects and mining
+penalties, with progressive crack overlays on clients from 1.21.4 onward. These
+pieces still require repeated clicks: vanilla clients send no held-button mining
+or release packets for entity hitboxes. Fences, gates and real blocks retain native
+held-button mining.
 
 The source pin follows Cinch's 5.0.0 development snapshot on `Multi-Loader-26.2`, at
 the exact commit recorded in `pack/upstream.properties`. It adds 50 registered

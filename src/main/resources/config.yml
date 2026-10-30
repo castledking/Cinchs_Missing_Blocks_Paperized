@@ -109,6 +109,10 @@ resource-pack:
   #
   #   craftengine (default)
   #       CraftEngine builds the pack and sends it itself. Nothing else to configure.
+  #       Also use this when RSPM's compatible_plugins/craftengine.yml already imports
+  #       CraftEngine/generated/resource_pack.zip. In that setup, disable CraftEngine's
+  #       send-on-join and let RSPM's file watcher handle the merged pack. CMB does not
+  #       copy another pack or force an RSPM reload in this mode.
   #
   #   rspm
   #       ResourcePackManager merges the pack into the server's combined pack, which is

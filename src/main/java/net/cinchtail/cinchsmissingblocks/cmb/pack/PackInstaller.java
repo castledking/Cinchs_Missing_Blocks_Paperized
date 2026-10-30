@@ -15,6 +15,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -69,11 +70,7 @@ public final class PackInstaller {
         Set<String> removedAll = new HashSet<>();
         removed.values().forEach(removedAll::addAll);
 
-        Path target = target();
-        Files.createDirectories(target);
-        int written = 0;
-        int unchanged = 0;
-        Set<Path> wanted = new HashSet<>();
+        Map<String, byte[]> files = new LinkedHashMap<>();
         for (String rel : index) {
             byte[] data = resource(rel);
             if (rel.startsWith("configuration/") && rel.endsWith(".yml")) {
@@ -82,6 +79,19 @@ public final class PackInstaller {
             if (rel.equals("configuration/recipes.yml")) {
                 data = netherBrickYield(data, cfg.cheaperNetherBrickRecipe());
             }
+            files.put(rel, data);
+        }
+        MiningOverlayModels.install(files, removedAll);
+        PackModelPruner.prune(files);
+
+        Path target = target();
+        Files.createDirectories(target);
+        int written = 0;
+        int unchanged = 0;
+        Set<Path> wanted = new HashSet<>();
+        for (var entry : files.entrySet()) {
+            String rel = entry.getKey();
+            byte[] data = entry.getValue();
             Path file = target.resolve(rel);
             wanted.add(file);
             if (Files.isRegularFile(file) && Arrays.equals(Files.readAllBytes(file), data)) {

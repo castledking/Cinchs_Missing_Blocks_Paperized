@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/pale_oak_planks",
-    "top": "minecraft:block/pale_oak_planks",
-    "side": "minecraft:block/pale_oak_planks",
-    "bottom": "minecraft:block/pale_oak_planks"
+    "particle": "cinchsmissingblocks:block/vanilla/pale_oak_planks",
+    "top": "cinchsmissingblocks:block/vanilla/pale_oak_planks",
+    "side": "cinchsmissingblocks:block/vanilla/pale_oak_planks",
+    "bottom": "cinchsmissingblocks:block/vanilla/pale_oak_planks"
   },
   "elements": [
     {

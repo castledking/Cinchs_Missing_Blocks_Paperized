@@ -13,7 +13,7 @@ Prepare a disposable Paper 26.3 test server with CraftEngine, Java 25, and a
 ./gradlew build
 python3 ci/gate-regression/run.py \
   --cache-server /path/to/prepared-test-server \
-  --cmb build/libs/cmb-1.0.2.jar \
+  --cmb build/libs/cmb-1.0.3.jar \
   --protocol /path/to/node-minecraft-protocol \
   --java-home /path/to/java-25 \
   --output build/gate-regression

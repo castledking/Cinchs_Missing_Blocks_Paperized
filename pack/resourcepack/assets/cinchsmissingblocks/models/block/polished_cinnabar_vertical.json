@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/polished_cinnabar",
-    "top": "minecraft:block/polished_cinnabar",
-    "side": "minecraft:block/polished_cinnabar",
-    "bottom": "minecraft:block/polished_cinnabar"
+    "particle": "cinchsmissingblocks:block/vanilla/polished_cinnabar",
+    "top": "cinchsmissingblocks:block/vanilla/polished_cinnabar",
+    "side": "cinchsmissingblocks:block/vanilla/polished_cinnabar",
+    "bottom": "cinchsmissingblocks:block/vanilla/polished_cinnabar"
   },
   "elements": [
     {

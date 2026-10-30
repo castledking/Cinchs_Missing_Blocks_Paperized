@@ -1,0 +1,47 @@
+{
+  "source": "Minecraft Java 26.3 client assets; dependencies absent from the 1.21.1 client",
+  "client_sha1": "e877b6a07acd633fb3bb475002175cec036e7b87",
+  "baseline": "1.21.1",
+  "models": [
+    "block/cinnabar",
+    "block/cinnabar_bricks",
+    "block/pale_oak_planks",
+    "block/polished_cinnabar",
+    "block/polished_sulfur",
+    "block/poplar_planks",
+    "block/resin_bricks",
+    "block/sulfur",
+    "block/sulfur_bricks"
+  ],
+  "textures": [
+    "block/cinnabar",
+    "block/cinnabar_bricks",
+    "block/pale_oak_planks",
+    "block/polished_cinnabar",
+    "block/polished_sulfur",
+    "block/poplar_planks",
+    "block/resin_bricks",
+    "block/sulfur",
+    "block/sulfur_bricks"
+  ],
+  "files": {
+    "assets/cinchsmissingblocks/models/block/vanilla/cinnabar.json": "ff09626dcebbb14d234a9e0c63648687612d5d757f665fd48fa8f85380f4fc7d",
+    "assets/cinchsmissingblocks/models/block/vanilla/cinnabar_bricks.json": "fcd14192c378d8c103982534e16307ea77009455a2e7427f9607be8d4720674a",
+    "assets/cinchsmissingblocks/models/block/vanilla/pale_oak_planks.json": "0a1abe74ba799cc502479b1da7aee33c7be7eea6ea98f30a522d0907c157d64d",
+    "assets/cinchsmissingblocks/models/block/vanilla/polished_cinnabar.json": "b05f5d21add27f039a1da9f7e13870e01ac825b965c02a4024bdb344683d1ecb",
+    "assets/cinchsmissingblocks/models/block/vanilla/polished_sulfur.json": "5a1683cd81968e4c682700811f6dbf8a3f010858e535d53c7334afe3b736af89",
+    "assets/cinchsmissingblocks/models/block/vanilla/poplar_planks.json": "c230d2e753972a3dcbd5290d83089d1ae0c42f7b842797769fd3987733089da3",
+    "assets/cinchsmissingblocks/models/block/vanilla/resin_bricks.json": "633646586d6f7b071621324212831cdd40f327ea5010e4fae40f73b401cd77b4",
+    "assets/cinchsmissingblocks/models/block/vanilla/sulfur.json": "6ead9c6cb45cf6b01ba4b68db4e8f75f0e5d28ccec5da56dc7ad30ca073514a8",
+    "assets/cinchsmissingblocks/models/block/vanilla/sulfur_bricks.json": "f4339bae6e0ad3b53d07d9181ccd0946dc21cd77229058a402025a2af9655229",
+    "assets/cinchsmissingblocks/textures/block/vanilla/cinnabar.png": "4e79f9fd7bacd3380c946a96180d9c9f1c334bb7e15233eef0ea7cdb21833a65",
+    "assets/cinchsmissingblocks/textures/block/vanilla/cinnabar_bricks.png": "0cfb48bd8a01555cccd630d3ae7a404624dec3b9e957b25b8acee4538e5e8c70",
+    "assets/cinchsmissingblocks/textures/block/vanilla/pale_oak_planks.png": "d478269d770f5bbefc0373a597155329d2f8d089ab76376c14c7eec8e79ea66f",
+    "assets/cinchsmissingblocks/textures/block/vanilla/polished_cinnabar.png": "7194bfba04c7320b10a48e37b3639023563ff23b2a29e897d1b3910269df95b1",
+    "assets/cinchsmissingblocks/textures/block/vanilla/polished_sulfur.png": "501ba4f49362cd3c4fd911c38a75ccb4cb534522f9599566245cd968f7282ff5",
+    "assets/cinchsmissingblocks/textures/block/vanilla/poplar_planks.png": "06ed0071fc45228f4c0e4c4cddd3dd810e1c73d954d1338c728817b6f1cbe575",
+    "assets/cinchsmissingblocks/textures/block/vanilla/resin_bricks.png": "ab7b68d7fd987c8d82e9225a33b783419a86ff4a2e77e5b1cc22cd63f546445c",
+    "assets/cinchsmissingblocks/textures/block/vanilla/sulfur.png": "d3e0cd02215daa4aa9f6b4b7124bf3acbadf53e984771cad7b7ddb20f5cf6b86",
+    "assets/cinchsmissingblocks/textures/block/vanilla/sulfur_bricks.png": "932a16ca4923f8196e1ae24b365b841ab2287488dee94e927736159eae4fdd3b"
+  }
+}

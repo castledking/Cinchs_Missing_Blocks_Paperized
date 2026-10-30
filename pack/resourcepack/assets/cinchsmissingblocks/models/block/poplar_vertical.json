@@ -1,10 +1,10 @@
 {
   "parent": "minecraft:block/block",
   "textures": {
-    "particle": "minecraft:block/poplar_planks",
-    "top": "minecraft:block/poplar_planks",
-    "side": "minecraft:block/poplar_planks",
-    "bottom": "minecraft:block/poplar_planks"
+    "particle": "cinchsmissingblocks:block/vanilla/poplar_planks",
+    "top": "cinchsmissingblocks:block/vanilla/poplar_planks",
+    "side": "cinchsmissingblocks:block/vanilla/poplar_planks",
+    "bottom": "cinchsmissingblocks:block/vanilla/poplar_planks"
   },
   "elements": [
     {
