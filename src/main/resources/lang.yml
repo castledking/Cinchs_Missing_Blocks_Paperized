@@ -57,3 +57,15 @@ setup-delivery-rspm: "ResourcePackManager merges it into the server pack; CraftE
 setup-hint-rspm-installed: "&e ! &7ResourcePackManager is installed: set &fresource-pack.delivery: rspm &7so the packs merge instead of competing."
 setup-hint-nexo-sounds: "&e ! &7Nexo mutes vanilla stone sounds (mechanics.yml: &ffurniture.custom_block_sounds: true&7 with custom_blocks sounds off). Stone blocks, CMB's included, go silent - set it to false."
 setup-hint-viabackwards: "&7 • ViaBackwards found: the concrete slabs and stairs vanilla 26.3 also has are kept for older clients."
+
+# Shown in the console on startup and to players with cmb.admin on join after CMB
+# is updated, until /cmb reload all has been run.
+updated-message:
+  - "&6&lCinch's Missing Blocks &7- updated {version_change}"
+  - "&7 • {pack_note}"
+  - "&e ! &7Run &f/cmb reload all &7so CraftEngine rebuilds the resource pack."
+
+updated-from-to: "from &f{previous} &7to &f{current}"
+updated-to: "to &f{current}"
+updated-pack-installed: "CMB installed this version's pack into CraftEngine on startup, but players get the old pack until CraftEngine rebuilds it."
+updated-pack-manual: "resource-pack.install is off in config.yml, so CMB didn't install this version's pack: update the pack files yourself first."

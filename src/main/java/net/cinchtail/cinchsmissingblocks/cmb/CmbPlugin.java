@@ -32,6 +32,8 @@ public final class CmbPlugin extends JavaPlugin {
     private PackWriter packWriter;
     private final Lang lang = new Lang(this);
     private SetupNotice setupNotice;
+    private UpdateNotice updateNotice;
+    private boolean hadExistingInstall;
     private PieceTools pieceTools;
     private FurnitureMining furnitureMining;
     /** When this plugin started loading, so the banner can say how long the boot took. */
@@ -58,6 +60,10 @@ public final class CmbPlugin extends JavaPlugin {
         int registered = CmbBehaviors.ALL.size();
         getLogger().info("Registered " + registered + " CraftEngine block behaviors");
 
+        // Checked before ConfigLoader writes a default config.yml on first boot, so
+        // UpdateNotice can tell a fresh install from an upgrade from 1.0.4 or earlier.
+        this.hadExistingInstall = UpdateNotice.hasExistingInstall(getDataFolder());
+
         // The pack goes in before CraftEngine reads its packs: every onLoad runs before
         // any onEnable, and CraftEngine loads after CMB (paper-plugin.yml).
         this.configLoader = new ConfigLoader(this);
@@ -73,12 +79,12 @@ public final class CmbPlugin extends JavaPlugin {
      * Writes the jar's bundled pack into CraftEngine's resources, filtered by config.yml
      * (PackInstaller). {@code resource-pack.install: false} leaves the folder alone.
      */
-    private void installPack() {
+    private boolean installPack() {
         CmbConfig cfg = configLoader.config();
         PackInstaller installer = new PackInstaller(this);
         if (!cfg.resourcePack().install()) {
             getLogger().info("resource-pack.install is false: leaving " + installer.target() + " as it is");
-            return;
+            return true;
         }
         try {
             PackInstaller.Result result = installer.install(cfg);
@@ -86,8 +92,10 @@ public final class CmbPlugin extends JavaPlugin {
                     + result.written() + " written, " + result.unchanged() + " unchanged, "
                     + result.deleted() + " deleted; " + result.removedIds()
                     + " ids turned off by config.yml");
+            return true;
         } catch (Throwable t) {
             getLogger().log(Level.SEVERE, "Could not install the CMB pack", t);
+            return false;
         }
     }
 
@@ -109,6 +117,7 @@ public final class CmbPlugin extends JavaPlugin {
         }
 
         if (configLoader == null) {
+            this.hadExistingInstall = UpdateNotice.hasExistingInstall(getDataFolder());
             this.configLoader = new ConfigLoader(this);
         }
         this.packWriter = new PackWriter(this);
@@ -155,6 +164,8 @@ public final class CmbPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(pieceTools, this);
         this.setupNotice = new SetupNotice(this);
         getServer().getPluginManager().registerEvents(setupNotice, this);
+        this.updateNotice = new UpdateNotice(this, hadExistingInstall);
+        getServer().getPluginManager().registerEvents(updateNotice, this);
         if (debug()) {
             try {
                 Integration1bCommand integration = new Integration1bCommand(this);
@@ -229,6 +240,7 @@ public final class CmbPlugin extends JavaPlugin {
         // Last, so the details grid reports the state actually in force: delivery is
         // resolved in applyConfig(), and the listeners above are what that state describes.
         printStartupBanner();
+        updateNotice.remindConsole();
 
         if (debug()) {
             getLogger().info("ownership verifier active (-Dcmb.debug=true)");
@@ -275,6 +287,10 @@ public final class CmbPlugin extends JavaPlugin {
 
     public SetupNotice setupNotice() {
         return setupNotice;
+    }
+
+    public UpdateNotice updateNotice() {
+        return updateNotice;
     }
 
     /** The loaded config.yml. */
@@ -350,15 +366,17 @@ public final class CmbPlugin extends JavaPlugin {
     public void reload(CommandSender reply) {
         Schedulers.global(this, () -> {
             lang.load();
-            if (!applyConfig()) {
+            if (!applyConfig() || !installPack()) {
                 reply.sendMessage(lang.get("reload-failed"));
                 return;
             }
-            installPack();
             try {
                 org.bukkit.Bukkit.dispatchCommand(
                         org.bukkit.Bukkit.getConsoleSender(), "ce reload all");
                 getLogger().info("Triggered ce reload all");
+                if (updateNotice != null) {
+                    updateNotice.markReloaded();
+                }
                 reply.sendMessage(lang.get("reload-success"));
             } catch (Throwable t) {
                 getLogger().log(Level.WARNING, "Failed to trigger ce reload all", t);

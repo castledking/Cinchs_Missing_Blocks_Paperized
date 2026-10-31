@@ -12,7 +12,7 @@ import java.util.Map;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.Plugin;
 
 /**
  * Player-facing messages, from plugins/CMB/lang.yml with the jar's lang.yml behind it
@@ -22,10 +22,10 @@ public final class Lang {
 
     private static final LegacyComponentSerializer LEGACY = LegacyComponentSerializer.legacyAmpersand();
 
-    private final JavaPlugin plugin;
+    private final Plugin plugin;
     private YamlConfiguration messages = new YamlConfiguration();
 
-    public Lang(JavaPlugin plugin) {
+    public Lang(Plugin plugin) {
         this.plugin = plugin;
     }
 

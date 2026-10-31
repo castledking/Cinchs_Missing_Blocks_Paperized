@@ -27,6 +27,9 @@ import org.bukkit.plugin.Plugin;
  */
 public final class SetupNotice implements Listener {
 
+    /** Guards read-modify-write updates to plugins/CMB/data.yml across notices. */
+    static final Object DATA_LOCK = new Object();
+
     private static final long DELAY_TICKS = 60;
 
     private final CmbPlugin plugin;
@@ -36,18 +39,30 @@ public final class SetupNotice implements Listener {
     public SetupNotice(CmbPlugin plugin) {
         this.plugin = plugin;
         this.dataFile = new File(plugin.getDataFolder(), "data.yml");
-        seen.addAll(YamlConfiguration.loadConfiguration(dataFile).getStringList("setup-message-seen"));
+        synchronized (DATA_LOCK) {
+            seen.addAll(YamlConfiguration.loadConfiguration(dataFile).getStringList("setup-message-seen"));
+        }
     }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        if (!player.hasPermission("cmb.admin") || seen.contains(player.getUniqueId().toString())) {
+        if (!player.hasPermission("cmb.admin")) {
             return;
         }
+        String id = player.getUniqueId().toString();
+        synchronized (DATA_LOCK) {
+            if (seen.contains(id)) {
+                return;
+            }
+        }
         player.getScheduler().runDelayed(plugin, task -> {
+            synchronized (DATA_LOCK) {
+                if (!seen.add(id)) {
+                    return;
+                }
+            }
             send(player);
-            seen.add(player.getUniqueId().toString());
             save();
         }, null, DELAY_TICKS);
     }
@@ -91,12 +106,14 @@ public final class SetupNotice implements Listener {
     }
 
     private void save() {
-        YamlConfiguration data = YamlConfiguration.loadConfiguration(dataFile);
-        data.set("setup-message-seen", new ArrayList<>(seen));
-        try {
-            data.save(dataFile);
-        } catch (IOException e) {
-            plugin.getLogger().warning("Could not save data.yml: " + e.getMessage());
+        synchronized (DATA_LOCK) {
+            YamlConfiguration data = YamlConfiguration.loadConfiguration(dataFile);
+            data.set("setup-message-seen", new ArrayList<>(seen));
+            try {
+                data.save(dataFile);
+            } catch (IOException e) {
+                plugin.getLogger().warning("Could not save data.yml: " + e.getMessage());
+            }
         }
     }
 }
