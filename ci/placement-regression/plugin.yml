@@ -1,0 +1,5 @@
+name: PlacementProbe
+version: 1
+main: PlacementProbe
+api-version: "1.21"
+depend: [CMB, CraftEngine]
