@@ -76,6 +76,7 @@ import org.bukkit.event.server.ServerLoadEvent;
 import org.bukkit.event.world.ChunkLoadEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.BoundingBox;
 import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
 import net.cinchtail.cinchsmissingblocks.cmb.scheduler.Schedulers;
@@ -124,6 +125,8 @@ public final class VerticalSlabListener implements Listener {
 
     /** One pixel. Collider boxes are float-rounded, so faces match to within this. */
     private static final double EPSILON = 1.0 / 16.0;
+    /** How far a ray finds what a placement click hit: past any player's reach. */
+    private static final double REACH = 6.0;
     /**
      * After this plugin handles a bucket on a vertical slab, the same player's
      * vanilla bucket use is ignored for this many ticks. The furniture interaction
@@ -611,11 +614,11 @@ public final class VerticalSlabListener implements Listener {
         }
         Vector look = player.getLocation().getDirection();
         // A slab or stair's half, as vanilla: the top of a block gives the bottom half,
-        // the underside the top half, and a side whichever half was hit.
+        // the underside the top half, and a side the top half only above its middle.
         String half = switch (anchor) {
             case "ground" -> "bottom";
             case "ceiling" -> "top";
-            default -> hitPoint(player, event, cell, look).getY() - cell.getY() >= 0.5
+            default -> hitPoint(player, event, cell, face, look).getY() - cell.getY() > 0.5
                     ? "top" : "bottom";
         };
 
@@ -659,7 +662,7 @@ public final class VerticalSlabListener implements Listener {
                     if (wall != null) {
                         BlockFace against = wall.getOppositeFace();
                         corner = new BlockFace[] {
-                            against, sideOf(against, hitPoint(player, event, cell, look), cell)
+                            against, sideOf(against, hitPoint(player, event, cell, wall, look), cell)
                         };
                     } else {
                         corner = new BlockFace[] {
@@ -1680,16 +1683,46 @@ public final class VerticalSlabListener implements Listener {
 
     /**
      * Where on the clicked face the player hit. CraftEngine's location is centred on
-     * the face, so the hit comes from a fresh ray; if that ray does not reach the same
-     * block (a click on other furniture), the player's look direction decides.
+     * the face, so the hit comes from a fresh ray. A piece is air to a block ray, so a
+     * click on one lands where the ray meets the piece across the face; only if the
+     * ray meets neither (a click on other furniture) does the look direction decide.
      */
     private static Vector hitPoint(Player player, FurnitureAttemptPlaceEvent event,
-                                   Block cell, Vector look) {
-        RayTraceResult ray = player.rayTraceBlocks(6.0);
+                                   Block cell, BlockFace face, Vector look) {
+        RayTraceResult ray = player.rayTraceBlocks(REACH);
         if (ray != null && event.clickedBlock().equals(ray.getHitBlock())) {
             return ray.getHitPosition();
         }
+        Vector onPiece = pieceHit(player.getEyeLocation(), cell.getRelative(face.getOppositeFace()));
+        if (onPiece != null) {
+            return onPiece;
+        }
         return cell.getLocation().add(0.5, 0.5, 0.5).toVector().add(look);
+    }
+
+    /**
+     * Where a line of sight first meets a piece in a cell, or null. CraftEngine finds
+     * where a click on furniture landed the same way, clipping the look ray against the
+     * hitbox, so this is the point it reported for the click.
+     */
+    static Vector pieceHit(Location eye, Block cell) {
+        Vector start = eye.toVector();
+        Vector direction = eye.getDirection();
+        Vector nearest = null;
+        for (Plate plate : platesIn(cell)) {
+            for (FurnitureHitBox hitBox : plate.furniture().hitboxes()) {
+                for (int i = 0; i < hitBox.partCount(); i++) {
+                    var b = hitBox.part(i).aabb();
+                    RayTraceResult hit = new BoundingBox(b.minX, b.minY, b.minZ, b.maxX, b.maxY, b.maxZ)
+                            .rayTrace(start, direction, REACH);
+                    if (hit != null && (nearest == null || hit.getHitPosition().distanceSquared(start)
+                            < nearest.distanceSquared(start))) {
+                        nearest = hit.getHitPosition();
+                    }
+                }
+            }
+        }
+        return nearest;
     }
 
     /** CraftEngine's wall yaw (Direction.getYaw) back to the face it came from. */
